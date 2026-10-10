@@ -13,6 +13,7 @@ export RSG_PYTHON="$RSG_STAGE2_PY"
 "$RSG_STAGE2_PY" stage2/scripts/collect.py --split holdout
 "$RSG_STAGE2_PY" stage2/scripts/validate_corpus.py
 "$RSG_STAGE2_PY" stage2/scripts/compare.py --resume
+"$RSG_STAGE2_PY" stage2/scripts/compare_balanced.py
 "$RSG_STAGE2_PY" stage2/scripts/aggregate.py
 "$RSG_STAGE2_PY" stage2/scripts/check_replay_syntax.py
 "$RSG_STAGE2_PY" stage2/scripts/analyze_dependencies.py

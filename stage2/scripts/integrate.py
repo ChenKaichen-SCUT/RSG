@@ -6,6 +6,7 @@ import z3
 from common import S,dump
 from semantics import Context,from_ast
 from algorithms import symbolic_closure,finite_closure,joint
+from balanced_joint import joint_balanced
 from formula_parser import parse
 
 def syntactically_bounded_guard(c):
@@ -67,7 +68,7 @@ def integrate(directory,method):
     'algorithm':{'status':'empty_seed_no_search'},'all_queries':c.queries,'python_total_seconds':time.perf_counter()-start})
   return
  backend=('finite' if syntactically_bounded_guard(c) else 'symbolic') if method=='closure' else 'joint'
- result={'finite':finite_closure,'symbolic':symbolic_closure,'joint':joint}[backend](c)
+ result={'finite':finite_closure,'symbolic':symbolic_closure,'joint':joint_balanced}[backend](c)
  proposed=z3.parse_smt2_string('(assert '+result['result_smt2']+')',decls=c.env)[0]
  accepted=result['validation']['valid'] and result['versus_official']['relation']=='B_strictly_larger'
  chosen=z3.simplify(proposed if accepted else c.official)

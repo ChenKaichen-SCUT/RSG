@@ -14,7 +14,7 @@ def summary(split='all'):
  validations=[read(p) for p in sorted((S/'results/validation/primary').glob('*/call_*/validation.json')) if p.parent.parent.name in ids]
  cases=[read(p) for p in sorted((S/'results/comparison/primary').glob('*/call_*/comparison.json')) if p.parent.parent.name in ids]
  valid=[v for v in validations if v['status']=='validated'];methods={};hard=[]
- for name in ('A_official','B_repeat','C_single','D_finite','D_symbolic','E_joint2'):
+ for name in ('A_official','B_repeat','C_single','D_finite','D_symbolic','E_joint2','E_balanced'):
   pairs=[(c['instance'],c.get('methods',{}).get(name)) for c in cases];pairs=[(k,r) for k,r in pairs if r]
   rs=[r for _,r in pairs];ts=[r['algorithm_seconds'] for r in rs if 'algorithm_seconds' in r]
   methods[name]={'instances':len(rs),'statuses':dict(collections.Counter(r['status'] for r in rs)),
@@ -32,7 +32,7 @@ def summary(split='all'):
  for c in cases:
   ms=c.get('methods',{});a=ms.get('A_official',{});b=ms.get('B_repeat',{});single=ms.get('C_single',{})
   closure=any(expanded(ms.get(n,{}),'versus_official') for n in ('D_finite','D_symbolic'))
-  joint=expanded(ms.get('E_joint2',{}),'versus_official')
+  joint=expanded(ms.get('E_balanced',ms.get('E_joint2',{})),'versus_official')
   official_stuck=a.get('comparison',{}).get('relation')=='equal'
   single_complete=single.get('status')=='complete_no_extension'
   repeat_stuck=b.get('status')=='semantic_fixpoint' and b.get('versus_official',{}).get('relation')=='equal'
