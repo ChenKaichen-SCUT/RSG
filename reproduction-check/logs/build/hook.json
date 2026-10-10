@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/root/RSG-reproduction-check/.venv/bin/python",
+    "/root/RSG-reproduction-check/scripts/add_experiment_hook.py"
+  ],
+  "cwd": "/root/RSG-reproduction-check",
+  "started_utc": "2026-10-10T09:22:37.731583+00:00",
+  "sampled_peak_tree_rss_kib": 21872,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 0.04182664899963129,
+  "stdout": "logs/build/hook.stdout",
+  "stderr": "logs/build/hook.stderr",
+  "peak_rss_kib": 20768
+}

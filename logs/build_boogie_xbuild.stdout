@@ -1,0 +1,537 @@
+
+>>>> xbuild tool is deprecated and will be removed in future updates, use msbuild instead <<<<
+
+XBuild Engine Version 14.0
+Mono, Version 6.8.0.105
+Copyright (C) 2005-2013 Various Mono authors
+
+Build started 10/10/2026 17:03:22.
+__________________________________________________
+Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln" (default target(s)):
+	Target ValidateSolutionConfiguration:
+		Building solution configuration "Release|Mixed Platforms".
+	Target Build:
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/CodeContractsExtender.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "bin/Release/"
+				Created directory "obj/Release/"
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../InterimKey.snk /publicsign /optimize+ /out:obj/Release/CodeContractsExtender.dll ../version.cs cce.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Xml.Linq.dll /reference:/usr/lib/mono/4.0-api/System.Data.DataSetExtensions.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/obj/Release/CodeContractsExtender.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/obj/Release/CodeContractsExtender.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/CodeContractsExtender.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Model/Model.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "../../Binaries/"
+				Created directory "obj/Release/"
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../InterimKey.snk /publicsign /optimize+ /out:obj/Release/Model.dll Model.cs ModelParser.cs Properties/AssemblyInfo.cs ../version.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Model/obj/Release/Model.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Model.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Model/obj/Release/Model.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Model.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Model/Model.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/Graph.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "bin/Release/"
+				Created directory "obj/Release/"
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/CodeContractsExtender.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/CodeContractsExtender.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../InterimKey.snk /publicsign /optimize+ /out:obj/Release/Graph.dll ../version.cs Graph.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/obj/Release/Graph.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/obj/Release/Graph.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/Graph.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/Basetypes.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "bin/Release/"
+				Created directory "obj/Release/"
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/CodeContractsExtender.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/CodeContractsExtender.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../InterimKey.snk /publicsign /optimize+ /out:obj/Release/Basetypes.dll ../version.cs BigDec.cs BigNum.cs Rational.cs Set.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Numerics.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/obj/Release/Basetypes.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/obj/Release/Basetypes.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/Basetypes.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/ParserHelper.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "bin/Release/"
+				Created directory "obj/Release/"
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/CodeContractsExtender.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/CodeContractsExtender.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../InterimKey.snk /publicsign /optimize+ /out:obj/Release/ParserHelper.dll ../version.cs ParserHelper.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Xml.Linq.dll /reference:/usr/lib/mono/4.0-api/System.Data.DataSetExtensions.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/obj/Release/ParserHelper.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/obj/Release/ParserHelper.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/ParserHelper.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ModelViewer/ModelViewer.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: x86
+				Created directory "obj/x86/Release/"
+			Target GenerateResources:
+				Tool /usr/lib/mono/4.5/resgen.exe execution started with arguments: /useSourcePath /compile "Main.resx,obj/x86/Release/Microsoft.Boogie.ModelViewer.Main.resources" 
+				Tool /usr/lib/mono/4.5/resgen.exe execution started with arguments: /useSourcePath /compile "Properties/Resources.resx,obj/x86/Release/Microsoft.Boogie.ModelViewer.Properties.Resources.resources" 
+				Tool /usr/lib/mono/4.5/resgen.exe execution started with arguments: /useSourcePath /compile "SourceView.resx,obj/x86/Release/Microsoft.Boogie.ModelViewer.SourceView.resources" 
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../InterimKey.snk /publicsign /optimize+ /out:obj/x86/Release/ModelViewer.dll /resource:obj/x86/Release/Microsoft.Boogie.ModelViewer.Main.resources /resource:obj/x86/Release/Microsoft.Boogie.ModelViewer.Properties.Resources.resources /resource:obj/x86/Release/Microsoft.Boogie.ModelViewer.SourceView.resources BaseProvider.cs BCTProvider.cs DafnyProvider.cs DataModel.cs Main.cs Main.Designer.cs Namer.cs Properties/AssemblyInfo.cs SourceView.cs SourceView.Designer.cs TreeSkeleton.cs VccProvider.cs Properties/Resources.Designer.cs Properties/Settings.Designer.cs ../version.cs obj/x86/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /win32icon:bvdicon.ico /define:TRACE /nostdlib /platform:AnyCPU /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Numerics.dll /reference:/usr/lib/mono/gac/System.Deployment/4.0.0.0__b03f5f7f11d50a3a/System.Deployment.dll /reference:/usr/lib/mono/4.0-api/System.Drawing.dll /reference:/usr/lib/mono/4.0-api/System.Windows.Forms.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries//Model.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+VccProvider.cs(811,13): warning CS0219: The variable `model' is assigned but its value is never used
+VccProvider.cs(952,15): warning CS0219: The variable `basePtr' is assigned but its value is never used
+BaseProvider.cs(46,25): warning CS0414: The private field `Microsoft.Boogie.ModelViewer.Base.BaseState.st' is assigned but its value is never used
+BCTProvider.cs(29,39): warning CS0414: The private field `Microsoft.Boogie.ModelViewer.BCT.BCTModel.typeName' is assigned but its value is never used
+DafnyProvider.cs(37,39): warning CS0414: The private field `Microsoft.Boogie.ModelViewer.Dafny.DafnyModel.typeName' is assigned but its value is never used
+Main.cs(276,25): warning CS0414: The private field `Microsoft.Boogie.ModelViewer.Main.center' is assigned but its value is never used
+VccProvider.cs(294,14): warning CS0414: The private field `Microsoft.Boogie.ModelViewer.Vcc.VccModel.state_props' is assigned but its value is never used
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ModelViewer/obj/x86/Release/ModelViewer.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/ModelViewer.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ModelViewer/obj/x86/Release/ModelViewer.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/ModelViewer.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ModelViewer/ModelViewer.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/Core.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "bin/Release/"
+				Created directory "obj/Release/"
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Basetypes.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Basetypes.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/CodeContractsExtender.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/CodeContractsExtender.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Graph.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Graph.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/ParserHelper.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/ParserHelper.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../InterimKey.snk /publicsign /optimize+ /out:obj/Release/Core.dll Absy.cs AbsyCmd.cs AbsyExpr.cs AbsyQuant.cs AbsyType.cs InterProceduralReachabilityGraph.cs CommandLineOptions.cs DeadVarElim.cs Duplicator.cs Inline.cs LambdaHelper.cs LoopUnroll.cs OOLongUtil.cs Parser.cs ResolutionContext.cs Scanner.cs StandardVisitor.cs TypeAmbiguitySeeker.cs Util.cs VariableDependenceAnalyser.cs VCExp.cs ../version.cs Xml.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Numerics.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release//Basetypes.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release//Graph.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release//ParserHelper.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+AbsyType.cs(828,16): warning CS0659: `Microsoft.Boogie.BasicType' overrides Object.Equals(object) but does not override Object.GetHashCode()
+AbsyType.cs(2817,16): warning CS0659: `Microsoft.Boogie.CtorType' overrides Object.Equals(object) but does not override Object.GetHashCode()
+Absy.cs(2507,38): warning CS0219: The variable `entry' is assigned but its value is never used
+DeadVarElim.cs(137,11): warning CS0162: Unreachable code detected
+Parser.cs(80,16): warning CS0219: The variable `ms' is assigned but its value is never used
+Parser.cs(553,25): warning CS0219: The variable `tyds' is assigned but its value is never used
+Absy.cs(2599,40): warning CS0414: The private field `Microsoft.Boogie.LoopProcedure.blockMap' is assigned but its value is never used
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/obj/Release/Core.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/obj/Release/Core.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/Core.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/BVD/BVD.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "obj/Release/"
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /optimize+ /out:obj/Release/BVD.exe Program.cs Properties/AssemblyInfo.cs obj/Release/.NETFramework,Version=v4.0.AssemblyAttribute.cs /target:winexe /define:TRACE /nostdlib /platform:AnyCPU /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/gac/System.Deployment/4.0.0.0__b03f5f7f11d50a3a/System.Deployment.dll /reference:/usr/lib/mono/4.0-api/System.Drawing.dll /reference:/usr/lib/mono/4.0-api/System.Numerics.dll /reference:/usr/lib/mono/4.0-api/System.Windows.Forms.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries//ModelViewer.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+			Target _CopyAppConfigFile:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/BVD/App.config' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/BVD.exe.config'
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/BVD/obj/Release/BVD.exe.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/BVD.exe.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/BVD/obj/Release/BVD.exe' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/BVD.exe'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/BVD/BVD.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/AbsInt.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "bin/Release/"
+				Created directory "obj/Release/"
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/bin/Release/Basetypes.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/bin/Release/Basetypes.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/bin/Release/CodeContractsExtender.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/bin/Release/CodeContractsExtender.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/bin/Release/Core.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/bin/Release/Core.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/bin/Release/ParserHelper.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/bin/Release/ParserHelper.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Graph.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/bin/Release/Graph.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Graph.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/bin/Release/Graph.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../InterimKey.snk /publicsign /optimize+ /out:obj/Release/AbsInt.dll IntervalDomain.cs TrivialDomain.cs NativeLattice.cs Traverse.cs ../version.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Numerics.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release//Basetypes.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release//Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release//ParserHelper.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+IntervalDomain.cs(839,15): warning CS0219: The variable `op' is assigned but its value is never used
+NativeLattice.cs(292,13): warning CS0219: The variable `conjuncts' is assigned but its value is never used
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/obj/Release/AbsInt.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/bin/Release/AbsInt.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/obj/Release/AbsInt.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/bin/Release/AbsInt.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/AbsInt.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/VCExpr.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "bin/Release/"
+				Created directory "obj/Release/"
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/Basetypes.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/Basetypes.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/CodeContractsExtender.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/CodeContractsExtender.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/Core.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/Core.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/ParserHelper.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/ParserHelper.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Graph.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/Graph.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Graph.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/Graph.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../InterimKey.snk /publicsign /optimize+ /out:obj/Release/VCExpr.dll ../version.cs BigLiteralAbstracter.cs Boogie2VCExpr.cs Clustering.cs LetBindingSorter.cs NameClashResolver.cs SimplifyLikeLineariser.cs TermFormulaFlattening.cs TypeErasure.cs TypeErasureArguments.cs TypeErasurePremisses.cs VCExprAST.cs VCExprASTPrinter.cs VCExprASTVisitors.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release//Basetypes.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release//Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release//ParserHelper.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/obj/Release/VCExpr.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/VCExpr.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/obj/Release/VCExpr.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/VCExpr.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/VCExpr.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/Concurrency.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "bin/Release/"
+				Created directory "obj/Release/"
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/bin/Release/Basetypes.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/bin/Release/Basetypes.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/bin/Release/Core.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/bin/Release/Core.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/bin/Release/Graph.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/bin/Release/Graph.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/bin/Release/ParserHelper.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/bin/Release/ParserHelper.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/CodeContractsExtender.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/bin/Release/CodeContractsExtender.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/CodeContractsExtender.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/bin/Release/CodeContractsExtender.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../InterimKey.snk /publicsign /optimize+ /out:obj/Release/Concurrency.dll LinearSets.cs MoverCheck.cs OwickiGries.cs Program.cs Properties/AssemblyInfo.cs RefinementCheck.cs TypeCheck.cs YieldTypeChecker.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /nostdlib /platform:AnyCPU /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Xml.Linq.dll /reference:/usr/lib/mono/4.0-api/System.Data.DataSetExtensions.dll /reference:/usr/lib/mono/4.0-api/Microsoft.CSharp.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release//Basetypes.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release//Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release//Graph.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release//ParserHelper.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+OwickiGries.cs(371,21): warning CS0219: The variable `program' is assigned but its value is never used
+OwickiGries.cs(429,21): warning CS0219: The variable `linearDomains' is assigned but its value is never used
+OwickiGries.cs(519,21): warning CS0219: The variable `program' is assigned but its value is never used
+OwickiGries.cs(818,21): warning CS0219: The variable `program' is assigned but its value is never used
+MoverCheck.cs(30,26): warning CS0414: The private field `Microsoft.Boogie.MoverCheck.moverTypeChecker' is assigned but its value is never used
+			Target _CopyAppConfigFile:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/App.config' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/bin/Release/Concurrency.dll.config'
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/obj/Release/Concurrency.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/bin/Release/Concurrency.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/obj/Release/Concurrency.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/bin/Release/Concurrency.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/Concurrency.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/VCGeneration.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "bin/Release/"
+				Created directory "obj/Release/"
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/Basetypes.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/Basetypes.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/CodeContractsExtender.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/CodeContractsExtender.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/Core.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/Core.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/Graph.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/Graph.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Model.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/Model.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Model.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/Model.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/ParserHelper.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/ParserHelper.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/VCExpr.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/VCExpr.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/VCExpr.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/VCExpr.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../InterimKey.snk /publicsign /optimize+ /out:obj/Release/VCGeneration.dll Check.cs ConditionGeneration.cs Context.cs ExprExtensions.cs FixedpointVC.cs OrderingAxioms.cs RPFP.cs StratifiedVC.cs VC.cs ../version.cs Wlp.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release//Basetypes.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release//Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release//Graph.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries//Model.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release//ParserHelper.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release//VCExpr.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+Context.cs(147,21): warning CS0219: The variable `cmds' is assigned but its value is never used
+FixedpointVC.cs(269,17): warning CS0219: The variable `thing' is assigned but its value is never used
+FixedpointVC.cs(633,30): warning CS0219: The variable `freePostExpr' is assigned but its value is never used
+FixedpointVC.cs(1488,21): warning CS0219: The variable `id' is assigned but its value is never used
+FixedpointVC.cs(1861,24): warning CS0219: The variable `implName' is assigned but its value is never used
+FixedpointVC.cs(1927,23): warning CS0219: The variable `vvar' is assigned but its value is never used
+RPFP.cs(448,18): warning CS0219: The variable `body' is assigned but its value is never used
+StratifiedVC.cs(1023,25): warning CS1718: A comparison made to same variable. Did you mean to compare something else?
+VC.cs(167,41): warning CS0429: Unreachable expression code detected
+VC.cs(170,13): warning CS0162: Unreachable code detected
+VC.cs(1357,40): warning CS0219: The variable `gotoCmdOrigins' is assigned but its value is never used
+VC.cs(1535,11): warning CS0162: Unreachable code detected
+VC.cs(1884,11): warning CS0162: Unreachable code detected
+Wlp.cs(349,17): warning CS0162: Unreachable code detected
+FixedpointVC.cs(57,48): warning CS0414: The private field `Microsoft.Boogie.FixedpointVC.gen' is assigned but its value is never used
+StratifiedVC.cs(2023,20): warning CS0414: The private field `VC.StratifiedVCGen.StratifiedInliningErrorReporter.mainVC' is assigned but its value is never used
+VC.cs(523,20): warning CS0414: The private field `VC.VCGen.Split.id' is assigned but its value is never used
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/obj/Release/VCGeneration.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/VCGeneration.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/obj/Release/VCGeneration.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/VCGeneration.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/VCGeneration.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/SMTLib.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "bin/Release/"
+				Created directory "obj/Release/"
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Basetypes.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Basetypes.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/CodeContractsExtender.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/CodeContractsExtender.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Core.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Core.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Graph.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Graph.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Model.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Model.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Model.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Model.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/ParserHelper.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/ParserHelper.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/VCExpr.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/VCExpr.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/VCExpr.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/VCExpr.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/VCGeneration.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/VCGeneration.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/VCGeneration.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/VCGeneration.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../../InterimKey.snk /publicsign /optimize+ /out:obj/Release/Provers.SMTLib.dll Inspector.cs SMTLibProverOptions.cs ProverInterface.cs SExpr.cs SMTLibLineariser.cs SMTLibNamer.cs SMTLibProcess.cs TypeDeclCollector.cs ../../version.cs Z3.cs CVC4.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release//Basetypes.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release//Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release//Graph.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries//Model.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release//ParserHelper.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release//VCExpr.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release//VCGeneration.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+TypeDeclCollector.cs(22,42): warning CS0414: The private field `Microsoft.Boogie.SMTLib.TypeDeclCollector.Options' is assigned but its value is never used
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/obj/Release/Provers.SMTLib.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Provers.SMTLib.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/obj/Release/Provers.SMTLib.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Provers.SMTLib.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/SMTLib.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/Predication.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "bin/Release/"
+				Created directory "obj/Release/"
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/Basetypes.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/Basetypes.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/Core.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/Core.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/Graph.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/Graph.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/ParserHelper.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/ParserHelper.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/VCGeneration.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/VCGeneration.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/VCGeneration.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/VCGeneration.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/CodeContractsExtender.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/CodeContractsExtender.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/CodeContractsExtender.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/CodeContractsExtender.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/VCExpr.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/VCExpr.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/VCExpr.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/VCExpr.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/Model.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/Model.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/Model.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/Model.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../InterimKey.snk /publicsign /optimize+ /out:obj/Release/Predication.dll BlockPredicator.cs SmartBlockPredicator.cs UniformityAnalyser.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Xml.Linq.dll /reference:/usr/lib/mono/4.0-api/System.Data.DataSetExtensions.dll /reference:/usr/lib/mono/4.0-api/Microsoft.CSharp.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release//Basetypes.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release//Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release//Graph.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release//ParserHelper.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release//VCGeneration.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+SmartBlockPredicator.cs(27,27): warning CS0414: The private field `Microsoft.Boogie.SmartBlockPredicator.blockIds' is assigned but its value is never used
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/obj/Release/Predication.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/Predication.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/obj/Release/Predication.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release/Predication.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/Predication.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/Doomed.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "bin/Release/"
+				Created directory "obj/Release/"
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/Basetypes.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/Basetypes.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/CodeContractsExtender.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/CodeContractsExtender.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/Core.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/Core.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/Graph.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/Graph.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Model.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/Model.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Model.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/Model.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/ParserHelper.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/ParserHelper.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/VCExpr.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/VCExpr.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/VCExpr.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/VCExpr.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/VCGeneration.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/VCGeneration.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/VCGeneration.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/VCGeneration.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../InterimKey.snk /publicsign /optimize+ /out:obj/Release/Doomed.dll DoomCheck.cs DoomedLoopUnrolling.cs DoomedStrategy.cs DoomErrorHandler.cs HasseDiagram.cs VCDoomed.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Xml.Linq.dll /reference:/usr/lib/mono/4.0-api/System.Data.DataSetExtensions.dll /reference:/usr/lib/mono/4.0-api/Microsoft.CSharp.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release//Basetypes.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release//Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release//Graph.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries//Model.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release//ParserHelper.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release//VCExpr.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release//VCGeneration.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+DoomErrorHandler.cs(69,29): warning CS0219: The variable `assertNodes' is assigned but its value is never used
+VCDoomed.cs(737,19): warning CS0219: The variable `cs' is assigned but its value is never used
+DoomedStrategy.cs(305,21): warning CS0414: The private field `VC.PathCoverStrategy.m_Ignore' is assigned but its value is never used
+DoomedStrategy.cs(307,16): warning CS0414: The private field `VC.PathCoverStrategy.m_Random' is assigned but its value is never used
+DoomedStrategy.cs(310,29): warning CS0414: The private field `VC.PathCoverStrategy.m_foundBlock' is assigned but its value is never used
+DoomedStrategy.cs(413,21): warning CS0414: The private field `VC.PathCoverStrategyK.m_Ignore' is assigned but its value is never used
+DoomedStrategy.cs(415,16): warning CS0414: The private field `VC.PathCoverStrategyK.m_Random' is assigned but its value is never used
+DoomedStrategy.cs(418,29): warning CS0414: The private field `VC.PathCoverStrategyK.m_foundBlock' is assigned but its value is never used
+VCDoomed.cs(23,45): warning CS0414: The private field `VC.DCGen.m_copiedBlocks' is assigned but its value is never used
+VCDoomed.cs(25,25): warning CS0414: The private field `VC.DCGen.m_doomedCmds' is assigned but its value is never used
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/obj/Release/Doomed.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/Doomed.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/obj/Release/Doomed.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release/Doomed.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/Doomed.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/Houdini.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "bin/Release/"
+				Created directory "obj/Release/"
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Newtonsoft.Json.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Newtonsoft.Json.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Basetypes.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release/Basetypes.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Basetypes.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/CodeContractsExtender.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release/CodeContractsExtender.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/CodeContractsExtender.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Core.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release/Core.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Core.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Graph.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release/Graph.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Graph.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Model.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Model.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Model.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Model.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/ParserHelper.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release/ParserHelper.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/ParserHelper.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Provers.SMTLib.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Provers.SMTLib.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Provers.SMTLib.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Provers.SMTLib.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/VCExpr.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/VCExpr.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release/VCExpr.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/VCExpr.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/VCGeneration.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/VCGeneration.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release/VCGeneration.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/VCGeneration.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /optimize+ /out:obj/Release/Houdini.dll ../version.cs AbstractHoudini.cs Checker.cs CandidateDependenceAnalyser.cs MLHoudini.cs MLHoudiniSymb.cs Houdini.cs StagedHoudini.cs ConcurrentHoudini.cs obj/Release/.NETFramework,Version=v4.0.AssemblyAttribute.cs /target:library /define:TRACE /nostdlib /reference:../../Newtonsoft.Json.dll /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Xml.Linq.dll /reference:/usr/lib/mono/4.0-api/System.Data.DataSetExtensions.dll /reference:/usr/lib/mono/4.0-api/Microsoft.CSharp.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release//Basetypes.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release//Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release//Graph.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries//Model.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release//ParserHelper.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release//Provers.SMTLib.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release//VCExpr.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release//VCGeneration.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+MLHoudini.cs(1930,38): error CS1644: Feature `pattern matching' cannot be used because it is not part of the C# 7.0 language specification
+MLHoudini.cs(2501,38): error CS1644: Feature `pattern matching' cannot be used because it is not part of the C# 7.0 language specification
+MLHoudini.cs(2771,42): error CS1644: Feature `pattern matching' cannot be used because it is not part of the C# 7.0 language specification
+			Task "Csc" execution -- FAILED
+			Done building target "CoreCompile" in project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/Houdini.csproj".-- FAILED
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/Houdini.csproj".-- FAILED
+	Task "MSBuild" execution -- FAILED
+	Done building target "Build" in project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln".-- FAILED
+Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln".-- FAILED
+
+Build FAILED.
+
+Warnings:
+
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln (default targets) ->
+(Build target) ->
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ModelViewer/ModelViewer.csproj (default targets) ->
+/usr/lib/mono/xbuild/14.0/bin/Microsoft.CSharp.targets (CoreCompile target) ->
+
+	VccProvider.cs(811,13): warning CS0219: The variable `model' is assigned but its value is never used
+	VccProvider.cs(952,15): warning CS0219: The variable `basePtr' is assigned but its value is never used
+	BaseProvider.cs(46,25): warning CS0414: The private field `Microsoft.Boogie.ModelViewer.Base.BaseState.st' is assigned but its value is never used
+	BCTProvider.cs(29,39): warning CS0414: The private field `Microsoft.Boogie.ModelViewer.BCT.BCTModel.typeName' is assigned but its value is never used
+	DafnyProvider.cs(37,39): warning CS0414: The private field `Microsoft.Boogie.ModelViewer.Dafny.DafnyModel.typeName' is assigned but its value is never used
+	Main.cs(276,25): warning CS0414: The private field `Microsoft.Boogie.ModelViewer.Main.center' is assigned but its value is never used
+	VccProvider.cs(294,14): warning CS0414: The private field `Microsoft.Boogie.ModelViewer.Vcc.VccModel.state_props' is assigned but its value is never used
+
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln (default targets) ->
+(Build target) ->
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/Core.csproj (default targets) ->
+/usr/lib/mono/xbuild/14.0/bin/Microsoft.CSharp.targets (CoreCompile target) ->
+
+	AbsyType.cs(828,16): warning CS0659: `Microsoft.Boogie.BasicType' overrides Object.Equals(object) but does not override Object.GetHashCode()
+	AbsyType.cs(2817,16): warning CS0659: `Microsoft.Boogie.CtorType' overrides Object.Equals(object) but does not override Object.GetHashCode()
+	Absy.cs(2507,38): warning CS0219: The variable `entry' is assigned but its value is never used
+	DeadVarElim.cs(137,11): warning CS0162: Unreachable code detected
+	Parser.cs(80,16): warning CS0219: The variable `ms' is assigned but its value is never used
+	Parser.cs(553,25): warning CS0219: The variable `tyds' is assigned but its value is never used
+	Absy.cs(2599,40): warning CS0414: The private field `Microsoft.Boogie.LoopProcedure.blockMap' is assigned but its value is never used
+
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln (default targets) ->
+(Build target) ->
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/AbsInt.csproj (default targets) ->
+/usr/lib/mono/xbuild/14.0/bin/Microsoft.CSharp.targets (CoreCompile target) ->
+
+	IntervalDomain.cs(839,15): warning CS0219: The variable `op' is assigned but its value is never used
+	NativeLattice.cs(292,13): warning CS0219: The variable `conjuncts' is assigned but its value is never used
+
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln (default targets) ->
+(Build target) ->
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/Concurrency.csproj (default targets) ->
+/usr/lib/mono/xbuild/14.0/bin/Microsoft.CSharp.targets (CoreCompile target) ->
+
+	OwickiGries.cs(371,21): warning CS0219: The variable `program' is assigned but its value is never used
+	OwickiGries.cs(429,21): warning CS0219: The variable `linearDomains' is assigned but its value is never used
+	OwickiGries.cs(519,21): warning CS0219: The variable `program' is assigned but its value is never used
+	OwickiGries.cs(818,21): warning CS0219: The variable `program' is assigned but its value is never used
+	MoverCheck.cs(30,26): warning CS0414: The private field `Microsoft.Boogie.MoverCheck.moverTypeChecker' is assigned but its value is never used
+
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln (default targets) ->
+(Build target) ->
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/VCGeneration.csproj (default targets) ->
+/usr/lib/mono/xbuild/14.0/bin/Microsoft.CSharp.targets (CoreCompile target) ->
+
+	Context.cs(147,21): warning CS0219: The variable `cmds' is assigned but its value is never used
+	FixedpointVC.cs(269,17): warning CS0219: The variable `thing' is assigned but its value is never used
+	FixedpointVC.cs(633,30): warning CS0219: The variable `freePostExpr' is assigned but its value is never used
+	FixedpointVC.cs(1488,21): warning CS0219: The variable `id' is assigned but its value is never used
+	FixedpointVC.cs(1861,24): warning CS0219: The variable `implName' is assigned but its value is never used
+	FixedpointVC.cs(1927,23): warning CS0219: The variable `vvar' is assigned but its value is never used
+	RPFP.cs(448,18): warning CS0219: The variable `body' is assigned but its value is never used
+	StratifiedVC.cs(1023,25): warning CS1718: A comparison made to same variable. Did you mean to compare something else?
+	VC.cs(167,41): warning CS0429: Unreachable expression code detected
+	VC.cs(170,13): warning CS0162: Unreachable code detected
+	VC.cs(1357,40): warning CS0219: The variable `gotoCmdOrigins' is assigned but its value is never used
+	VC.cs(1535,11): warning CS0162: Unreachable code detected
+	VC.cs(1884,11): warning CS0162: Unreachable code detected
+	Wlp.cs(349,17): warning CS0162: Unreachable code detected
+	FixedpointVC.cs(57,48): warning CS0414: The private field `Microsoft.Boogie.FixedpointVC.gen' is assigned but its value is never used
+	StratifiedVC.cs(2023,20): warning CS0414: The private field `VC.StratifiedVCGen.StratifiedInliningErrorReporter.mainVC' is assigned but its value is never used
+	VC.cs(523,20): warning CS0414: The private field `VC.VCGen.Split.id' is assigned but its value is never used
+
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln (default targets) ->
+(Build target) ->
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/SMTLib.csproj (default targets) ->
+/usr/lib/mono/xbuild/14.0/bin/Microsoft.CSharp.targets (CoreCompile target) ->
+
+	TypeDeclCollector.cs(22,42): warning CS0414: The private field `Microsoft.Boogie.SMTLib.TypeDeclCollector.Options' is assigned but its value is never used
+
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln (default targets) ->
+(Build target) ->
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/Predication.csproj (default targets) ->
+/usr/lib/mono/xbuild/14.0/bin/Microsoft.CSharp.targets (CoreCompile target) ->
+
+	SmartBlockPredicator.cs(27,27): warning CS0414: The private field `Microsoft.Boogie.SmartBlockPredicator.blockIds' is assigned but its value is never used
+
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln (default targets) ->
+(Build target) ->
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/Doomed.csproj (default targets) ->
+/usr/lib/mono/xbuild/14.0/bin/Microsoft.CSharp.targets (CoreCompile target) ->
+
+	DoomErrorHandler.cs(69,29): warning CS0219: The variable `assertNodes' is assigned but its value is never used
+	VCDoomed.cs(737,19): warning CS0219: The variable `cs' is assigned but its value is never used
+	DoomedStrategy.cs(305,21): warning CS0414: The private field `VC.PathCoverStrategy.m_Ignore' is assigned but its value is never used
+	DoomedStrategy.cs(307,16): warning CS0414: The private field `VC.PathCoverStrategy.m_Random' is assigned but its value is never used
+	DoomedStrategy.cs(310,29): warning CS0414: The private field `VC.PathCoverStrategy.m_foundBlock' is assigned but its value is never used
+	DoomedStrategy.cs(413,21): warning CS0414: The private field `VC.PathCoverStrategyK.m_Ignore' is assigned but its value is never used
+	DoomedStrategy.cs(415,16): warning CS0414: The private field `VC.PathCoverStrategyK.m_Random' is assigned but its value is never used
+	DoomedStrategy.cs(418,29): warning CS0414: The private field `VC.PathCoverStrategyK.m_foundBlock' is assigned but its value is never used
+	VCDoomed.cs(23,45): warning CS0414: The private field `VC.DCGen.m_copiedBlocks' is assigned but its value is never used
+	VCDoomed.cs(25,25): warning CS0414: The private field `VC.DCGen.m_doomedCmds' is assigned but its value is never used
+
+Errors:
+
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln (default targets) ->
+(Build target) ->
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/Houdini.csproj (default targets) ->
+/usr/lib/mono/xbuild/14.0/bin/Microsoft.CSharp.targets (CoreCompile target) ->
+
+	MLHoudini.cs(1930,38): error CS1644: Feature `pattern matching' cannot be used because it is not part of the C# 7.0 language specification
+	MLHoudini.cs(2501,38): error CS1644: Feature `pattern matching' cannot be used because it is not part of the C# 7.0 language specification
+	MLHoudini.cs(2771,42): error CS1644: Feature `pattern matching' cannot be used because it is not part of the C# 7.0 language specification
+
+	 50 Warning(s)
+	 3 Error(s)
+
+Time Elapsed 00:00:06.6825250

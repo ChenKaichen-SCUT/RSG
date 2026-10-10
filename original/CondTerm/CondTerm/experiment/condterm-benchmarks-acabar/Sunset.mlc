@@ -1,0 +1,51 @@
+###include <stdio.h>
+##
+##int main() {
+##    int t;
+##    scanf("%d", &t);
+##    printf("[Testing] <Interface V4.0> (Log all variables for reuse)\n");
+##    
+##    while (t > 10) {
+##        printf("t:%d\n", t);
+##        if (t == 25) {
+##            t = 30;
+##        }
+##        if (t <= 30) {
+##            t = t-1;
+##        } else {
+##            t = 20;
+##        }
+##    }
+##    
+##    return 0;
+##}
+##
+##
+!vars
+t
+
+!pvars
+t'
+
+!path
+t>=11
+t=25
+t'=30
+
+!path
+t>=11
+t<=24
+t<=30
+t'=t-1
+
+!path
+t>=11
+t>=26
+t>=31
+t'=20
+
+!path
+t>=11
+t>=26
+t<=30
+t'=t-1

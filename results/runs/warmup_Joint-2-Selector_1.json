@@ -1,0 +1,244 @@
+{
+  "method": "Joint-2-Selector",
+  "wall_seconds": 0.07485082499988494,
+  "smt_calls": 12,
+  "solver_seconds": 0.0322204130004593,
+  "unsat_core_calls": 0,
+  "candidates": [
+    {
+      "selectors": [
+        false,
+        false
+      ],
+      "formula": "(or (and (= p 0) (>= x 0) (<= x 0)) (and (= p 1) (>= x 4) (<= x 4)))",
+      "valid": true,
+      "checks": [
+        {
+          "name": "joint_00_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.003023824999900171,
+          "passed": true
+        },
+        {
+          "name": "joint_00_guard",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0026617860000897053,
+          "passed": true
+        },
+        {
+          "name": "joint_00_closure",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0026719570000750537,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "selectors": [
+        false,
+        true
+      ],
+      "formula": "(or (and (= p 0) (>= x 0) (<= x 0)) (and (= p 1) (>= x 3) (<= x 4)))",
+      "valid": false,
+      "checks": [
+        {
+          "name": "joint_01_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0026705360000960354,
+          "passed": true
+        },
+        {
+          "name": "joint_01_guard",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002452251000022443,
+          "passed": true
+        },
+        {
+          "name": "joint_01_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002811849999943661,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "1"
+          }
+        }
+      ]
+    },
+    {
+      "selectors": [
+        true,
+        false
+      ],
+      "formula": "(or (and (= p 0) (>= x 0) (<= x 1)) (and (= p 1) (>= x 4) (<= x 4)))",
+      "valid": false,
+      "checks": [
+        {
+          "name": "joint_10_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0027079880001110723,
+          "passed": true
+        },
+        {
+          "name": "joint_10_guard",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0026667570000427077,
+          "passed": true
+        },
+        {
+          "name": "joint_10_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027893689998563787,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "1",
+            "x_next": "3"
+          }
+        }
+      ]
+    },
+    {
+      "selectors": [
+        true,
+        true
+      ],
+      "formula": "(or (and (= p 0) (>= x 0) (<= x 1)) (and (= p 1) (>= x 3) (<= x 4)))",
+      "valid": true,
+      "checks": [
+        {
+          "name": "joint_11_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0026643470000635716,
+          "passed": true
+        },
+        {
+          "name": "joint_11_guard",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002455201000202578,
+          "passed": true
+        },
+        {
+          "name": "joint_11_closure",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002644546000055925,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "formula_smt2": "(or (and (= p 0) (>= x 0) (<= x 1)) (and (= p 1) (>= x 3) (<= x 4)))",
+  "queries": [
+    {
+      "name": "joint_00_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.003023824999900171,
+      "passed": true
+    },
+    {
+      "name": "joint_00_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0026617860000897053,
+      "passed": true
+    },
+    {
+      "name": "joint_00_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0026719570000750537,
+      "passed": true
+    },
+    {
+      "name": "joint_01_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0026705360000960354,
+      "passed": true
+    },
+    {
+      "name": "joint_01_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002452251000022443,
+      "passed": true
+    },
+    {
+      "name": "joint_01_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002811849999943661,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "1"
+      }
+    },
+    {
+      "name": "joint_10_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0027079880001110723,
+      "passed": true
+    },
+    {
+      "name": "joint_10_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0026667570000427077,
+      "passed": true
+    },
+    {
+      "name": "joint_10_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027893689998563787,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "1",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "joint_11_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0026643470000635716,
+      "passed": true
+    },
+    {
+      "name": "joint_11_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002455201000202578,
+      "passed": true
+    },
+    {
+      "name": "joint_11_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002644546000055925,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "docker",
+    "-H",
+    "unix:///root/rsg-docker.sock",
+    "run",
+    "--rm",
+    "--network",
+    "host",
+    "ubuntu:22.04",
+    "cat",
+    "/etc/os-release"
+  ],
+  "cwd": "/mnt/Space0/RSG",
+  "started_utc": "2026-10-10T08:38:14.464195+00:00",
+  "exit_code": 125,
+  "wall_seconds": 24.62905140494695,
+  "stdout": "logs/docker_container_probe.stdout",
+  "stderr": "logs/docker_container_probe.stderr",
+  "peak_rss_kib": 51432
+}

@@ -1,0 +1,252 @@
+{
+  "access": {
+    "embargo": {
+      "active": false,
+      "reason": null
+    },
+    "files": "public",
+    "record": "public",
+    "status": "open"
+  },
+  "created": "2025-08-18T03:29:15.256032+00:00",
+  "custom_fields": {},
+  "deletion_status": {
+    "is_deleted": false,
+    "status": "P"
+  },
+  "expanded": {
+    "parent": {
+      "access": {
+        "owned_by": {
+          "active": null,
+          "blocked_at": null,
+          "confirmed_at": null,
+          "email": "",
+          "id": "1292313",
+          "is_current_user": false,
+          "links": {
+            "avatar": "https://zenodo.org/api/users/1292313/avatar.svg",
+            "records_html": "https://zenodo.org/search?q=parent.access.owned_by.user:1292313",
+            "self": "https://zenodo.org/api/users/1292313"
+          },
+          "profile": {
+            "affiliations": "",
+            "full_name": "WHITE_CHOCOLATE"
+          },
+          "username": "WHITE000CHOCOLATE",
+          "verified_at": null
+        }
+      }
+    }
+  },
+  "files": {
+    "count": 1,
+    "enabled": true,
+    "entries": {
+      "CondTerm-Artifact.rar": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:a75d0094fedfb274dd48bf31cf730741",
+        "ext": "rar",
+        "id": "074290a8-58dd-44c5-a2ff-c8c668c465c9",
+        "key": "CondTerm-Artifact.rar",
+        "links": {
+          "content": "https://zenodo.org/api/records/16891885/files/CondTerm-Artifact.rar/content",
+          "self": "https://zenodo.org/api/records/16891885/files/CondTerm-Artifact.rar"
+        },
+        "metadata": {},
+        "mimetype": "application/vnd.rar",
+        "size": 338912600,
+        "storage_class": "L"
+      }
+    },
+    "order": [],
+    "total_bytes": 338912600
+  },
+  "id": "16891885",
+  "is_draft": false,
+  "is_published": true,
+  "links": {
+    "access": "https://zenodo.org/api/records/16891885/access",
+    "access_grants": "https://zenodo.org/api/records/16891885/access/grants",
+    "access_links": "https://zenodo.org/api/records/16891885/access/links",
+    "access_request": "https://zenodo.org/api/records/16891885/access/request",
+    "access_users": "https://zenodo.org/api/records/16891885/access/users",
+    "communities": "https://zenodo.org/api/records/16891885/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/16891885/communities-suggestions",
+    "doi": "https://doi.org/10.5281/zenodo.16891885",
+    "draft": "https://zenodo.org/api/records/16891885/draft",
+    "file_modification": "https://zenodo.org/api/records/16891885/file-modification",
+    "files": "https://zenodo.org/api/records/16891885/files",
+    "latest": "https://zenodo.org/api/records/16891885/versions/latest",
+    "latest_html": "https://zenodo.org/records/16891885/latest",
+    "media_files": "https://zenodo.org/api/records/16891885/media-files",
+    "parent": "https://zenodo.org/api/records/16891884",
+    "parent_doi": "https://doi.org/10.5281/zenodo.16891884",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.16891884",
+    "parent_html": "https://zenodo.org/records/16891884",
+    "preview_html": "https://zenodo.org/records/16891885?preview=1",
+    "quota_increase": "https://zenodo.org/api/records/16891885/quota-increase",
+    "request_deletion": "https://zenodo.org/api/records/16891885/request-deletion",
+    "requests": "https://zenodo.org/api/records/16891885/requests",
+    "reserve_doi": "https://zenodo.org/api/records/16891885/draft/pids/doi",
+    "self": "https://zenodo.org/api/records/16891885",
+    "self_doi": "https://doi.org/10.5281/zenodo.16891885",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.16891885",
+    "self_html": "https://zenodo.org/records/16891885",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:16891885/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:16891885/sequence/default",
+    "versions": "https://zenodo.org/api/records/16891885/versions"
+  },
+  "media_files": {
+    "count": 0,
+    "enabled": false,
+    "entries": {},
+    "order": [],
+    "total_bytes": 0
+  },
+  "metadata": {
+    "creators": [
+      {
+        "person_or_org": {
+          "family_name": "Huang",
+          "given_name": "Biting",
+          "name": "Huang, Biting",
+          "type": "personal"
+        }
+      }
+    ],
+    "description": "<h1>CondTerm</h1>\n<p>CondTerm is a tool for generating accurate termination conditions for loops. It is based on data-driven termination prover ddlTerm and non-termination prover RSLearn.</p>\n<h2>Install on Linux</h2>\n<p><em>We tested the following procedure on Ubuntu 22.04.</em></p>\n<ol>\n<li>\n<p>Install the <a href=\"https://www.mono-project.com/download/stable/#download-lin\">Mono environment</a></p>\n</li>\n<li>\n<p>Install python3, gcc/g++, make and the necessary pip packages</p>\n<pre><code>&nbsp;apt install -y gcc g++ make python3 python3-pip</code><br><code> pip install pandas scipy scikit-learn antlr4-python3-runtime xlsxwriter</code></pre>\n</li>\n<li>\n<p>Build Boogie in <code>ice/popl16_artifact/Boogie/Source</code></p>\n<pre><code>&nbsp;msbuild NewBoogie.sln</code></pre>\n</li>\n<li>\n<p>Build C5.0 in <code>ice/popl16_artifact/C50</code></p>\n<pre><code>&nbsp;make clean; make all</code></pre>\n<p>Then, copy all generated <code>c5.0.*</code> into <code>ice/popl16_artifact/Boogie/Binaries</code></p>\n</li>\n<li>\n<p>Download <code>z3 4.8.9</code> from <a href=\"https://github.com/Z3Prover/z3/releases/download/z3-4.8.9/z3-4.8.9-x64-ubuntu-16.04.zip\">Github</a></p>\n<p>Unzip the zip file, copy the inside <code>bin/z3</code> into <code>ice/popl16_artifact/Boogie/Binaries</code> and rename it to <code>z3.exe</code></p>\n</li>\n</ol>\n<h2>Run on Linux</h2>\n<ol>\n<li>\n<p>Please update the configuration file <code>experiment/scripts/Config.xml</code> first.</p>\n<pre><code>&nbsp;&lt;!-- A path to tmp directory --&gt;</code><br><code>&nbsp;&lt;Tmp&gt;/tmpfs&lt;/Tmp&gt;</code><br><code>&nbsp;&lt;!-- A path to output result directory --&gt;</code><br><code>&nbsp;&lt;Log_Dir&gt;/my/path/to/log&lt;/Log_Dir&gt;</code></pre>\n</li>\n<li>\n<p>Run the experiments (e.g. the main experiment in our paper)</p>\n<pre><code>&nbsp;cd CondTerm</code><br><code>&nbsp;python3 experiment/scripts/RunTasks.py experiment/scripts/Config.xml</code></pre>\n</li>\n</ol>\n<p>Following ddlTerm, we suggest using <a href=\"https://man7.org/linux/man-pages/man5/tmpfs.5.html\">tmpfs</a> to reduce the time of IO.</p>\n<p>The result Excel file will be located at <code>/my/path/to/log</code>, and the output of each benchmark will be in a subfolder within <code>outputs/</code> with the same name as the Excel file.</p>\n<h2>The Baseline Tool</h2>\n<p>To run a comparative experiment against the baseline tool Acabar, please visit <a href=\"http://loopkiller.com/acabar/acabar.php#syntax\">its website</a> to download the executable file.</p>\n<ul>\n<li>\n<p>The benchmarks manually transferred for Acabar locate in <code>experiment/condterm-benchmarks-acabar</code></p>\n</li>\n<li>\n<p>The running script can be found at <code>experiment/baseline.scripts/Acabar</code> and please modify the paths in the scripts before executing.</p>\n</li>\n</ul>\n<h2>File Structure</h2>\n<ul>\n<li>\n<p><code>experiment/</code> includes benchmarks and important scripts</p>\n<ul>\n<li>\n<p><code>scripts/</code> includes scripts to run the experiment, among which <code>CondTerm.py</code> is the main entrance of CondTerm</p>\n</li>\n<li>\n<p><code>baseline.scripts</code> contains the script for running the base line tool Acabar</p>\n</li>\n<li>\n<p><code>condterm-benchmarkd*</code> are benchmarks used for CondTerm as well as Acabar</p>\n</li>\n</ul>\n</li>\n<li>\n<p><code>src/</code> includes codes to support ddlTerm and RSLearn</p>\n<ul>\n<li>\n<p><code>RSLearner.py</code> is to prepocess and call RSLearn to get a recurrent set.</p>\n</li>\n<li>\n<p>The others are inherited from ddlTerm and we made some modification</p>\n</li>\n</ul>\n</li>\n<li>\n<p><code>ice/</code> includes an open source safety validator <code>ICE-DT</code></p>\n<ul>\n<li>\n<p>we incorporated the implementation of RSLearn into <code>popl16_artifact/Boogie/Source</code> and made some modification.</p>\n</li>\n</ul>\n</li>\n</ul>",
+    "publication_date": "2025-08-18",
+    "publisher": "Zenodo",
+    "resource_type": {
+      "id": "software",
+      "title": {
+        "de": "Software",
+        "en": "Software"
+      }
+    },
+    "rights": [
+      {
+        "description": {
+          "en": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited."
+        },
+        "icon": "cc-by-icon",
+        "id": "cc-by-4.0",
+        "props": {
+          "scheme": "spdx",
+          "url": "https://creativecommons.org/licenses/by/4.0/legalcode"
+        },
+        "title": {
+          "en": "Creative Commons Attribution 4.0 International"
+        }
+      }
+    ],
+    "title": "CondTerm-Artifact"
+  },
+  "parent": {
+    "access": {
+      "owned_by": {
+        "user": "1292313"
+      },
+      "settings": {
+        "accept_conditions_text": null,
+        "allow_guest_requests": false,
+        "allow_user_requests": false,
+        "secret_link_expiration": 0
+      }
+    },
+    "communities": {},
+    "id": "16891884",
+    "pids": {
+      "doi": {
+        "client": "datacite",
+        "identifier": "10.5281/zenodo.16891884",
+        "provider": "datacite"
+      }
+    }
+  },
+  "pids": {
+    "doi": {
+      "client": "datacite",
+      "identifier": "10.5281/zenodo.16891885",
+      "provider": "datacite"
+    },
+    "oai": {
+      "identifier": "oai:zenodo.org:16891885",
+      "provider": "oai"
+    }
+  },
+  "revision_id": 3,
+  "stats": {
+    "all_versions": {
+      "data_volume": 4405863800.0,
+      "downloads": 13,
+      "unique_downloads": 11,
+      "unique_views": 33,
+      "views": 40
+    },
+    "this_version": {
+      "data_volume": 4405863800.0,
+      "downloads": 13,
+      "unique_downloads": 11,
+      "unique_views": 33,
+      "views": 40
+    }
+  },
+  "status": "published",
+  "swh": {},
+  "ui": {
+    "access_status": {
+      "description_l10n": "The record and files are publicly accessible.",
+      "embargo_date_l10n": null,
+      "icon": "unlock",
+      "id": "open",
+      "message_class": "",
+      "title_l10n": "Open"
+    },
+    "created_date_l10n_long": "August 18, 2025",
+    "creators": {
+      "affiliations": [],
+      "creators": [
+        {
+          "person_or_org": {
+            "family_name": "Huang",
+            "given_name": "Biting",
+            "name": "Huang, Biting",
+            "type": "personal"
+          }
+        }
+      ]
+    },
+    "custom_fields": {},
+    "description_stripped": "CondTerm\n\nCondTerm is a tool for generating accurate termination conditions for loops. It is based on data-driven termination prover ddlTerm and non-termination prover RSLearn.\n\nInstall on Linux\n\nWe tested the following procedure on Ubuntu 22.04.\n\n\n\n\n\nInstall the Mono environment\n\n\n\n\nInstall python3, gcc/g++, make and the necessary pip packages\n\n\u00a0apt install -y gcc g++ make python3 python3-pip pip install pandas scipy scikit-learn antlr4-python3-runtime xlsxwriter\n\n\n\n\nBuild Boogie in ice/popl16_artifact/Boogie/Source\n\n\u00a0msbuild NewBoogie.sln\n\n\n\n\nBuild C5.0 in ice/popl16_artifact/C50\n\n\u00a0make clean; make all\n\nThen, copy all generated c5.0.* into ice/popl16_artifact/Boogie/Binaries\n\n\n\n\nDownload z3 4.8.9 from Github\n\nUnzip the zip file, copy the inside bin/z3 into ice/popl16_artifact/Boogie/Binaries and rename it to z3.exe\n\n\n\nRun on Linux\n\n\n\n\n\nPlease update the configuration file experiment/scripts/Config.xml first.\n\n\u00a0<!-- A path to tmp directory -->\u00a0<Tmp>/tmpfs</Tmp>\u00a0<!-- A path to output result directory -->\u00a0<Log_Dir>/my/path/to/log</Log_Dir>\n\n\n\n\nRun the experiments (e.g. the main experiment in our paper)\n\n\u00a0cd CondTerm\u00a0python3 experiment/scripts/RunTasks.py experiment/scripts/Config.xml\n\n\n\nFollowing ddlTerm, we suggest using tmpfs to reduce the time of IO.\n\nThe result Excel file will be located at /my/path/to/log, and the output of each benchmark will be in a subfolder within outputs/ with the same name as the Excel file.\n\nThe Baseline Tool\n\nTo run a comparative experiment against the baseline tool Acabar, please visit its website to download the executable file.\n\n\n\n\n\nThe benchmarks manually transferred for Acabar locate in experiment/condterm-benchmarks-acabar\n\n\n\n\nThe running script can be found at experiment/baseline.scripts/Acabar and please modify the paths in the scripts before executing.\n\n\n\nFile Structure\n\n\n\n\n\nexperiment/ includes benchmarks and important scripts\n\n\n\n\n\nscripts/ includes scripts to run the experiment, among which CondTerm.py is the main entrance of CondTerm\n\n\n\n\nbaseline.scripts contains the script for running the base line tool Acabar\n\n\n\n\ncondterm-benchmarkd* are benchmarks used for CondTerm as well as Acabar\n\n\n\n\n\n\nsrc/ includes codes to support ddlTerm and RSLearn\n\n\n\n\n\nRSLearner.py is to prepocess and call RSLearn to get a recurrent set.\n\n\n\n\nThe others are inherited from ddlTerm and we made some modification\n\n\n\n\n\n\nice/ includes an open source safety validator ICE-DT\n\n\n\n\n\nwe incorporated the implementation of RSLearn into popl16_artifact/Boogie/Source and made some modification.",
+    "is_draft": false,
+    "publication_date_l10n_long": "August 18, 2025",
+    "publication_date_l10n_medium": "Aug 18, 2025",
+    "resource_type": {
+      "id": "software",
+      "title_l10n": "Software"
+    },
+    "rights": [
+      {
+        "description_l10n": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited.",
+        "icon": "cc-by-icon",
+        "id": "cc-by-4.0",
+        "props": {
+          "scheme": "spdx",
+          "url": "https://creativecommons.org/licenses/by/4.0/legalcode"
+        },
+        "title_l10n": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "updated_date_l10n_long": "August 18, 2025",
+    "version": "v1"
+  },
+  "updated": "2025-08-18T03:29:15.532134+00:00",
+  "versions": {
+    "index": 1,
+    "is_latest": true
+  }
+}

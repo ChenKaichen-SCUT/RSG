@@ -1,0 +1,870 @@
+                          Accurate Inference of Termination Conditions
+                    Biting Huang                                                   Zhilei Han                                       Fei He∗
+         School of Software, Tsinghua                                School of Software, Tsinghua                      School of Software, Tsinghua
+                  University                                                  University                                        University
+        Key Laboratory for Information                              Key Laboratory for Information                    Key Laboratory for Information
+             System Security, MoE                                        System Security, MoE                              System Security, MoE
+     Beijing National Research Center for                        Beijing National Research Center for              Beijing National Research Center for
+     Information Science and Technology                          Information Science and Technology                Information Science and Technology
+                Beijing, China                                              Beijing, China                                    Beijing, China
+         hbt23@mails.tsinghua.edu.cn                                 hzl21@mails.tsinghua.edu.cn                          hefei@tsinghua.edu.cn
+
+ABSTRACT                                                                                    the other hand, since temination is generally undecidable, prov-
+We present the first approach to infer termination conditions that                          ing non-termination, the dual property to termination, is another
+are accurate in the sense of precisely characterizing terminating                           active research topic. A wide range of non-termination analysis
+states. It builds on a simple but effective framework where non-                            methods have been proposed recently, including white-box anal-
+terminating states are iteratively identified and removed, and a ter-                       yses [9, 33, 40] and “guess-and-check” techniques [18, 26, 35]. To
+mination prover is employed to validate the current condition. We                           provide witness for non-termination, most of them employ the con-
+instantiate the framework with data-driven provers and design a                             cept of recurrent set [10, 25] as the non-termination argument.
+multi-way data sharing mechanism to enhance their interaction.                                 Termination and non-termination analyses both answer a “yes-
+Our proofs show that this method is correct, accurate, terminat-                            or-no” question about program behavior. However, most programs
+ing, and relatively complete. Additionally, we introduce general-                           are neither always terminating nor always non-terminating – they
+ization techniques for recurrent sets to accelerate the iteration pro-                      may terminate on some inputs but not on others. Traditional (non-
+cess. Evaluation on a benchmark of programs from the literature                             )termination analysis typically provides a binary answer, which is
+shows that our implementation significantly outperforms the state-                          insufficient for such cases where programs exhibit mixed behav-
+of-the-art tool Acabar, producing much more accurate termination                            ior. This motivates the problem of conditional termination, which
+conditions, with the proposed techniques playing a crucial role in                          aims to more precisely characterize the conditions under which a
+speeding up the convergence of the process.                                                 program terminates.
+                                                                                               Unlike termination and non-termination analyses, studies focus-
+CCS CONCEPTS                                                                                ing on generating termination conditions remain limited. Among
+                                                                                            these, Cook et al. [12] introduce potential ranking functions and
+• Theory of computation → Logic and verification.
+                                                                                            generate termination conditions by calculating preconditions that
+                                                                                            promote these functions to valid arguments. Another work [5] in-
+KEYWORDS
+                                                                                            fers termination condition by over-approximating non-terminating
+program termination, termination condition, recurrent set, black-                           states, while in [20] a condition is obtained by expanding an under-
+box learning                                                                                approximation of terminating states incrementally.
+ACM Reference Format:                                                                          However, existing methods do not guarantee the precision of
+Biting Huang, Zhilei Han, and Fei He. 2026. Accurate Inference of Termi-                    generated termination conditions and impose restrictions on pro-
+nation Conditions. In 2026 IEEE/ACM 48th International Conference on Soft-                  grams (e.g. linear affine loops), limiting their applicability. Notably,
+ware Engineering (ICSE ’26), April 12–18, 2026, Rio de Janeiro, Brazil. ACM,                false is a trivial but valid termination condition for any program,
+New York, NY, USA, 13 pages. https://doi.org/10.1145/3744916.3764568                        but its extreme imprecision renders it useless. Therefore, it is nec-
+                                                                                            essary to derive termination conditions with more accuracy, en-
+1     INTRODUCTION                                                                          compassing terminating states as much as possible.
+Termination is an essential property to establish total correctness                            In this paper, we introduce the first framework for inferring
+of programs. As a classical problem in formal verification, it has                          termination conditions that are accurate in the sense of precisely
+been extensively studied in the past, and considerable termination                          characterizing terminating states. This approach leverages existing
+analysis tools [3, 23, 28, 31] have emerged in the last decade. On                          (non-)termination provers to iteratively identify non-terminating
+                                                                                            states, remove them from the program, and verify termination of
+∗ Fei He is the corresponding author.
+                                                                                            the remaining states. Once termination is proven, the termination
+                                                                                            condition is derived from all previously identified non-termination
+Permission to make digital or hard copies of part or all of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed       arguments. The framework is prover-agnostic and highly versatile.
+for profit or commercial advantage and that copies bear this notice and the full citation   We instantiate it with data-driven provers and design a multi-way
+on the first page. Copyrights for third-party components of this work must be honored.
+For all other uses, contact the owner/author(s).
+                                                                                            data sharing mechanism to enhance efficiency. To further reduce
+ICSE ’26, April 12–18, 2026, Rio de Janeiro, Brazil                                         iterations, we introduce a generalization framework for recurrent
+© 2026 Copyright held by the owner/author(s).                                               sets, expanding the identified non-terminating states.
+ACM ISBN 979-8-4007-2025-3/26/04
+https://doi.org/10.1145/3744916.3764568
+ICSE ’26, April 12–18, 2026, Rio de Janeiro, Brazil                                                                              Biting Huang, Zhilei Han, and Fei He
+
+
+   Based on this, we establish the correctness of our approach. First,                Several existing techniques (e.g., [30]) can decompose programs
+we prove its soundness and accurateness, ensuring that the derived                 into loops. This allows us to derive analysis results for programs
+predicate exactly characterizes all terminating states. Second, we                 by analyzing each loop individually.
+show that the method is guaranteed to terminate, provided that the
+                                                                                      Definition 2.1 (Loop). A loop 𝐿 is a triple 𝐿 = (T𝑠𝑡𝑒𝑚 , G𝑙𝑜𝑜𝑝 , T𝑙𝑜𝑜𝑝 ),
+accurate condition can be expressed as a boolean combination of
+                                                                                   where T𝑠𝑡𝑒𝑚 and T𝑙𝑜𝑜𝑝 are transition formulas representing all tran-
+certain atomic predicates, the non-termination prover is relatively
+                                                                                   sitions from the initial states to the loop entry and within the loop
+complete, and the recurrent set identified in each iteration satisfies
+                                                                                   body respectively, and G𝑙𝑜𝑜𝑝 defines the loop’s entry condition.
+a bound condition (fully described in Section 4.4). Furthermore, if
+the termination prover is also complete under these conditions, our                    In analyzing a loop, we identify two types of states: the pro-
+approach is guaranteed to return the accurate termination condi-                   gram’s initial states, and loop-head states, which are states at the
+tion. To the best of our knowledge, no existing technique offers                   loop entry and are reachable from an initial state. A trace of a loop
+such theoretical guarantees on both precision and convergence.                     is represented as a sequence of loop-head states 𝑠 1, 𝑠 2, ..., such that:
+   We have implemented a prototype tool CondTerm based on the                          (1) (𝑠𝑖 , 𝑠𝑖+1 ) ⊨ T𝑙𝑜𝑜𝑝 for all 𝑖 ≥ 1,
+data-driven termination prover ddlTerm [55] and non-termination                        (2) if the trace is finite with length 𝑛, then 𝑠𝑖 |= G𝑙𝑜𝑜𝑝 for 1 ≤
+prover RSLearn [26]. Using the benchmarks from [55] and [26], we                           𝑖 < 𝑛 and 𝑠𝑛 6 |= G𝑙𝑜𝑜𝑝 ; if the trace is infinite, then 𝑠𝑖 |= G𝑙𝑜𝑜𝑝
+show that our approach can infer accurate termination conditions                           for all 𝑖 ≥ 1.
+for both terminating and non-terminating programs. Additionally,
+                                                                                       Throughout this paper, it is assumed that T𝑙𝑜𝑜𝑝 is deterministic,
+we also compare with Acabar [20], the latest tool for generating
+                                                                                   i.e., ∀𝑥, 𝑥 0, 𝑥 00 , T𝑙𝑜𝑜𝑝 (𝑥, 𝑥 0 ) ∧ T𝑙𝑜𝑜𝑝 (𝑥, 𝑥 00 ) → 𝑥 0 = 𝑥 00 . Each loop-
+termination conditions. Experimental results indicate that we can
+                                                                                   head state then induces a trace of the loop. A loop-head state 𝑠 is
+handle a significantly larger set of programs than Acabar and pro-
+                                                                                   said to be terminating (resp. non-terminating) if the trace starting
+duce more accurate termination conditions.
+                                                                                   from 𝑠 is finite (resp.infinite). Furthermore, a loop 𝐿 is said to be
+   Overall, the main contributions of this paper are as follows:
+                                                                                   terminating if each loop-head state of 𝐿 is terminating. Conversely,
+     • We propose the first framework for inferring termination                    a loop is non-terminating if it has at least one non-terminating loop-
+       conditions that are accurate in the sense of precisely charac-              head state, corresponding to an infinite trace.
+       terizing terminating states, and introduce a multi-way data                     For a loop 𝐿 = (T𝑠𝑡𝑒𝑚 , G𝑙𝑜𝑜𝑝 , T𝑙𝑜𝑜𝑝 ) and a predicate 𝜑, the instru-
+                                                                                                                               𝜑                                  𝜑
+       sharing mechanism to enhance efficiency.                                    mentation of 𝐿 with 𝜑 is 𝐿𝜑 = (T𝑠𝑡𝑒𝑚 , G𝑙𝑜𝑜𝑝 , T𝑙𝑜𝑜𝑝 ), where T𝑠𝑡𝑒𝑚 is
+                                                                                                            𝜑
+     • We theoretically establish the correctness of the approach,                 given by ∀®    𝑥, 𝑥®0 .T𝑠𝑡𝑒𝑚 (𝑥,
+                                                                                                                  ® 𝑥®0 ) ⇔ T𝑠𝑡𝑒𝑚 (𝑥, ® 𝑥®0 ) ∧ 𝜑 (𝑥®0 ). This is equiv-
+       specifically ensuring its soundness, accurateness, termina-                 alent to inserting the statement “assume (𝜑)” immediately before
+       tion, and relative completeness.                                            the loop entry, ensuring that 𝜑 holds when 𝐿 is first entered.
+     • We introduce a generalization framework for recurrent sets
+                                                                                      Definition 2.2 (Termination Condition). A formula 𝜑 is called a
+       and provide guarantees for its correctness.
+                                                                                   termination condition of a loop 𝐿 if 𝐿𝜑 is terminating.
+     • We implement our framework and demonstrate that it out-
+       performs existing tools in both the number of solved cases                     Termination conditions characterize conditions under which the
+       and the precision of the generated conditions.                              loop is guaranteed to be terminating. Moreover, we define the ac-
+                                                                                   curate termination condition, meaning that the program will ter-
+   The remainder of the paper is organized as follows: Section 2                   minate if and only if the condition holds.
+introduces basic concepts and background knowledge. Section 3
+provides an overview of our approach through an illustrative ex-                         Definition 2.3 (Accurate Termination Condition). A termination
+ample. Section 4 presents the framework for inferring accurate ter-                condition 𝜑 is accurate if it precisely characterizes the set of all
+mination conditions.Section 5 details the technique to generalize                  terminating loop-head states. In other words, any loop-head state
+recurrent set obtained from non-termination prover. Section 6 re-                  𝑠 6 |= 𝜑 must be non-terminating.
+ports evaluation results of CondTerm. Section 7 reviews related                       For brevity, in the remainder of this paper, we will often ab-
+work and Section 8 concludes the paper.                                            breviate “terminating/non-terminating loop-head states” as simply
+                                                                                   “terminating/non-terminating states”.
+2 PRELIMINARIES
+                                                                                   2.2     Recurrent Set
+2.1 Basic Concepts                                                                 To prove non-termination, the standard approach is to identify a
+In this paper, we denote by 𝒙® the set of program variables. A state               recurrent set, a set of states from which execution can repeat indef-
+𝑠 is a valuation of variables, while a transition (𝑠, 𝑠 0 ) represents an          initely without getting out of the set. The existence of such a set
+execution from state 𝑠 to its successor 𝑠 0 . Transitions are described            guarantees an infinite trace, establishing non-termination.
+by transition formula, a formula over 𝒙∪  ® 𝒙®0 , where primed variables
+𝒙®0 represent values after the transition. The combined valuation 𝑠                   Definition 2.4 (Recurrent Set). A predicate R is a recurrent set of a
+and 𝑠 0 is given by 𝜎𝑠,𝑠 0 where 𝜎𝑠,𝑠 0 (𝑣) = 𝑠 (𝑣) and 𝜎𝑠,𝑠 0 (𝑣 0 ) = 𝑠 0 (𝑣).   deterministic loop 𝐿 = (T𝑠𝑡𝑒𝑚 , G𝑙𝑜𝑜𝑝 , T𝑙𝑜𝑜𝑝 ) if it satisfies the recur-
+For a formula 𝜙, we say state 𝑠 |= 𝜙 if the valuation of 𝑠 satisfies 𝜙.            rent set constraints RSC(R) := RC(R) ∧ GC(R) ∧ IC(R), where:
+Similarly, for a transition formula 𝑓 , we say transition (𝑠, 𝑠 0 ) |= 𝑓               • RC(R) ⇔ ∃®     𝑥, 𝑥®0 . T𝑠𝑡𝑒𝑚 (𝑥,
+                                                                                                                        ® 𝑥®0 ) ∧ R(𝑥®0 )     (reachability)
+if the combined valuation of 𝑠 and 𝑠 0 satisfies 𝑓 .                                   • GC(R) ⇔ ∀®     𝑥 . R(𝑥)® → G𝑙𝑜𝑜𝑝 (𝑥)   ®                    (guard)
+Accurate Inference of Termination Conditions                                                                  ICSE ’26, April 12–18, 2026, Rio de Janeiro, Brazil
+
+
+                 𝑥, 𝑥®0 . R(𝑥)
+      • IC(R) ⇔ ∀®                     ® 𝑥®0 ) → R(𝑥®0 )
+                            ® ∧ T𝑙𝑜𝑜𝑝 (𝑥,                        (inductive-                              1 while (t != 0) {
+                                                                                                          2   if (t < -w) {
+        ness)                                                                                             3     t := t - 1;
+                                                                                                          4     t := t * (- 1);
+   In the definition, RC(R) ensures that R is reachable from the be-                                      5   }
+ginning of the loop; GC(R) guarantees that each state in R satisfies                                      6   else if (t > w) {
+                                                                                                          7     t := t + 1;
+the loop guard, thus does not terminate; IC(R) demonstrates the                                           8     t := t * (- 1);
+inductiveness of R, showing that states in R remain within the set                                        9   }
+                                                                                                         10   else {
+after each loop iteration. Therefore, once the program execution
+                                                                                                         11       t := 0;
+reaches R, it will continue to execute indefinitely within R, ensur-                                     12   }
+ing the existence of a reachable infinite trace. For a predicate H, if                                   13 }
+
+RSC(H) is valid, we say H defines a valid recurrent set of 𝐿.
+                                                                                                Figure 1: An illustrative example.
+2.3     Black-box Learning
+Black-box learning is a powerful approach for program analysis
+that consists of two components: a learner and a teacher. It treats              move further away from 0 with each iteration, resulting in infinite
+the program as a black box, extracting samples without examin-                   execution. When 𝑤 < 0 and 𝑡 ≠ 0, the loop terminates if and only
+ing its internal structure. The learner uses these samples to infer a            if 𝑡 < −𝑤 and 𝑡 = 1, i.e. 𝑤 <= −2 ∧ 𝑡 = 1. Otherwise, 𝑡 will move
+target hypothesis, while the teacher validates it. If valid, a desired           away from 0 and the loop executes infinitely. Additionally, when
+proof is established. Otherwise, the teacher provides counterexam-               𝑡 = 0, the loop always terminates as the loop guard condition fails.
+ples for further learning iterations. This approach decouples the                    Notably, many predicates can serve as termination conditions
+learning process from the program’s semantics, enabling it to han-               for this loop, but not all are useful. For example, the trivial predi-
+dle more complex cases, such as non-linear assignments.                          cate false technically qualifies but excludes all executions, provid-
+    Program analysis based on the black-box framework typically                  ing no useful information about the loop’s behavior. Our objective
+relies on decision tree learning, a well-studied machine learning                is to infer an accurate termination condition (Section 4).
+technique with many established algorithms like ID3 [48], C4.5 [49]                  We begin by guessing true as the initial conjecture for the ac-
+and C5.0. Decision tree learning has already been applied in both                curate terminating condition, denoted as 𝜑 0 . To validate whether
+termination analysis [55] and non-termination analysis [26], lever-              𝜑 0 is an accurate termination condition, we attempt to prove the
+aging its structured approach to classify program behaviors and                  termination of L𝜑 0 , the instrumented version of L with 𝜑 0 . Since
+facilitate the learning of (non-)termination arguments.                          the statement assume (true) has no effect on the original loop, the
+    Specifically, an attribute is a numerical expression over 𝑥,      ® with     termination proving of L𝜑 0 must fail.
+different methods focusing on different attributes. For example,                     Next, we turn to a non-termination prover to check if L𝜑 0 is
+the octagonal domain includes attributes {±𝑥 ± 𝑦|𝑥, 𝑦 ∈ 𝑥®}. Given               non-terminating. Given that the instrumented loop is indeed non-
+a finite set of attributes A = {𝑎 1, 𝑎 2, . . . , 𝑎𝑛 }, an atomic predicate      terminating, we assume the non-termination prover returns a re-
+takes the form 𝑎 ≤ 𝑐, where 𝑎 ∈ A and 𝑐 is a constant. A deci-                   current set R𝑜1 : 𝑤 = 0 ∧ (𝑡 ≤ −2 ∨ 0 < 𝑡), which characterizes a
+sion tree is a boolean combination of atomic predicates. In decision             set of non-terminating states. To expedite the iterative process, we
+tree learning, the learner selects the most suitable atomic predicate            apply a generalization technique to expand the returned recurrent
+𝑎 ≤ 𝑐 based on information gain, splitting the state space into two              set. For instance, R𝑜1 is generalized to R1 : 𝑤 = 0 ∧ (𝑡 ≤ −1 ∨ 0 < 𝑡).
+regions: one where 𝑎 ≤ 𝑐 holds and one where it does not. This pro-              This generalization process (Section 5) is guaranteed to preserve
+cess continues iteratively, refining the state space and producing a             the validity of the recurrent set, meaning the expanded states must
+structured decision tree that best fits the samples.                             also be non-terminating.
+    A widely-used decision tree learning framework for verification                  As all states identified by R1 are confirmed as non-terminating,
+is the ICE framework [21], which classifies samples into three cate-             the accurate termination condition must exclude these states. Con-
+gories: positive, negative and implicative. Positive samples 𝑆 + (resp.          sequently, we refine our conjecture 𝜑 0 to 𝜑 1 := 𝜑 0 ∧ ¬R1 ≡ 𝑤 ≠
+negative samples 𝑆 − ) represent program states that must be in-                 0 ∨ (−1 < 𝑡 ∧ 𝑡 ≤ 0), thereby excluding the non-terminating states
+cluded in (resp. excluded from) the target predicate. An implicative             identified by R1 . The refined conjecture 𝜑 1 is then used to instru-
+sample (𝑠 1, 𝑠 2 ) ∈ 𝑆 → signifies that if 𝑠 1 satisfies the target predicate,   ment the loop L, yielding L𝜑 1 .
+then so does 𝑠 2 . The ICE framework learns a decision tree that sat-                We now apply the same process to L𝜑 1 . Once again, the termi-
+isfies all conditions imposed by the sample set 𝑆 = (𝑆 +, 𝑆 − , 𝑆 → ).           nation proving for L𝜑 1 fails, while the non-termination proving
+                                                                                 yields a new recurrent set, which, after generalization, yields R2 .
+3     AN ILLUSTRATIVE EXAMPLE                                                    Accordingly, we refine the conjecture further to 𝜑 2 := 𝜑 1 ∧ ¬R2 ,
+In this section, we illustrate the core idea of our approach through             and obtain the new instrumented loop L𝜑 2 . This process continues
+a simple example. Consider the loop L in Figure 1, where 𝑡 and 𝑤                 iteratively until the 9th refinement, resulting in the final conjec-
+are integer variables of the program.                                            ture: 𝜑 9 : (𝑤 ≥ 0 ∧ −𝑤 ≤ 𝑡 ≤ 𝑤) ∨ 𝑡 = 0 ∨ (𝑤 ≤ −2 ∧ 𝑡 = 1).
+   By analyzing the behavior of the loop, we can observe that when               At this point, the instrumented loop L𝜑 9 successfully passes the
+𝑤 ≥ 0, if −𝑤 ≤ 𝑡 ≤ 𝑤, 𝑡 is set to 0 in the loop body and subse-                  termination proof.
+quently exits the loop. If 𝑡 < −𝑤 or 𝑡 > 𝑤, the loop body incre-                     Given the soundness and accurateness of our approach (estab-
+ments the absolute value of 𝑡 by 1 and flips its sign, causing 𝑡 to              lished in Section 4.4), we can confidently conclude that 𝜑 9 is an
+ICSE ’26, April 12–18, 2026, Rio de Janeiro, Brazil                                                                           Biting Huang, Zhilei Han, and Fei He
+
+             Loop L
+                                                                                         Algorithm 1: Inference of Accurate Termination Condi-
+                                      φ := φ ∧ ¬R
+       φ := true                                                                         tions.
+                   Lφ                                          Yes, a recurrent set R
+                                                                                           input : A loop 𝐿 = (T𝑠𝑡𝑒𝑚 , G𝑙𝑜𝑜𝑝 , T𝑙𝑜𝑜𝑝 )
+      Termination Prover                                 Non-Termination Prover            output : An accurate termination condition 𝜑 of 𝐿, or
+                                                                                                   “Unknown” if such condition cannot be inferred.
+           Loop Bound                    Data                Non-Termination            1 𝜑 := True
+             Samples                    Storage                 Samples
+                                                                                        2  while True do
+                                                                                                        𝜑
+      Is Lφ terminating?        Multi-way data sharing   Is Lφ non-terminating?
+                                                                                         3   𝐿𝜑 := (T𝑠𝑡𝑒𝑚 , G𝑙𝑜𝑜𝑝 , T𝑙𝑜𝑜𝑝 )
+            Yes                                                      Unknown             4   𝑟𝑠𝑡 := termination_prover (𝐿𝜑 )
+                                        Unknown
+                                                                                         5   if 𝑟𝑠𝑡 is “Yes” then
+            return φ                                         report Unknown              6        return 𝜑
+                                                                                         7    (𝑟𝑠𝑡, R) := nontermination_prover (𝐿𝜑 )
+                   Figure 2: The inference framework.
+                                                                                         8    if 𝑟𝑠𝑡 is “Unknown” then
+                                                                                         9        return “Unknown”
+                                                                                               // R := rs_generalization (R)
+accurate termination condition for the original loop L. Addition-
+                                                                                        10    𝜑 = 𝜑 ∧ ¬R
+ally, we have established the termination and relative complete-
+ness of our approach (in Section 4.4). This ensures that, provided
+the underlying termination and non-termination provers meet the
+specified requirements, the iterative procedure will always termi-
+nate in a finite number of steps and return an accurate termination
+condition for any given loop.                                                           in Definition 2.4 is existential, but these states can be safely ex-
+                                                                                        cluded from further consideration in the accurate termination con-
+4     INFERENCE FRAMEWORK                                                               dition. This is achieved by refining 𝜑 to 𝜑 ∧¬R (Line 10). The above
+Termination is a challenging property that requires all traces of a                     process repeats until either an accurate termination condition is in-
+loop to be finite. For loops that do not satisfy this property, our goal                ferred or the algorithm reports Unknown.
+is to infer an accurate termination condition that characterizes the
+maximal set of loop-head states that ensure finite loop traces. This                    4.2    Termination and Non-Termination Provers
+section describes the process for inferring such conditions.
+                                                                                        The versatile framework in algorithm 1 allows for the use of var-
+                                                                                        ious termination provers and non-termination provers, a consid-
+4.1      Overall Procedure                                                              erable number of which has been developed over the years and
+Figure 2 illustrates the overall procedure of our approach, with its                    manifests varying abilities to handle different classes of programs.
+pseudocode in algorithm 1. Given a loop 𝐿 = (T𝑠𝑡𝑒𝑚 , G𝑙𝑜𝑜𝑝 , T𝑙𝑜𝑜𝑝 ),                      However, since the (non-)termination provers in our framework
+the goal is to infer the accurate termination condition 𝜑 of the                        are treated as black-boxes and take the same instrumented pro-
+loop. If no such condition can be inferred, the procedure returns                       gram as input, we prefer provers that are effective, fully automated
+Unknown. Let 𝜑 represent the current conjecture for the accurate                        and apply similar and coherent algorithms. In that regard, we adopt
+termination condition. The procedure begins by initializing 𝜑 to                        two newly proposed data-driven provers, which employ black-box
+true (Line 1 in algorithm 1), and then iteratively refines 𝜑.                           learning as introduced in Section 2.3 and inherit all its benefits.
+   In each iteration, the procedure updates the loop 𝐿 to 𝐿𝜑 =                             Recall that in such data-driven provers, the target proof argu-
+   𝜑                                                       𝜑
+(T𝑠𝑡𝑒𝑚 , G𝑙𝑜𝑜𝑝 , T𝑙𝑜𝑜𝑝 ) (Line 3). As explained earlier, T𝑠𝑡𝑒𝑚 is defined               ment is synthesized from a sample set, with samples classified into
+          0    𝜑        0                  0         0
+as ∀®𝑥, 𝑥® , T𝑠𝑡𝑒𝑚 (𝑥,
+                    ® 𝑥® ) ⇔ T𝑠𝑡𝑒𝑚 (𝑥, ® 𝑥® ) ∧ 𝜑 (𝑥® ), which is equiva-               three categories: positive, negative, and implicative. Positive (resp.
+lent to inserting the statement “assume (𝜑)” before the loop entry.                     negative) samples indicate that the required argument must hold
+Thus, only executions where 𝜑 holds upon the initial entry into 𝐿                       (resp. not hold) on these samples, while implicative samples repre-
+are taken into account.                                                                 sent the transition constraints that the argument needs to satisfy.
+   The instrumented loop 𝐿𝜑 is then passed to a termination prover                         These samples are either statically obtained or dynamically ob-
+(Line 4). If termination is established, the procedure stops and re-                    served from the program, though the exact data represented by a
+turns 𝜑 as the inferred accurate termination condition. Otherwise,                      sample may varies slightly among provers. For a data-driven ter-
+a non-termination prover is invoked to determine whether 𝐿𝜑 ex-                         mination prover such as ddlTerm [55], the goal is to learn a correct
+hibits non-termination (Line 7). If successful, the prover returns a                    loop bound from loop bound samples to serve as the program’s
+recurrent set R as the non-termination argument. Otherwise, nei-                        termination argument. Therefore, each sample includes a program
+ther termination nor non-termination of 𝐿𝜑 can be proved, the pro-                      state and its corresponding loop bound. On the other hand, a data-
+cedure stops and returns Unknown (Line 9).                                              driven non-termination prover (such as RSLearn [26]) aims to learn
+   Each recurrent set represents a set of loop-head states that are                     a valid recurrent set from a set of non-termination samples, which
+confirmed to be non-terminating. Note that states in recurrent sets                     includes a program state as well as its termination behavior (i.e.,
+might not be reachable since the reachability constraint RC(R)                          whether it terminates or not).
+Accurate Inference of Termination Conditions                                                             ICSE ’26, April 12–18, 2026, Rio de Janeiro, Brazil
+
+
+   Moreover, with regard to the validation of the inferred candi-           samples. For the loop bound learner, if a reused terminating sam-
+date argument, termination provers rely on a safety checker to ver-         ple does not contain an loop bound, it is used as a test input for
+ify the correctness of a candidate bound, which entails deriving a          the program to obtain the corresponding loop bound by dynamic
+suitable loop invariant. In this context, the widespread adoption of        execution. As a result, the discovered samples can be shared across
+data-driven approaches is exemplified by the ICE framework [21],            provers and iterations, therefore enhancing overall efficiency.
+which employs positive, negative, and implicative samples for in-              A simple data-sharing mechanism was previously introduced
+variant learning and has been applied in ddlTerm. On the other              in [55] for data-driven termination analysis. However, that method
+hand, for non-termination provers, the validation of a recurrent            was relatively limited, as it only facilitated information exchange
+set is performed using an SMT solver, which checks whether the              between H and (𝑆𝑖𝑛𝑣 + , 𝑆 − ) while overlooking implicative samples.
+                                                                                                     𝑖𝑛𝑣
+candidate satisfies the formal definition of a recurrent set.               In contrast, our approach adopts a more comprehensive and effec-
+                                                                            tive sharing strategy by incorporating both terminating and im-
+                                                                            plicative samples. These implicative samples are essential in the
+4.3     Multi-way Data Sharing
+                                                                            ICE learning framework, significantly improving its robustness and
+In our framework, the termination and non-termination provers               learnability [21].
+alternately analyze the program. The provers individually need
+to start verification from an empty sample set, though the sam-             4.4    Correctness
+ples generated for one prover are likely to be helpful for the other.
+Meanwhile, the provers is invoked multiple times across different           This section establishes the correctness properties of our approach.
+iterations. Although each invocation targets a slightly modified            We begin by proving the soundness of algorithm 1, then address its
+version of the program, the terminating states and the loop body            accurateness, and finally discuss its termination and relative com-
+remain unchanged. This motivates us to introduce interaction and            pleteness.
+data sharing between these two provers as well as across different             The soundness of algorithm 1 follows directly from its construc-
+iterations, which can further improve the efficiency of the scheme.         tion: if the algorithm returns a predicate 𝜑, this can only happen at
+   In our framework, we design a multi-way data sharing shown               Line 6, which indicates that the termination of 𝐿𝜑 has been proven
+as the red part in Figure 2. Samples found in the two provers can be        by the termination prover (Line 4 in algorithm 1). Thus, if the ter-
+stored and reused during the whole process. Specifically, the data          mination prover is sound, 𝜑 must indeed be a valid termination
+sharing mechanism is illustrated in Figure 3.                               condition for 𝐿. Here, soundness of the termination prover means
+   As previously discussed, the termination prover and the non-             that if it returns “Yes”, then the loop passed to it must be terminat-
+termination prover together incorporate three data-driven compo-            ing. This leads us to the following theorem:
+nents: loop bound learning, invariant learning and recurrent set               TheoRem 4.1 (Soundness). Consider any loop represented as 𝐿 =
+learning, as shown in Figure 3. The samples corresponding to these          (T𝑠𝑡𝑒𝑚 , G𝑙𝑜𝑜𝑝 , T𝑙𝑜𝑜𝑝 ), if algorithm 1 returns a predicate 𝜑, then 𝜑
+three types of learning algorithms are as follows:                          is guaranteed to be a termination condition of 𝐿, provided that the
+                                                                            termination prover used in algorithm 1 is sound.
+      • Loop bound samples H consist of samples (𝑥,        ® 𝑟 ) where 𝑥®
+        represents a loop-head program state and 𝑟 is the correspond-           Establishing the accurateness of algorithm 1 is more involved,
+        ing loop bound.                                                     requiring that both the termination and non-termination provers
+      • Invariant samples 𝑆𝑖𝑛𝑣 = (𝑆𝑖𝑛𝑣+ , 𝑆 − , 𝑆 → ) consist of posi-
+                                           𝑖𝑛𝑣 𝑖𝑛𝑣                          are sound. For a non-termination prover, soundness means that if
+        tive, negative, and implicative samples for invariant learn-        it returns “Yes” along with a recurrent set, then all states within
+                                +        −
+        ing. Each element in 𝑆𝑖𝑛𝑣 or 𝑆𝑖𝑛𝑣 represents a loop-head            this set are indeed non-terminating.
+                                       → is a pair of two loop-head
+        state, while each element in 𝑆𝑖𝑛𝑣
+        states.                                                                 TheoRem 4.2 (AccuRateness). For any loop of the form 𝐿 =
+      • Recurrent set samples 𝑆𝑟𝑠 = (𝑆𝑟𝑠  + , 𝑆 − , 𝑆 → ) follow a simi-
+                                               𝑟𝑠 𝑟𝑠
+                                                                            (T𝑠𝑡𝑒𝑚 , G𝑙𝑜𝑜𝑝 , T𝑙𝑜𝑜𝑝 ), if algorithm 1 returns a predicate 𝜑, then 𝜑
+        lar structure to 𝑆𝑖𝑛𝑣 but are used in the context of recur-         is guaranteed to be an accurate termination condition for 𝐿, provided
+        rent set learning, where positive samples 𝑆𝑟𝑠    + denote non-      that the termination and non-termination provers used in algorithm 1
+                                            −
+        terminating loop-head states and 𝑆𝑟𝑠 represent terminating          are sound.
+        ones.
+                                                                                 PRoof. Suppose the algorithm returns 𝜑 after 𝑛 complete itera-
+   Among these, two types of samples explicitly indicate termina-           tions (i.e., Lines 3-10 in algorithm 1), with recurrent sets inferred
+tion: loop bound samples in H , as a known loop bound guarantees            in each iteration being R1, R2, · · · , R𝑛 , respectively. According to
+termination, and negative recurrent set samples 𝑆𝑟𝑠− , which repre-         algorithm 1, we have 𝜑 := ¬R1 ∧ ¬R2 ∧ · · · ∧ ¬R𝑛 ≡ ¬(R1 ∨ R2 ∨
+sent terminating states without an associated loop bound. Both              · · · ∨ R𝑛 ). By Theorem 4.1, 𝜑 is a valid termination condition.
+categories are stored as terminating samples in our data storage.                Now, assume for contradiction that 𝜑 is not accurate enough. By
+Additionally, we collect implicative samples from invariant learn-          Definition 2.3, there must exist a loop-head state 𝑠 6 |= 𝜑 such that 𝑠
+                                              → and 𝑆 → , which aid
+ing and recurrent set learning, specifically 𝑆𝑖𝑛𝑣                           is terminating. Given 𝑠 6 |= 𝜑, it follows that 𝑠 must belong to one of
+                                                      𝑟𝑠
+in inferring additional terminating states.                                 the recurrent sets R1, R2, . . . , R𝑛 . However, this would contradict
+   During each learning phase of an iteration, the learner first at-        the soundness of the non-termination prover, which ensures that
+tempts to retrieve and reuse terminating and implicative samples            all states in each recurrent set R𝑖 are non-terminating. Therefore,
+from the data storage, thereby avoiding the need for generating all         𝜑 must indeed be an accurate termination condition.                   □
+ICSE ’26, April 12–18, 2026, Rio de Janeiro, Brazil                                                                       Biting Huang, Zhilei Han, and Fei He
+
+
+
+
+                                                      Figure 3: Illustration of multi-way data sharing.
+
+
+   The two theorems above establish the functional correctness of                satisfies 𝑚𝑎𝑥𝑐 (𝑅) ≤ 𝑚𝑎𝑥𝑐 (¬𝜑 ∗ ), the algorithm is guaranteed to
+algorithm 1. We now proceed to demonstrate termination of the                    terminate after a finite number of iterations.
+algorithm itself, i.e., after a finite number of iterations, the algo-                                                                           □
+rithm will always terminate by either returning an accurate ter-
+mination condition or reporting Unknown. This property relies on                    Notably, the termination prover ddlTerm is sound [55], and the
+the properties of the non-termination prover. Specifically, a non-               non-termination prover RSLearn has been proven both sound and
+termination prover is deemed relatively complete if it satisfies the             relatively complete [26]. What’s more, according to Theorem 2
+following condition: given a set of attributes A = {𝑎 1, · · · , 𝑎𝑛 }, for       in [26], RSLearn can identify the recurrent set 𝑅 with the minimum
+any loop 𝐿 = (T𝑠𝑡𝑒𝑚 , G𝑙𝑜𝑜𝑝 , T𝑙𝑜𝑜𝑝 ), the non-termination prover is             𝑚𝑎𝑥𝑐 (𝑅), satisfying the premise of Theorem 4.3. Thus, instantiating
+guaranteed to terminate and return a recurrent set as long as 𝐿 has              our approach with ddlTerm and RSLearn ensures soundness, accu-
+a recurrent set expressible as a boolean combination of predicates               rateness, and termination, establishing it as an effective framework
+of the form 𝑎 ≤ 𝑐, where 𝑎 ∈ A and 𝑐 is an integer. Furthermore,                 for inferring accurate termination conditions for loops.
+for any formula 𝜑 expressed in this form, we define 𝑚𝑎𝑥𝑐 (𝜑) to be                  Furthermore, if the termination prover is complete, i.e., it can al-
+the maximum absolute value of all constants 𝑐 appearing in 𝜑.                    ways successfully prove termination when the loop is indeed termi-
+                                                                                 nating, we can establish the relative completeness of our approach.
+   TheoRem 4.3 (TeRmination). Given a loop expressed as 𝐿 =
+                                                                                     TheoRem 4.4 (Relative Completeness). Given a loop denoted
+(T𝑠𝑡𝑒𝑚 , G𝑙𝑜𝑜𝑝 , T𝑙𝑜𝑜𝑝 ) and a set of attributes A = {𝑎 1, ..., 𝑎𝑛 }, if the
+                                                                                 by 𝐿 = (T𝑠𝑡𝑒𝑚 , G𝑙𝑜𝑜𝑝 , T𝑙𝑜𝑜𝑝 ) and a set of attributes A = {𝑎 1, ..., 𝑎𝑛 },
+accurate termination condition 𝜑 ∗ of 𝐿 can be expressed as a boolean
+                                                                                 if the accurate termination condition 𝜑 ∗ of 𝐿 can be expressed as a
+combination of atomic predicates 𝑎 ≤ 𝑐 where 𝑎 ∈ A and c is any in-
+                                                                                 boolean combination of atomic predicates 𝑎 ≤ 𝑐 where 𝑎 ∈ A and 𝑐 is
+teger, then algorithm 1 is guaranteed to terminate, provided that the
+                                                                                 any integer, then algorithm 1 is guaranteed to terminate with an ac-
+termination prover used in algorithm 1 is sound, the non-termination
+                                                                                 curate termination condition, provided that the termination and non-
+prover is both sound and relatively complete, and the recurrent set 𝑅
+                                                                                 termination provers used in algorithm 1 are both sound and complete
+identified in each iteration by it satisfies 𝑚𝑎𝑥𝑐 (𝑅) ≤ 𝑚𝑎𝑥𝑐 (¬𝜑 ∗ ).
+                                                                                 (or relatively complete), and the recurrent set 𝑅 identified in each it-
+                                                                                 eration satisfies 𝑚𝑎𝑥𝑐 (𝑅) ≤ 𝑚𝑎𝑥𝑐 (¬𝜑 ∗ ).
+   PRoof. In each iteration, the algorithm either terminates or in-
+fers a new recurrent set. Suppose the algorithm is at the (𝑖 + 1)-th                PRoof. Theorem 4.2 and Theorem 4.3 ensure the algorithm’s ter-
+iteration, with the recurrent sets inferred in the preceding 𝑖 iter-             mination, with any resulting predicate 𝜑 being a precise termina-
+ations being R1, R2, . . . , R𝑖 , so the current conjecture 𝜑 is ¬R1 ∧           tion condition. Therefore, it suffices to prove that the algorithm
+¬R2 ∧ · · · ∧ ¬R𝑖 . If the algorithm does not terminate at the current           is guaranteed to return a predicate, or equivalently, the algorithm
+iteration, meaning that 𝐿𝜑 remains non-terminating and a recur-                  will not terminate with Unknown.
+rent set is inferred. Since ¬𝜑 ∗ , the negation of the accurate ter-                Let 𝜑 be the current conjecture of the condition. If 𝐿𝜑 is passed
+mination condition, characterizes all non-terminating states, there              to the non-termination prover, it must be non-terminating. Other-
+exists a loop-head state 𝑠 |= ¬𝜑 ∗ that is reachable from the begin-             wise, the termination prover would have confirmed termination,
+ning of 𝐿𝜑 . Additionally, as ¬𝜑 ∗ represents all non-terminating                leading to a halt with 𝜑. As discussed in Theorem 4.3, ¬𝜑 ∗ serves
+states of 𝐿, it serves as a recurrent set for 𝐿 and, by extension,               as a recurrent set for 𝐿𝜑 . Since 𝜑 ∗ can be expressed as a boolean
+for 𝐿𝜑 . Therefore, there exists a recurrent set 𝑅 for 𝐿𝜑 such that              combination of atomic predicates 𝑎 ≤ 𝑐 where 𝑎 ∈ A and 𝑐 is an
+𝑚𝑎𝑥𝑐 (𝑅) ≤ 𝑚𝑎𝑥𝑐 (¬𝜑 ∗ ).                                                         integer (i.e., expressible by A), ¬𝜑 ∗ is expressible by A as well.
+   Furthermore, for a finite attribute set A and an upper bound                  Thus, 𝐿𝜑 has at least one recurrent set expressible by A. Given the
+𝑚 = 𝑚𝑎𝑥𝑐 (¬𝜑 ∗ ), the number of possible atomic predicates of the                relative completeness of the non-termination prover, it is guaran-
+form 𝑎 ≤ 𝑐, where 𝑎 ∈ A and 𝑐 is bounded by 𝑚, is finite. Con-                   teed to return a recurrent set. Therefore, the algorithm will never
+sequently, the number of recurrent sets that can be expressed as                 terminate with Unknown, proving its relative completeness.
+boolean combinations of such predicates is also finite. Addition-                                                                                   □
+ally, in each iteration, the algorithm excludes previously identified
+non-terminating states by the instrumentation of the loop. Thus,                 5 RECURRENT SET GENERALIZATION
+the non-termination prover will not infer the same recurrent set                 Since non-termination verification is an existential problem, mean-
+again. Finally, since the recurrent set 𝑅 identified in each iteration           ing that identifying a single state from which the program does not
+Accurate Inference of Termination Conditions                                                                ICSE ’26, April 12–18, 2026, Rio de Janeiro, Brazil
+
+
+ Algorithm 2: Recurrent Set Generalization.                                 These algorithms iteratively select optimal attributes (e.g., those
+  input : A DNF formula R : 𝑟 1 ∨ 𝑟 2 ∨ · · · ∨ 𝑟𝑛                          with the highest information gain), making attribute selection al-
+  output : Generalized DNF formula R0                                       ready well-optimized. Thus, generalizing constants within atomic
+                                                                            predicates is more relevant.
+1  for 𝑖 = 1 to 𝑛 do
+ 2     𝑟𝑖 ← predicate_elimination (𝑟𝑖 , R)
+                                                                            5.2     Generalization Techniques
+ 3     𝑟𝑖0 ← constant_generalization (𝑟𝑖 , R)
+                  ∨                                                         Now we discuss about the predicate elimination and constant gen-
+ 4     R ← 𝑟𝑖0 ∨ {𝑟 𝑗 |1 ≤ 𝑗 ≤ 𝑛, 𝑗 ≠ 𝑖}
+                                                                            eralization techniques in detail. Note that a recurrent set R satisfies
+5    return R                                                               the constraints RC(R), GC(R) and IC(R) in Definition 2.4, where
+                                                                            GC(R) and IC(R) are quantified formulas. Therefore, the validity
+                                                                            of GC ∧ IC is equivalent to the unsatisfiability of ¬GC ∨ ¬IC, i.e.
+terminate is sufficient to verify non-termination, existing meth-           the following formula Ψ(R) is unsatisfiable:
+ods [10, 11, 19] typically stop once such a state is found. When             𝑥 0, 𝑥®1, 𝑥®10 .¬(R(𝑥®0 ) → G𝑙𝑜𝑜𝑝 (𝑥))∨¬(R(
+                                                                            ∃®                                  ®        𝑥®1 )∧T𝑙𝑜𝑜𝑝 (𝑥®1, 𝑥®10 ) → R(𝑥®1 ))
+returning a recurrent set, these tools often disregard its size.                                                                                      (1)
+    However, to infer the accurate termination condition, all non-          Thus, the formula R can be generalized using the minimal UNSAT
+terminating states must be excluded. As presented in algorithm 1,           core, which identifies the smallest subset of constraints that pre-
+if the recurrent set obtained is not comprehensive enough, the ter-         serves the unsatisfiability of a formula.
+mination prover may fail to confirm termination, resulting in addi-
+tional iterations needed to generate an adequate recurrent set. This           Predicate Elimination. Let R ≡ 𝑟𝑡 ∨R𝑡 represent the initial recur-
+may lead to an increase in the overall number of iterations.                rent set, where 𝑟𝑡 is the disjunct currently under consideration for
+    To tackle this issue, we propose a recurrent set generalization         generalization, and R𝑡 denotes the remaining disjuncts. Suppose
+scheme that considers both the number of atomic predicates and              𝑟𝑡 = 𝑝 1 ∧ · · · ∧ 𝑝𝑛 where 𝑝 1, . . . , 𝑝𝑛 are atomic predicates. Firstly,
+the constants in each atomic predicate. As shown in the blue com-           for predicate elimination, a boolean variable P𝑖 is introduced for
+ment in algorithm 1, the technique is employed after getting a re-          each predicate 𝑝𝑖 , indicating whether 𝑝𝑖 is retained. The predicate
+current set from the non-termination prover. This approach signif-          𝑟𝑡 is then modified by replacing 𝑝𝑖 with P𝑖 → 𝑝𝑖 , resulting in a
+                                                                                              ∧
+icantly reduces the number of iterations in the overall framework.          new form R0 : {P𝑖 → 𝑝𝑖 |1 ≤ 𝑖 ≤ 𝑛} ∨ R𝑡 .
+                                                                               When P1 ∧ ... ∧ P𝑛 holds, R0 and R are identical. Given that R
+5.1     Framework                                                           is a recurrent set, the following formula is unsatisfiable:
+                                                                                                                      ∧
+Recall that a recurrent set is defined as a predicate satisfying the                                   Ψ(R0 ) ∧            P𝑖                      (2)
+three constraints in Definition 2.4. Given a valid recurrent set R,                                                1≤𝑖 ≤𝑛
+our goal is to generalize R into a weaker recurrent set R0 . Formally,
+the objective is to establish that R ⇒ R0 holds and R0 also satisfies          Therefore, setting Ψ(R0 ) as a hard constraint and P1, ..., P𝑛 as
+all constraints in Definition 2.4, i.e. RSC(R0 ) is valid.                  soft constraints, an UNSAT core of Equation (1) represents a mini-
+                                                                                                                                 ∧
+    Overall, the framework of recurrent set generalization is shown         mal subset U ⊆ {P1, ..., P𝑛 } such that Ψ(R0 ) ∧ P𝑖 ∈U P𝑖 remains
+in algorithm 2. We assume the input is a DNF formula 𝑅 = 𝑟 1 ∨              unsatisfiable. Denote 𝑟𝑢 = {𝑝𝑖 |P𝑖 ∈ U}. Predicates in 𝑟𝑢 are crit-
+𝑟 2 ∨ ... ∨ 𝑟𝑛 , where each disjunct 𝑟𝑖 (1 ≤ 𝑖 ≤ 𝑛) is a conjunction        ical to Equation (2)’s unsatisfiability, while others can be safely
+of several atomic predicates corresponding to an attribute set A =          eliminated. Removing these non-essential predicates yields a gen-
+                                                                                                         ∧
+{𝑎 1, 𝑎 2, ..., 𝑎𝑛 }. The recurrent set obtained from the non-termination   eralized recurrent set R𝑒 : ( 𝑝𝑖 ∈𝑟𝑢 𝑝𝑖 ) ∨ R𝑡 . It follows directly that
+                                                                                               ∧                   ∧
+prover is a boolean combination of atomic predicates over A, thus           R → R𝑒 holds, as 1≤𝑖 ≤𝑛 𝑝𝑖 implies 𝑝𝑖 ∈𝑟𝑢 𝑝𝑖 .
+can always be transformed to a DNF formula.                                    Constant Generalization. Typically, an atomic predicate may be
+    In algorithm 2, each disjunct 𝑟𝑖 (1 ≤ 𝑖 ≤ 𝑛) is iteratively con-        non-removable, but its range can be generalized. To this end, a con-
+sidered for predicate elimination and constant generalization (line         stant generalization process is introduced after predicate elimina-
+2-4). Predicate elimination (line 2) simplifies 𝑟𝑖 by removing redun-       tion to further expand the recurrent set by systematically relaxing
+dant atomic predicates, making it simpler and potentially weaker.           the constants in atomic predicates.
+Next, constant generalization (line 3) refines the simplified disjunct         Each atomic predicate 𝑎𝑖 ≤ 𝑐𝑖 (1 ≤ 𝑖 ≤ 𝑛) in 𝑟𝑡 defines an
+𝑟𝑖 by replacing each atomic predicate 𝑎 ≤ 𝑐 with 𝑎 ≤ 𝑐 0 where              interval (−∞, 𝑐𝑖 ]. For generalization, we establish a sequence of
+𝑐 0 ≥ 𝑐, aiming to weaken the formula as much as possible or leav-          distances D = {0 = 𝑑 0, 𝑑 1, 𝑑 2, ..., 𝑑𝑚 } with 𝑑 𝑗 < 𝑑 𝑗+1 for every
+ing it unchanged if generalization is not feasible.                         0 ≤ 𝑗 < 𝑚. These distances create boundaries {𝑐𝑖 +𝑑 𝑗 | 0 ≤ 𝑗 ≤ 𝑚},
+    After obtaining the generalized disjunct 𝑟𝑖0 , 𝑟𝑖 in R is replaced      partitioning the number line into disjoint intervals.
+with 𝑟𝑖0 , resulting in an updated formula R (line 4). This iterative          To find the maximum range, digging technique [56] is applied.
+update across all disjuncts produces a new recurrent set R0 , which         It was proposed for generalizing a single counterexample, while
+is highly likely weaker than R and thus contains more program               here we extend it to generalize a recurrent set. For each atomic
+states, improving the framework’s efficiency in identifying the ac-         predicate 𝑝𝑖 : 𝑎𝑖 ≤ 𝑐𝑖 , 𝑚 + 1 intervals are introduced as follows:
+curate termination condition.                                                              {
+    The generalization preserves the formula’s attributes, aligning                         𝑎𝑖 > 𝑐𝑖 + 𝑑 𝑗 −1 ∧ 𝑎𝑖 ≤ 𝑐𝑖 + 𝑑 𝑗 , if 1 ≤ 𝑗 ≤ 𝑚
+                                                                                   I𝑖,𝑗 :=
+with the nature of learning algorithms like the ICE framework [21].                         𝑎𝑖 > 𝑐𝑖 + 𝑑 𝑗 −1,                  if 𝑗 = 𝑚 + 1
+ICSE ’26, April 12–18, 2026, Rio de Janeiro, Brazil                                                                                 Biting Huang, Zhilei Han, and Fei He
+
+
+    Each I𝑖,𝑗 represents an interval separated by 𝑐𝑖 , 𝑐𝑖 +𝑑 1, ..., 𝑐𝑖 +𝑑𝑚 .       Table 1: Comparative results of CondTerm and Acabar on
+The union of all intervals forms the predicate 𝑎𝑖 > 𝑐𝑖 , the nega-                  non-terminating (NT) and terminating (T) benchmarks. The
+tion of the original 𝑝𝑖 . The digging technique attempts to remove                  numbers in parentheses indicate cases where the accurate
+some of the intervals while maintaining unsatisfiability of Ψ(R),                   termination conditions were obtained.
+and constructs a new recurrent set from remaining intervals.
+    For each I𝑖,𝑗 , a boolean variable P𝑖,𝑗 is introduced to represent                  Benchmarks                         NT                             T
+whether I𝑖,𝑗 is excluded, meaning that its negation holds. By re-
+                          ∧                                                                  Tools             CondTerm          Acabar       CondTerm        Acabar
+placing each 𝑝𝑖 with 1≤ 𝑗 ≤𝑚+1 P𝑖,𝑗 → ¬I𝑖,𝑗 , we obtain R0 as
+(∧                                 )
+                                                                                        #Solved.                  78(78)      51(41)           136(136)     64(56)
+    1≤𝑖 ≤𝑛,1≤ 𝑗 ≤𝑚+1 P𝑖,𝑗 → ¬I𝑖,𝑗 ∨ R𝑡 . Since for each 1 ≤ 𝑖 ≤ 𝑛,
+∧                                                                                      #Both Sol.                      39(39)                        57(49)
+   1≤ 𝑗 ≤𝑚+1 ¬I𝑖,𝑗 is equivalent to the original predicate 𝑎𝑖 ≤ 𝑐𝑖 , the              #Unique Sol.                39(39)       12(2)            79(87)       7(7)
+following formula is unsatisfiable:
+                                                                                     Avg. T. on Sol.(s)            8.01        0.81              14.89       3.57
+                                     ∧
+                       Ψ(R0 ) ∧                P𝑖,𝑗                       (3)
+                                      1≤𝑖 ≤𝑛,1≤ 𝑗 ≤𝑚                                   Second, the unsatisfiability of the formula Ψ(R) shown in Equa-
+   By considering Equation (3) with hard constraints Ψ(R0 ) and                     tion (1) encodes the validity of GC(R) and IC(R) in Definition 2.4.
+soft constraints {P𝑖,𝑗 |1 ≤ 𝑖 ≤ 𝑛, 1 ≤ 𝑗 ≤ 𝑚 + 1}, a minimal UNSAT                  By the properties of the UNSAT core, each step of the generaliza-
+core is obtained, indicating a sequence of intervals to be excluded.                tion process preserves the unsatisfiability of Ψ. Therefore, Ψ(R0 )
+                                                            ∧
+For an UNSAT core {I1, I2, ..., I𝑢 }, 𝑟𝑡 is updated to 𝑟𝑡0 : 𝑢𝑖=1 ¬I𝑖 .             remains unsatisfiable and thus GC(R0 ) and IC(R0 ) are valid.
+                                               ∧𝑢
+   Similarly, we get the generalized R𝑔 : ( 𝑖=1 ¬I𝑖 ) ∨ R𝑡 . Since                     Thus far, we have shown that RC(R0 ), GC(R0 ) and IC(R0 ) are
+∧
+  1≤𝑖 ≤𝑛,1≤ 𝑗 ≤𝑚+1 ¬I𝑖,𝑗 ⇔ 𝑟 𝑡 holds, the states expressed by R are                 valid, implying the validity of RSC(R0 ) := RC(R0 ) ∧ GC(R0 ) ∧
+included in thoses indicated by R𝑔 , thus R ⇒ R𝑔 is valid.                          IC(R0 ). By Definition 2.4, R0 is a valid recurrent set for 𝐿.   □
+   Example 5.1. Consider the program in Figure 1 again. In the first
+                                                                                       Next, we show that the generalization process preserves the cor-
+iteration, the original recurrent set R1 obtained is (𝑤 ≤ 0 ∧ −𝑤 ≤
+                                                                                    rectness of the overall framework. In particular, with recurrent set
+0 ∧𝑡 ≤ −2) ∨ (𝑤 ≤ 0 ∧ −𝑤 ≤ 0 ∧ −2 < 𝑡 ∧ 0 < 𝑡). The two disjuncts
+                                                                                    generalization, the four theorems in Section 4.4 continue to hold.
+are considered separately. For the first disjunct, no redundant pred-
+icates are identified during predicate elimination. Using the dis-                     TheoRem 5.3. With the inclusion of recurrent set generalization,
+tance set D = {0, 1, 2, 4, 8, 10}, constant generalization expands the              algorithm 1 continues to satisfy the four theorems in Section 4.4, en-
+atomic predicate 𝑡 ≤ −2 to 𝑡 ≤ −1, yielding 𝑤 ≤ 0 ∧ −𝑤 ≤ 0 ∧ 𝑡 ≤                    suring that the framework maintains its soundness, accurateness, ter-
+−1. For the second disjunct, predicate elimination removes the re-                  mination and relative completeness.
+dundant predicate −2 < 𝑡, while constant generalization cannot
+                                                                                       PRoof. According to Theorem 5.2, the generalized recurrent set
+expand the bounds further, yielding 𝑤 ≤ 0 ∧ −𝑤 ≤ 0 ∧ 0 < 𝑡.
+                                                                                    remains valid, thereby maintaining the soundness or relative com-
+Consequently, we obtain the generalized recurrent set R10 : (𝑤 ≤
+                                                                                    pleteness of the non-termination prover. Soundness and accurate-
+0 ∧ −𝑤 ≤ 0 ∧ 𝑡 ≤ −1) ∨ (𝑤 ≤ 0 ∧ −𝑤 ≤ 0 ∧ 0 < 𝑡), which simplifies
+                                                                                    ness follow directly, since integrating recurrent set generalization
+to 𝑤 = 0∧ (𝑡 ≤ −1∨0 < 𝑡) as discussed in Section 3. After nine iter-
+                                                                                    with a sound non-termination prover preserves its soundness.
+ations with our generalization technique, the accurate termination
+                                                                                       Termination and relative completeness are more evolved. Let
+condition 𝜑 ∗ : (𝑤 ≥ 0 ∧ −𝑤 ≤ 𝑡 ≤ 𝑤) ∨ 𝑡 = 0 ∨ (𝑤 ≤ −2 ∧ 𝑡 = 1) is
+                                                                                    𝜑𝑚 denote the desired accurate termination condition. Suppose
+successfully derived. Upon termination verification, we obtain 𝜑 ∗
+                                                                                    that in the current iteration, algorithm 1 obtains a recurrent set R
+as the final result.
+                                                                                    from the non-termination prover and generalizes it to R0 . Note that
+                                                                                    the generalization process may modify constants in the formula,
+5.3      Correctness
+                                                                                    meaning that 𝑚(R0 ) ≤ 𝑚(¬𝜑𝑚 ) may no longer hold. However, all
+This section establishes the correctness of algorithm 2, demonstrat-                states in R0 will be excluded in the next iteration. Since R ⇒ R0 ,
+ing that recurrent set generalization preserves non-termination as                  the states in R will be eliminated as well, and the non-termination
+well as the key properties of algorithm 1. First, we prove that the                 prover will not infer the same recurrent set again. Therefore, as
+generalized recurrent set remains a recurrent set for the loop:                     long as each recurrent set R obtained from the non-termination
+   TheoRem 5.2. Suppose R is a recurrent set for a loop 𝐿 = (T𝑠𝑡𝑒𝑚 ,                prover satisfies 𝑚(R) ≤ 𝑚(¬𝜑𝑚 ), the search space remains finite
+G𝑙𝑜𝑜𝑝 , T𝑙𝑜𝑜𝑝 ), then the formula R0 returned by algorithm 2 is also a              and the algorithm is guaranteed to terminate. Consequently, the
+recurrent set for 𝐿.                                                                relative completeness is preserved as well.                        □
+   PRoof. First, since R is a recurrent set, it follows from Defini-                6 EVALUATION
+tion 2.4 that there exists states 𝑥®0, 𝑥®00 such that T𝑠𝑡𝑒𝑚 (𝑥®0, 𝑥®00 )∧R(𝑥®00 )
+holds. Additionally, in the process of atomic predicate elimination                 We implement a prototype tool called CondTerm1 , which builds
+and constant generalization, it have been demonstrated that the                     on the data-driven termination prover ddlTerm [55] and the data-
+generalized predicate includes all states corresponding to the ori-                 driven non-termination prover RSLearn [26].
+gin predicate. Consequently, R ⇒ R0 holds, which implies that                          Following RSLearn, we employ the octagonal domain for recur-
+T𝑠𝑡𝑒𝑚 (𝑥®0, 𝑥®00 ) ∧ R0 (𝑥®00 ) holds as well, ensuring that R0 is reachable        rent set learning, resulting in conditions represented as boolean
+from the initial state 𝑥®0 and RC(R0 ) is valid.                                    1 The tool is available at: https://doi.org/10.5281/zenodo.16891884
+Accurate Inference of Termination Conditions                                                              ICSE ’26, April 12–18, 2026, Rio de Janeiro, Brazil
+
+
+combination of atomic predicates in the form ±𝑥 ±𝑦 ≤ 𝑐 where 𝑥, 𝑦            syntax for input, we manually converted each program for the ex-
+are program variables. For the digging technique in recurrent set            periments. The timeout for Acabar was set to 300 seconds.
+generalization, we use distance values D = {0, 1, 2, 4, 6, 8, 10, 20, 50}.      The overall results are summarized in Table 1. Out of the total
+                                                                             266 programs, CondTerm successfully derived accurate termina-
+   Benchmarks. We collect terminating benchmarks from [55] and               tion conditions for 214 programs, which is 86% more than Acabar.
+non-terminating benchmarks from [26]. Specifically, [55] uses 170            Specifically, for the 96 non-terminating benchmarks, CondTerm
+terminating programs taken from [18] and we take all of them.                accurately solved 78 cases, representing a 90% increase over Acabar.
+In [26], there are 111 linear non-terminating programs taken from            Among the 170 terminating benchmarks, CondTerm obtained the
+the C-Integer Programs category of the Termination and Complex-              accurate termination condition (i.e., true) for 136 programs, more
+ity Competition (TermComp [24]). Programs containing multiple                than twice the number accurately solved by Acabar.
+loops or non-deterministic loops, which are not supported by ddl-               Notably, Acabar is primarily designed for simple single loops
+Term, are excluded, resulting in a total of 96 benchmarks. In sum,           without stems and lacks support for non-linear assignments. Thus,
+our benchmark set consists of 266 programs, including 170 termi-             there are 137 benchmarks that Acabar could not process, whereas
+nating programs and 96 non-terminating programs.                             CondTerm is able to handle and execute them without issue. More-
+                                                                             over, while CondTerm consistently produces accurate termination
+   Environment. All experiments are conducted on a computer with
+                                                                             conditions, Acabar does not guarantee this level of precision.
+Intel (R) Core (TM) i5-12400 CPU (2.50 GHz) and 32.0 GB memory,
+                                                                                Furthermore, we analyze the results for non-terminating and
+running Ubuntu 22.04 platform. The timeout settings for ddlTerm
+                                                                             terminating benchmarks separately. For the 96 non-terminating
+and RSLearn follow the default configurations outlined in their re-
+                                                                             benchmarks, CondTerm successfully solved 78 cases, obtaining the
+spective papers and associated artifacts. Specifically, the timeout
+                                                                             accurate termination condition for each. Acabar solved 51 cases,
+for RSLearn is set to 60 seconds, while the timeouts for the three
+                                                                             with 41 resulting in accurate termination conditions. Both tools
+proving strategies of ddlTerm are set to 10, 25, and 40 seconds, re-
+                                                                             achieved accurate conditions for the 39 benchmarks they solved
+spectively. A result is reported as timeout if the tool fails to produce
+                                                                             in common. Additionally, there were 2 programs for which only
+a result after 15 iterations.
+                                                                             Acabar produced accurate termination conditions. For these bench-
+   Moreover, since termination verification can be time-consuming,
+                                                                             marks, CondTerm have generated the same conditions, but due to
+two optimizations have been implemented in our tool. On one
+                                                                             limitations of the termination prover, ddlTerm was unable to verify
+hand, a preliminary testing phase is introduced before perform-
+                                                                             termination, resulting in an unknown outcome.
+ing termination verification. During this phase, the program is ex-
+                                                                                Note that for non-terminating programs solved by Acabar, most
+ecuted with randomly generated inputs. If the number of tests re-
+                                                                             results were accurate. In essence, Acabar incrementally identifies
+sulting in timeout exceeds the number of terminating tests, the
+                                                                             terminating states by synthesizing disjunctively well-founded can-
+tool will proceed directly to non-termination verification. Mean-
+                                                                             didates. For those cases, accurate termination conditions can be di-
+while, the traces obtained during the testing phase are incorpo-
+                                                                             rectly derived from these well-founded candidates, which explains
+rated into the data storage for future reuse. If no recurrent set is
+                                                                             why Acabar occasionally produces accurate results. However, it
+found, termination verification is then used as a fallback. On the
+                                                                             does not explicitly report accuracy. Furthermore, this approach
+other hand, recognizing that ddlTerm implements three strategies,
+                                                                             would need to verify the universal non-termination of the remain-
+the tool begins by attempting only the first strategy, which has a
+                                                                             ing states to ensure accuracy, which is currently impractical. As a
+10-second timeout. If this strategy fails, the tool proceeds directly
+                                                                             result, Acabar struggles to guarantee or report accuracy, whereas
+to non-termination verification. If that also fails, the remaining two
+                                                                             CondTerm provides a formal guarantee of precision.
+strategies are then attempted.
+                                                                                Among the 170 terminating benchmarks, CondTerm solved 136
+                                                                             cases, all of which yielded the accurate termination condition true.
+6.1     Overall Evaluation                                                   In contrast, Acabar solved 64 cases, with 56 of these yielding the ac-
+Since termination is generally undecidable, verifying termination            curate condition true. For the 57 benchmarks solved by both tools,
+or non-termination is inherently challenging, let alone generating           CondTerm produced a more accurate result in 8 cases. In these
+termination conditions. Despite its fundamental importance in pro-           cases, Acabar returned a condition involving program variables,
+gram analysis, relatively few tools have been designed specifically          while CondTerm achieved the accurate condition true. These re-
+for termination condition inference, far less on ensuring accuracy.          sults highlight CondTerm’s significant advantage in both the num-
+Among existing tools, Acabar [20] is the most recent and most                ber of solved cases and the precision of termination conditions.
+comparable one, which aims to identify terminating states as com-               In terms of runtime, CondTerm is somewhat slower than Acabar,
+prehensively as possible and guarantees the generation of a ter-             mainly due to the time-consuming (non-)termination verification
+mination condition. Thus, we evaluate our tool CondTerm against              required in each iteration. In fact, the runtime of CondTerm largely
+Acabar and present the overall results in this experiment.                   depends on the (non-)termination provers. Changing the provers
+   In Acabar, the generation of termination conditions is based              or adjusting their timeout settings could lead to different runtimes.
+on transition invariants [46]. By incrementally identifying disjunc-         Meanwhile, Acabar is tailored for simpler loops and employs spe-
+tively well-founded relations, program transitions are decomposed            cialized and time-efficient algorithms for these cases.
+into those definitely terminate and those with unknown terminat-
+ing behavior. A termination condition is produced when no fur-
+ther decomposition is possible. Since Acabar requires a specific
+ICSE ’26, April 12–18, 2026, Rio de Janeiro, Brazil                                                                      Biting Huang, Zhilei Han, and Fei He
+
+
+  Table 2: Comparative results of multi-way data sharing.                          in the average time and a 16.5% increase in the number of itera-
+                                                                                   tions across all benchmarks. For benchmarks solved by both strate-
+        Benchmarks                          NT                       T             gies, “Without R.S.G.” increases average runtime by 19.4% and iter-
+                                                                                   ation counts by 8.4%. For benchmarks labeled as unknown by both
+       Enable M.D.S                  Y            N         Y               N
+                                                                                   strategies, “Without R.S.G.” results in a 11.8% increase in runtime
+        #Solved.                    78         78(0)        136        134(-2)     and a 20.1% increase in iteration counts. These results indicate that
+      T. on Sol.(s)                625          673        2025         1934       the recurrent set generalization technique significantly accelerates
+ Avg. T. on Both Sol.(s)           8.01     8.62(7.6%)     14.03     14.44(2.9%)   the iteration process and reduces the number of iterations. For solv-
+ Avg. Iter. on Both Sol.           2.29     2.32(1.3%)       1            1        able benchmarks, it facilitates faster convergence to the accurate
+                                                                                   termination condition, and for unsolvable benchmarks, it enables
+Table 3: Comparative results of recurrent set generalization.                      a quicker determination of the “unknown” result.
+
+                                                                                   7 RELATED WORK
+                 Strategy                    With R.S.G     Without R.S.G
+                                                                                      Conditional termination analysis. To date, research on generat-
+                 #Solved.                             78           76(-2)          ing termination conditions remains relatively limited. The earliest
+                        Overall                  39.11       54.86(40.3%)          approach, proposed by [12], introduces potential ranking functions
+    Avg. T.(s)       Both Solved.                7.85         9.37(19.4%)          that are bounded but not definitely decreasing, deriving termina-
+                    Both Unknown.               172.84       193.21(11.8%)         tion conditions for sequential arithmetic programs by identifying
+                                                                                   when these functions become valid. Subsequent works, such as [5]
+                        Overall                   3.03          3.53(16.5%)
+                                                                                   and [20], generate termination conditions by over-approximating
+    Avg. Iter.       Both Solved.                 2.26           2.45(8.4%)
+                                                                                   non-terminating states, relying on algebraic analysis that restricts
+                    Both Unknown.                 4.33          5.20(20.1%)
+                                                                                   their applicability. Specifically, [5] focuses on difference bounds,
+                                                                                   octagonal relations and linear affine relations, while [20] is limited
+6.2      Evaluation of Proposed Techniques                                         to linear simple loops that fit specific semantics. In contrast, our
+                                                                                   approach is independent of any specific (non-)termination provers
+To further validate our approach, we conduct experiments to eval-                  and allows for the integration of various proving methods. By lever-
+uate the effectiveness of multi-way data sharing and recurrent set                 aging two data-driven provers, it benefits from black-box learning,
+generalization.                                                                    allowing the learner to operate independently of the program’s
+   Evaluation of Multi-way Data Sharing. To assess the impact of                   semantics. This flexibility enables our method to handle complex
+multi-way data sharing (M.D.S), we compare its effectiveness on                    constructs such as non-linear assignments, which pose challenges
+non-terminating (NT) and terminating (T) benchmarks, as summa-                     for traditional algebraic methods. As a result, our approach im-
+rized in Table 2. The columns labeled “Y” and “N” indicate whether                 poses fewer structural restrictions on the programs and applies to
+M.D.S is enabled or disabled. Each column reports the number of                    a broader range of scenarios.
+solved benchmarks, the total time spent on these benchmarks, as                       Additionally, some researchers have introduced conditional ter-
+well as the average time and iteration counts for solved cases. For                mination analysis to enhance (non-)termination analysis. The au-
+non-terminating benchmarks, disabling M.D.S results in a 7.6% in-                  thors of [58] apply techniques from linear dynamical systems to de-
+crease in total time cost and a 1.3% increase in the number of itera-              velop a monotone conditional termination analysis. The work [4]
+tions. For terminating benchmarks, CondTerm successfully solves                    employs a constraint-based method, while [36] relies on Hoare-
+two additional benchmarks when M.D.S is enabled, while disabling                   style verification with second-order constraints. Other approaches
+M.D.S leads to a 2.9% increase in the average time of solved cases.                include conflict-driven learning [17], policy iteration [42], and ab-
+These results demonstrate that multi-way data sharing effectively                  stract interpretation [15, 51, 53, 54]. However, none of these exist-
+improves performance by reducing both time cost and iteration                      ing methods guarantee the precision of the generated conditions.
+counts, thereby enhancing the efficiency of the overall process.                   In contrast, our method explicitly ensures accuracy while main-
+                                                                                   taining soundness, termination, and relative completeness, provid-
+   Evaluation of Recurrent Set Generalization. Since the recurrent                 ing a strong theoretical foundation.
+set generalization is applied only after obtaining the program’s re-
+current set, it does not affect terminating programs. Therefore, we                   Termination analysis. Termination analysis has been extensively
+evaluate its effectiveness on the 96 non-terminating benchmarks.                   studied, leading to the development of numerous tools, including
+The results are presented in Table 3. The colomn “With R.S.G” and                  Terminator and its successor T2 [7, 13, 14], Tan [32], HipTNT+ [36],
+“Without R.S.G” represent the outcomes with and without recur-                     Ultimate Automizer [28], and ddlTerm [55]. Termination proofs
+rent set generalization, respectively. Each colomn displays the num-               typically rely on identifying a termination argument, such as a
+ber of solved benchmarks and the average time as well as iteration                 ranking function or a loop bound. Many approaches rely on con-
+counts for all benchmarks, solved benchmarks, and benchmarks                       straint solving [2, 6, 27, 34, 39, 45, 47], utilizing SMT solvers to
+reported as unknown.                                                               discover such arguments. For instance, the work [39] introduces
+   With the inclusion of recurrent set generalization, CondTerm                    templates for ranking functions and a constraint-based synthesis
+solved two additional benchmarks which would result in timeout                     of termination arguments. Some methods employ the “guess-and-
+without it. Additionally, “Without R.S.G.” shows a 40.3% increase                  check” technique, iteratively generating and verifying potential
+Accurate Inference of Termination Conditions                                                                 ICSE ’26, April 12–18, 2026, Rio de Janeiro, Brazil
+
+
+arguments [18, 35, 52], such as DynamiTe [35], which combines            REFERENCES
+static and dynamic analysis to learn ranking functions from sam-          [1] Yoav Alon and Cristina David. 2022. Using graph neural networks for program
+pled executions. Moreover, machine learning techniques have re-               termination. In Proceedings of the 30th ACM Joint European Software Engineer-
+                                                                              ing Conference and Symposium on the Foundations of Software Engineering (ES-
+cently gained traction in termination verification [44, 55], with             EC/FSE 2022). Association for Computing Machinery, New York, NY, USA, 910–
+approaches leveraging Support Vector Machine (SVMs) [41, 57]                  921. https://doi.org/10.1145/3540250.3549095
+                                                                          [2] Amir M. Ben-Amram and Samir Genaim. 2013. On the linear ranking problem
+and neural networks [1, 22, 50] to derive termination arguments.              for integer linear-constraint loops. SIGPLAN Not. 48, 1 (Jan. 2013), 51–62. https:
+What’s more, size-change termination (SCT) was introduced in [38],            //doi.org/10.1145/2480359.2429078
+which is a property strictly stronger than termination [29]. SCT          [3] Dirk Beyer and M. Erkan Keremoglu. 2011. CPAchecker: A Tool for Configurable
+                                                                              Software Verification. In Computer Aided Verification, Ganesh Gopalakrishnan
+abstracts programs as “size-change graphs” that track monotone                and Shaz Qadeer (Eds.). Springer, Berlin, Heidelberg, 184–190. https://doi.org/
+decreases across function calls, ensuring any infinite execution in-          10.1007/978-3-642-22110-1_16
+duces infinite descent in a well-founded measure. Subsequent work         [4] Cristina Borralleras, Marc Brockschmidt, Daniel Larraz, Albert Oliveras, Enric
+                                                                              Rodríguez-Carbonell, and Albert Rubio. 2017. Proving Termination Through
+has extracted explicit ranking functions from SCT instances [37]              Conditional Termination. In Tools and Algorithms for the Construction and Anal-
+and enforced termination dynamically via run-time contracts [43].             ysis of Systems, Axel Legay and Tiziana Margaria (Eds.). Springer, Berlin, Heidel-
+                                                                              berg, 99–117. https://doi.org/10.1007/978-3-662-54577-5_6
+                                                                          [5] Marius Bozga, Radu Iosif, and Filip Konečný. 2012. Deciding Conditional Ter-
+                                                                              mination. In Tools and Algorithms for the Construction and Analysis of Systems,
+   Non-termination analysis. Non-termination analysis was first ad-           Cormac Flanagan and Barbara König (Eds.). Springer, Berlin, Heidelberg, 252–
+                                                                              266. https://doi.org/10.1007/978-3-642-28756-5_18
+dressed in [25], which utilizes constraint-solving techniques to iden-    [6] Aaron R. Bradley, Zohar Manna, and Henny B. Sipma. 2005. Termination Anal-
+tify a recurrent set. Subsequently, the authors of [10] enhance the           ysis of Integer Linear Loops. In CONCUR 2005 – Concurrency Theory, Martín
+concept and introduced the notion of closed recurrent sets. Numer-            Abadi and Luca de Alfaro (Eds.). Springer, Berlin, Heidelberg, 488–502. https:
+                                                                              //doi.org/10.1007/11539452_37
+ous non-termination verification methods have since been devel-           [7] Marc Brockschmidt, Byron Cook, and Carsten Fuhs. 2013. Better Termination
+oped, many based on white-box analysis. For example, the work [40]            Proving through Cooperation. In Computer Aided Verification, Natasha Shary-
+proposes the geometric non-termination argument, while [33] ap-               gina and Helmut Veith (Eds.). Springer, Berlin, Heidelberg, 413–429. https:
+                                                                              //doi.org/10.1007/978-3-642-39799-8_28
+plies Max-SMT solving, [9] introduces program reversal to trans-          [8] Marc Brockschmidt, Thomas Ströder, Carsten Otto, and Jürgen Giesl. 2012. Au-
+form the problem into invariant generation, and [8] constructs a              tomated Detection of Non-termination and NullPointerExceptions for Java Byte-
+                                                                              code. In Formal Verification of Object-Oriented Software, Bernhard Beckert, Fer-
+termination graph for analysis. Other approaches rely on recur-               ruccio Damiani, and Dilian Gurov (Eds.). Springer, Berlin, Heidelberg, 123–141.
+rence relation solvers [19] or specialize in addressing nonlinear             https://doi.org/10.1007/978-3-642-31762-0_9
+programs [11] and bit-vector programs [16]. Some methods adopt            [9] Krishnendu Chatterjee, Ehsan Kafshdar Goharshady, Petr Novotný, and Đorđe
+                                                                              Žikelić. 2021. Proving non-termination by program reversal. In Proceedings of the
+a black-box learning framework, such as [18], which aims to gen-              42nd ACM SIGPLAN International Conference on Programming Language Design
+erate conjunctive recurrent sets, and [35], which utilizes dynamic            and Implementation (PLDI 2021). Association for Computing Machinery, New
+invariant inference to generate candidate arguments. Recently, ma-            York, NY, USA, 1033–1048. https://doi.org/10.1145/3453483.3454093
+                                                                         [10] Hong-Yi Chen, Byron Cook, Carsten Fuhs, Kaustubh Nimkar, and Peter O’Hearn.
+chine learning has been integrated into non-termination verifica-             2014. Proving Nontermination via Safety. In Tools and Algorithms for the
+tion, as exemplified in [26], which proposes a black-box algorithm            Construction and Analysis of Systems, Erika Ábrahám and Klaus Havelund
+based on decision tree learning.                                              (Eds.). Springer, Berlin, Heidelberg, 156–171. https://doi.org/10.1007/978-3-642-
+                                                                              54862-8_11
+                                                                         [11] Byron Cook, Carsten Fuhs, Kaustubh Nimkar, and Peter O’Hearn. 2014. Disprov-
+                                                                              ing termination with overapproximation. In 2014 Formal Methods in Computer-
+                                                                              Aided Design (FMCAD). 67–74. https://doi.org/10.1109/FMCAD.2014.6987597
+8    CONCLUSION                                                          [12] Byron Cook, Sumit Gulwani, Tal Lev-Ami, Andrey Rybalchenko, and Mooly Sa-
+                                                                              giv. 2008. Proving Conditional Termination. In Computer Aided Verification,
+In this work, we propose a novel framework for inferring accu-                Aarti Gupta and Sharad Malik (Eds.). Springer, Berlin, Heidelberg, 328–340.
+rate termination conditions for programs. The framework lever-                https://doi.org/10.1007/978-3-540-70545-1_32
+ages termination and non-termination provers to iteratively iso-         [13] Byron Cook, Andreas Podelski, and Andrey Rybalchenko. 2006. Termination
+                                                                              proofs for systems code. SIGPLAN Not. 41, 6 (June 2006), 415–426. https://doi.
+late non-terminating states and verify the remaining ones. We in-             org/10.1145/1133255.1134029
+stantiate the framework with data-driven provers and develop a           [14] Byron Cook, Abigail See, and Florian Zuleger. 2013. Ramsey vs. Lexicographic
+                                                                              Termination Proving. In Tools and Algorithms for the Construction and Analysis
+multi-way data-sharing mechanism to improve their interaction.                of Systems, Nir Piterman and Scott A. Smolka (Eds.). Springer, Berlin, Heidelberg,
+Through formal proofs, we establish the soundness, accurateness,              47–61. https://doi.org/10.1007/978-3-642-36742-7_4
+termination and relative completeness of our method. Addition-           [15] Patrick Cousot and Radhia Cousot. 2012. An Abstract Interpretation Framework
+                                                                              for Termination. SIGPLAN Not. 47, 1 (Jan. 2012), 245–258. https://doi.org/10.
+ally, we introduce generalization techniques for recurrent sets to            1145/2103621.2103687
+enhance the efficiency of the iterative process. Experimental re-        [16] Cristina David, Daniel Kroening, and Matt Lewis. 2015. Unrestricted Termina-
+sults demonstrate that our implementation significantly outper-               tion and Non-termination Arguments for Bit-Vector Programs. In Programming
+                                                                              Languages and Systems, Jan Vitek (Ed.). Springer, Berlin, Heidelberg, 183–204.
+forms the current state-of-the-art tool, Acabar, by providing more            https://doi.org/10.1007/978-3-662-46669-8_8
+accurate termination conditions across a comprehensive benchmark,        [17] Vijay D’Silva and Caterina Urban. 2015. Conflict-Driven Conditional Termina-
+                                                                              tion. In Computer Aided Verification, Daniel Kroening and Corina S. Păsăreanu
+highlighting its potential to advance program analysis with both              (Eds.). Springer International Publishing, Cham, 271–286. https://doi.org/10.
+theoretical guarantees and practical improvements.                            1007/978-3-319-21668-3_16
+                                                                         [18] Grigory Fedyukovich, Yueling Zhang, and Aarti Gupta. 2018. Syntax-Guided
+                                                                              Termination Analysis. In Computer Aided Verification, Hana Chockler and Georg
+                                                                              Weissenbacher (Eds.). Springer International Publishing, Cham, 124–143. https:
+                                                                              //doi.org/10.1007/978-3-319-96145-3_7
+ACKNOWLEDGMENTS                                                          [19] Florian Frohn and Jürgen Giesl. 2019. Proving Non-Termination via Loop Accel-
+This work was supported in part by the National Natural Science               eration. https://doi.org/10.48550/arXiv.1905.11187 arXiv:1905.11187.
+Foundation of China (No. 62072267 and No. 62021002).
+ICSE ’26, April 12–18, 2026, Rio de Janeiro, Brazil                                                                                      Biting Huang, Zhilei Han, and Fei He
+
+
+[20] Pierre Ganty and Samir Genaim. 2013. Proving Termination Starting from the          [38] Chin Soon Lee, Neil D. Jones, and Amir M. Ben-Amram. 2001. The Size-Change
+     End. In Computer Aided Verification, Natasha Sharygina and Helmut Veith (Eds.).          Principle for Program Termination. In Proceedings of the 28th ACM SIGPLAN-
+     Springer, Berlin, Heidelberg, 397–412. https://doi.org/10.1007/978-3-642-39799-          SIGACT Symposium on Principles of Programming Languages (POPL ’01). Associ-
+     8_27                                                                                     ation for Computing Machinery, New York, NY, USA, 81–92. https://doi.org/10.
+[21] Pranav Garg, Daniel Neider, P. Madhusudan, and Dan Roth. 2016. Learning                  1145/360204.360210
+     Invariants Using Decision Trees and Implication Counterexamples. SIGPLAN            [39] Jan Leike and Matthias Heizmann. 2015. Ranking Templates for Linear Loops.
+     Not. 51, 1 (Jan. 2016), 499–512. https://doi.org/10.1145/2914770.2837664                 Logical Methods in Computer Science Volume 11, Issue 1 (March 2015). https:
+[22] Mirco Giacobbe, Daniel Kroening, and Julian Parsert. 2022. Neural termina-               //doi.org/10.2168/LMCS-11(1:16)2015 Publisher: Episciences.org.
+     tion analysis. In Proceedings of the 30th ACM Joint European Software Engineer-     [40] Jan Leike and Matthias Heizmann. 2018. Geometric Nontermination Arguments.
+     ing Conference and Symposium on the Foundations of Software Engineering (ES-             In Tools and Algorithms for the Construction and Analysis of Systems, Dirk Beyer
+     EC/FSE 2022). Association for Computing Machinery, New York, NY, USA, 633–               and Marieke Huisman (Eds.). Springer International Publishing, Cham, 266–283.
+     645. https://doi.org/10.1145/3540250.3549120                                             https://doi.org/10.1007/978-3-319-89963-3_16
+[23] Jürgen Giesl, Marc Brockschmidt, Fabian Emmes, Florian Frohn, Carsten Fuhs,         [41] Yi Li, Xuechao Sun, Yong Li, Andrea Turrini, and Lijun Zhang. 2019. Synthe-
+     Carsten Otto, Martin Plücker, Peter Schneider-Kamp, Thomas Ströder, Stephanie            sizing Nested Ranking Functions for Loop Programs via SVM. In Formal Meth-
+     Swiderski, and René Thiemann. 2014. Proving Termination of Programs Auto-                ods and Software Engineering, Yamine Ait-Ameur and Shengchao Qin (Eds.).
+     matically with AProVE. In Automated Reasoning, Stéphane Demri, Deepak Ka-                Springer International Publishing, Cham, 438–454. https://doi.org/10.1007/978-
+     pur, and Christoph Weidenbach (Eds.). Springer International Publishing, Cham,           3-030-32409-4_27
+     184–191. https://doi.org/10.1007/978-3-319-08587-6_13                               [42] Damien Massé. 2014. Policy Iteration-Based Conditional Termination and Rank-
+[24] Jürgen Giesl, Albert Rubio, Christian Sternagel, Johannes Waldmann, and Ak-              ing Functions. In Verification, Model Checking, and Abstract Interpretation, Ken-
+     ihisa Yamada. 2019. The Termination and Complexity Competition. In Tools                 neth L. McMillan and Xavier Rival (Eds.). Springer, Berlin, Heidelberg, 453–471.
+     and Algorithms for the Construction and Analysis of Systems (Lecture Notes in            https://doi.org/10.1007/978-3-642-54013-4_25
+     Computer Science), Dirk Beyer, Marieke Huisman, Fabrice Kordon, and Bern-           [43] Phuc C. Nguyen, Thomas Gilray, Sam Tobin-Hochstadt, and David Van Horn.
+     hard Steffen (Eds.). Springer International Publishing, Cham, 156–166. https:            2019. Size-Change Termination as a Contract: Dynamically and Statically En-
+     //doi.org/10.1007/978-3-030-17502-3_10                                                   forcing Termination for Higher-Order Programs. In Proceedings of the 40th
+[25] Ashutosh Gupta, Thomas A. Henzinger, Rupak Majumdar, Andrey Rybalchenko,                 ACM SIGPLAN Conference on Programming Language Design and Implementa-
+     and Ru-Gang Xu. 2008. Proving non-termination. In Proceedings of the 35th an-            tion (PLDI 2019). Association for Computing Machinery, New York, NY, USA,
+     nual ACM SIGPLAN-SIGACT symposium on Principles of programming languages                 845–859. https://doi.org/10.1145/3314221.3314643
+     (POPL ’08). Association for Computing Machinery, New York, NY, USA, 147–158.        [44] Aditya V. Nori and Rahul Sharma. 2013. Termination proofs from tests. In Pro-
+     https://doi.org/10.1145/1328438.1328459                                                  ceedings of the 2013 9th Joint Meeting on Foundations of Software Engineering
+[26] Zhilei Han and Fei He. [n. d.]. Data-Driven Recurrent Set Learning For                   (ESEC/FSE 2013). Association for Computing Machinery, New York, NY, USA,
+     Non-Termination Analysis. In 2023 IEEE/ACM 45th International Conference                 246–256. https://doi.org/10.1145/2491411.2491413
+     on Software Engineering (ICSE) (2023-05). 1303–1315. https://doi.org/10.1109/       [45] Andreas Podelski and Andrey Rybalchenko. 2004. A Complete Method for the
+     ICSE48619.2023.00115                                                                     Synthesis of Linear Ranking Functions. In Verification, Model Checking, and Ab-
+[27] William R. Harris, Akash Lal, Aditya V. Nori, and Sriram K. Rajamani. 2010. Al-          stract Interpretation, Bernhard Steffen and Giorgio Levi (Eds.). Springer, Berlin,
+     ternation for Termination. In Static Analysis, Radhia Cousot and Matthieu Martel         Heidelberg, 239–251. https://doi.org/10.1007/978-3-540-24622-0_20
+     (Eds.). Springer, Berlin, Heidelberg, 304–319. https://doi.org/10.1007/978-3-642-   [46] A. Podelski and A. Rybalchenko. 2004. Transition Invariants. In Proceedings
+     15769-1_19                                                                               of the 19th Annual IEEE Symposium on Logic in Computer Science, 2004. 32–41.
+[28] Matthias Heizmann, Jochen Hoenicke, and Andreas Podelski. 2014. Termina-                 https://doi.org/10.1109/LICS.2004.1319598
+     tion Analysis by Learning Terminating Programs. In Computer Aided Verifica-         [47] Andreas Podelski and Andrey Rybalchenko. 2011. Transition Invariants and
+     tion, Armin Biere and Roderick Bloem (Eds.). Springer International Publishing,          Transition Predicate Abstraction for Program Termination. In Tools and Algo-
+     Cham, 797–813. https://doi.org/10.1007/978-3-319-08867-9_53                              rithms for the Construction and Analysis of Systems, Parosh Aziz Abdulla and
+[29] Matthias Heizmann, Neil D. Jones, and Andreas Podelski. 2010. Size-Change                K. Rustan M. Leino (Eds.). Springer, Berlin, Heidelberg, 3–10. https://doi.org/
+     Termination and Transition Invariants. In Static Analysis, Radhia Cousot and             10.1007/978-3-642-19835-9_2
+     Matthieu Martel (Eds.). Springer, Berlin, Heidelberg, 22–50. https://doi.org/10.    [48] J. R. Quinlan. 1986. Induction of Decision Trees. Machine Learning 1, 1 (March
+     1007/978-3-642-15769-1_4                                                                 1986), 81–106. https://doi.org/10.1007/BF00116251
+[30] Zachary Kincaid, Thomas Reps, and John Cyphert. 2021. Algebraic Program             [49] J. Ross Quinlan. 2014. C4.5: Programs for Machine Learning. Elsevier.
+     Analysis. In Computer Aided Verification, Alexandra Silva and K. Rustan M. Leino    [50] Wang Tan and Yi Li. 2021. Synthesis of ranking functions via DNN. Neural
+     (Eds.). Springer International Publishing, Cham, 46–83. https://doi.org/10.1007/         Computing and Applications 33, 16 (Aug. 2021), 9939–9959. https://doi.org/10.
+     978-3-030-81685-8_3                                                                      1007/s00521-021-05763-8
+[31] Daniel Kroening, Viktor Malík, Peter Schrammel, and Tomáš Vojnar. 2023.             [51] Caterina Urban. 2013. The Abstract Domain of Segmented Ranking Functions. In
+     2LS for Program Analysis.               https://doi.org/10.48550/arXiv.2302.02380        Static Analysis, Francesco Logozzo and Manuel Fähndrich (Eds.). Springer, Berlin,
+     arXiv:2302.02380                                                                         Heidelberg, 43–62. https://doi.org/10.1007/978-3-642-38856-9_5
+[32] Daniel Kroening, Natasha Sharygina, Aliaksei Tsitovich, and Christoph M. Win-       [52] Caterina Urban, Arie Gurfinkel, and Temesghen Kahsai. 2016. Synthesizing
+     tersteiger. 2010. Termination Analysis with Compositional Transition Invari-             Ranking Functions from Bits and Pieces. In Tools and Algorithms for the Construc-
+     ants. In Computer Aided Verification, Tayssir Touili, Byron Cook, and Paul Jack-         tion and Analysis of Systems, Marsha Chechik and Jean-François Raskin (Eds.).
+     son (Eds.). Springer, Berlin, Heidelberg, 89–103. https://doi.org/10.1007/978-3-         Springer, Berlin, Heidelberg, 54–70. https://doi.org/10.1007/978-3-662-49674-
+     642-14295-6_9                                                                            9_4
+[33] Daniel Larraz, Kaustubh Nimkar, Albert Oliveras, Enric Rodríguez-Carbonell,         [53] Caterina Urban and Antoine Miné. 2014. An Abstract Domain to Infer Ordinal-
+     and Albert Rubio. [n. d.]. Proving Non-Termination Using Max-SMT. In Com-                Valued Ranking Functions. In Programming Languages and Systems, Zhong Shao
+     puter Aided Verification (Cham, 2014), Armin Biere and Roderick Bloem (Eds.).            (Ed.). Springer, Berlin, Heidelberg, 412–431. https://doi.org/10.1007/978-3-642-
+     Springer International Publishing, 779–796. https://doi.org/10.1007/978-3-319-           54833-8_22
+     08867-9_52                                                                          [54] Caterina Urban and Antoine Miné. 2014. A Decision Tree Abstract Domain for
+[34] Daniel Larraz, Albert Oliveras, Enric Rodríguez-Carbonell, and Albert Rubio.             Proving Conditional Termination. In Static Analysis, Markus Müller-Olm and
+     2013. Proving termination of imperative programs using Max-SMT. In 2013                  Helmut Seidl (Eds.). Springer International Publishing, Cham, 302–318. https:
+     Formal Methods in Computer-Aided Design. 218–225. https://doi.org/10.1109/               //doi.org/10.1007/978-3-319-10936-7_19
+     FMCAD.2013.6679413                                                                  [55] Rongchen Xu, Jianhui Chen, and Fei He. 2022. Data-driven loop bound learning
+[35] Ton Chanh Le, Timos Antonopoulos, Parisa Fathololumi, Eric Koskinen, and                 for termination analysis. In Proceedings of the 44th International Conference on
+     ThanhVu Nguyen. 2020. DynamiTe: dynamic termination and non-termination                  Software Engineering. 499–510.
+     proofs. Proc. ACM Program. Lang. 4, OOPSLA (Nov. 2020), 189:1–189:30. https:        [56] Rongchen Xu, Fei He, and Bow-Yaw Wang. 2020. Interval counterexamples for
+     //doi.org/10.1145/3428257                                                                loop invariant learning. In Proceedings of the 28th ACM Joint Meeting on European
+[36] Ton Chanh Le, Shengchao Qin, and Wei-Ngan Chin. 2015. Termination and                    Software Engineering Conference and Symposium on the Foundations of Software
+     Non-Termination Specification Inference. In Proceedings of the 36th ACM SIG-             Engineering. 111–122.
+     PLAN Conference on Programming Language Design and Implementation (PLDI             [57] Yue Yuan and Yi Li. 2019. Ranking Function Detection via SVM: A More General
+     ’15). Association for Computing Machinery, New York, NY, USA, 489–498. https:            Method. IEEE Access 7 (2019), 9971–9979. https://doi.org/10.1109/ACCESS.2018.
+     //doi.org/10.1145/2737924.2737993                                                        2890692 Conference Name: IEEE Access.
+[37] Chin Soon Lee. 2009. Ranking Functions for Size-Change Termination. ACM             [58] Shaowei Zhu and Zachary Kincaid. 2021. Reflections on Termination of Linear
+     Trans. Program. Lang. Syst. 31, 3 (April 2009), 10:1–10:42. https://doi.org/10.          Loops. In Computer Aided Verification, Alexandra Silva and K. Rustan M. Leino
+     1145/1498926.1498928                                                                     (Eds.). Springer International Publishing, Cham, 51–74. https://doi.org/10.1007/
+Accurate Inference of Termination Conditions   ICSE ’26, April 12–18, 2026, Rio de Janeiro, Brazil
+
+
+     978-3-030-81688-9_3
+

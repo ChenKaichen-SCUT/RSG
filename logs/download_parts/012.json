@@ -1,0 +1,25 @@
+[
+  {
+    "part": 12,
+    "attempt": 0,
+    "command": [
+      "curl",
+      "-L",
+      "--fail",
+      "--connect-timeout",
+      "20",
+      "--max-time",
+      "600",
+      "-r",
+      "106033152-109051903",
+      "-D",
+      "/root/RSG/logs/download_parts/012.headers",
+      "-o",
+      "/root/RSG/sources/artifact_parts/012.part.tail",
+      "https://zenodo.org/records/16891885/files/CondTerm-Artifact.rar"
+    ],
+    "exit_code": 0,
+    "seconds": 92.86997657100005,
+    "valid_range": true
+  }
+]

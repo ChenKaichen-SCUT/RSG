@@ -1,0 +1,25 @@
+{
+  "command": [
+    "timeout",
+    "--kill-after=2",
+    "80",
+    "mono",
+    "Boogie.exe",
+    "/nologo",
+    "/noinfer",
+    "/contractInfer",
+    "/mlHoudini:dt_penalty",
+    "/RSInfer",
+    "/trace",
+    "/printAssignment",
+    "/RSGeneralize",
+    "/root/RSG/work/smoke/rsl/WhileTrue_rsl.bpl"
+  ],
+  "cwd": "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries",
+  "started_utc": "2026-10-10T09:04:50.760742+00:00",
+  "exit_code": 0,
+  "wall_seconds": 0.3145241110000825,
+  "stdout": "logs/official_smoke.stdout",
+  "stderr": "logs/official_smoke.stderr",
+  "peak_rss_kib": 43276
+}

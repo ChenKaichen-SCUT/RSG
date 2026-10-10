@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/root/RSG/.venv/bin/python",
+    "/root/RSG/experiments/run_python_method.py",
+    "joint",
+    "benchmark_Joint-2-Selector_00"
+  ],
+  "cwd": "/root/RSG",
+  "started_utc": "2026-10-10T09:08:38.754198+00:00",
+  "sampled_peak_tree_rss_kib": 42032,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 0.17120035400012057,
+  "stdout": "logs/benchmark/Joint-2-Selector_00.stdout",
+  "stderr": "logs/benchmark/Joint-2-Selector_00.stderr",
+  "peak_rss_kib": 41060
+}

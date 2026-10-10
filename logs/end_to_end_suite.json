@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "experiments/run_end_to_end.py"
+  ],
+  "cwd": "/root/RSG",
+  "started_utc": "2026-10-10T09:09:57.153057+00:00",
+  "sampled_peak_tree_rss_kib": 397964,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 18.519058020000102,
+  "stdout": "logs/end_to_end_suite.stdout",
+  "stderr": "logs/end_to_end_suite.stderr",
+  "peak_rss_kib": 187136
+}

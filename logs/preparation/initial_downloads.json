@@ -1,0 +1,72 @@
+[
+  {
+    "file": "zenodo_record.json",
+    "url": "https://zenodo.org/api/records/16891884",
+    "error": "HTTP Error 504: Gateway Time-out",
+    "seconds": 31.65154638804961
+  },
+  {
+    "file": "project.html",
+    "url": "https://thufv.github.io/research/icse26",
+    "final_url": "https://thufv.github.io/research/icse26",
+    "bytes": 4657,
+    "sha256": "cff8a44836255a10155a4ebc6f6d04c2b060f24728e2ec2e1fdb99befa1c691c",
+    "headers": {
+      "Connection": "close",
+      "Content-Length": "4657",
+      "Server": "GitHub.com",
+      "Content-Type": "text/html; charset=utf-8",
+      "Last-Modified": "Sat, 23 May 2026 12:47:18 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "\"6a11a1d6-1231\"",
+      "expires": "Sat, 10 Oct 2026 08:31:43 GMT",
+      "Cache-Control": "max-age=600",
+      "x-proxy-cache": "MISS",
+      "X-GitHub-Request-Id": "C21E:1D287A:1354FD:15EA8E:6AC9F597",
+      "x-github-edge-region": "westus3",
+      "Accept-Ranges": "bytes",
+      "Age": "0",
+      "Date": "Sat, 10 Oct 2026 08:36:23 GMT",
+      "Via": "1.1 varnish",
+      "X-Served-By": "cache-bur-kbur8200154-BUR",
+      "X-Cache": "HIT",
+      "X-Cache-Hits": "0",
+      "X-Timer": "S1791621383.186347,VS0,VE76",
+      "Vary": "Accept-Encoding",
+      "X-Fastly-Request-ID": "c842cda332e1cbad6e513fa7f1762175c69549d3"
+    },
+    "seconds": 0.7657176569919102
+  },
+  {
+    "file": "icse26.pdf",
+    "url": "https://feihe.github.io/materials/icse26.pdf",
+    "final_url": "https://feihe.github.io/materials/icse26.pdf",
+    "bytes": 372188,
+    "sha256": "a7e1b91620093a58a13e8b86b295bc1608b6f65c41e4c3b8790d2d83fdbb461c",
+    "headers": {
+      "Connection": "close",
+      "Content-Length": "372188",
+      "Server": "GitHub.com",
+      "Content-Type": "application/pdf",
+      "Last-Modified": "Thu, 17 Sep 2026 13:09:10 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "\"6aabe676-5addc\"",
+      "expires": "Sat, 10 Oct 2026 08:46:23 GMT",
+      "Cache-Control": "max-age=600",
+      "x-proxy-cache": "MISS",
+      "X-GitHub-Request-Id": "0D12:3331BD:13D007:166E82:6AC9F906",
+      "x-github-edge-region": "westus3",
+      "Accept-Ranges": "bytes",
+      "Age": "0",
+      "Date": "Sat, 10 Oct 2026 08:36:23 GMT",
+      "Via": "1.1 varnish",
+      "X-Served-By": "cache-bur-kbur8200078-BUR",
+      "X-Cache": "MISS",
+      "X-Cache-Hits": "0",
+      "X-Timer": "S1791621383.493289,VS0,VE95",
+      "Vary": "Accept-Encoding",
+      "X-Fastly-Request-ID": "4de44dc2635966bffce321d2713dabf95e22bf10"
+    },
+    "seconds": 1.6190586310112849
+  }
+]

@@ -1,0 +1,4 @@
+Collecting z3-solver==4.8.9.0
+  Using cached z3_solver-4.8.9.0-py2.py3-none-manylinux1_x86_64.whl (30.5 MB)
+Saved ./sources/wheels/z3_solver-4.8.9.0-py2.py3-none-manylinux1_x86_64.whl
+Successfully downloaded z3-solver

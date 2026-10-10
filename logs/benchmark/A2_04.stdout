@@ -1,0 +1,38 @@
+[Debug] Storage CSV file path: 
+[Warning] Storage CSV file not found, ignored
+[RSG_ENTRY] MLHoudini.modifiedGeneralizeRS_2; RSLearn bypassed
+[RSG_ATTRIBUTES] p;x
+[RSG_INPUT_SMT] (or (and (and (<= |p| 1) (<= (- |p|) -1)) (and (<= |x| 4) (<= (- |x|) -4))) (and (and (<= |p| 0) (<= (- |p|) 0)) (and (<= |x| 0) (<= (- |x|) 0))))
+[INFO] Current RS: (p <= 1 && -p <= -1 && x <= 4 && -x <= -4) || (p <= 0 && -p <= 0 && x <= 0 && -x <= 0)
+The generalization vc is valid/unsat
+[RSG_SOLVER_SECONDS] 0.0031626
+[Debug] predicate generalization---get unsat core: GeneralizeRSPredicate_1_4 GeneralizeRSPredicate_1_3 GeneralizeRSPredicate_1_2 GeneralizeRSPredicate_1_1
+[INFO] Generalized Predicate: -x <= -4 && x <= 4 && -p <= -1 && p <= 1
+The generalization vc is valid/unsat
+[RSG_SOLVER_SECONDS] 0.0052508
+[Debug] interval generalization---get unsat core: GeneralizeRSInterval_1_pred2_int2 GeneralizeRSInterval_1_pred2_int3 GeneralizeRSInterval_1_pred2_int4 GeneralizeRSInterval_1_pred2_int5 GeneralizeRSInterval_1_pred2_int6 GeneralizeRSInterval_1_pred2_int7 GeneralizeRSInterval_1_pred3_int2 GeneralizeRSInterval_1_pred3_int3 GeneralizeRSInterval_1_pred3_int4 GeneralizeRSInterval_1_pred1_int9 GeneralizeRSInterval_1_pred3_int6 GeneralizeRSInterval_1_pred4_int4 GeneralizeRSInterval_1_pred4_int9 GeneralizeRSInterval_1_pred4_int3 GeneralizeRSInterval_1_pred4_int8 GeneralizeRSInterval_1_pred2_int9 GeneralizeRSInterval_1_pred3_int5 GeneralizeRSInterval_1_pred2_int8 GeneralizeRSInterval_1_pred4_int5 GeneralizeRSInterval_1_pred4_int2 GeneralizeRSInterval_1_pred3_int9 GeneralizeRSInterval_1_pred4_int6 GeneralizeRSInterval_1_pred3_int7 GeneralizeRSInterval_1_pred3_int8 GeneralizeRSInterval_1_pred4_int7 GeneralizeRSInterval_1_pred1_int8 GeneralizeRSInterval_1_pred1_int7 GeneralizeRSInterval_1_pred1_int6 GeneralizeRSInterval_1_pred1_int5 GeneralizeRSInterval_1_pred1_int4 GeneralizeRSInterval_1_pred1_int3 GeneralizeRSInterval_1_pred1_int2
+[INFO] Generalized Predicate: x <= 4
+[INFO] Generalized Predicate: -p <= -1
+[INFO] Generalized Predicate: -x <= -4
+[INFO] Generalized Predicate: p <= 1
+The generalization vc is valid/unsat
+[RSG_SOLVER_SECONDS] 0.0009402
+[Debug] predicate generalization---get unsat core: GeneralizeRSPredicate_2_4 GeneralizeRSPredicate_2_3 GeneralizeRSPredicate_2_2 GeneralizeRSPredicate_2_1
+[INFO] Generalized Predicate: -x <= 0 && x <= 0 && -p <= 0 && p <= 0
+The generalization vc is valid/unsat
+[RSG_SOLVER_SECONDS] 0.0049184
+[Debug] interval generalization---get unsat core: GeneralizeRSInterval_2_pred2_int4 GeneralizeRSInterval_2_pred2_int5 GeneralizeRSInterval_2_pred2_int6 GeneralizeRSInterval_2_pred2_int8 GeneralizeRSInterval_2_pred2_int9 GeneralizeRSInterval_2_pred3_int2 GeneralizeRSInterval_2_pred3_int3 GeneralizeRSInterval_2_pred3_int4 GeneralizeRSInterval_2_pred3_int5 GeneralizeRSInterval_2_pred3_int6 GeneralizeRSInterval_2_pred3_int8 GeneralizeRSInterval_2_pred1_int9 GeneralizeRSInterval_2_pred4_int2 GeneralizeRSInterval_2_pred3_int9 GeneralizeRSInterval_2_pred4_int8 GeneralizeRSInterval_2_pred4_int7 GeneralizeRSInterval_2_pred4_int9 GeneralizeRSInterval_2_pred4_int5 GeneralizeRSInterval_2_pred2_int2 GeneralizeRSInterval_2_pred1_int7 GeneralizeRSInterval_2_pred2_int7 GeneralizeRSInterval_2_pred2_int3 GeneralizeRSInterval_2_pred4_int6 GeneralizeRSInterval_2_pred4_int3 GeneralizeRSInterval_2_pred4_int4 GeneralizeRSInterval_2_pred3_int7 GeneralizeRSInterval_2_pred1_int6 GeneralizeRSInterval_2_pred1_int5 GeneralizeRSInterval_2_pred1_int4 GeneralizeRSInterval_2_pred1_int3 GeneralizeRSInterval_2_pred1_int2 GeneralizeRSInterval_2_pred1_int8
+[INFO] Generalized Predicate: x <= 0
+[INFO] Generalized Predicate: -p <= 0
+[INFO] Generalized Predicate: -x <= 0
+[INFO] Generalized Predicate: p <= 0
+[INFO] Generalized RS: (x <= 4 && -p <= -1 && -x <= -4 && p <= 1) || (x <= 0 && -p <= 0 && -x <= 0 && p <= 0)
+[RSG_OUTPUT_SMT] (or (and (and (and (<= |x| 4) (<= (- |p|) -1)) (<= (- |x|) -4)) (<= |p| 1)) (and (and (and (<= |x| 0) (<= (- |p|) 0)) (<= (- |x|) 0)) (<= |p| 0)))
+[RSG_WALL_SECONDS] 0.0497568
+[RSG_ORACLE] False
+Prover time = 0.00
+Number of prover queries = 0
+C5 Learner time = 0.00
+Number of C5 Learner queries = 0
+
+Boogie program verifier finished with 1 verified, 0 errors

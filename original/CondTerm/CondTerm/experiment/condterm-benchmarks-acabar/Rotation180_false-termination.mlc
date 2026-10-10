@@ -1,0 +1,36 @@
+##/*
+## * Date: 2013-12-16
+## * Author: leike@informatik.uni-freiburg.de
+## *
+## * Rotates x and y by 90 degrees
+## * Does not terminate.
+## */
+##  w1
+###include <stdio.h>
+##
+##int main ()
+##{
+##    int oldx;
+##	int x;
+##	int y;
+##	scanf("%d%d", &x, &y);
+##    printf("[Testing] <Interface V4.0> (Log all variables for reuse)\n");
+##	while (1) {
+##		printf("x:%d,y:%d,oldx:%d\n", x, y, oldx);
+##        oldx = x;
+##		x = -y;
+##		y = oldx;
+##	}
+##	return 0;
+##}
+##
+##
+!vars
+x y
+
+!pvars
+x' y'
+
+!path
+x'=-y
+y'=x

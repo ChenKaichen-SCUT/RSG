@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/root/RSG-reproduction-check/.venv/bin/python",
+    "/root/RSG-reproduction-check/experiments/run_python_method.py",
+    "repair",
+    "benchmark_Closure-Repair_03"
+  ],
+  "cwd": "/root/RSG-reproduction-check",
+  "started_utc": "2026-10-10T09:22:58.383700+00:00",
+  "sampled_peak_tree_rss_kib": 42092,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 0.12458451500015144,
+  "stdout": "logs/benchmark/Closure-Repair_03.stdout",
+  "stderr": "logs/benchmark/Closure-Repair_03.stderr",
+  "peak_rss_kib": 41032
+}

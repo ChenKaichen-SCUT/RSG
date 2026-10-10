@@ -1,0 +1,8 @@
+Unable to find image 'ubuntu:22.04' locally
+22.04: Pulling from library/ubuntu
+98c4455a9898: Pulling fs layer
+98c4455a9898: Verifying Checksum
+98c4455a9898: Download complete
+docker: failed to register layer: unshare: operation not permitted
+
+Run 'docker run --help' for more information

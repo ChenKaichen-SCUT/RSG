@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/root/RSG-reproduction-check/.venv/bin/python",
+    "/root/RSG-reproduction-check/experiments/run_python_method.py",
+    "A4",
+    "A4"
+  ],
+  "cwd": "/root/RSG-reproduction-check",
+  "started_utc": "2026-10-10T09:22:49.225203+00:00",
+  "sampled_peak_tree_rss_kib": 43356,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 1.7758376799997677,
+  "stdout": "logs/A4.stdout",
+  "stderr": "logs/A4.stderr",
+  "peak_rss_kib": 42280
+}

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "env",
+    "GIT_LFS_SKIP_SMUDGE=1",
+    "GIT_TERMINAL_PROMPT=0",
+    "git",
+    "clone",
+    "--depth",
+    "1",
+    "--branch",
+    "icse26-submit",
+    "https://github.com/WHITE000CHOCOLATE/CondTerm.git",
+    "sources/git-checkout"
+  ],
+  "cwd": "/root/RSG",
+  "started_utc": "2026-10-10T08:50:47.094064+00:00",
+  "exit_code": 128,
+  "wall_seconds": 0.5646461860000045,
+  "stdout": "logs/official_git_clone.stdout",
+  "stderr": "logs/official_git_clone.stderr",
+  "peak_rss_kib": 4608
+}

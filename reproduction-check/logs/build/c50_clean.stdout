@@ -1,0 +1,5 @@
+make -C cpp_wrapper clean
+make[1]: Entering directory '/root/RSG-reproduction-check/work/CondTerm/ice/popl16_artifact/C50/cpp_wrapper'
+rm -rf *.o *.a
+make[1]: Leaving directory '/root/RSG-reproduction-check/work/CondTerm/ice/popl16_artifact/C50/cpp_wrapper'
+rm -rf *.o c5.0.dt_penalty c5.0.dt_entropy c5.0dbg  report

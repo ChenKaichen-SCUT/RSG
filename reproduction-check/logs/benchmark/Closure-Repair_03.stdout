@@ -1,0 +1,162 @@
+{
+  "method": "Finite-Region-Closure-Repair",
+  "rounds": [
+    {
+      "states": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "removed": [
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "states": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "removed": []
+    }
+  ],
+  "validation": {
+    "formula_smt2": "(or (and (= p 0) (= x 0))\n    (and (= p 0) (= x 1))\n    (and (= p 1) (= x 3))\n    (and (= p 1) (= x 4)))",
+    "valid": true,
+    "checks": [
+      {
+        "name": "repair_output_nonempty",
+        "result": "sat",
+        "expected": "sat",
+        "seconds": 0.002684237000266876,
+        "passed": true,
+        "counterexample_or_witness": {
+          "p": "1",
+          "x": "4",
+          "p_next": "0",
+          "x_next": "0"
+        }
+      },
+      {
+        "name": "repair_output_seed",
+        "result": "unsat",
+        "expected": "unsat",
+        "seconds": 0.0023532579998573055,
+        "passed": true
+      },
+      {
+        "name": "repair_output_guard",
+        "result": "unsat",
+        "expected": "unsat",
+        "seconds": 0.0026765160000650212,
+        "passed": true
+      },
+      {
+        "name": "repair_output_closure",
+        "result": "unsat",
+        "expected": "unsat",
+        "seconds": 0.0026617660000738397,
+        "passed": true
+      }
+    ],
+    "display_states": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ]
+    ]
+  },
+  "wall_seconds": 0.032921647999955894,
+  "smt_calls": 5,
+  "solver_seconds": 0.013467114000377478,
+  "unsat_core_calls": 0,
+  "formula_smt2": "(or (and (= p 0) (= x 0))\n    (and (= p 0) (= x 1))\n    (and (= p 1) (= x 3))\n    (and (= p 1) (= x 4)))",
+  "queries": [
+    {
+      "name": "repair_region_exact",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.003091337000114436,
+      "passed": true
+    },
+    {
+      "name": "repair_output_nonempty",
+      "result": "sat",
+      "expected": "sat",
+      "seconds": 0.002684237000266876,
+      "passed": true,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "repair_output_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023532579998573055,
+      "passed": true
+    },
+    {
+      "name": "repair_output_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0026765160000650212,
+      "passed": true
+    },
+    {
+      "name": "repair_output_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0026617660000738397,
+      "passed": true
+    }
+  ]
+}

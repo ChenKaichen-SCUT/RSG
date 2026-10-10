@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "experiments/verify.py"
+  ],
+  "cwd": "/root/RSG-reproduction-check",
+  "started_utc": "2026-10-10T09:22:47.371090+00:00",
+  "sampled_peak_tree_rss_kib": 42976,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 0.3782824259997142,
+  "stdout": "logs/independent_smt.stdout",
+  "stderr": "logs/independent_smt.stderr",
+  "peak_rss_kib": 41904
+}

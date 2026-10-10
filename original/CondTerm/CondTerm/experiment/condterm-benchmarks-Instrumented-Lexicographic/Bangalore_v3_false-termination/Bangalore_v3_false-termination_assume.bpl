@@ -1,0 +1,27 @@
+/*
+ * Date: 06/07/2015
+ * Created by: Ton Chanh Le (chanhle@comp.nus.edu.sg)
+ */
+
+function {:existential true} b0(x : int, y : int %FD%): bool;
+function {:existential true} b1(x : int, y : int): bool;
+
+procedure main() {
+    var x : int;
+    var y %VD%: int;
+
+    if (y <= x) {
+        %BE%
+  assume ((x <= -1) || (y > 0)); // CondTerm
+        while (x >= 0)
+            invariant b0(x,y %IC%);
+            rec b1(x, y)
+        {
+            %BT%
+            x := x - y;
+
+            %IT%
+        }
+    }
+    return;
+}

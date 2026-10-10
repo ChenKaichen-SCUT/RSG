@@ -1,0 +1,11 @@
+{
+  "validated_utc": "2026-10-10T09:33:14.801442+00:00",
+  "source_files_hash_matched": 3500,
+  "total_submission_files": 7389,
+  "source_hash_mismatches": [],
+  "credential_pattern_files": [],
+  "oversize_files": [],
+  "unredacted_cookie_headers": [],
+  "broken_report_links": [],
+  "primary_and_reproduction_checks_passed": true
+}

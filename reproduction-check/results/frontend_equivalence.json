@@ -1,0 +1,189 @@
+{
+  "C": {
+    "file": "experiments/witness.c",
+    "assignments": [
+      [
+        "x",
+        "4 - x"
+      ],
+      [
+        "p",
+        "1 - p"
+      ]
+    ],
+    "guard_smt2": "(or (and (= 0 p) (<= 0 x) (>= 2 x)) (and (= 1 p) (<= 3 x) (>= 4 x)))",
+    "transition_smt2": "(and (= p_next (- 1 p)) (= x_next (- 4 x)))",
+    "guard_equivalent": {
+      "name": "C_guard_equiv",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002662215999862383,
+      "passed": true,
+      "query_file": "logs/smt/frontend/0000_C_guard_equiv.smt2"
+    },
+    "body_equivalent": {
+      "name": "C_transition_equiv",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002363358999900811,
+      "passed": true,
+      "query_file": "logs/smt/frontend/0001_C_transition_equiv.smt2"
+    }
+  },
+  "Boogie": {
+    "file": "experiments/witness.bpl",
+    "assignments": [
+      [
+        "x",
+        "4-x"
+      ],
+      [
+        "p",
+        "1-p"
+      ]
+    ],
+    "guard_smt2": "(or (and (= 0 p) (<= 0 x) (>= 2 x)) (and (= 1 p) (<= 3 x) (>= 4 x)))",
+    "transition_smt2": "(and (= p_next (- 1 p)) (= x_next (- 4 x)))",
+    "guard_equivalent": {
+      "name": "Boogie_guard_equiv",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.00298452399965754,
+      "passed": true,
+      "query_file": "logs/smt/frontend/0002_Boogie_guard_equiv.smt2"
+    },
+    "body_equivalent": {
+      "name": "Boogie_transition_equiv",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023676389996580838,
+      "passed": true,
+      "query_file": "logs/smt/frontend/0003_Boogie_transition_equiv.smt2"
+    }
+  },
+  "C_LE": {
+    "file": "experiments/benchmarks/le/Witness/Witness.c",
+    "assignments": [
+      [
+        "x",
+        "4-x"
+      ],
+      [
+        "p",
+        "1-p"
+      ]
+    ],
+    "guard_smt2": "(or (and (= 0 p) (<= 0 x) (>= 2 x)) (and (= 1 p) (<= 3 x) (>= 4 x)))",
+    "transition_smt2": "(and (= p_next (- 1 p)) (= x_next (- 4 x)))",
+    "guard_equivalent": {
+      "name": "C_LE_guard_equiv",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0025786240003071725,
+      "passed": true,
+      "query_file": "logs/smt/frontend/0004_C_LE_guard_equiv.smt2"
+    },
+    "body_equivalent": {
+      "name": "C_LE_transition_equiv",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023817600003894768,
+      "passed": true,
+      "query_file": "logs/smt/frontend/0005_C_LE_transition_equiv.smt2"
+    }
+  },
+  "C_NLE": {
+    "file": "experiments/benchmarks/nle/Witness/Witness.c",
+    "assignments": [
+      [
+        "x",
+        "4-x"
+      ],
+      [
+        "p",
+        "1-p"
+      ]
+    ],
+    "guard_smt2": "(or (and (= 0 p) (<= 0 x) (>= 2 x)) (and (= 1 p) (<= 3 x) (>= 4 x)))",
+    "transition_smt2": "(and (= p_next (- 1 p)) (= x_next (- 4 x)))",
+    "guard_equivalent": {
+      "name": "C_NLE_guard_equiv",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0025288130000262754,
+      "passed": true,
+      "query_file": "logs/smt/frontend/0006_C_NLE_guard_equiv.smt2"
+    },
+    "body_equivalent": {
+      "name": "C_NLE_transition_equiv",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.00240525900017019,
+      "passed": true,
+      "query_file": "logs/smt/frontend/0007_C_NLE_transition_equiv.smt2"
+    }
+  },
+  "BPL_LE": {
+    "file": "experiments/benchmarks/le/Witness/Witness.bpl",
+    "assignments": [
+      [
+        "x",
+        "4-x"
+      ],
+      [
+        "p",
+        "1-p"
+      ]
+    ],
+    "guard_smt2": "(or (and (= 0 p) (<= 0 x) (>= 2 x)) (and (= 1 p) (<= 3 x) (>= 4 x)))",
+    "transition_smt2": "(and (= p_next (- 1 p)) (= x_next (- 4 x)))",
+    "guard_equivalent": {
+      "name": "BPL_LE_guard_equiv",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002787128999898414,
+      "passed": true,
+      "query_file": "logs/smt/frontend/0008_BPL_LE_guard_equiv.smt2"
+    },
+    "body_equivalent": {
+      "name": "BPL_LE_transition_equiv",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023952289998305787,
+      "passed": true,
+      "query_file": "logs/smt/frontend/0009_BPL_LE_transition_equiv.smt2"
+    }
+  },
+  "BPL_NLE": {
+    "file": "experiments/benchmarks/nle/Witness/Witness.bpl",
+    "assignments": [
+      [
+        "x",
+        "4-x"
+      ],
+      [
+        "p",
+        "1-p"
+      ]
+    ],
+    "guard_smt2": "(or (and (= 0 p) (<= 0 x) (>= 2 x)) (and (= 1 p) (<= 3 x) (>= 4 x)))",
+    "transition_smt2": "(and (= p_next (- 1 p)) (= x_next (- 4 x)))",
+    "guard_equivalent": {
+      "name": "BPL_NLE_guard_equiv",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0025173419999191537,
+      "passed": true,
+      "query_file": "logs/smt/frontend/0010_BPL_NLE_guard_equiv.smt2"
+    },
+    "body_equivalent": {
+      "name": "BPL_NLE_transition_equiv",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002402750000328524,
+      "passed": true,
+      "query_file": "logs/smt/frontend/0011_BPL_NLE_transition_equiv.smt2"
+    }
+  },
+  "all_passed": true
+}

@@ -1,0 +1,5 @@
+original/** -text
+logs/** -text
+reproduction-check/** -text
+*.pdf binary
+*.gz binary

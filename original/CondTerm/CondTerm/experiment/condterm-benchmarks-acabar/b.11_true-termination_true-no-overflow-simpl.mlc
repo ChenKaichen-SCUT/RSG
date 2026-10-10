@@ -1,0 +1,62 @@
+##c = 0;
+##while (x + y > 0)
+##{
+##    if (x > y)
+##    {
+##        x = x - 1;
+##    }
+##    else
+##    {
+##        if (x == y)
+##        {
+##            x = x - 1;
+##        }
+##        else
+##        {
+##            y = y - 1;
+##        }
+##    }
+##}
+##
+##
+!vars
+x y c
+
+!pvars
+x' y' c'
+
+!path
+c=0
+x+y>=1
+x>=y+1
+x'=x-1
+y'=y
+c'=c
+
+!path
+c=0
+x+y>=1
+x<=y
+x=y
+x'=x-1
+y'=y
+c'=c
+
+!path
+c=0
+x+y>=1
+x<=y
+x<=y-1
+y'=y-1
+x'=x
+c'=c
+
+!path
+c=0
+x+y>=1
+x<=y
+x>=y+1
+y'=y-1
+x'=x
+c'=c
+

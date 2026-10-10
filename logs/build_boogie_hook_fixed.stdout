@@ -1,0 +1,334 @@
+
+>>>> xbuild tool is deprecated and will be removed in future updates, use msbuild instead <<<<
+
+XBuild Engine Version 14.0
+Mono, Version 6.8.0.105
+Copyright (C) 2005-2013 Various Mono authors
+
+Build started 10/10/2026 17:05:32.
+__________________________________________________
+Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln" (default target(s)):
+	Target ValidateSolutionConfiguration:
+		Building solution configuration "Release|Mixed Platforms".
+	Target Build:
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/CodeContractsExtender.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/CodeContractsExtender.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Model/Model.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Model/Model.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/Graph.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/Graph.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/Basetypes.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/Basetypes.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/ParserHelper.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/ParserHelper.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ModelViewer/ModelViewer.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: x86
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ModelViewer/ModelViewer.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/Core.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/Core.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/BVD/BVD.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+			Target _CopyAppConfigFile:
+			Skipping target "_CopyAppConfigFile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/BVD/BVD.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/AbsInt.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/AbsInt.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/VCExpr.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/VCExpr.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/Concurrency.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+			Target _CopyAppConfigFile:
+			Skipping target "_CopyAppConfigFile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/Concurrency.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/VCGeneration.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/VCGeneration.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/SMTLib.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /keyfile:../../InterimKey.snk /publicsign /optimize+ /out:obj/Release/Provers.SMTLib.dll Inspector.cs SMTLibProverOptions.cs ProverInterface.cs SExpr.cs SMTLibLineariser.cs SMTLibNamer.cs SMTLibProcess.cs TypeDeclCollector.cs ../../version.cs Z3.cs CVC4.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /langversion:Experimental /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release//Basetypes.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release//Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release//Graph.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries//Model.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release//ParserHelper.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release//VCExpr.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release//VCGeneration.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+TypeDeclCollector.cs(22,42): warning CS0414: The private field `Microsoft.Boogie.SMTLib.TypeDeclCollector.Options' is assigned but its value is never used
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/obj/Release/Provers.SMTLib.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Provers.SMTLib.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/obj/Release/Provers.SMTLib.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Provers.SMTLib.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/SMTLib.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/Predication.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/Predication.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/Doomed.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/Doomed.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/Houdini.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Provers.SMTLib.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Provers.SMTLib.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Provers.SMTLib.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Provers.SMTLib.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /optimize+ /out:obj/Release/Houdini.dll ../version.cs AbstractHoudini.cs Checker.cs CandidateDependenceAnalyser.cs RSGExperiment.cs MLHoudini.cs MLHoudiniSymb.cs Houdini.cs StagedHoudini.cs ConcurrentHoudini.cs obj/Release/.NETFramework,Version=v4.0.AssemblyAttribute.cs /target:library /define:TRACE /langversion:Experimental /nostdlib /reference:../../Newtonsoft.Json.dll /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Xml.Linq.dll /reference:/usr/lib/mono/4.0-api/System.Data.DataSetExtensions.dll /reference:/usr/lib/mono/4.0-api/Microsoft.CSharp.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release//Basetypes.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release//Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release//Graph.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries//Model.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release//ParserHelper.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release//Provers.SMTLib.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release//VCExpr.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release//VCGeneration.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+AbstractHoudini.cs(307,27): warning CS0219: The variable `failingProcedure' is assigned but its value is never used
+AbstractHoudini.cs(3467,25): warning CS0219: The variable `pos' is assigned but its value is never used
+CandidateDependenceAnalyser.cs(701,7): warning CS0162: Unreachable code detected
+MLHoudini.cs(1048,17): warning CS0219: The variable `index' is assigned but its value is never used
+MLHoudini.cs(1818,30): warning CS0219: The variable `curModel' is assigned but its value is never used
+MLHoudini.cs(2384,30): warning CS0219: The variable `curModel' is assigned but its value is never used
+MLHoudini.cs(3451,18): warning CS0219: The variable `simplifiedPredicatesExpr' is assigned but its value is never used
+MLHoudini.cs(3773,13): warning CS0162: Unreachable code detected
+MLHoudini.cs(4392,20): warning CS0219: The variable `output' is assigned but its value is never used
+MLHoudini.cs(5064,41): warning CS0219: The variable `proverOutcome' is assigned but its value is never used
+MLHoudini.cs(5333,13): warning CS0162: Unreachable code detected
+MLHoudini.cs(5334,28): warning CS0168: The variable `vars' is declared but never used
+MLHoudini.cs(6318,20): warning CS0219: The variable `output' is assigned but its value is never used
+MLHoudini.cs(6368,27): warning CS0219: The variable `failingProcedure' is assigned but its value is never used
+MLHoudini.cs(6396,27): warning CS0219: The variable `failingProcedure' is assigned but its value is never used
+MLHoudiniSymb.cs(1324,20): warning CS0219: The variable `output' is assigned but its value is never used
+MLHoudiniSymb.cs(1394,27): warning CS0219: The variable `failingProcedure' is assigned but its value is never used
+AbstractHoudini.cs(2334,25): warning CS0414: The private field `Microsoft.Boogie.Houdini.AbstractHoudini.summaryClass' is assigned but its value is never used
+AbstractHoudini.cs(3189,17): warning CS0414: The private field `Microsoft.Boogie.Houdini.ConstantVal.program' is assigned but its value is never used
+AbstractHoudini.cs(3190,24): warning CS0414: The private field `Microsoft.Boogie.Houdini.ConstantVal.impl' is assigned but its value is never used
+CandidateDependenceAnalyser.cs(627,21): warning CS0414: The private field `Microsoft.Boogie.Houdini.CandidateReachabilityChecker.prog' is assigned but its value is never used
+CandidateDependenceAnalyser.cs(628,33): warning CS0414: The private field `Microsoft.Boogie.Houdini.CandidateReachabilityChecker.candidates' is assigned but its value is never used
+MLHoudini.cs(437,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.totalTreeSize' is assigned but its value is never used
+MLHoudini.cs(438,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.lastTreeSize' is assigned but its value is never used
+MLHoudini.cs(439,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.total_truetrue_implications' is assigned but its value is never used
+MLHoudini.cs(440,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.last_truetrue_implications' is assigned but its value is never used
+MLHoudini.cs(441,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.total_falsetrue_implications' is assigned but its value is never used
+MLHoudini.cs(442,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.last_falsetrue_implications' is assigned but its value is never used
+MLHoudini.cs(443,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.total_falsefalse_implications' is assigned but its value is never used
+MLHoudini.cs(444,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.last_falsefalse_implications' is assigned but its value is never used
+MLHoudini.cs(448,108): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.counterExamples' is assigned but its value is never used
+MLHoudini.cs(465,35): warning CS0169: The private field `Microsoft.Boogie.Houdini.MLHoudini.instrumentationMapForRS' is never used
+MLHoudini.cs(473,22): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.HavocApproximated' is assigned but its value is never used
+MLHoudini.cs(778,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.currentMDataReused' is assigned but its value is never used
+MLHoudini.cs(924,21): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.storage_currentReuseMax' is assigned but its value is never used
+MLHoudini.cs(927,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.condterm_max_abslute_size' is assigned but its value is never used
+MLHoudini.cs(6783,28): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.GeneralizeCheckCallBack.impl' is assigned but its value is never used
+MLHoudiniSymb.cs(235,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.totalTreeSize' is assigned but its value is never used
+MLHoudiniSymb.cs(236,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.lastTreeSize' is assigned but its value is never used
+MLHoudiniSymb.cs(237,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.total_truetrue_implications' is assigned but its value is never used
+MLHoudiniSymb.cs(238,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.last_truetrue_implications' is assigned but its value is never used
+MLHoudiniSymb.cs(239,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.total_falsetrue_implications' is assigned but its value is never used
+MLHoudiniSymb.cs(240,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.last_falsetrue_implications' is assigned but its value is never used
+MLHoudiniSymb.cs(241,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.total_falsefalse_implications' is assigned but its value is never used
+MLHoudiniSymb.cs(242,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.last_falsefalse_implications' is assigned but its value is never used
+MLHoudiniSymb.cs(246,122): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.counterExamples' is assigned but its value is never used
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/obj/Release/Houdini.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Houdini.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/obj/Release/Houdini.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Houdini.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/Houdini.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ExecutionEngine/ExecutionEngine.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Houdini.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Houdini.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release/Houdini.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Houdini.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /optimize+ /out:obj/Release/ExecutionEngine.dll ExecutionEngine.cs Properties/AssemblyInfo.cs VerificationResultCache.cs obj/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs /target:library /define:TRACE /langversion:Experimental /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Xml.Linq.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/bin/Release//AbsInt.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release//Basetypes.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/bin/Release//Concurrency.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release//Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release//Doomed.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release//Graph.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release//Houdini.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries//Model.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release//ParserHelper.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release//Predication.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release//VCGeneration.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ExecutionEngine/obj/Release/ExecutionEngine.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/ExecutionEngine.dll.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ExecutionEngine/obj/Release/ExecutionEngine.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/ExecutionEngine.dll'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ExecutionEngine/ExecutionEngine.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/BoogieDriver/BoogieDriver.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Provers.SMTLib.dll' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Provers.SMTLib.dll'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release/Provers.SMTLib.dll.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Provers.SMTLib.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /optimize+ /out:obj/Release/Boogie.exe BoogieDriver.cs ../version.cs obj/Release/.NETFramework,Version=v4.0.AssemblyAttribute.cs /target:exe /define:TRACE /langversion:Experimental /nostdlib /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/bin/Release//AbsInt.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release//Basetypes.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release//Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/bin/Release//Doomed.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries//ExecutionEngine.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release//Graph.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/bin/Release//Houdini.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release//ParserHelper.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/bin/Release//Predication.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release//Provers.SMTLib.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release//VCExpr.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release//VCGeneration.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+			Target DeployOutputFiles:
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/BoogieDriver/obj/Release/Boogie.exe.mdb' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Boogie.exe.mdb'
+				Copying file from '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/BoogieDriver/obj/Release/Boogie.exe' to '/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries/Boogie.exe'
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/BoogieDriver/BoogieDriver.csproj".
+Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln".
+
+Build succeeded.
+
+Warnings:
+
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln (default targets) ->
+(Build target) ->
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/SMTLib.csproj (default targets) ->
+/usr/lib/mono/xbuild/14.0/bin/Microsoft.CSharp.targets (CoreCompile target) ->
+
+	TypeDeclCollector.cs(22,42): warning CS0414: The private field `Microsoft.Boogie.SMTLib.TypeDeclCollector.Options' is assigned but its value is never used
+
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln (default targets) ->
+(Build target) ->
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/Houdini.csproj (default targets) ->
+/usr/lib/mono/xbuild/14.0/bin/Microsoft.CSharp.targets (CoreCompile target) ->
+
+	AbstractHoudini.cs(307,27): warning CS0219: The variable `failingProcedure' is assigned but its value is never used
+	AbstractHoudini.cs(3467,25): warning CS0219: The variable `pos' is assigned but its value is never used
+	CandidateDependenceAnalyser.cs(701,7): warning CS0162: Unreachable code detected
+	MLHoudini.cs(1048,17): warning CS0219: The variable `index' is assigned but its value is never used
+	MLHoudini.cs(1818,30): warning CS0219: The variable `curModel' is assigned but its value is never used
+	MLHoudini.cs(2384,30): warning CS0219: The variable `curModel' is assigned but its value is never used
+	MLHoudini.cs(3451,18): warning CS0219: The variable `simplifiedPredicatesExpr' is assigned but its value is never used
+	MLHoudini.cs(3773,13): warning CS0162: Unreachable code detected
+	MLHoudini.cs(4392,20): warning CS0219: The variable `output' is assigned but its value is never used
+	MLHoudini.cs(5064,41): warning CS0219: The variable `proverOutcome' is assigned but its value is never used
+	MLHoudini.cs(5333,13): warning CS0162: Unreachable code detected
+	MLHoudini.cs(5334,28): warning CS0168: The variable `vars' is declared but never used
+	MLHoudini.cs(6318,20): warning CS0219: The variable `output' is assigned but its value is never used
+	MLHoudini.cs(6368,27): warning CS0219: The variable `failingProcedure' is assigned but its value is never used
+	MLHoudini.cs(6396,27): warning CS0219: The variable `failingProcedure' is assigned but its value is never used
+	MLHoudiniSymb.cs(1324,20): warning CS0219: The variable `output' is assigned but its value is never used
+	MLHoudiniSymb.cs(1394,27): warning CS0219: The variable `failingProcedure' is assigned but its value is never used
+	AbstractHoudini.cs(2334,25): warning CS0414: The private field `Microsoft.Boogie.Houdini.AbstractHoudini.summaryClass' is assigned but its value is never used
+	AbstractHoudini.cs(3189,17): warning CS0414: The private field `Microsoft.Boogie.Houdini.ConstantVal.program' is assigned but its value is never used
+	AbstractHoudini.cs(3190,24): warning CS0414: The private field `Microsoft.Boogie.Houdini.ConstantVal.impl' is assigned but its value is never used
+	CandidateDependenceAnalyser.cs(627,21): warning CS0414: The private field `Microsoft.Boogie.Houdini.CandidateReachabilityChecker.prog' is assigned but its value is never used
+	CandidateDependenceAnalyser.cs(628,33): warning CS0414: The private field `Microsoft.Boogie.Houdini.CandidateReachabilityChecker.candidates' is assigned but its value is never used
+	MLHoudini.cs(437,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.totalTreeSize' is assigned but its value is never used
+	MLHoudini.cs(438,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.lastTreeSize' is assigned but its value is never used
+	MLHoudini.cs(439,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.total_truetrue_implications' is assigned but its value is never used
+	MLHoudini.cs(440,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.last_truetrue_implications' is assigned but its value is never used
+	MLHoudini.cs(441,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.total_falsetrue_implications' is assigned but its value is never used
+	MLHoudini.cs(442,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.last_falsetrue_implications' is assigned but its value is never used
+	MLHoudini.cs(443,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.total_falsefalse_implications' is assigned but its value is never used
+	MLHoudini.cs(444,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.last_falsefalse_implications' is assigned but its value is never used
+	MLHoudini.cs(448,108): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.counterExamples' is assigned but its value is never used
+	MLHoudini.cs(465,35): warning CS0169: The private field `Microsoft.Boogie.Houdini.MLHoudini.instrumentationMapForRS' is never used
+	MLHoudini.cs(473,22): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.HavocApproximated' is assigned but its value is never used
+	MLHoudini.cs(778,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.currentMDataReused' is assigned but its value is never used
+	MLHoudini.cs(924,21): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.storage_currentReuseMax' is assigned but its value is never used
+	MLHoudini.cs(927,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.condterm_max_abslute_size' is assigned but its value is never used
+	MLHoudini.cs(6783,28): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudini.GeneralizeCheckCallBack.impl' is assigned but its value is never used
+	MLHoudiniSymb.cs(235,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.totalTreeSize' is assigned but its value is never used
+	MLHoudiniSymb.cs(236,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.lastTreeSize' is assigned but its value is never used
+	MLHoudiniSymb.cs(237,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.total_truetrue_implications' is assigned but its value is never used
+	MLHoudiniSymb.cs(238,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.last_truetrue_implications' is assigned but its value is never used
+	MLHoudiniSymb.cs(239,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.total_falsetrue_implications' is assigned but its value is never used
+	MLHoudiniSymb.cs(240,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.last_falsetrue_implications' is assigned but its value is never used
+	MLHoudiniSymb.cs(241,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.total_falsefalse_implications' is assigned but its value is never used
+	MLHoudiniSymb.cs(242,13): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.last_falsefalse_implications' is assigned but its value is never used
+	MLHoudiniSymb.cs(246,122): warning CS0414: The private field `Microsoft.Boogie.Houdini.MLHoudiniSymb.counterExamples' is assigned but its value is never used
+
+	 47 Warning(s)
+	 0 Error(s)
+
+Time Elapsed 00:00:06.2925330

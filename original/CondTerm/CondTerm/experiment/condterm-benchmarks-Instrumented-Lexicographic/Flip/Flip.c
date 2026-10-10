@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int _i;
+    int j;
+    int t;
+    scanf("%d%d", &_i, &j);
+    printf("[Testing] <Interface V3.0TR> (Basic lexical method)\n");
+    t = 0;
+    
+    while (_i != 0 && j != 0) {
+        printf("%d,%d\n", _i, j);
+        t = _i;
+        _i = j;
+        j = t;
+    }
+    
+    return 0;
+}

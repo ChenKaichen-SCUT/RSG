@@ -1,0 +1,13 @@
+{
+  "command": [
+    "apt-get",
+    "update"
+  ],
+  "cwd": "/root/RSG",
+  "started_utc": "2026-10-10T08:51:42.017349+00:00",
+  "exit_code": 0,
+  "wall_seconds": 1.33344593999999,
+  "stdout": "logs/apt_update.stdout",
+  "stderr": "logs/apt_update.stderr",
+  "peak_rss_kib": 94956
+}

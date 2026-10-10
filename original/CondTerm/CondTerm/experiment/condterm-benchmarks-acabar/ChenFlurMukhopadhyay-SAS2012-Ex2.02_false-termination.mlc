@@ -1,0 +1,16 @@
+##while (x < 0) {
+##    x = x + y;
+##    y = y - 1;
+##}
+##
+##
+!vars
+x y
+
+!pvars
+x' y'
+
+!path
+x<=-1
+x'=x+y
+y'=y-1

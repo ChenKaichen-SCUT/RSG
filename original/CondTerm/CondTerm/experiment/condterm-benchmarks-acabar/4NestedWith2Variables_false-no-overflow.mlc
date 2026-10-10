@@ -1,0 +1,16 @@
+##while (a > 0) {
+##  olda = a;
+##  a = 3*olda - 4*b;
+##  b = 4*olda + 3*b;
+##}
+##return 0;
+##
+!vars
+a b
+!pvars
+a' b'
+
+!path
+a>=1
+a'=3*a-4*b
+b'=4*a+3*b

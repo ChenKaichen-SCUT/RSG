@@ -1,0 +1,142 @@
+--- a/Houdini/MLHoudini.cs
++++ b/Houdini/MLHoudini.cs
+@@ -361,7 +361,7 @@
+         }
+     }
+ 
+-    public class MLHoudini
++    public partial class MLHoudini
+     {
+         // the tuple is <index, type, bound>
+         // type == 0 means ge, type == 1 means le
+@@ -1594,6 +1594,7 @@
+             {
+                 C5Domain rs = function2Value["b1"] as C5Domain;
+                 Expr modelExpr = rs.getModelExpr();
++                Console.WriteLine("[RSG_NATURAL_SEED_SMT] " + RsgSmt(modelExpr));
+                 Console.WriteLine("[INFO] Current RS: " + modelExpr);
+                 
+                 // Expr generalizedRS = generalizeRS();
+@@ -5149,6 +5150,7 @@
+ 
+         public VCGenOutcome ComputeSummaries()
+         {
++            if (RsgExperimentRequested()) return RunRsgExperiment();
+             // Compute SCCs and determine a priority order for impls
+             var Succ = new Dictionary<string, HashSet<string>>();
+             var Pred = new Dictionary<string, HashSet<string>>();
+--- a/Houdini/Houdini.csproj
++++ b/Houdini/Houdini.csproj
+@@ -152,6 +152,7 @@
+     <Compile Include="AbstractHoudini.cs" />
+     <Compile Include="Checker.cs" />
+     <Compile Include="CandidateDependenceAnalyser.cs" />
++    <Compile Include="RSGExperiment.cs" />
+     <Compile Include="MLHoudini.cs">
+       <SubType>Code</SubType>
+     </Compile>
+--- a/Provers/SMTLib/ProverInterface.cs
++++ b/Provers/SMTLib/ProverInterface.cs
+@@ -1280,6 +1280,8 @@
+ 
+     public override List<string> CheckAndUnsatCore(List<string> constants)
+     {
++        var rsgWatch = Stopwatch.StartNew();
++        try {
+         PrepareCommon();
+         SendThisVC("(check-sat " + constants.Concat(" ") + " )");
+         
+@@ -1303,6 +1305,11 @@
+         FlushLogFile();
+ 
+         return unsatCore;
++        } finally {
++            rsgWatch.Stop();
++            if (Environment.GetEnvironmentVariable("RSG_PROFILE") == "1")
++                Console.WriteLine("[RSG_SOLVER_SECONDS] " + rsgWatch.Elapsed.TotalSeconds.ToString("R", System.Globalization.CultureInfo.InvariantCulture));
++        }
+     }
+     
+     public List<string> UnsatCore()
+--- /dev/null
++++ b/Houdini/RSGExperiment.cs
+@@ -0,0 +1,79 @@
++// Experimental entry and telemetry only. The official RSG method is unchanged.
++using System;
++using System.Collections.Generic;
++using System.Diagnostics;
++using System.Globalization;
++using System.IO;
++using System.Linq;
++using Microsoft.Boogie;
++using VC;
++
++namespace Microsoft.Boogie.Houdini {
++    public partial class MLHoudini {
++        private bool RsgExperimentRequested() {
++            if (!CommandLineOptions.Clo.RSInfer) return false;
++            if (Environment.GetEnvironmentVariable("RSG_EXPERIMENT") == "direct") return true;
++            string marker = Environment.GetEnvironmentVariable("RSG_INJECT_ONCE");
++            return !String.IsNullOrEmpty(marker) && !File.Exists(marker);
++        }
++
++        private Expr RsgFixedSeed(bool oracle) {
++            List<Variable> vs = existentialFunctions["b1"].InParams;
++            if (vs.Count != 2 || vs[0].Name != "p" || vs[1].Name != "x")
++                throw new InvalidOperationException("Experiment requires b1(p:int,x:int)");
++            Expr p = Expr.Ident(vs[0]), x = Expr.Ident(vs[1]);
++            Expr np = Expr.Unary(Token.NoToken, UnaryOperator.Opcode.Neg, p);
++            Expr nx = Expr.Unary(Token.NoToken, UnaryOperator.Opcode.Neg, x);
++            Expr a = Expr.And(Expr.And(Expr.Le(p,Expr.Literal(0)),Expr.Le(np,Expr.Literal(0))),
++                             Expr.And(Expr.Le(x,Expr.Literal(oracle ? 1 : 0)),Expr.Le(nx,Expr.Literal(0))));
++            Expr b = Expr.And(Expr.And(Expr.Le(p,Expr.Literal(1)),Expr.Le(np,Expr.Literal(-1))),
++                             Expr.And(Expr.Le(x,Expr.Literal(4)),Expr.Le(nx,Expr.Literal(oracle ? -3 : -4))));
++            return Environment.GetEnvironmentVariable("RSG_ORDER") == "reverse" ? Expr.Or(b,a) : Expr.Or(a,b);
++        }
++
++        private VCGenOutcome RunRsgExperiment() {
++            Function seed = program.TopLevelDeclarations.OfType<Function>().FirstOrDefault(f => f.Name == "RSG_seed");
++            Expr input = seed != null ? seed.Body : RsgFixedSeed(false);
++            if (Environment.GetEnvironmentVariable("RSG_ATTRS") == "unary")
++                attribute2Expr["b1"] = attribute2Expr["b1"].Where(kv => kv.Value is IdentifierExpr).ToDictionary(kv => kv.Key,kv => kv.Value);
++            Console.WriteLine("[RSG_ENTRY] MLHoudini.modifiedGeneralizeRS_2; RSLearn bypassed");
++            Console.WriteLine("[RSG_ATTRIBUTES] " + String.Join(";",attribute2Expr["b1"].Values.Select(v => v.ToString())));
++            Console.WriteLine("[RSG_INPUT_SMT] " + RsgSmt(input));
++            Console.WriteLine("[INFO] Current RS: " + input);
++            string marker = Environment.GetEnvironmentVariable("RSG_INJECT_ONCE");
++            if (!String.IsNullOrEmpty(marker)) File.WriteAllText(marker,"first RSLearn call replaced\n");
++            bool oracle = Environment.GetEnvironmentVariable("RSG_ORACLE") == "1";
++            var watch = Stopwatch.StartNew();
++            Expr result = oracle ? RsgFixedSeed(true) : modifiedGeneralizeRS_2(input);
++            watch.Stop();
++            if (oracle) Console.WriteLine("[INFO] Generalized RS: " + result);
++            Console.WriteLine("[RSG_OUTPUT_SMT] " + RsgSmt(result));
++            Console.WriteLine("[RSG_WALL_SECONDS] " + watch.Elapsed.TotalSeconds.ToString("R",CultureInfo.InvariantCulture));
++            Console.WriteLine("[RSG_ORACLE] " + oracle);
++            Console.WriteLine("Prover time = 0.00"); // No RSLearn prover calls; RSG time is separately recorded.
++            Console.WriteLine("Number of prover queries = 0");
++            Console.WriteLine("C5 Learner time = 0.00");
++            Console.WriteLine("Number of C5 Learner queries = 0");
++            return new VCGenOutcome(ProverInterface.Outcome.Valid,new List<Counterexample>());
++        }
++
++        private static string RsgSmt(Expr e) {
++            var literal = e as LiteralExpr;
++            if (literal != null) return literal.ToString();
++            var id = e as IdentifierExpr;
++            if (id != null) return "|" + id.Name + "|";
++            var n = e as NAryExpr;
++            if (n == null) throw new InvalidOperationException("Unsupported experiment AST: "+e.GetType());
++            string op=n.Fun.FunctionName;
++            switch(op) {
++                case "&&": op="and"; break;
++                case "||": op="or"; break;
++                case "!": op="not"; break;
++                case "==": op="="; break;
++                case "!=": op="distinct"; break;
++                case "==>": op="=>"; break;
++            }
++            return "("+op+" "+String.Join(" ",n.Args.Select(RsgSmt))+")";
++        }
++    }
++}

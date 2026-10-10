@@ -1,0 +1,46 @@
+##if (y > 0)
+##  return 0;
+##
+##while (x != 0)
+##{
+##  if (x < 10)
+##    x++;
+##  else
+##    x = y;
+##}
+##
+##
+### these are the variables
+###
+!vars
+x y
+
+# these are the primed variables 
+!pvars 
+x' y'
+
+# PATH 1
+#
+!path
+y=<0
+x>=1
+x<=9
+x'=x+1
+y'=y
+
+# PATH 1-2
+#
+!path
+y=<0
+x<=-1
+x'=x+1
+y'=y
+
+# PATH 2
+#
+!path
+y=<0
+x>=10
+x'=y
+y'=y
+

@@ -1,0 +1,24 @@
+##int main() {
+##    int x, y, oldx;
+##    scanf("%d%d", &x, &y);
+##    printf("[Testing] <Interface V4.0> (Log all variables for reuse)\n");
+##    while (x < 5) {
+##        printf("x:%d,y:%d\n", x, y);
+##        oldx = x;
+##        x = oldx - y;
+##        y = oldx + y;
+##    }
+##    return 0;
+##}
+##
+##
+!vars
+x y
+
+!pvars
+x' y'
+
+!path
+x<=4
+x'=x-y
+y'=x+y

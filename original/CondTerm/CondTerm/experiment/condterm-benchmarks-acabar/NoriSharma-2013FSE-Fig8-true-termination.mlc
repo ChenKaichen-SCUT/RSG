@@ -1,0 +1,37 @@
+###include <stdio.h>
+##
+##int main() {
+##  int x, y, z;
+##  scanf("%d%d%d", &x, &y, &z);
+##  printf("[Testing] <Interface V4.0> (Log all variables for reuse)\n");
+##  while (x >= y) {
+##    printf("x:%d,y:%d,z:%d\n", x, y, z);
+##    if (z > 1) {
+##      z = z - 1;
+##      x = x + z;
+##    } else {
+##      y = y + 1;
+##    }
+##  }
+##}
+##
+##
+!vars
+x y z
+
+!pvars
+x' y' z'
+
+!path
+x>=y
+z>=2
+z'=z-1
+x'=x+z
+y'=y
+
+!path
+x>=y
+z<=1
+y'=y+1
+x'=x
+z'=z

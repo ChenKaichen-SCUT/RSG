@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "scripts/download_artifact.py"
+  ],
+  "cwd": "/root/RSG",
+  "started_utc": "2026-10-10T08:51:48.243487+00:00",
+  "exit_code": 143,
+  "wall_seconds": 197.25284225399997,
+  "stdout": "logs/artifact_multipart.stdout",
+  "stderr": "logs/artifact_multipart.stderr",
+  "peak_rss_kib": 16440
+}

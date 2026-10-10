@@ -1,0 +1,17 @@
+#include <assert.h>
+#include <stdio.h>
+
+int main() {
+    int t;
+    int b;
+    scanf("%d", &t);
+    printf("[Testing] <Interface V4.0> (Log all variables for reuse)\n");
+    
+  assert (t > -1); // CondTerm
+    while (t != 1 && t != 0) {
+        printf("t:%d\n", t);
+        t = t-2;
+    }
+    
+    return 0;
+}

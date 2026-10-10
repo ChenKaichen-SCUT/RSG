@@ -1,0 +1,17 @@
+{
+  "command": [
+    "rsync",
+    "-a",
+    "/root/RSG-reproduction-check/original/CondTerm/CondTerm/",
+    "/root/RSG-reproduction-check/work/CondTerm/"
+  ],
+  "cwd": "/root/RSG-reproduction-check",
+  "started_utc": "2026-10-10T09:22:15.508002+00:00",
+  "sampled_peak_tree_rss_kib": 17260,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 0.07912659599969629,
+  "stdout": "logs/build/restore.stdout",
+  "stderr": "logs/build/restore.stderr",
+  "peak_rss_kib": 7264
+}

@@ -1,0 +1,54 @@
+echo gcc -g -ffloat-store
+gcc -g -ffloat-store
+make -C cpp_wrapper
+make[1]: Entering directory '/root/RSG/work/CondTerm/ice/popl16_artifact/C50/cpp_wrapper'
+gcc -O3 -c array.c
+g++ -O3 -c clist.cpp
+g++ -O3 -c cmap.cpp
+g++ -O3 -c file_tools.cpp
+g++ -O3 -I .. -c tree_serializer.cpp
+ar crs cpp_wrapper.a array.o clist.o cmap.o file_tools.o tree_serializer.o
+make[1]: Leaving directory '/root/RSG/work/CondTerm/ice/popl16_artifact/C50/cpp_wrapper'
+make c5.0dbg c5.0.dt_penalty c5.0.dt_entropy
+make[1]: Entering directory '/root/RSG/work/CondTerm/ice/popl16_artifact/C50'
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c c50.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c global.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c construct.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c formtree.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c info.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c discr.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c contin.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c subset.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c prune.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c p-thresh.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c trees.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c formrules.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c siftrules.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c ruletree.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c rules.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c xval.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c getnames.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c getdata.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c implicitatt.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c mcost.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c classify.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c confmat.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c sort.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c update.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c utility.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c modelfiles.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c attwinnow.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -c debug.c
+gcc -g -ffloat-store -g -Wall -DVerbOpt -O0 -DDEBUG -g -o c5.0dbg c50.o global.o construct.o formtree.o info.o discr.o contin.o subset.o prune.o p-thresh.o trees.o formrules.o siftrules.o ruletree.o rules.o xval.o getnames.o getdata.o implicitatt.o mcost.o classify.o confmat.o sort.o update.o utility.o modelfiles.o attwinnow.o debug.o  cpp_wrapper/cpp_wrapper.a -lm -lstdc++
+cat defns.i global.c c50.c construct.c formtree.c info.c discr.c contin.c subset.c prune.c p-thresh.c trees.c siftrules.c ruletree.c rules.c getdata.c implicitatt.c mcost.c confmat.c sort.c update.c attwinnow.c classify.c formrules.c getnames.c modelfiles.c utility.c xval.c debug.c\
+	| egrep -v 'defns.i|extern.i' >c50gt.c
+gcc -g -ffloat-store  -static-libgcc -static-libstdc++ -DPENALTY -O3 -o c5.0.dt_penalty c50gt.c cpp_wrapper/cpp_wrapper.a -lm -lstdc++
+strip c5.0.dt_penalty
+rm c50gt.c
+cat defns.i global.c c50.c construct.c formtree.c info.c discr.c contin.c subset.c prune.c p-thresh.c trees.c siftrules.c ruletree.c rules.c getdata.c implicitatt.c mcost.c confmat.c sort.c update.c attwinnow.c classify.c formrules.c getnames.c modelfiles.c utility.c xval.c debug.c\
+	| egrep -v 'defns.i|extern.i' >c50gt.c
+gcc -g -ffloat-store  -static-libgcc -static-libstdc++ -O3 -o c5.0.dt_entropy c50gt.c cpp_wrapper/cpp_wrapper.a -lm -lstdc++
+strip c5.0.dt_entropy
+rm c50gt.c
+make[1]: Leaving directory '/root/RSG/work/CondTerm/ice/popl16_artifact/C50'
+gcc -g -ffloat-store  -static-libgcc -static-libstdc++ -o report report.c -lm

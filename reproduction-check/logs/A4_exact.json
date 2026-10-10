@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "experiments/exact_single_term.py"
+  ],
+  "cwd": "/root/RSG-reproduction-check",
+  "started_utc": "2026-10-10T09:23:28.614712+00:00",
+  "sampled_peak_tree_rss_kib": 43360,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 0.3678112659999897,
+  "stdout": "logs/A4_exact.stdout",
+  "stderr": "logs/A4_exact.stderr",
+  "peak_rss_kib": 42284
+}

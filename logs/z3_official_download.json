@@ -1,0 +1,21 @@
+{
+  "command": [
+    "curl",
+    "-L",
+    "--fail",
+    "--connect-timeout",
+    "15",
+    "--max-time",
+    "150",
+    "-o",
+    "sources/z3-4.8.9-x64-ubuntu-16.04.zip",
+    "https://github.com/Z3Prover/z3/releases/download/z3-4.8.9/z3-4.8.9-x64-ubuntu-16.04.zip"
+  ],
+  "cwd": "/root/RSG",
+  "started_utc": "2026-10-10T09:03:52.768569+00:00",
+  "exit_code": 56,
+  "wall_seconds": 90.25399709999988,
+  "stdout": "logs/z3_official_download.stdout",
+  "stderr": "logs/z3_official_download.stderr",
+  "peak_rss_kib": 14076
+}

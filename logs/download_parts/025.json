@@ -1,0 +1,71 @@
+[
+  {
+    "part": 25,
+    "attempt": 0,
+    "command": [
+      "curl",
+      "-L",
+      "--fail",
+      "--connect-timeout",
+      "20",
+      "--max-time",
+      "600",
+      "-r",
+      "209715200-218103807",
+      "-D",
+      "/root/RSG/logs/download_parts/025.headers",
+      "-o",
+      "/root/RSG/sources/artifact_parts/025.part",
+      "https://zenodo.org/records/16891885/files/CondTerm-Artifact.rar"
+    ],
+    "exit_code": 18,
+    "seconds": 115.94325617100003,
+    "valid_range": false
+  },
+  {
+    "part": 25,
+    "attempt": 1,
+    "command": [
+      "curl",
+      "-L",
+      "--fail",
+      "--connect-timeout",
+      "20",
+      "--max-time",
+      "600",
+      "-r",
+      "212586544-218103807",
+      "-D",
+      "/root/RSG/logs/download_parts/025.headers",
+      "-o",
+      "/root/RSG/sources/artifact_parts/025.part.tail",
+      "https://zenodo.org/records/16891885/files/CondTerm-Artifact.rar"
+    ],
+    "exit_code": 18,
+    "seconds": 116.90015561799999,
+    "valid_range": false
+  },
+  {
+    "part": 25,
+    "attempt": 2,
+    "command": [
+      "curl",
+      "-L",
+      "--fail",
+      "--connect-timeout",
+      "20",
+      "--max-time",
+      "600",
+      "-r",
+      "215870976-218103807",
+      "-D",
+      "/root/RSG/logs/download_parts/025.headers",
+      "-o",
+      "/root/RSG/sources/artifact_parts/025.part.tail",
+      "https://zenodo.org/records/16891885/files/CondTerm-Artifact.rar"
+    ],
+    "exit_code": 0,
+    "seconds": 29.032206868999992,
+    "valid_range": true
+  }
+]

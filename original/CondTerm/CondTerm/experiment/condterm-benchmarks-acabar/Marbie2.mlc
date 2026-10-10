@@ -1,0 +1,25 @@
+###include <stdio.h>
+##  w1
+##int main() {
+##    int t;
+##    scanf("%d", &t);
+##    printf("[Testing] <Interface V4.0> (Log all variables for reuse)\n");
+##    
+##    while(5<8) {
+##        printf("t:%d\n", t);
+##        t = t+1;
+##    }
+##	
+##    return 0;
+##}
+##
+##
+!vars
+t
+
+!pvars
+t'
+
+!path
+5<=7
+t'=t+1

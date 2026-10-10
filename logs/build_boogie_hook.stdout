@@ -1,0 +1,223 @@
+
+>>>> xbuild tool is deprecated and will be removed in future updates, use msbuild instead <<<<
+
+XBuild Engine Version 14.0
+Mono, Version 6.8.0.105
+Copyright (C) 2005-2013 Various Mono authors
+
+Build started 10/10/2026 17:05:02.
+__________________________________________________
+Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln" (default target(s)):
+	Target ValidateSolutionConfiguration:
+		Building solution configuration "Release|Mixed Platforms".
+	Target Build:
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/CodeContractsExtender.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/CodeContractsExtender.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Model/Model.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Model/Model.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/Graph.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/Graph.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/Basetypes.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/Basetypes.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/ParserHelper.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/ParserHelper.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ModelViewer/ModelViewer.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: x86
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ModelViewer/ModelViewer.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/Core.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/Core.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/BVD/BVD.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+			Target _CopyAppConfigFile:
+			Skipping target "_CopyAppConfigFile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/BVD/BVD.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/AbsInt.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/AbsInt/AbsInt.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/VCExpr.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/VCExpr.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/Concurrency.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+			Target _CopyAppConfigFile:
+			Skipping target "_CopyAppConfigFile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Concurrency/Concurrency.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/VCGeneration.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/VCGeneration.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/SMTLib.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/SMTLib.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/Predication.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Predication/Predication.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/Doomed.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+			Skipping target "CoreCompile" because its outputs are up-to-date.
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Doomed/Doomed.csproj".
+		Project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/Houdini.csproj" (default target(s)):
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target _GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "_GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+				Tool /usr/lib/mono/4.5/mcs.exe execution started with arguments: /noconfig /debug:pdbonly /optimize+ /out:obj/Release/Houdini.dll ../version.cs AbstractHoudini.cs Checker.cs CandidateDependenceAnalyser.cs MLHoudini.cs MLHoudiniSymb.cs Houdini.cs StagedHoudini.cs ConcurrentHoudini.cs obj/Release/.NETFramework,Version=v4.0.AssemblyAttribute.cs /target:library /define:TRACE /langversion:Experimental /nostdlib /reference:../../Newtonsoft.Json.dll /reference:/usr/lib/mono/4.0-api/System.dll /reference:/usr/lib/mono/4.0-api/System.Xml.Linq.dll /reference:/usr/lib/mono/4.0-api/System.Data.DataSetExtensions.dll /reference:/usr/lib/mono/4.0-api/Microsoft.CSharp.dll /reference:/usr/lib/mono/4.0-api/System.Data.dll /reference:/usr/lib/mono/4.0-api/System.Xml.dll /reference:/usr/lib/mono/4.0-api/System.Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Basetypes/bin/Release//Basetypes.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/CodeContractsExtender/bin/Release//CodeContractsExtender.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Core/bin/Release//Core.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Graph/bin/Release//Graph.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Binaries//Model.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/ParserHelper/bin/Release//ParserHelper.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/bin/Release//Provers.SMTLib.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCExpr/bin/Release//VCExpr.dll /reference:/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/VCGeneration/bin/Release//VCGeneration.dll /reference:/usr/lib/mono/4.0-api//mscorlib.dll /warn:4
+AbstractHoudini.cs(307,27): warning CS0219: The variable `failingProcedure' is assigned but its value is never used
+AbstractHoudini.cs(3467,25): warning CS0219: The variable `pos' is assigned but its value is never used
+CandidateDependenceAnalyser.cs(701,7): warning CS0162: Unreachable code detected
+MLHoudini.cs(1048,17): warning CS0219: The variable `index' is assigned but its value is never used
+MLHoudini.cs(1597,63): error CS0103: The name `RsgSmt' does not exist in the current context
+MLHoudini.cs(3773,13): warning CS0162: Unreachable code detected
+MLHoudini.cs(5153,17): error CS0103: The name `RsgExperimentRequested' does not exist in the current context
+MLHoudini.cs(5153,50): error CS0103: The name `RunRsgExperiment' does not exist in the current context
+MLHoudini.cs(5333,13): warning CS0162: Unreachable code detected
+			Task "Csc" execution -- FAILED
+			Done building target "CoreCompile" in project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/Houdini.csproj".-- FAILED
+		Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/Houdini.csproj".-- FAILED
+	Task "MSBuild" execution -- FAILED
+	Done building target "Build" in project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln".-- FAILED
+Done building project "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln".-- FAILED
+
+Build FAILED.
+
+Warnings:
+
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln (default targets) ->
+(Build target) ->
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/Houdini.csproj (default targets) ->
+/usr/lib/mono/xbuild/14.0/bin/Microsoft.CSharp.targets (CoreCompile target) ->
+
+	AbstractHoudini.cs(307,27): warning CS0219: The variable `failingProcedure' is assigned but its value is never used
+	AbstractHoudini.cs(3467,25): warning CS0219: The variable `pos' is assigned but its value is never used
+	CandidateDependenceAnalyser.cs(701,7): warning CS0162: Unreachable code detected
+	MLHoudini.cs(1048,17): warning CS0219: The variable `index' is assigned but its value is never used
+	MLHoudini.cs(3773,13): warning CS0162: Unreachable code detected
+	MLHoudini.cs(5333,13): warning CS0162: Unreachable code detected
+
+Errors:
+
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/NewBoogie.sln (default targets) ->
+(Build target) ->
+/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source/Houdini/Houdini.csproj (default targets) ->
+/usr/lib/mono/xbuild/14.0/bin/Microsoft.CSharp.targets (CoreCompile target) ->
+
+	MLHoudini.cs(1597,63): error CS0103: The name `RsgSmt' does not exist in the current context
+	MLHoudini.cs(5153,17): error CS0103: The name `RsgExperimentRequested' does not exist in the current context
+	MLHoudini.cs(5153,50): error CS0103: The name `RunRsgExperiment' does not exist in the current context
+
+	 6 Warning(s)
+	 3 Error(s)
+
+Time Elapsed 00:00:03.6165880

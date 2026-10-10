@@ -1,0 +1,139 @@
+[Info] Setting the strategy...
+[Info] Using strategy CondTerm_Config
+[Info] RSGeneralize=true
+[Info] DataSaving=true
+[Info] Running the task Witness...
+---Begin Iteration: 1 ---
+[Info] Initial run and test...
+Test with LB=-10, UB=10, R=40
+Test with LB=-60, UB=60, R=30
+Test with LB=-110, UB=110, R=20
+[Warning] Test timeout 1s. Skip!
+[TEST] get 0 terminating executions and 3 timeout executions
+initial test result:  False
+[DataSaving] write data into storage files.
+[Debug] Boogie Dir: /root/RSG-reproduction-check/work/CondTerm/ice/popl16_artifact/Boogie/Binaries
+[Debug] Boogie Cmd: /usr/bin/timeout --foreground --kill-after 1 61 mono Boogie.exe /nologo /noinfer /contractInfer /mlHoudini:dt_penalty /RSInfer /trace /printAssignment /RSGeneralize /DataShare 10 /StorageCSV /root/RSG-reproduction-check/work/e2e/fixed_R0/storage.csv /StorageIMP /root/RSG-reproduction-check/work/e2e/fixed_R0/storage.imp /root/RSG-reproduction-check/work/e2e/fixed_R0/tmp/Witness_rsl.bpl
+[Debug] Storage CSV file path: /root/RSG-reproduction-check/work/e2e/fixed_R0/storage.csv
+[Warning] Storage CSV file not found, ignored
+[Debug] predicate generalization---get unsat core: GeneralizeRSPredicate_1_4 GeneralizeRSPredicate_1_3 GeneralizeRSPredicate_1_2 GeneralizeRSPredicate_1_1
+[Debug] interval generalization---get unsat core: GeneralizeRSInterval_1_pred2_int4 GeneralizeRSInterval_1_pred2_int5 GeneralizeRSInterval_1_pred2_int7 GeneralizeRSInterval_1_pred2_int9 GeneralizeRSInterval_1_pred3_int3 GeneralizeRSInterval_1_pred3_int4 GeneralizeRSInterval_1_pred3_int5 GeneralizeRSInterval_1_pred3_int6 GeneralizeRSInterval_1_pred3_int7 GeneralizeRSInterval_1_pred3_int9 GeneralizeRSInterval_1_pred2_int3 GeneralizeRSInterval_1_pred1_int9 GeneralizeRSInterval_1_pred3_int8 GeneralizeRSInterval_1_pred4_int7 GeneralizeRSInterval_1_pred4_int6 GeneralizeRSInterval_1_pred3_int2 GeneralizeRSInterval_1_pred4_int4 GeneralizeRSInterval_1_pred2_int6 GeneralizeRSInterval_1_pred4_int3 GeneralizeRSInterval_1_pred2_int2 GeneralizeRSInterval_1_pred4_int2 GeneralizeRSInterval_1_pred4_int8 GeneralizeRSInterval_1_pred4_int5 GeneralizeRSInterval_1_pred2_int8 GeneralizeRSInterval_1_pred4_int9 GeneralizeRSInterval_1_pred1_int8 GeneralizeRSInterval_1_pred1_int7 GeneralizeRSInterval_1_pred1_int6 GeneralizeRSInterval_1_pred1_int5 GeneralizeRSInterval_1_pred1_int4 GeneralizeRSInterval_1_pred1_int3 GeneralizeRSInterval_1_pred1_int2
+[Debug] predicate generalization---get unsat core: GeneralizeRSPredicate_2_4 GeneralizeRSPredicate_2_3 GeneralizeRSPredicate_2_2 GeneralizeRSPredicate_2_1
+[Debug] interval generalization---get unsat core: GeneralizeRSInterval_2_pred1_int9 GeneralizeRSInterval_2_pred2_int3 GeneralizeRSInterval_2_pred2_int4 GeneralizeRSInterval_2_pred2_int6 GeneralizeRSInterval_2_pred2_int7 GeneralizeRSInterval_2_pred2_int8 GeneralizeRSInterval_2_pred2_int9 GeneralizeRSInterval_2_pred3_int2 GeneralizeRSInterval_2_pred3_int3 GeneralizeRSInterval_2_pred3_int4 GeneralizeRSInterval_2_pred4_int9 GeneralizeRSInterval_2_pred4_int7 GeneralizeRSInterval_2_pred3_int7 GeneralizeRSInterval_2_pred4_int5 GeneralizeRSInterval_2_pred4_int4 GeneralizeRSInterval_2_pred4_int2 GeneralizeRSInterval_2_pred3_int9 GeneralizeRSInterval_2_pred3_int5 GeneralizeRSInterval_2_pred1_int8 GeneralizeRSInterval_2_pred4_int8 GeneralizeRSInterval_2_pred1_int6 GeneralizeRSInterval_2_pred4_int3 GeneralizeRSInterval_2_pred1_int7 GeneralizeRSInterval_2_pred3_int6 GeneralizeRSInterval_2_pred2_int2 GeneralizeRSInterval_2_pred4_int6 GeneralizeRSInterval_2_pred3_int8 GeneralizeRSInterval_2_pred1_int5 GeneralizeRSInterval_2_pred1_int4 GeneralizeRSInterval_2_pred1_int3 GeneralizeRSInterval_2_pred1_int2 GeneralizeRSInterval_2_pred2_int5
+[Info] => Prover Time: 0.0
+[Info] => Learner Time: 0.0
+Boogie program verifier finished with 1 verified, 0 errors
+[Debug]get generalized recurrent set: (x <= 0 && -p <= 0 && -x <= 0 && p <= 0) || (-x <= -4 && x <= 4 && -p <= -1 && p <= 1)
+and_str_strip:  x <= 0
+and_str_strip:  -p <= 0
+and_str_strip:  -x <= 0
+and_str_strip:  p <= 0
+and_str_strip:  -x <= -4
+and_str_strip:  x <= 4
+and_str_strip:  -p <= -1
+and_str_strip:  p <= 1
+[Debug]calculate condition: (Ne(p, 0) | Ne(x, 0)) & (Ne(p, 1) | Ne(x, 4))
+[Info]new condition: (Ne(p, 0) & Ne(p, 1)) | (Ne(p, 0) & Ne(x, 4)) | (Ne(p, 1) & Ne(x, 0)) | (Ne(x, 0) & Ne(x, 4))
+[Info] => Sub-Result: Verified
+---Begin Iteration: 2 ---
+[Info] Initial run and test...
+Test with LB=-10, UB=10, R=40
+Test with LB=-60, UB=60, R=30
+Test with LB=-110, UB=110, R=20
+[Warning] Test timeout 1s. Skip!
+[TEST] get 0 terminating executions and 2 timeout executions
+initial test result:  False
+[DataSaving] write data into storage files.
+[Debug] Boogie Dir: /root/RSG-reproduction-check/work/CondTerm/ice/popl16_artifact/Boogie/Binaries
+[Debug] Boogie Cmd: /usr/bin/timeout --foreground --kill-after 1 61 mono Boogie.exe /nologo /noinfer /contractInfer /mlHoudini:dt_penalty /RSInfer /trace /printAssignment /RSGeneralize /DataShare 10 /StorageCSV /root/RSG-reproduction-check/work/e2e/fixed_R0/storage.csv /StorageIMP /root/RSG-reproduction-check/work/e2e/fixed_R0/storage.imp /root/RSG-reproduction-check/work/e2e/fixed_R0/tmp/Witness_assume_rsl.bpl
+[Debug] Storage CSV file path: /root/RSG-reproduction-check/work/e2e/fixed_R0/storage.csv
+[Warning] Storage CSV file not found, ignored
+[Debug] rslearn Reuse: True, maxRatio=10
+[Info] Guess Rec #0: true
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #1: false
+[Info] Guess Rec #2: false
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #3: p - x <= -1
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #4: p <= 0
+[Debug] 0 Term, 0 Imp Reused.
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #5: p - x <= -1 && -1 < p + x && p <= 0
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #6: -1 < p && p <= 0
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #7: p - x <= -1 && -2 < p - x && 0 < p + x && p <= 0
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #8: (p - x <= -1 && -1 < p && p <= 0) || (p - x <= -1 && -1 < p && 0 < p && p - x <= -2)
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #9: (x <= 2 && -1 < p && p <= 0 && 0 < x && x <= 1) || 2 < x
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #10: (p - x <= -1 && p - x <= -2 && 0 < p) || (p - x <= -1 && -2 < p - x && p <= 0 && 0 < p + x)
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #11: (p - x <= -1 && p - x <= -2 && 0 < p && p <= 1) || (p - x <= -1 && -2 < p - x && p <= 0 && 0 < p + x)
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #12: (p - x <= -1 && -4 < p - x && p - x <= -2 && 0 < p && p <= 1) || (p - x <= -1 && -4 < p - x && -2 < p - x && p <= 0 && 0 < p + x)
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #13: (-1 < p && p <= 1 && p - x <= 0 && x <= 1) || (-1 < p && p <= 1 && p - x <= 0 && 1 < x && 0 < p && 2 < x && x <= 3)
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #14: (-1 < p && p <= 1 && p - x <= 0 && p + x <= 1) || (-1 < p && p <= 1 && p - x <= 0 && 1 < p + x && 0 < p && p - x <= -2 && x <= 3)
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #15: (-1 < p && p <= 1 && p - x <= 0 && -4 < p - x && x <= 2 && p + x <= 1) || (-1 < p && p <= 1 && p - x <= 0 && -4 < p - x && 2 < x)
+[Debug] 0 Term, 0 Imp Reused.
+[Info] Guess Rec #16: (-1 < p && p <= 1 && p - x <= 0 && -4 < p - x && p + x <= 1) || (-1 < p && p <= 1 && p - x <= 0 && -4 < p - x && 1 < p + x && 3 < p + x)
+[Debug] predicate generalization---get unsat core: GeneralizeRSPredicate_1_1 GeneralizeRSPredicate_1_5 GeneralizeRSPredicate_1_3
+[Debug] interval generalization---get unsat core: GeneralizeRSInterval_1_pred2_int4 GeneralizeRSInterval_1_pred2_int5 GeneralizeRSInterval_1_pred2_int6 GeneralizeRSInterval_1_pred2_int7 GeneralizeRSInterval_1_pred2_int8 GeneralizeRSInterval_1_pred2_int9 GeneralizeRSInterval_1_pred3_int2 GeneralizeRSInterval_1_pred3_int3 GeneralizeRSInterval_1_pred3_int6 GeneralizeRSInterval_1_pred3_int4 GeneralizeRSInterval_1_pred3_int8 GeneralizeRSInterval_1_pred3_int5 GeneralizeRSInterval_1_pred1_int9 GeneralizeRSInterval_1_pred3_int7 GeneralizeRSInterval_1_pred1_int8 GeneralizeRSInterval_1_pred2_int3 GeneralizeRSInterval_1_pred1_int6 GeneralizeRSInterval_1_pred2_int2 GeneralizeRSInterval_1_pred3_int9 GeneralizeRSInterval_1_pred1_int5 GeneralizeRSInterval_1_pred1_int3 GeneralizeRSInterval_1_pred1_int4 GeneralizeRSInterval_1_pred1_int7 GeneralizeRSInterval_1_pred1_int2
+[Debug] predicate generalization---get unsat core: GeneralizeRSPredicate_2_4 GeneralizeRSPredicate_2_6 GeneralizeRSPredicate_2_2
+[Debug] interval generalization---get unsat core: GeneralizeRSInterval_2_pred2_int5 GeneralizeRSInterval_2_pred2_int8 GeneralizeRSInterval_2_pred3_int2 GeneralizeRSInterval_2_pred3_int3 GeneralizeRSInterval_2_pred3_int4 GeneralizeRSInterval_2_pred3_int5 GeneralizeRSInterval_2_pred3_int6 GeneralizeRSInterval_2_pred3_int7 GeneralizeRSInterval_2_pred3_int8 GeneralizeRSInterval_2_pred3_int9 GeneralizeRSInterval_2_pred2_int3 GeneralizeRSInterval_2_pred1_int8 GeneralizeRSInterval_2_pred1_int9 GeneralizeRSInterval_2_pred2_int2 GeneralizeRSInterval_2_pred2_int6 GeneralizeRSInterval_2_pred1_int6 GeneralizeRSInterval_2_pred1_int7 GeneralizeRSInterval_2_pred1_int5 GeneralizeRSInterval_2_pred1_int3 GeneralizeRSInterval_2_pred2_int4 GeneralizeRSInterval_2_pred1_int2 GeneralizeRSInterval_2_pred2_int7 GeneralizeRSInterval_2_pred1_int4 GeneralizeRSInterval_2_pred2_int9
+[Info] => Prover Time: 0.09
+[Info] => Learner Time: 0.04
+Boogie program verifier finished with 1 verified, 0 errors
+[Debug]get generalized recurrent set: (p + x <= 1 && p - x <= 0 && -p <= 0) || (-(p + x) <= -4 && p <= 1 && -(p - x) <= 3)
+and_str_strip:  p + x <= 1
+and_str_strip:  p - x <= 0
+and_str_strip:  -p <= 0
+and_str_strip:  -(p + x) <= -4
+and_str_strip:  p <= 1
+and_str_strip:  -(p - x) <= 3
+[Debug]calculate condition: ((p > x) | (p < 0) | (p + x > 1)) & ((p > 1) | (p + x < 4) | (p - x < -3))
+[Info]new condition: ((p > x) | (p < 0) | (p + x > 1)) & ((p > 1) | (p + x < 4) | (p - x < -3)) & ((Ne(p, 0) & Ne(p, 1)) | (Ne(p, 0) & Ne(x, 4)) | (Ne(p, 1) & Ne(x, 0)) | (Ne(x, 0) & Ne(x, 4)))
+[DataSaving] record RSL data: 10 term and 3 imp.
+[Info] => Sub-Result: Verified
+---Begin Iteration: 3 ---
+[Info] Initial run and test...
+Test with LB=-10, UB=10, R=40
+Test with LB=-60, UB=60, R=30
+[Warning] Test timeout 1s. Skip!
+[TEST] get 0 terminating executions and 0 timeout executions
+initial test result:  True
+[Info] C File find! Trying make compilation...
+[Info] => Compile success!
+Running Task 'Witness'
+[Info] Check round 1:
+[Info] Running the test...
+No data output from the test. Retest with LB = -60, UB = 60, R = 100
+[Warning] Test timeout 1s. Skip!
+[Info] Running the bound learner...
+[Info] Use Advanced CBC: 2
+match Decl for:i
+match M for:i
+match Inv for:i
+[Info] Running CBC...
+[info] Write to CBC file /root/RSG-reproduction-check/work/e2e/fixed_R0/tmp/CBC_Witness_assume.bpl
+[Debug] Boogie Dir: /root/RSG-reproduction-check/work/CondTerm/ice/popl16_artifact/Boogie/Binaries
+[Debug] Boogie Cmd: mono Boogie.exe /noinfer /contractInfer /liveVariableAnalysis:0 /printAssignment /trace /printModel:4 /root/RSG-reproduction-check/work/e2e/fixed_R0/tmp/CBC_Witness_assume.bpl
+Boogie program verifier finished with 1 verified, 0 errors
+[info] CBC verified with bound 2
+[Info] The termination is proved.
+[Info] The const bound checker proved with bound 2.
+[Info] => Sub-Result: Termination
+[Info] Bound is: i >= 2
+[Info] Inv is: CBC 2
+[Info] Result: Cond-Termination (5.690720 s, Termination 1.322005 s, NonTermination 0.666123 s)
+[Info] Condition Result: ((p > x) || (p < 0) || (p + x > 1)) && ((p > 1) || (p + x < 4) || (p - x < -3)) && ((ne(p, 0) && ne(p, 1)) || (ne(p, 0) && ne(x, 4)) || (ne(p, 1) && ne(x, 0)) || (ne(x, 0) && ne(x, 4)))
+[Info] Iteration times: 3
+[Info] Termination Time Result:
+[1.322005271911621]
+[Info] NonTermination Time Result:
+[0.24117636680603027, 0.42494702339172363]

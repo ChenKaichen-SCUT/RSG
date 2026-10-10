@@ -1,0 +1,22 @@
+##while (x >= 0) {
+##	x = x + y;
+##	y = y + 1;
+##}
+##
+##
+### these are the variables
+###
+!vars
+x y
+
+# these are the primed variables 
+!pvars 
+x' y'
+
+# PATH 1
+#
+!path
+x>=0
+x'=x+y
+y'=y+1
+

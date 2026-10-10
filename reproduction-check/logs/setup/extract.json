@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "scripts/extract_artifact.py"
+  ],
+  "cwd": "/root/RSG-reproduction-check",
+  "started_utc": "2026-10-10T09:22:07.244101+00:00",
+  "sampled_peak_tree_rss_kib": 46772,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 7.88020358499989,
+  "stdout": "logs/setup/extract.stdout",
+  "stderr": "logs/setup/extract.stderr",
+  "peak_rss_kib": 27688
+}

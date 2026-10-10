@@ -1,0 +1,54 @@
+##if (b >= 1) t = 1; else t = -1;
+##
+##while (x <= n)
+##{
+##  if (b >= 1) x = x + t; else x = x - t;
+##}
+##
+##
+!vars
+x n b t
+
+!pvars
+x' n' b' t'
+
+!path
+b>=1
+t=1
+x<=n
+b>=1
+x'=x+t
+n'=n
+b'=b
+t'=t
+
+!path
+b>=1
+t=1
+x<=n
+b<=0
+x'=x-t
+n'=n
+b'=b
+t'=t
+
+!path
+b<=0
+t=-1
+x<=n
+b>=1
+x'=x+t
+n'=n
+b'=b
+t'=t
+
+!path
+b<=0
+t=-1
+x<=n
+b<=0
+x'=x-t
+n'=n
+b'=b
+t'=t
+

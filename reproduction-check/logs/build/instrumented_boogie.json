@@ -1,0 +1,18 @@
+{
+  "command": [
+    "xbuild",
+    "/t:Rebuild",
+    "/p:Configuration=Release",
+    "/p:LangVersion=Experimental",
+    "NewBoogie.sln"
+  ],
+  "cwd": "/root/RSG-reproduction-check/work/CondTerm/ice/popl16_artifact/Boogie/Source",
+  "started_utc": "2026-10-10T09:22:37.773633+00:00",
+  "sampled_peak_tree_rss_kib": 430008,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 9.539913682000133,
+  "stdout": "logs/build/instrumented_boogie.stdout",
+  "stderr": "logs/build/instrumented_boogie.stderr",
+  "peak_rss_kib": 405576
+}

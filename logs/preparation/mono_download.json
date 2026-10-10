@@ -1,0 +1,19 @@
+{
+  "command": [
+    "apt-get",
+    "-y",
+    "--download-only",
+    "-o",
+    "Dir::Cache::archives=/mnt/Space0/RSG/.deps/debs",
+    "install",
+    "mono-devel",
+    "mono-xbuild"
+  ],
+  "cwd": "/mnt/Space0/RSG",
+  "started_utc": "2026-10-10T08:38:52.755412+00:00",
+  "exit_code": 100,
+  "wall_seconds": 131.82805701403413,
+  "stdout": "logs/mono_download.stdout",
+  "stderr": "logs/mono_download.stderr",
+  "peak_rss_kib": 98244
+}

@@ -1,0 +1,236 @@
+[TRACE] Using prover: /root/RSG-reproduction-check/work/pristine-bin/z3.exe
+Parsing /root/RSG-reproduction-check/experiments/witness.bpl
+Coalescing blocks...
+Coalescing blocks...
+Coalescing blocks...
+Coalescing blocks...
+Coalescing blocks...
+Coalescing blocks...
+[Debug] Storage CSV file path: 
+[Warning] Storage CSV file not found, ignored
+Generating VC of main
+Generating VC of main_instrumented
+Generating VC of main_helper_1
+Generating VC of main_helper_2
+Generating VC of main_helper_3
+Generating VC of main_helper_4
+[Debug] rslearn Reuse: False, maxRatio=10
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  true
+}
+Negative example added
+Added: b1:1,0: negative
+Prover Time taken = 0.037369
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.003797
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  false
+}
+Prover Time taken = 0.000412
+Prover Time taken = 0.000224
+Prover Time taken = 0.000208
+Prover Time taken = 0.000241
+Verifying main_instrumented For Sample: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  false
+}
+Positive example added
+Added: b1:0,0: positive
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.002503
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  p <= 0
+}
+Negative example added
+Added: b1:-1,0: negative
+Prover Time taken = 0.003498
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.002148
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  -1 < p && p <= 0
+}
+Negative example added
+Added: b1:0,-1: negative
+Prover Time taken = 0.003406
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.002185
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  -1 < x && -1 < p && p <= 0
+}
+Prover Time taken = 0.001905
+Implication added
+Added implication: 4,5
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.002209
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  p - x <= 0 && -1 < p
+}
+Negative example added
+Added: b1:1,1: negative
+Prover Time taken = 0.001963
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.002217
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  p - x <= 0 && -1 < p && p + x <= 1
+}
+Prover Time taken = 0.000805
+Prover Time taken = 0.001939
+Implication added
+Added implication: 1,7
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.002334
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  (p + x <= 3 && p - x <= 0 && -1 < p && p + x <= 1) || 3 < p + x
+}
+Negative example added
+Added: b1:2,2: negative
+Prover Time taken = 0.002082
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.002209
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  (x <= 2 && x <= 0 && -1 < x && -1 < p && p <= 0) || 2 < x
+}
+Prover Time taken = 0.000729
+Negative example added
+Added: b1:2,3: negative
+Prover Time taken = 0.003265
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.002249
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  p - x <= -3 || (-3 < p - x && x <= 0 && -1 < x && -1 < p && p <= 0)
+}
+Negative example added
+Added: b1:-2,1: negative
+Prover Time taken = 0.003997
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.002326
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  (x <= 3 && x <= 0 && -1 < x && -1 < p && p <= 0) || 3 < x
+}
+Prover Time taken = 0.000706
+Negative example added
+Added: b1:2,4: negative
+Prover Time taken = 0.001967
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.002293
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  (p <= 1 && p + x <= 4 && -1 < p + x && p <= 0) || (p <= 1 && p + x <= 4 && -1 < p + x && 0 < p && p - x <= -1) || (p <= 1 && 4 < p + x)
+}
+Negative example added
+Overwrote: b1:1,2: negative
+Prover Time taken = 0.002353
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.002336
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  (p <= 1 && x <= 3 && x <= 0 && -1 < x && -1 < p && p <= 0) || (p <= 1 && 3 < x)
+}
+Prover Time taken = 0.000753
+Negative example added
+Added: b1:-1,4: negative
+Prover Time taken = 0.002029
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.002309
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  (-1 < p && p - x <= -3) || (-1 < p && -3 < p - x && p <= 0 && -1 < p - x && -1 < x)
+}
+Prover Time taken = 0.000854
+Negative example added
+Added: b1:2,5: negative
+Prover Time taken = 0.002129
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.002354
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  (p <= 1 && p + x <= 4 && x <= 0 && -1 < x && -1 < p && p <= 0) || (p <= 1 && 4 < p + x)
+}
+Prover Time taken = 0.000778
+Negative example added
+Added: b1:0,5: negative
+Prover Time taken = 0.002134
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.00235
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  (p <= 1 && -1 < p && p <= 0 && x <= 1 && -1 < x) || (p <= 1 && -1 < p && 0 < p && p - x <= -2)
+}
+Prover Time taken = 0.000827
+Negative example added
+Added: b1:1,5: negative
+Prover Time taken = 0.002114
+c5 filename: ./c5.0.dt_penalty
+Learner (c5) Time taken = 0.002294
+Verifying main: 
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  (p <= 1 && -1 < p && p <= 0 && x <= 1 && -1 < x) || (p <= 1 && -1 < p && 0 < p && p - x <= -2 && -4 < p - x)
+}
+Prover Time taken = 0.000981
+Prover Time taken = 0.000946
+Prover Time taken = 0.000836
+Prover Time taken = 0.000837
+[INFO] Current RS: (p <= 1 && -1 < p && p <= 0 && x <= 1 && -1 < x) || (p <= 1 && -1 < p && 0 < p && p - x <= -2 && -4 < p - x)
+The generalization vc is valid/unsat
+[Debug] predicate generalization---get unsat core: GeneralizeRSPredicate_1_5 GeneralizeRSPredicate_1_4 GeneralizeRSPredicate_1_3 GeneralizeRSPredicate_1_2
+[INFO] Generalized Predicate: -1 < x && x <= 1 && p <= 0 && -1 < p
+The generalization vc is valid/unsat
+[Debug] interval generalization---get unsat core: GeneralizeRSInterval_1_pred2_int5 GeneralizeRSInterval_1_pred2_int6 GeneralizeRSInterval_1_pred2_int7 GeneralizeRSInterval_1_pred2_int8 GeneralizeRSInterval_1_pred2_int9 GeneralizeRSInterval_1_pred3_int2 GeneralizeRSInterval_1_pred3_int3 GeneralizeRSInterval_1_pred3_int4 GeneralizeRSInterval_1_pred3_int5 GeneralizeRSInterval_1_pred3_int6 GeneralizeRSInterval_1_pred3_int7 GeneralizeRSInterval_1_pred4_int5 GeneralizeRSInterval_1_pred4_int7 GeneralizeRSInterval_1_pred4_int8 GeneralizeRSInterval_1_pred4_int6 GeneralizeRSInterval_1_pred2_int2 GeneralizeRSInterval_1_pred4_int3 GeneralizeRSInterval_1_pred1_int9 GeneralizeRSInterval_1_pred1_int6 GeneralizeRSInterval_1_pred4_int4 GeneralizeRSInterval_1_pred3_int9 GeneralizeRSInterval_1_pred3_int8 GeneralizeRSInterval_1_pred2_int3 GeneralizeRSInterval_1_pred4_int9 GeneralizeRSInterval_1_pred2_int4 GeneralizeRSInterval_1_pred1_int5 GeneralizeRSInterval_1_pred1_int7 GeneralizeRSInterval_1_pred1_int8 GeneralizeRSInterval_1_pred1_int4 GeneralizeRSInterval_1_pred4_int2 GeneralizeRSInterval_1_pred1_int2 GeneralizeRSInterval_1_pred1_int3
+[INFO] Generalized Predicate: x <= 1
+[INFO] Generalized Predicate: p <= 0
+[INFO] Generalized Predicate: -p <= 0
+[INFO] Generalized Predicate: -x <= 0
+The generalization vc is valid/unsat
+[Debug] predicate generalization---get unsat core: GeneralizeRSPredicate_2_5 GeneralizeRSPredicate_2_4 GeneralizeRSPredicate_2_3 GeneralizeRSPredicate_2_1
+[INFO] Generalized Predicate: -4 < p - x && p - x <= -2 && 0 < p && p <= 1
+The generalization vc is valid/unsat
+[Debug] interval generalization---get unsat core: GeneralizeRSInterval_2_pred2_int5 GeneralizeRSInterval_2_pred2_int8 GeneralizeRSInterval_2_pred2_int9 GeneralizeRSInterval_2_pred3_int2 GeneralizeRSInterval_2_pred3_int3 GeneralizeRSInterval_2_pred3_int4 GeneralizeRSInterval_2_pred3_int5 GeneralizeRSInterval_2_pred3_int6 GeneralizeRSInterval_2_pred3_int8 GeneralizeRSInterval_2_pred2_int3 GeneralizeRSInterval_2_pred4_int9 GeneralizeRSInterval_2_pred4_int8 GeneralizeRSInterval_2_pred4_int5 GeneralizeRSInterval_2_pred4_int4 GeneralizeRSInterval_2_pred4_int2 GeneralizeRSInterval_2_pred4_int3 GeneralizeRSInterval_2_pred4_int7 GeneralizeRSInterval_2_pred4_int6 GeneralizeRSInterval_2_pred1_int9 GeneralizeRSInterval_2_pred2_int2 GeneralizeRSInterval_2_pred3_int7 GeneralizeRSInterval_2_pred1_int8 GeneralizeRSInterval_2_pred3_int9 GeneralizeRSInterval_2_pred1_int5 GeneralizeRSInterval_2_pred2_int4 GeneralizeRSInterval_2_pred1_int6 GeneralizeRSInterval_2_pred2_int7 GeneralizeRSInterval_2_pred1_int2 GeneralizeRSInterval_2_pred2_int6 GeneralizeRSInterval_2_pred1_int7 GeneralizeRSInterval_2_pred1_int4 GeneralizeRSInterval_2_pred1_int3
+[INFO] Generalized Predicate: p - x <= -2
+[INFO] Generalized Predicate: -p <= -1
+[INFO] Generalized Predicate: p <= 1
+[INFO] Generalized Predicate: -(p - x) <= 3
+[INFO] Generalized RS: (x <= 1 && p <= 0 && -p <= 0 && -x <= 0) || (p - x <= -2 && -p <= -1 && p <= 1 && -(p - x) <= 3)
+Prover time = 0.08
+Number of prover queries = 30
+C5 Learner time = 0.04
+Number of C5 Learner queries = 16
+Total time: 0.18
+Number of examples:1
+Number of counter-examples:13
+Number of implications:2
+function {:existential true} {:inline} b1(p: int, x: int) : bool
+{
+  (p <= 1 && -1 < p && p <= 0 && x <= 1 && -1 < x) || (p <= 1 && -1 < p && 0 < p && p - x <= -2 && -4 < p - x)
+}
+verified
+
+Boogie program verifier finished with 1 verified, 0 errors

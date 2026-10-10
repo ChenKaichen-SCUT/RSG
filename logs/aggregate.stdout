@@ -1,0 +1,21 @@
+{
+  "verdict": "PARTIAL",
+  "scope": "One synthetic deterministic integer loop; oracle is not an integrated joint implementation.",
+  "official_strict_expansion": false,
+  "joint_is_Rstar": true,
+  "repair_is_Rstar": true,
+  "A4_exact_strict_candidates": 0,
+  "display_state_counts": {
+    "A1": 2,
+    "A2": 2,
+    "A3": 2,
+    "A5": 2,
+    "A4": 2,
+    "Joint-2-Selector": 4,
+    "Closure-Repair": 4
+  },
+  "joint_minus_A1_median_seconds": 0.028450032499978156,
+  "joint_over_A1_median_ratio": 1.5745885233895263,
+  "unknown_queries": [],
+  "checks_passed": true
+}

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "rsync",
+    "-a",
+    "--exclude=.git",
+    "/root/RSG/original/CondTerm/CondTerm/",
+    "/root/RSG/work/CondTerm/"
+  ],
+  "cwd": "/root/RSG",
+  "started_utc": "2026-10-10T09:03:18.369404+00:00",
+  "exit_code": 0,
+  "wall_seconds": 0.38060262699991654,
+  "stdout": "logs/working_copy.stdout",
+  "stderr": "logs/working_copy.stderr",
+  "peak_rss_kib": 7152
+}

@@ -1,0 +1,1209 @@
+{
+  "natural": {
+    "process": {
+      "command": [
+        "/root/RSG-reproduction-check/.venv/bin/python",
+        "-u",
+        "experiment/scripts/CondTerm.py",
+        "--name",
+        "Witness",
+        "--ledir",
+        "/root/RSG-reproduction-check/work/e2e/natural/benchmarks/le",
+        "--nledir",
+        "/root/RSG-reproduction-check/work/e2e/natural/benchmarks/nle",
+        "--seed",
+        "888",
+        "--tmp",
+        "/root/RSG-reproduction-check/work/e2e/natural/tmp",
+        "--test",
+        "/root/RSG-reproduction-check/work/e2e/natural/test",
+        "--vars",
+        "p|x",
+        "--conf",
+        "/root/RSG-reproduction-check/experiments/Config.xml"
+      ],
+      "cwd": "/root/RSG-reproduction-check/work/CondTerm",
+      "started_utc": "2026-10-10T09:23:29.127227+00:00",
+      "sampled_peak_tree_rss_kib": 370576,
+      "rss_sampling_interval_seconds": 0.005,
+      "exit_code": 0,
+      "wall_seconds": 6.925713206999717,
+      "stdout": "logs/e2e/natural.stdout",
+      "stderr": "logs/e2e/natural.stderr",
+      "peak_rss_kib": 187016
+    },
+    "mode": "natural",
+    "stdout_complete": true,
+    "result": "Cond-Termination",
+    "initial_state_policy": "all integers in Boogie; arbitrary int32 scanf inputs in C",
+    "oracle": false,
+    "fixed_seed_injection": null,
+    "reported_total_seconds": 5.973671,
+    "reported_termination_seconds": 1.337685,
+    "reported_nontermination_seconds": 0.822051,
+    "iterations": 3,
+    "condition": "(ne(p, 0) || ne(x, 1)) && (ne(p, 1) || ne(p - x, -2)) && (((p > 1) && (p < 0)) || ((p > 1) && (x < 0)) || ((p < 0) && (x < 4)) || ((x < 0) && (x < 4)) || ((p > 1) && (p > -x)) || ((x < 4) && (p > -x)) || ((p < 0) && (p - x < -3)) || ((x < 0) && (p - x < -3)) || ((p > -x) && (p - x < -3)))",
+    "condition_exactness": {
+      "name": "natural_termination_condition_exact",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0034075040002790047,
+      "passed": true,
+      "query_file": "logs/smt/e2e_reanalysis/0000_natural_termination_condition_exact.smt2"
+    },
+    "rslearn_invocations": 2,
+    "ddlterm_invocations": 1,
+    "recurrent_sets": [
+      {
+        "iteration": 1,
+        "stage": "learned_seed",
+        "formula": "(-1 < p && p <= 1 && -4 < p - x && x <= 3 && p + x <= 0 && -1 < x) || (-1 < p && p <= 1 && -4 < p - x && 3 < x)",
+        "formula_smt2": "(let ((a!1 (and (< (- 1) p) (>= 1 p) (< (- 4) (- p x)))))\n  (or (and a!1 (>= 3 x) (>= 0 (+ p x)) (< (- 1) x)) (and a!1 (< 3 x))))",
+        "validation": {
+          "formula_smt2": "(let ((a!1 (and (< (- 1) p) (>= 1 p) (< (- 4) (- p x)))))\n  (or (and a!1 (>= 3 x) (>= 0 (+ p x)) (< (- 1) x)) (and a!1 (< 3 x))))",
+          "valid": true,
+          "checks": [
+            {
+              "name": "natural_0_learned_seed_nonempty",
+              "result": "sat",
+              "expected": "sat",
+              "seconds": 0.0027502880002430174,
+              "passed": true,
+              "counterexample_or_witness": {
+                "p": "1",
+                "x": "4",
+                "p_next": "0",
+                "x_next": "0"
+              },
+              "query_file": "logs/smt/e2e_reanalysis/0001_natural_0_learned_seed_nonempty.smt2"
+            },
+            {
+              "name": "natural_0_learned_seed_seed",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0024037700000008044,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0002_natural_0_learned_seed_seed.smt2"
+            },
+            {
+              "name": "natural_0_learned_seed_guard",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002810389999922336,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0003_natural_0_learned_seed_guard.smt2"
+            },
+            {
+              "name": "natural_0_learned_seed_closure",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002900852000038867,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0004_natural_0_learned_seed_closure.smt2"
+            }
+          ],
+          "display_states": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        "equivalent_R0": {
+          "name": "natural_0_learned_seed_eq0",
+          "result": "unsat",
+          "expected": null,
+          "seconds": 0.0028234510000402224,
+          "passed": null,
+          "query_file": "logs/smt/e2e_reanalysis/0005_natural_0_learned_seed_eq0.smt2"
+        },
+        "equivalent_Rstar": {
+          "name": "natural_0_learned_seed_eqstar",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0028766109999196487,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          },
+          "query_file": "logs/smt/e2e_reanalysis/0006_natural_0_learned_seed_eqstar.smt2"
+        }
+      },
+      {
+        "iteration": 1,
+        "stage": "generalized",
+        "formula": "(-x <= 0 && p + x <= 0 && -p <= 0) || (-(p - x) <= 3 && p <= 1 && -x <= -4)",
+        "formula_smt2": "(let ((a!1 (and (>= 3 (- (- p x))) (>= 1 p) (<= (- x) (- 4)))))\n  (or (and (>= 0 (- x)) (>= 0 (+ p x)) (>= 0 (- p))) a!1))",
+        "validation": {
+          "formula_smt2": "(let ((a!1 (and (>= 3 (- (- p x))) (>= 1 p) (<= (- x) (- 4)))))\n  (or (and (>= 0 (- x)) (>= 0 (+ p x)) (>= 0 (- p))) a!1))",
+          "valid": true,
+          "checks": [
+            {
+              "name": "natural_0_generalized_nonempty",
+              "result": "sat",
+              "expected": "sat",
+              "seconds": 0.0027049269997405645,
+              "passed": true,
+              "counterexample_or_witness": {
+                "p": "0",
+                "x": "0",
+                "p_next": "0",
+                "x_next": "0"
+              },
+              "query_file": "logs/smt/e2e_reanalysis/0007_natural_0_generalized_nonempty.smt2"
+            },
+            {
+              "name": "natural_0_generalized_seed",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0027623589999166143,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0008_natural_0_generalized_seed.smt2"
+            },
+            {
+              "name": "natural_0_generalized_guard",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0027693090000866505,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0009_natural_0_generalized_guard.smt2"
+            },
+            {
+              "name": "natural_0_generalized_closure",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002848149999863381,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0010_natural_0_generalized_closure.smt2"
+            }
+          ],
+          "display_states": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        "equivalent_R0": {
+          "name": "natural_0_generalized_eq0",
+          "result": "unsat",
+          "expected": null,
+          "seconds": 0.0028036399999109562,
+          "passed": null,
+          "query_file": "logs/smt/e2e_reanalysis/0011_natural_0_generalized_eq0.smt2"
+        },
+        "equivalent_Rstar": {
+          "name": "natural_0_generalized_eqstar",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002865320999717369,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          },
+          "query_file": "logs/smt/e2e_reanalysis/0012_natural_0_generalized_eqstar.smt2"
+        }
+      },
+      {
+        "iteration": 2,
+        "stage": "learned_seed",
+        "formula": "(-1 < p && p <= 1 && p <= 0 && x <= 1 && 0 < x) || (-1 < p && p <= 1 && 0 < p && p - x <= -2 && -3 < p - x)",
+        "formula_smt2": "(let ((a!1 (and (and (< (- 1) p) (>= 1 p)) (>= 0 p) (>= 1 x) (< 0 x)))\n      (a!2 (and (and (< (- 1) p) (>= 1 p))\n                (< 0 p)\n                (<= (- p x) (- 2))\n                (< (- 3) (- p x)))))\n  (or a!1 a!2))",
+        "validation": {
+          "formula_smt2": "(let ((a!1 (and (and (< (- 1) p) (>= 1 p)) (>= 0 p) (>= 1 x) (< 0 x)))\n      (a!2 (and (and (< (- 1) p) (>= 1 p))\n                (< 0 p)\n                (<= (- p x) (- 2))\n                (< (- 3) (- p x)))))\n  (or a!1 a!2))",
+          "valid": true,
+          "checks": [
+            {
+              "name": "natural_1_learned_seed_nonempty",
+              "result": "sat",
+              "expected": "sat",
+              "seconds": 0.002723156999763887,
+              "passed": true,
+              "counterexample_or_witness": {
+                "p": "0",
+                "x": "1",
+                "p_next": "0",
+                "x_next": "0"
+              },
+              "query_file": "logs/smt/e2e_reanalysis/0013_natural_1_learned_seed_nonempty.smt2"
+            },
+            {
+              "name": "natural_1_learned_seed_seed",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002359909000006155,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0014_natural_1_learned_seed_seed.smt2"
+            },
+            {
+              "name": "natural_1_learned_seed_guard",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002740568999797688,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0015_natural_1_learned_seed_guard.smt2"
+            },
+            {
+              "name": "natural_1_learned_seed_closure",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0027701089998117823,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0016_natural_1_learned_seed_closure.smt2"
+            }
+          ],
+          "display_states": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        "equivalent_R0": {
+          "name": "natural_1_learned_seed_eq0",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002767538999705721,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          },
+          "query_file": "logs/smt/e2e_reanalysis/0017_natural_1_learned_seed_eq0.smt2"
+        },
+        "equivalent_Rstar": {
+          "name": "natural_1_learned_seed_eqstar",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002770679000150267,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          },
+          "query_file": "logs/smt/e2e_reanalysis/0018_natural_1_learned_seed_eqstar.smt2"
+        }
+      },
+      {
+        "iteration": 2,
+        "stage": "generalized",
+        "formula": "(-x <= -1 && x <= 1 && p <= 0 && -p <= 0) || (-(p - x) <= 2 && -p <= -1 && p <= 1 && p - x <= -2)",
+        "formula_smt2": "(let ((a!1 (and (>= 2 (- (- p x))) (<= (- p) (- 1)) (>= 1 p) (<= (- p x) (- 2)))))\n  (or (and (<= (- x) (- 1)) (>= 1 x) (>= 0 p) (>= 0 (- p))) a!1))",
+        "validation": {
+          "formula_smt2": "(let ((a!1 (and (>= 2 (- (- p x))) (<= (- p) (- 1)) (>= 1 p) (<= (- p x) (- 2)))))\n  (or (and (<= (- x) (- 1)) (>= 1 x) (>= 0 p) (>= 0 (- p))) a!1))",
+          "valid": true,
+          "checks": [
+            {
+              "name": "natural_1_generalized_nonempty",
+              "result": "sat",
+              "expected": "sat",
+              "seconds": 0.002655285999935586,
+              "passed": true,
+              "counterexample_or_witness": {
+                "p": "0",
+                "x": "1",
+                "p_next": "0",
+                "x_next": "0"
+              },
+              "query_file": "logs/smt/e2e_reanalysis/0019_natural_1_generalized_nonempty.smt2"
+            },
+            {
+              "name": "natural_1_generalized_seed",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0027529979997780174,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0020_natural_1_generalized_seed.smt2"
+            },
+            {
+              "name": "natural_1_generalized_guard",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0027265280000392522,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0021_natural_1_generalized_guard.smt2"
+            },
+            {
+              "name": "natural_1_generalized_closure",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002827160000379081,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0022_natural_1_generalized_closure.smt2"
+            }
+          ],
+          "display_states": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        "equivalent_R0": {
+          "name": "natural_1_generalized_eq0",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0027701090002665296,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          },
+          "query_file": "logs/smt/e2e_reanalysis/0023_natural_1_generalized_eq0.smt2"
+        },
+        "equivalent_Rstar": {
+          "name": "natural_1_generalized_eqstar",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002718216999710421,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          },
+          "query_file": "logs/smt/e2e_reanalysis/0024_natural_1_generalized_eqstar.smt2"
+        }
+      }
+    ],
+    "reported_rslearn_prover_seconds": [
+      0.08,
+      0.08
+    ],
+    "reported_c5_learner_seconds": [
+      0.04,
+      0.03
+    ],
+    "solver_timing_limitation": "Official displayed prover times are rounded and omit RSG; full process time is measured externally."
+  },
+  "fixed_R0": {
+    "process": {
+      "command": [
+        "/root/RSG-reproduction-check/.venv/bin/python",
+        "-u",
+        "experiment/scripts/CondTerm.py",
+        "--name",
+        "Witness",
+        "--ledir",
+        "/root/RSG-reproduction-check/work/e2e/fixed_R0/benchmarks/le",
+        "--nledir",
+        "/root/RSG-reproduction-check/work/e2e/fixed_R0/benchmarks/nle",
+        "--seed",
+        "888",
+        "--tmp",
+        "/root/RSG-reproduction-check/work/e2e/fixed_R0/tmp",
+        "--test",
+        "/root/RSG-reproduction-check/work/e2e/fixed_R0/test",
+        "--vars",
+        "p|x",
+        "--conf",
+        "/root/RSG-reproduction-check/experiments/Config.xml"
+      ],
+      "cwd": "/root/RSG-reproduction-check/work/CondTerm",
+      "started_utc": "2026-10-10T09:23:36.105826+00:00",
+      "sampled_peak_tree_rss_kib": 367100,
+      "rss_sampling_interval_seconds": 0.005,
+      "exit_code": 0,
+      "wall_seconds": 6.6162760010001875,
+      "stdout": "logs/e2e/fixed_R0.stdout",
+      "stderr": "logs/e2e/fixed_R0.stderr",
+      "peak_rss_kib": 186352
+    },
+    "mode": "fixed_R0",
+    "stdout_complete": true,
+    "result": "Cond-Termination",
+    "initial_state_policy": "all integers in Boogie; arbitrary int32 scanf inputs in C",
+    "oracle": false,
+    "fixed_seed_injection": "first RSLearn call only",
+    "reported_total_seconds": 5.69072,
+    "reported_termination_seconds": 1.322005,
+    "reported_nontermination_seconds": 0.666123,
+    "iterations": 3,
+    "condition": "((p > x) || (p < 0) || (p + x > 1)) && ((p > 1) || (p + x < 4) || (p - x < -3)) && ((ne(p, 0) && ne(p, 1)) || (ne(p, 0) && ne(x, 4)) || (ne(p, 1) && ne(x, 0)) || (ne(x, 0) && ne(x, 4)))",
+    "condition_exactness": {
+      "name": "fixed_R0_termination_condition_exact",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0029963649999444897,
+      "passed": true,
+      "query_file": "logs/smt/e2e_reanalysis/0025_fixed_R0_termination_condition_exact.smt2"
+    },
+    "rslearn_invocations": 2,
+    "ddlterm_invocations": 1,
+    "recurrent_sets": [
+      {
+        "iteration": 1,
+        "stage": "injected_seed",
+        "formula": "Or(And(p == 0, x == 0), And(p == 1, x == 4))",
+        "formula_smt2": "(or (and (= p 0) (= x 0)) (and (= p 1) (= x 4)))",
+        "validation": {
+          "formula_smt2": "(or (and (= p 0) (= x 0)) (and (= p 1) (= x 4)))",
+          "valid": true,
+          "checks": [
+            {
+              "name": "fixed_R0_0_injected_seed_nonempty",
+              "result": "sat",
+              "expected": "sat",
+              "seconds": 0.002667535999989923,
+              "passed": true,
+              "counterexample_or_witness": {
+                "p": "1",
+                "x": "4",
+                "p_next": "0",
+                "x_next": "0"
+              },
+              "query_file": "logs/smt/e2e_reanalysis/0026_fixed_R0_0_injected_seed_nonempty.smt2"
+            },
+            {
+              "name": "fixed_R0_0_injected_seed_seed",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0023696779999227147,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0027_fixed_R0_0_injected_seed_seed.smt2"
+            },
+            {
+              "name": "fixed_R0_0_injected_seed_guard",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0026288250001016422,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0028_fixed_R0_0_injected_seed_guard.smt2"
+            },
+            {
+              "name": "fixed_R0_0_injected_seed_closure",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0026101440003003518,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0029_fixed_R0_0_injected_seed_closure.smt2"
+            }
+          ],
+          "display_states": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        "equivalent_R0": {
+          "name": "fixed_R0_0_injected_seed_eq0",
+          "result": "unsat",
+          "expected": null,
+          "seconds": 0.002323797999906674,
+          "passed": null,
+          "query_file": "logs/smt/e2e_reanalysis/0030_fixed_R0_0_injected_seed_eq0.smt2"
+        },
+        "equivalent_Rstar": {
+          "name": "fixed_R0_0_injected_seed_eqstar",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002715018000344571,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          },
+          "query_file": "logs/smt/e2e_reanalysis/0031_fixed_R0_0_injected_seed_eqstar.smt2"
+        }
+      },
+      {
+        "iteration": 1,
+        "stage": "generalized",
+        "formula": "(x <= 0 && -p <= 0 && -x <= 0 && p <= 0) || (-x <= -4 && x <= 4 && -p <= -1 && p <= 1)",
+        "formula_smt2": "(or (and (>= 0 x) (>= 0 (- p)) (>= 0 (- x)) (>= 0 p))\n    (and (<= (- x) (- 4)) (>= 4 x) (<= (- p) (- 1)) (>= 1 p)))",
+        "validation": {
+          "formula_smt2": "(or (and (>= 0 x) (>= 0 (- p)) (>= 0 (- x)) (>= 0 p))\n    (and (<= (- x) (- 4)) (>= 4 x) (<= (- p) (- 1)) (>= 1 p)))",
+          "valid": true,
+          "checks": [
+            {
+              "name": "fixed_R0_0_generalized_nonempty",
+              "result": "sat",
+              "expected": "sat",
+              "seconds": 0.002631575000123121,
+              "passed": true,
+              "counterexample_or_witness": {
+                "p": "0",
+                "x": "0",
+                "p_next": "0",
+                "x_next": "0"
+              },
+              "query_file": "logs/smt/e2e_reanalysis/0032_fixed_R0_0_generalized_nonempty.smt2"
+            },
+            {
+              "name": "fixed_R0_0_generalized_seed",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002666736000264791,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0033_fixed_R0_0_generalized_seed.smt2"
+            },
+            {
+              "name": "fixed_R0_0_generalized_guard",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0026668259997677524,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0034_fixed_R0_0_generalized_guard.smt2"
+            },
+            {
+              "name": "fixed_R0_0_generalized_closure",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.00268333599979087,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0035_fixed_R0_0_generalized_closure.smt2"
+            }
+          ],
+          "display_states": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        "equivalent_R0": {
+          "name": "fixed_R0_0_generalized_eq0",
+          "result": "unsat",
+          "expected": null,
+          "seconds": 0.0026816459999281506,
+          "passed": null,
+          "query_file": "logs/smt/e2e_reanalysis/0036_fixed_R0_0_generalized_eq0.smt2"
+        },
+        "equivalent_Rstar": {
+          "name": "fixed_R0_0_generalized_eqstar",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002680427000086638,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          },
+          "query_file": "logs/smt/e2e_reanalysis/0037_fixed_R0_0_generalized_eqstar.smt2"
+        }
+      },
+      {
+        "iteration": 2,
+        "stage": "learned_seed",
+        "formula": "(-1 < p && p <= 1 && p - x <= 0 && -4 < p - x && p + x <= 1) || (-1 < p && p <= 1 && p - x <= 0 && -4 < p - x && 1 < p + x && 3 < p + x)",
+        "formula_smt2": "(let ((a!1 (and (< (- 1) p) (>= 1 p) (>= 0 (- p x)) (< (- 4) (- p x)))))\n  (or (and a!1 (>= 1 (+ p x))) (and a!1 (< 1 (+ p x)) (< 3 (+ p x)))))",
+        "validation": {
+          "formula_smt2": "(let ((a!1 (and (< (- 1) p) (>= 1 p) (>= 0 (- p x)) (< (- 4) (- p x)))))\n  (or (and a!1 (>= 1 (+ p x))) (and a!1 (< 1 (+ p x)) (< 3 (+ p x)))))",
+          "valid": true,
+          "checks": [
+            {
+              "name": "fixed_R0_1_learned_seed_nonempty",
+              "result": "sat",
+              "expected": "sat",
+              "seconds": 0.002738388000125269,
+              "passed": true,
+              "counterexample_or_witness": {
+                "p": "1",
+                "x": "3",
+                "p_next": "0",
+                "x_next": "0"
+              },
+              "query_file": "logs/smt/e2e_reanalysis/0038_fixed_R0_1_learned_seed_nonempty.smt2"
+            },
+            {
+              "name": "fixed_R0_1_learned_seed_seed",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002383109000220429,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0039_fixed_R0_1_learned_seed_seed.smt2"
+            },
+            {
+              "name": "fixed_R0_1_learned_seed_guard",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0028005899998788664,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0040_fixed_R0_1_learned_seed_guard.smt2"
+            },
+            {
+              "name": "fixed_R0_1_learned_seed_closure",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0028648409997913404,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0041_fixed_R0_1_learned_seed_closure.smt2"
+            }
+          ],
+          "display_states": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        "equivalent_R0": {
+          "name": "fixed_R0_1_learned_seed_eq0",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002827249999882042,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          },
+          "query_file": "logs/smt/e2e_reanalysis/0042_fixed_R0_1_learned_seed_eq0.smt2"
+        },
+        "equivalent_Rstar": {
+          "name": "fixed_R0_1_learned_seed_eqstar",
+          "result": "unsat",
+          "expected": null,
+          "seconds": 0.0028405409998413234,
+          "passed": null,
+          "query_file": "logs/smt/e2e_reanalysis/0043_fixed_R0_1_learned_seed_eqstar.smt2"
+        }
+      },
+      {
+        "iteration": 2,
+        "stage": "generalized",
+        "formula": "(p + x <= 1 && p - x <= 0 && -p <= 0) || (-(p + x) <= -4 && p <= 1 && -(p - x) <= 3)",
+        "formula_smt2": "(let ((a!1 (and (<= (- (+ p x)) (- 4)) (>= 1 p) (>= 3 (- (- p x))))))\n  (or (and (>= 1 (+ p x)) (>= 0 (- p x)) (>= 0 (- p))) a!1))",
+        "validation": {
+          "formula_smt2": "(let ((a!1 (and (<= (- (+ p x)) (- 4)) (>= 1 p) (>= 3 (- (- p x))))))\n  (or (and (>= 1 (+ p x)) (>= 0 (- p x)) (>= 0 (- p))) a!1))",
+          "valid": true,
+          "checks": [
+            {
+              "name": "fixed_R0_1_generalized_nonempty",
+              "result": "sat",
+              "expected": "sat",
+              "seconds": 0.0027309679999234504,
+              "passed": true,
+              "counterexample_or_witness": {
+                "p": "1",
+                "x": "3",
+                "p_next": "0",
+                "x_next": "0"
+              },
+              "query_file": "logs/smt/e2e_reanalysis/0044_fixed_R0_1_generalized_nonempty.smt2"
+            },
+            {
+              "name": "fixed_R0_1_generalized_seed",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002782100000331411,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0045_fixed_R0_1_generalized_seed.smt2"
+            },
+            {
+              "name": "fixed_R0_1_generalized_guard",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002818709999701241,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0046_fixed_R0_1_generalized_guard.smt2"
+            },
+            {
+              "name": "fixed_R0_1_generalized_closure",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0027790799999820592,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0047_fixed_R0_1_generalized_closure.smt2"
+            }
+          ],
+          "display_states": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        "equivalent_R0": {
+          "name": "fixed_R0_1_generalized_eq0",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0028216400000928843,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          },
+          "query_file": "logs/smt/e2e_reanalysis/0048_fixed_R0_1_generalized_eq0.smt2"
+        },
+        "equivalent_Rstar": {
+          "name": "fixed_R0_1_generalized_eqstar",
+          "result": "unsat",
+          "expected": null,
+          "seconds": 0.0028655209998760256,
+          "passed": null,
+          "query_file": "logs/smt/e2e_reanalysis/0049_fixed_R0_1_generalized_eqstar.smt2"
+        }
+      }
+    ],
+    "reported_rslearn_prover_seconds": [
+      0.0,
+      0.09
+    ],
+    "reported_c5_learner_seconds": [
+      0.0,
+      0.04
+    ],
+    "solver_timing_limitation": "Official displayed prover times are rounded and omit RSG; full process time is measured externally."
+  },
+  "oracle_Rstar": {
+    "process": {
+      "command": [
+        "/root/RSG-reproduction-check/.venv/bin/python",
+        "-u",
+        "experiment/scripts/CondTerm.py",
+        "--name",
+        "Witness",
+        "--ledir",
+        "/root/RSG-reproduction-check/work/e2e/oracle_Rstar/benchmarks/le",
+        "--nledir",
+        "/root/RSG-reproduction-check/work/e2e/oracle_Rstar/benchmarks/nle",
+        "--seed",
+        "888",
+        "--tmp",
+        "/root/RSG-reproduction-check/work/e2e/oracle_Rstar/tmp",
+        "--test",
+        "/root/RSG-reproduction-check/work/e2e/oracle_Rstar/test",
+        "--vars",
+        "p|x",
+        "--conf",
+        "/root/RSG-reproduction-check/experiments/Config.xml"
+      ],
+      "cwd": "/root/RSG-reproduction-check/work/CondTerm",
+      "started_utc": "2026-10-10T09:23:42.778503+00:00",
+      "sampled_peak_tree_rss_kib": 365708,
+      "rss_sampling_interval_seconds": 0.005,
+      "exit_code": 0,
+      "wall_seconds": 4.687849140999788,
+      "stdout": "logs/e2e/oracle_Rstar.stdout",
+      "stderr": "logs/e2e/oracle_Rstar.stderr",
+      "peak_rss_kib": 186056
+    },
+    "mode": "oracle_Rstar",
+    "stdout_complete": true,
+    "result": "Cond-Termination",
+    "initial_state_policy": "all integers in Boogie; arbitrary int32 scanf inputs in C",
+    "oracle": true,
+    "fixed_seed_injection": "first RSLearn call only",
+    "reported_total_seconds": 3.774225,
+    "reported_termination_seconds": 1.3239,
+    "reported_nontermination_seconds": 0.184271,
+    "iterations": 2,
+    "condition": "((x > 1) && (x > 4)) || ((x > 1) && (x < 3)) || ((x > 1) && ne(p, 1)) || ((x > 4) && (x < 0)) || ((x > 4) && ne(p, 0)) || ((x < 0) && (x < 3)) || ((x < 0) && ne(p, 1)) || ((x < 3) && ne(p, 0)) || (ne(p, 0) && ne(p, 1))",
+    "condition_exactness": {
+      "name": "oracle_Rstar_termination_condition_exact",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0027527689999260474,
+      "passed": true,
+      "query_file": "logs/smt/e2e_reanalysis/0050_oracle_Rstar_termination_condition_exact.smt2"
+    },
+    "rslearn_invocations": 1,
+    "ddlterm_invocations": 1,
+    "recurrent_sets": [
+      {
+        "iteration": 1,
+        "stage": "injected_seed",
+        "formula": "Or(And(p == 0, x == 0), And(p == 1, x == 4))",
+        "formula_smt2": "(or (and (= p 0) (= x 0)) (and (= p 1) (= x 4)))",
+        "validation": {
+          "formula_smt2": "(or (and (= p 0) (= x 0)) (and (= p 1) (= x 4)))",
+          "valid": true,
+          "checks": [
+            {
+              "name": "oracle_Rstar_0_injected_seed_nonempty",
+              "result": "sat",
+              "expected": "sat",
+              "seconds": 0.0026664359997994325,
+              "passed": true,
+              "counterexample_or_witness": {
+                "p": "0",
+                "x": "0",
+                "p_next": "0",
+                "x_next": "0"
+              },
+              "query_file": "logs/smt/e2e_reanalysis/0051_oracle_Rstar_0_injected_seed_nonempty.smt2"
+            },
+            {
+              "name": "oracle_Rstar_0_injected_seed_seed",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002347678000205633,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0052_oracle_Rstar_0_injected_seed_seed.smt2"
+            },
+            {
+              "name": "oracle_Rstar_0_injected_seed_guard",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0026383159997749317,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0053_oracle_Rstar_0_injected_seed_guard.smt2"
+            },
+            {
+              "name": "oracle_Rstar_0_injected_seed_closure",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002580044000296766,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0054_oracle_Rstar_0_injected_seed_closure.smt2"
+            }
+          ],
+          "display_states": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        "equivalent_R0": {
+          "name": "oracle_Rstar_0_injected_seed_eq0",
+          "result": "unsat",
+          "expected": null,
+          "seconds": 0.0023346880002463877,
+          "passed": null,
+          "query_file": "logs/smt/e2e_reanalysis/0055_oracle_Rstar_0_injected_seed_eq0.smt2"
+        },
+        "equivalent_Rstar": {
+          "name": "oracle_Rstar_0_injected_seed_eqstar",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026904870001089876,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          },
+          "query_file": "logs/smt/e2e_reanalysis/0056_oracle_Rstar_0_injected_seed_eqstar.smt2"
+        }
+      },
+      {
+        "iteration": 1,
+        "stage": "generalized",
+        "formula": "(p <= 0 && -p <= 0 && x <= 1 && -x <= 0) || (p <= 1 && -p <= -1 && x <= 4 && -x <= -3)",
+        "formula_smt2": "(or (and (>= 0 p) (>= 0 (- p)) (>= 1 x) (>= 0 (- x)))\n    (and (>= 1 p) (<= (- p) (- 1)) (>= 4 x) (<= (- x) (- 3))))",
+        "validation": {
+          "formula_smt2": "(or (and (>= 0 p) (>= 0 (- p)) (>= 1 x) (>= 0 (- x)))\n    (and (>= 1 p) (<= (- p) (- 1)) (>= 4 x) (<= (- x) (- 3))))",
+          "valid": true,
+          "checks": [
+            {
+              "name": "oracle_Rstar_0_generalized_nonempty",
+              "result": "sat",
+              "expected": "sat",
+              "seconds": 0.002652955000030488,
+              "passed": true,
+              "counterexample_or_witness": {
+                "p": "1",
+                "x": "3",
+                "p_next": "0",
+                "x_next": "0"
+              },
+              "query_file": "logs/smt/e2e_reanalysis/0057_oracle_Rstar_0_generalized_nonempty.smt2"
+            },
+            {
+              "name": "oracle_Rstar_0_generalized_seed",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002688125999611657,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0058_oracle_Rstar_0_generalized_seed.smt2"
+            },
+            {
+              "name": "oracle_Rstar_0_generalized_guard",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0026951570002893277,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0059_oracle_Rstar_0_generalized_guard.smt2"
+            },
+            {
+              "name": "oracle_Rstar_0_generalized_closure",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0026899670001512277,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0060_oracle_Rstar_0_generalized_closure.smt2"
+            }
+          ],
+          "display_states": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        "equivalent_R0": {
+          "name": "oracle_Rstar_0_generalized_eq0",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026836769998226373,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          },
+          "query_file": "logs/smt/e2e_reanalysis/0061_oracle_Rstar_0_generalized_eq0.smt2"
+        },
+        "equivalent_Rstar": {
+          "name": "oracle_Rstar_0_generalized_eqstar",
+          "result": "unsat",
+          "expected": null,
+          "seconds": 0.0026491759999771602,
+          "passed": null,
+          "query_file": "logs/smt/e2e_reanalysis/0062_oracle_Rstar_0_generalized_eqstar.smt2"
+        }
+      }
+    ],
+    "reported_rslearn_prover_seconds": [
+      0.0
+    ],
+    "reported_c5_learner_seconds": [
+      0.0
+    ],
+    "solver_timing_limitation": "Official displayed prover times are rounded and omit RSG; full process time is measured externally."
+  },
+  "standalone_without_data_sharing": {
+    "source": "logs/original_witness_rslearn.stdout",
+    "recurrent_sets": [
+      {
+        "stage": "Current RS",
+        "formula": "(p <= 1 && -1 < p && p <= 0 && x <= 1 && -1 < x) || (p <= 1 && -1 < p && 0 < p && p - x <= -2 && -4 < p - x)",
+        "formula_smt2": "(let ((a!1 (and (and (>= 1 p) (< (- 1) p)) (>= 0 p) (>= 1 x) (< (- 1) x)))\n      (a!2 (and (and (>= 1 p) (< (- 1) p))\n                (< 0 p)\n                (<= (- p x) (- 2))\n                (< (- 4) (- p x)))))\n  (or a!1 a!2))",
+        "validation": {
+          "formula_smt2": "(let ((a!1 (and (and (>= 1 p) (< (- 1) p)) (>= 0 p) (>= 1 x) (< (- 1) x)))\n      (a!2 (and (and (>= 1 p) (< (- 1) p))\n                (< 0 p)\n                (<= (- p x) (- 2))\n                (< (- 4) (- p x)))))\n  (or a!1 a!2))",
+          "valid": true,
+          "checks": [
+            {
+              "name": "standalone_0_nonempty",
+              "result": "sat",
+              "expected": "sat",
+              "seconds": 0.0027087969997410255,
+              "passed": true,
+              "counterexample_or_witness": {
+                "p": "0",
+                "x": "0",
+                "p_next": "0",
+                "x_next": "0"
+              },
+              "query_file": "logs/smt/e2e_reanalysis/0063_standalone_0_nonempty.smt2"
+            },
+            {
+              "name": "standalone_0_seed",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002352647999941837,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0064_standalone_0_seed.smt2"
+            },
+            {
+              "name": "standalone_0_guard",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0027221469999858527,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0065_standalone_0_guard.smt2"
+            },
+            {
+              "name": "standalone_0_closure",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002786729000035848,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0066_standalone_0_closure.smt2"
+            }
+          ],
+          "display_states": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        "equivalent_Rstar": {
+          "name": "standalone_0_eqstar",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002761517999715579,
+          "passed": true,
+          "query_file": "logs/smt/e2e_reanalysis/0067_standalone_0_eqstar.smt2"
+        }
+      },
+      {
+        "stage": "Generalized RS",
+        "formula": "(x <= 1 && p <= 0 && -p <= 0 && -x <= 0) || (p - x <= -2 && -p <= -1 && p <= 1 && -(p - x) <= 3)",
+        "formula_smt2": "(let ((a!1 (and (<= (- p x) (- 2)) (<= (- p) (- 1)) (>= 1 p) (>= 3 (- (- p x))))))\n  (or (and (>= 1 x) (>= 0 p) (>= 0 (- p)) (>= 0 (- x))) a!1))",
+        "validation": {
+          "formula_smt2": "(let ((a!1 (and (<= (- p x) (- 2)) (<= (- p) (- 1)) (>= 1 p) (>= 3 (- (- p x))))))\n  (or (and (>= 1 x) (>= 0 p) (>= 0 (- p)) (>= 0 (- x))) a!1))",
+          "valid": true,
+          "checks": [
+            {
+              "name": "standalone_1_nonempty",
+              "result": "sat",
+              "expected": "sat",
+              "seconds": 0.002666505999968649,
+              "passed": true,
+              "counterexample_or_witness": {
+                "p": "0",
+                "x": "0",
+                "p_next": "0",
+                "x_next": "0"
+              },
+              "query_file": "logs/smt/e2e_reanalysis/0068_standalone_1_nonempty.smt2"
+            },
+            {
+              "name": "standalone_1_seed",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0023591389999637613,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0069_standalone_1_seed.smt2"
+            },
+            {
+              "name": "standalone_1_guard",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.0027299570001559914,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0070_standalone_1_guard.smt2"
+            },
+            {
+              "name": "standalone_1_closure",
+              "result": "unsat",
+              "expected": "unsat",
+              "seconds": 0.002807050000228628,
+              "passed": true,
+              "query_file": "logs/smt/e2e_reanalysis/0071_standalone_1_closure.smt2"
+            }
+          ],
+          "display_states": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        "equivalent_Rstar": {
+          "name": "standalone_1_eqstar",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0027248779997535166,
+          "passed": true,
+          "query_file": "logs/smt/e2e_reanalysis/0072_standalone_1_eqstar.smt2"
+        }
+      }
+    ]
+  }
+}

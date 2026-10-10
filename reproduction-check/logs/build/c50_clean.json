@@ -1,0 +1,15 @@
+{
+  "command": [
+    "make",
+    "clean"
+  ],
+  "cwd": "/root/RSG-reproduction-check/work/CondTerm/ice/popl16_artifact/C50",
+  "started_utc": "2026-10-10T09:22:25.621807+00:00",
+  "sampled_peak_tree_rss_kib": 4216,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 0.010759357000097225,
+  "stdout": "logs/build/c50_clean.stdout",
+  "stderr": "logs/build/c50_clean.stderr",
+  "peak_rss_kib": 3468
+}

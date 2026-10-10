@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "experiments/verify_frontend.py"
+  ],
+  "cwd": "/root/RSG-reproduction-check",
+  "started_utc": "2026-10-10T09:22:47.821477+00:00",
+  "sampled_peak_tree_rss_kib": 41244,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 0.17106800999999905,
+  "stdout": "logs/frontend_equivalence.stdout",
+  "stderr": "logs/frontend_equivalence.stderr",
+  "peak_rss_kib": 40628
+}

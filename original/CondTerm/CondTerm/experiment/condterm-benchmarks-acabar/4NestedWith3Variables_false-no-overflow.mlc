@@ -1,0 +1,18 @@
+##while (q > 0)
+##{
+##    q = q + a - 1;
+##    olda = a;
+##    a = 3 * olda - 4 * b;
+##    b = 4 * olda + 3 * b;
+##}
+##
+!vars
+q a b
+!pvars
+q' a' b'
+
+!path
+q>=1
+q'=q+a-1
+a'=3*a-4*b
+b'=4*a+3*b

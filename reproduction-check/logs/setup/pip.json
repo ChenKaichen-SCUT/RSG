@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/bin/pip",
+    "install",
+    "-r",
+    "scripts/requirements.lock"
+  ],
+  "cwd": "/root/RSG-reproduction-check",
+  "started_utc": "2026-10-10T09:21:29.135251+00:00",
+  "sampled_peak_tree_rss_kib": 252004,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 21.29882779899981,
+  "stdout": "logs/setup/pip.stdout",
+  "stderr": "logs/setup/pip.stderr",
+  "peak_rss_kib": 250936
+}

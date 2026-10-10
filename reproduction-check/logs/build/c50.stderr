@@ -1,0 +1,438 @@
+c50.c: In function ‘main’:
+c50.c:286:37: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+  286 |                 fprintf( Of, "Read %d intervals\n", IntervalsUpperBounds->size);
+      |                                    ~^               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                   |
+      |                                     int                                 size_t {aka long unsigned int}
+      |                                    %ld
+construct.c: In function ‘ConstructClassifiers’:
+construct.c:247:9: warning: format not a string literal and no format arguments [-Wformat-security]
+  247 |         fprintf (JSONfp, ser);
+      |         ^~~~~~~
+construct.c:249:15: warning: passing argument 1 of ‘free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  249 |         free (ser);
+      |               ^~~
+In file included from defns.i:46,
+                 from construct.c:53:
+/usr/include/stdlib.h:555:25: note: expected ‘void *’ but argument is of type ‘const char *’
+  555 | extern void free (void *__ptr) __THROW;
+      |                   ~~~~~~^~~~~
+construct.c:331:20: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  331 |         if ( Trial && NoStructure || ErrWt / Cases >= 0.49 )
+      |              ~~~~~~^~~~~~~~~~~~~~
+In file included from construct.c:53:
+construct.c: In function ‘EvaluateSingle’:
+construct.c:682:20: warning: implicit declaration of function ‘TotalTreeSize’; did you mean ‘TreeSize’? [-Wimplicit-function-declaration]
+  682 |                    TotalTreeSize(Raw[0]), TreeSize(Raw[0]), RawErrs, 100 * RawErrs / Tests);
+      |                    ^~~~~~~~~~~~~
+defns.i:73:53: note: in definition of macro ‘Verbosity’
+   73 | #define Verbosity(d,s)          if(VERBOSITY >= d) {s;}
+      |                                                     ^
+construct.c:750:17: warning: ‘SaveUtility’ may be used uninitialized [-Wmaybe-uninitialized]
+  750 |         UTILITY = SaveUtility;
+      |         ~~~~~~~~^~~~~~~~~~~~~
+formtree.c: In function ‘MyFormTree’:
+formtree.c:372:109: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+  372 |                         printf ("The number of discrete attribute (%d) values and the number of intervals (%d) does not match!\n", MaxAttVal[FirstSplitAttr] - 1, IntervalsLowerBounds->size);
+      |                                                                                                            ~^                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                             |                                                                         |
+      |                                                                                                             int                                                                       size_t {aka long unsigned int}
+      |                                                                                                            %ld
+formtree.c: In function ‘FindBestAttNew’:
+formtree.c:1084:38: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+ 1084 |                       NBr == BestNBr && Gain[Att] > Gain[BestAtt] ) )
+      |                       ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formtree.c:1082:41: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+ 1082 |                   Val > 0.999 * BestVal &&
+      |                   ~~~~~~~~~~~~~~~~~~~~~~^~
+ 1083 |                    ( NBr < BestNBr ||
+      |                    ~~~~~~~~~~~~~~~~~~    
+ 1084 |                       NBr == BestNBr && Gain[Att] > Gain[BestAtt] ) )
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formtree.c:1122:35: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+ 1122 |                    NBr == BestNBr && Gain[Att] > Gain[BestAtt] ) )
+      |                    ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formtree.c:1120:40: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+ 1120 |                  Val > 0.999 * BestVal &&
+      |                  ~~~~~~~~~~~~~~~~~~~~~~^~
+ 1121 |                  ( NBr < BestNBr ||
+      |                  ~~~~~~~~~~~~~~~~~~     
+ 1122 |                    NBr == BestNBr && Gain[Att] > Gain[BestAtt] ) )
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+contin.c: In function ‘EvalContinuousAttAlg1’:
+contin.c:220:20: warning: unused variable ‘j’ [-Wunused-variable]
+  220 |     CaseNo      i, j, BestI = -1, Tries=0;
+      |                    ^
+contin.c: In function ‘EvalContinuousAttAlg2’:
+contin.c:394:41: warning: unused variable ‘totalImplications’ [-Wunused-variable]
+  394 |     int         numImplicationsCut = 0, totalImplications;
+      |                                         ^~~~~~~~~~~~~~~~~
+contin.c:389:20: warning: unused variable ‘j’ [-Wunused-variable]
+  389 |     CaseNo      i, j, BestI = -1, Tries=0;
+      |                    ^
+contin.c: In function ‘EvalContinuousAttAlg6’:
+contin.c:570:31: warning: unused variable ‘reductionR2L’ [-Wunused-variable]
+  570 |     double      reductionL2R, reductionR2L;
+      |                               ^~~~~~~~~~~~
+contin.c:570:17: warning: unused variable ‘reductionL2R’ [-Wunused-variable]
+  570 |     double      reductionL2R, reductionR2L;
+      |                 ^~~~~~~~~~~~
+contin.c:568:41: warning: unused variable ‘totalImplications’ [-Wunused-variable]
+  568 |     int         numImplicationsCut = 0, totalImplications;
+      |                                         ^~~~~~~~~~~~~~~~~
+contin.c:568:17: warning: unused variable ‘numImplicationsCut’ [-Wunused-variable]
+  568 |     int         numImplicationsCut = 0, totalImplications;
+      |                 ^~~~~~~~~~~~~~~~~~
+contin.c:563:20: warning: unused variable ‘j’ [-Wunused-variable]
+  563 |     CaseNo      i, j, BestI = -1, Tries=0;
+      |                    ^
+contin.c: In function ‘EvalContinuousAttAlg3’:
+contin.c:751:20: warning: unused variable ‘j’ [-Wunused-variable]
+  751 |     CaseNo      i, j, BestI = -1, Tries=0;
+      |                    ^
+contin.c: In function ‘EvalContinuousAttAlg4’:
+contin.c:944:28: warning: unused variable ‘cut2left’ [-Wunused-variable]
+  944 |     int         right2cut, cut2left;  /* counters to track implications as they flow from the
+      |                            ^~~~~~~~
+contin.c:944:17: warning: unused variable ‘right2cut’ [-Wunused-variable]
+  944 |     int         right2cut, cut2left;  /* counters to track implications as they flow from the
+      |                 ^~~~~~~~~
+contin.c:943:38: warning: unused variable ‘numPointsOnRight’ [-Wunused-variable]
+  943 |     double      numPointsOnLeft = 0, numPointsOnRight = 0, totalPoints = 0;
+      |                                      ^~~~~~~~~~~~~~~~
+contin.c:943:17: warning: unused variable ‘numPointsOnLeft’ [-Wunused-variable]
+  943 |     double      numPointsOnLeft = 0, numPointsOnRight = 0, totalPoints = 0;
+      |                 ^~~~~~~~~~~~~~~
+contin.c:942:95: warning: unused variable ‘numImplicationsCut’ [-Wunused-variable]
+  942 |     double      totalImplications = 0, numImplicationsOnLeft = 0, numImplicationsOnRight = 0, numImplicationsCut = 0;
+      |                                                                                               ^~~~~~~~~~~~~~~~~~
+contin.c:942:67: warning: unused variable ‘numImplicationsOnRight’ [-Wunused-variable]
+  942 |     double      totalImplications = 0, numImplicationsOnLeft = 0, numImplicationsOnRight = 0, numImplicationsCut = 0;
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~~
+contin.c:942:40: warning: unused variable ‘numImplicationsOnLeft’ [-Wunused-variable]
+  942 |     double      totalImplications = 0, numImplicationsOnLeft = 0, numImplicationsOnRight = 0, numImplicationsCut = 0;
+      |                                        ^~~~~~~~~~~~~~~~~~~~~
+contin.c:942:17: warning: unused variable ‘totalImplications’ [-Wunused-variable]
+  942 |     double      totalImplications = 0, numImplicationsOnLeft = 0, numImplicationsOnRight = 0, numImplicationsCut = 0;
+      |                 ^~~~~~~~~~~~~~~~~
+contin.c:938:71: warning: variable ‘curBestGain’ set but not used [-Wunused-but-set-variable]
+  938 |                 w, BestGain=NegInfinity, BestInfo=1E38, ThreshCost=1, curBestGain;
+      |                                                                       ^~~~~~~~~~~
+contin.c:937:36: warning: unused variable ‘LHInfo’ [-Wunused-variable]
+  937 |     double      LowInfo, HighInfo, LHInfo, WeightedAvgInfo, LeastInfo=1E38,
+      |                                    ^~~~~~
+contin.c:936:20: warning: unused variable ‘j’ [-Wunused-variable]
+  936 |     CaseNo      i, j, BestI = -1, Tries=0;
+      |                    ^
+contin.c: In function ‘EvalContinuousAttAlg5’:
+contin.c:1176:20: warning: unused variable ‘j’ [-Wunused-variable]
+ 1176 |     CaseNo      i, j, BestI = -1, Tries=0;
+      |                    ^
+contin.c: In function ‘PrepareForContinAlg2’:
+contin.c:1796:5: warning: implicit declaration of function ‘CachesortWithImplications’; did you mean ‘QuicksortWithImplications’? [-Wimplicit-function-declaration]
+ 1796 |     CachesortWithImplications(GEnv.Xp, Lp, GEnv.SRec, GEnv.permutation);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |     QuicksortWithImplications
+subset.c: In function ‘EvalSubset’:
+subset.c:134:52: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  134 |         if ( GEnv.ValFreq[V1] > Epsilon || V1 == 1 && SomeNA[Att] )
+      |                                            ~~~~~~~~^~~~~~~~~~~~~~
+prune.c: In function ‘Prune’:
+prune.c:115:44: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  115 |         if ( Ordered(Att) || Discrete(Att) && SUBSET )
+prune.c: In function ‘EstimateErrs’:
+prune.c:343:42: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  343 |              T->Branch[v]->Tested == Att && Continuous(Att) )
+prune.c: In function ‘FindMinCC’:
+prune.c:586:30: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  586 |                  CC <= MinCC && CC < SaveMinCC /* changed by descendants */ )
+      |                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+prune.c: In function ‘CompressBranches’:
+prune.c:980:28: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  980 |                  EmptyOnly && Br->Cases >= MinLeaf )
+trees.c: In function ‘Show’:
+trees.c:167:53: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  167 |                          T->Branch[v]->Utility == 1 && ! T->Branch[v]->Cases )
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+siftrules.c: In function ‘HillClimb’:
+siftrules.c:619:37: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  619 |                  AltCost == NewCost && RuleIn[r] )
+      |                  ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+siftrules.c:634:37: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  634 |         if ( ! Toggle || DeleteOnly && RuleCount <= OriginalCount ) break;
+      |                          ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+siftrules.c: In function ‘UpdateDeltaErrs’:
+siftrules.c:782:46: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  782 | #define Prefer(d,c1,c2) ((d) > 0 || (d) == 0 && c1 < c2)
+      |                                              ^
+siftrules.c:817:22: note: in expansion of macro ‘Prefer’
+  817 |                      Prefer(TotVote[i][Alt] - (TotVote[i][Top] - Rule[r]->Vote),
+      |                      ^~~~~~
+siftrules.c:782:46: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  782 | #define Prefer(d,c1,c2) ((d) > 0 || (d) == 0 && c1 < c2)
+      |                                              ^
+siftrules.c:827:22: note: in expansion of macro ‘Prefer’
+  827 |                      Prefer(TotVote[i][Rhs] + Rule[r]->Vote - TotVote[i][Top],
+      |                      ^~~~~~
+siftrules.c: In function ‘CondBits’:
+siftrules.c:393:1: warning: control reaches end of non-void function [-Wreturn-type]
+  393 | }
+      | ^
+ruletree.c: In function ‘SetTestIndex’:
+ruletree.c:132:40: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  132 |                 if ( C->TestValue == 1 && CC->TestValue == 1 ||
+      |                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from rules.c:35:
+rules.c: In function ‘NewRule’:
+defns.i:177:50: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  177 |                         n1->Tested == n2->Tested && n1->Cut < n2->Cut)
+rules.c:77:49: note: in expansion of macro ‘Before’
+   77 |                 if ( ! Deleted[id] && ( ! dd || Before(Cond[id], Cond[dd]) ) )
+      |                                                 ^~~~~~
+getnames.c: In function ‘ListAttsUsed’:
+getnames.c:623:19: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  623 |             Att = (Attribute) DefSVal(D[e]);
+      |                   ^
+implicitatt.c: In function ‘ReadDefinition’:
+implicitatt.c:178:36: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  178 |         if ( c == EOF || c == '\n' && LastWasPeriod )
+      |                          ~~~~~~~~~~^~~~~~~~~~~~~~~~
+implicitatt.c: In function ‘Atom’:
+implicitatt.c:458:34: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  458 |         if ( ( Buff[BN+4] == '/' && Buff[BN+7] == '/' ||
+      |                ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+implicitatt.c: In function ‘DefSemanticsError’:
+implicitatt.c:714:33: warning: ‘%s’ directive writing up to 999 bytes into a region of size 993 [-Wformat-overflow=]
+  714 |         sprintf(XMsg, "%s with '%s'", Msg, Op);
+      |                                 ^~         ~~
+implicitatt.c:714:9: note: ‘sprintf’ output 9 or more bytes (assuming 1008) into a destination of size 1000
+  714 |         sprintf(XMsg, "%s with '%s'", Msg, Op);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+utility.c: In function ‘Error’:
+utility.c:474:17: warning: format not a string literal and no format arguments [-Wformat-security]
+  474 |     fprintf(Of, Buffer);
+      |                 ^~~~~~
+utility.c: In function ‘DateToDay’:
+utility.c:622:27: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  622 |     if ( ! ( DS[4] == '/' && DS[7] == '/' || DS[4] == '-' && DS[7] == '-' ) ||
+      |              ~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+utility.c:626:19: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  626 |          Day > 30 &&
+      |          ~~~~~~~~~^~
+  627 |             ( Month == 4 || Month == 6 || Month == 9 || Month == 11 ) ||
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+utility.c:631:45: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  631 |                             Year % 100 == 0 && Year % 400 != 0 ) ) )
+      |                             ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+utility.c:630:24: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  630 |               Day > 28 && ( Year % 4 != 0 ||
+      |               ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+  631 |                             Year % 100 == 0 && Year % 400 != 0 ) ) )
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+utility.c:628:21: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  628 |          Month == 2 &&
+      |          ~~~~~~~~~~~^~
+  629 |             ( Day > 29 ||
+      |             ~~~~~~~~~~~~~
+  630 |               Day > 28 && ( Year % 4 != 0 ||
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  631 |                             Year % 100 == 0 && Year % 400 != 0 ) ) )
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+utility.c: In function ‘DayToDate’:
+utility.c:671:53: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  671 |          ( (Year+1) % 4 != 0 || (Year+1) % 100 == 0 && (Year+1) % 400 != 0 ) )
+      |                                 ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+utility.c:670:21: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  670 |          Day == 366 &&
+      |          ~~~~~~~~~~~^~
+  671 |          ( (Year+1) % 4 != 0 || (Year+1) % 100 == 0 && (Year+1) % 400 != 0 ) )
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+utility.c: In function ‘Pmalloc’:
+utility.c:115:1: warning: control reaches end of non-void function [-Wreturn-type]
+  115 | }
+      | ^
+utility.c: In function ‘Prealloc’:
+utility.c:135:1: warning: control reaches end of non-void function [-Wreturn-type]
+  135 | }
+      | ^
+utility.c: In function ‘Pcalloc’:
+utility.c:151:1: warning: control reaches end of non-void function [-Wreturn-type]
+  151 | }
+      | ^
+c50gt.c: In function ‘main’:
+c50gt.c:1331:37: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+ 1331 |                 fprintf( Of, "Read %d intervals\n", IntervalsUpperBounds->size);
+      |                                    ~^               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                   |
+      |                                     int                                 size_t {aka long unsigned int}
+      |                                    %ld
+c50gt.c: In function ‘ConstructClassifiers’:
+c50gt.c:1762:9: warning: format not a string literal and no format arguments [-Wformat-security]
+ 1762 |         fprintf (JSONfp, ser);
+      |         ^~~~~~~
+c50gt.c:1764:15: warning: passing argument 1 of ‘free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1764 |         free (ser);
+      |               ^~~
+In file included from c50gt.c:46:
+/usr/include/stdlib.h:555:25: note: expected ‘void *’ but argument is of type ‘const char *’
+  555 | extern void free (void *__ptr) __THROW;
+      |                   ~~~~~~^~~~~
+c50gt.c: In function ‘EvaluateSingle’:
+c50gt.c:2202:31: warning: implicit declaration of function ‘TotalTreeSize’; did you mean ‘TreeSize’? [-Wimplicit-function-declaration]
+ 2202 |         int total_tree_size = TotalTreeSize(Pruned[0]);
+      |                               ^~~~~~~~~~~~~
+      |                               TreeSize
+c50gt.c: In function ‘MyFormTree’:
+c50gt.c:2815:109: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+ 2815 |                         printf ("The number of discrete attribute (%d) values and the number of intervals (%d) does not match!\n", MaxAttVal[FirstSplitAttr] - 1, IntervalsLowerBounds->size);
+      |                                                                                                            ~^                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                             |                                                                         |
+      |                                                                                                             int                                                                       size_t {aka long unsigned int}
+      |                                                                                                            %ld
+c50gt.c: In function ‘PrepareForContinAlg2’:
+c50gt.c:6310:5: warning: implicit declaration of function ‘CachesortWithImplications’; did you mean ‘QuicksortWithImplications’? [-Wimplicit-function-declaration]
+ 6310 |     CachesortWithImplications(GEnv.Xp, Lp, GEnv.SRec, GEnv.permutation);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |     QuicksortWithImplications
+c50gt.c: At top level:
+c50gt.c:13863:6: warning: conflicting types for ‘CachesortWithImplications’; have ‘void(CaseNo,  CaseNo,  SortRec *, struct array *)’ {aka ‘void(int,  int,  struct _sort_rec *, struct array *)’}
+13863 | void CachesortWithImplications(CaseNo Fp, CaseNo Lp, SortRec *SRec,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+c50gt.c:6310:5: note: previous implicit declaration of ‘CachesortWithImplications’ with type ‘void(CaseNo,  CaseNo,  SortRec *, struct array *)’ {aka ‘void(int,  int,  struct _sort_rec *, struct array *)’}
+ 6310 |     CachesortWithImplications(GEnv.Xp, Lp, GEnv.SRec, GEnv.permutation);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+c50gt.c: In function ‘ListAttsUsed’:
+c50gt.c:16589:19: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+16589 |             Att = (Attribute) DefSVal(D[e]);
+      |                   ^
+c50gt.c: In function ‘Error’:
+c50gt.c:18125:17: warning: format not a string literal and no format arguments [-Wformat-security]
+18125 |     fprintf(Of, Buffer);
+      |                 ^~~~~~
+In file included from /usr/include/stdio.h:894,
+                 from c50gt.c:43:
+In function ‘printf’,
+    inlined from ‘GetImplications’ at c50gt.c:12215:3:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: warning: ‘%s’ directive argument is null [-Wformat-overflow=]
+  112 |   return __printf_chk (__USE_FORTIFY_LEVEL - 1, __fmt, __va_arg_pack ());
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘printf’,
+    inlined from ‘GetIntervals’ at c50gt.c:12241:3:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: warning: ‘%s’ directive argument is null [-Wformat-overflow=]
+  112 |   return __printf_chk (__USE_FORTIFY_LEVEL - 1, __fmt, __va_arg_pack ());
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c50gt.c: In function ‘DefSemanticsError.part.0’:
+c50gt.c:13014:33: warning: ‘%s’ directive writing up to 999 bytes into a region of size 993 [-Wformat-overflow=]
+13014 |         sprintf(XMsg, "%s with '%s'", Msg, Op);
+      |                                 ^~         ~~
+In file included from /usr/include/stdio.h:894,
+                 from c50gt.c:43:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:38:10: note: ‘__builtin___sprintf_chk’ output 9 or more bytes (assuming 1008) into a destination of size 1000
+   38 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   39 |                                   __glibc_objsize (__s), __fmt,
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   40 |                                   __va_arg_pack ());
+      |                                   ~~~~~~~~~~~~~~~~~
+c50gt.c: In function ‘main’:
+c50gt.c:1331:37: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+ 1331 |                 fprintf( Of, "Read %d intervals\n", IntervalsUpperBounds->size);
+      |                                    ~^               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                   |
+      |                                     int                                 size_t {aka long unsigned int}
+      |                                    %ld
+c50gt.c: In function ‘ConstructClassifiers’:
+c50gt.c:1762:9: warning: format not a string literal and no format arguments [-Wformat-security]
+ 1762 |         fprintf (JSONfp, ser);
+      |         ^~~~~~~
+c50gt.c:1764:15: warning: passing argument 1 of ‘free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1764 |         free (ser);
+      |               ^~~
+In file included from c50gt.c:46:
+/usr/include/stdlib.h:555:25: note: expected ‘void *’ but argument is of type ‘const char *’
+  555 | extern void free (void *__ptr) __THROW;
+      |                   ~~~~~~^~~~~
+c50gt.c: In function ‘EvaluateSingle’:
+c50gt.c:2202:31: warning: implicit declaration of function ‘TotalTreeSize’; did you mean ‘TreeSize’? [-Wimplicit-function-declaration]
+ 2202 |         int total_tree_size = TotalTreeSize(Pruned[0]);
+      |                               ^~~~~~~~~~~~~
+      |                               TreeSize
+c50gt.c: In function ‘MyFormTree’:
+c50gt.c:2815:109: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+ 2815 |                         printf ("The number of discrete attribute (%d) values and the number of intervals (%d) does not match!\n", MaxAttVal[FirstSplitAttr] - 1, IntervalsLowerBounds->size);
+      |                                                                                                            ~^                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                             |                                                                         |
+      |                                                                                                             int                                                                       size_t {aka long unsigned int}
+      |                                                                                                            %ld
+c50gt.c: In function ‘PrepareForContinAlg2’:
+c50gt.c:6310:5: warning: implicit declaration of function ‘CachesortWithImplications’; did you mean ‘QuicksortWithImplications’? [-Wimplicit-function-declaration]
+ 6310 |     CachesortWithImplications(GEnv.Xp, Lp, GEnv.SRec, GEnv.permutation);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |     QuicksortWithImplications
+c50gt.c: At top level:
+c50gt.c:13863:6: warning: conflicting types for ‘CachesortWithImplications’; have ‘void(CaseNo,  CaseNo,  SortRec *, struct array *)’ {aka ‘void(int,  int,  struct _sort_rec *, struct array *)’}
+13863 | void CachesortWithImplications(CaseNo Fp, CaseNo Lp, SortRec *SRec,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+c50gt.c:6310:5: note: previous implicit declaration of ‘CachesortWithImplications’ with type ‘void(CaseNo,  CaseNo,  SortRec *, struct array *)’ {aka ‘void(int,  int,  struct _sort_rec *, struct array *)’}
+ 6310 |     CachesortWithImplications(GEnv.Xp, Lp, GEnv.SRec, GEnv.permutation);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+c50gt.c: In function ‘ListAttsUsed’:
+c50gt.c:16589:19: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+16589 |             Att = (Attribute) DefSVal(D[e]);
+      |                   ^
+c50gt.c: In function ‘Error’:
+c50gt.c:18125:17: warning: format not a string literal and no format arguments [-Wformat-security]
+18125 |     fprintf(Of, Buffer);
+      |                 ^~~~~~
+In file included from /usr/include/stdio.h:894,
+                 from c50gt.c:43:
+In function ‘printf’,
+    inlined from ‘GetImplications’ at c50gt.c:12215:3:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: warning: ‘%s’ directive argument is null [-Wformat-overflow=]
+  112 |   return __printf_chk (__USE_FORTIFY_LEVEL - 1, __fmt, __va_arg_pack ());
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘printf’,
+    inlined from ‘GetIntervals’ at c50gt.c:12241:3:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: warning: ‘%s’ directive argument is null [-Wformat-overflow=]
+  112 |   return __printf_chk (__USE_FORTIFY_LEVEL - 1, __fmt, __va_arg_pack ());
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c50gt.c: In function ‘DefSemanticsError.part.0’:
+c50gt.c:13014:33: warning: ‘%s’ directive writing up to 999 bytes into a region of size 993 [-Wformat-overflow=]
+13014 |         sprintf(XMsg, "%s with '%s'", Msg, Op);
+      |                                 ^~         ~~
+In file included from /usr/include/stdio.h:894,
+                 from c50gt.c:43:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:38:10: note: ‘__builtin___sprintf_chk’ output 9 or more bytes (assuming 1008) into a destination of size 1000
+   38 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   39 |                                   __glibc_objsize (__s), __fmt,
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   40 |                                   __va_arg_pack ());
+      |                                   ~~~~~~~~~~~~~~~~~
+report.c: In function ‘main’:
+report.c:78:14: warning: implicit declaration of function ‘isdigit’ [-Wimplicit-function-declaration]
+   78 |         if ( isdigit(*p) )
+      |              ^~~~~~~
+report.c:37:1: note: include ‘<ctype.h>’ or provide a declaration of ‘isdigit’
+   36 | #include <stdlib.h>
+  +++ |+#include <ctype.h>
+   37 | 
+report.c:89:12: warning: implicit declaration of function ‘memcmp’ [-Wimplicit-function-declaration]
+   89 |     if ( ! memcmp(Line, "boost", 5) )
+      |            ^~~~~~
+report.c:37:1: note: include ‘<string.h>’ or provide a declaration of ‘memcmp’
+   36 | #include <stdlib.h>
+  +++ |+#include <string.h>
+   37 | 
+report.c:89:34: warning: ‘memcmp’ argument 3 type is ‘int’ where ‘long unsigned int’ is expected in a call to built-in function declared without prototype [-Wbuiltin-declaration-mismatch]
+   89 |     if ( ! memcmp(Line, "boost", 5) )
+      |                                  ^
+<built-in>: note: built-in ‘memcmp’ declared here
+report.c:95:38: warning: ‘memcmp’ argument 3 type is ‘int’ where ‘long unsigned int’ is expected in a call to built-in function declared without prototype [-Wbuiltin-declaration-mismatch]
+   95 |     if ( ! memcmp(Line, "composite", 9) )
+      |                                      ^
+<built-in>: note: built-in ‘memcmp’ declared here
+report.c:127:42: warning: ‘memcmp’ argument 3 type is ‘int’ where ‘long unsigned int’ is expected in a call to built-in function declared without prototype [-Wbuiltin-declaration-mismatch]
+  127 |             if ( ! memcmp(Line, "boost", 5) )
+      |                                          ^
+<built-in>: note: built-in ‘memcmp’ declared here

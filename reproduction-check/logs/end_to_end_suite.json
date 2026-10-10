@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "experiments/run_end_to_end.py"
+  ],
+  "cwd": "/root/RSG-reproduction-check",
+  "started_utc": "2026-10-10T09:23:29.008409+00:00",
+  "sampled_peak_tree_rss_kib": 409664,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 18.536292311000125,
+  "stdout": "logs/end_to_end_suite.stdout",
+  "stderr": "logs/end_to_end_suite.stderr",
+  "peak_rss_kib": 187016
+}

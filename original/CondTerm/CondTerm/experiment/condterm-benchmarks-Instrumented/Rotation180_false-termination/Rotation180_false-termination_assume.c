@@ -1,0 +1,27 @@
+#include <assert.h>
+/*
+ * Date: 2013-12-16
+ * Author: leike@informatik.uni-freiburg.de
+ *
+ * Rotates x and y by 90 degrees
+ * Does not terminate.
+ */
+
+#include <stdio.h>
+
+int main ()
+{
+    int oldx;
+	int x;
+	int y;
+	scanf("%d%d", &x, &y);
+    printf("[Testing] <Interface V4.0> (Log all variables for reuse)\n");
+  assert (false); // CondTerm
+	while (1) {
+		printf("x:%d,y:%d,oldx:%d\n", x, y, oldx);
+        oldx = x;
+		x = -y;
+		y = oldx;
+	}
+	return 0;
+}

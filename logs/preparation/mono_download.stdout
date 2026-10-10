@@ -1,0 +1,359 @@
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  ca-certificates-mono cli-common libexif12 libgdiplus libgif7 libmono-2.0-dev
+  libmono-accessibility4.0-cil libmono-btls-interface4.0-cil
+  libmono-cairo4.0-cil libmono-cecil-private-cil libmono-cil-dev
+  libmono-codecontracts4.0-cil libmono-compilerservices-symbolwriter4.0-cil
+  libmono-corlib4.5-cil libmono-corlib4.5-dll libmono-cscompmgd0.0-cil
+  libmono-csharp4.0c-cil libmono-custommarshalers4.0-cil
+  libmono-data-tds4.0-cil libmono-db2-1.0-cil libmono-debugger-soft4.0a-cil
+  libmono-http4.0-cil libmono-i18n-cjk4.0-cil libmono-i18n-mideast4.0-cil
+  libmono-i18n-other4.0-cil libmono-i18n-rare4.0-cil libmono-i18n-west4.0-cil
+  libmono-i18n4.0-all libmono-i18n4.0-cil libmono-ldap4.0-cil
+  libmono-management4.0-cil libmono-messaging-rabbitmq4.0-cil
+  libmono-messaging4.0-cil libmono-microsoft-build-engine4.0-cil
+  libmono-microsoft-build-framework4.0-cil
+  libmono-microsoft-build-tasks-v4.0-4.0-cil
+  libmono-microsoft-build-utilities-v4.0-4.0-cil
+  libmono-microsoft-build4.0-cil libmono-microsoft-csharp4.0-cil
+  libmono-microsoft-visualc10.0-cil
+  libmono-microsoft-web-infrastructure1.0-cil libmono-oracle4.0-cil
+  libmono-parallel4.0-cil libmono-peapi4.0a-cil libmono-posix4.0-cil
+  libmono-rabbitmq4.0-cil libmono-relaxng4.0-cil libmono-security4.0-cil
+  libmono-sharpzip4.84-cil libmono-simd4.0-cil libmono-smdiagnostics0.0-cil
+  libmono-sqlite4.0-cil libmono-system-componentmodel-composition4.0-cil
+  libmono-system-componentmodel-dataannotations4.0-cil
+  libmono-system-configuration-install4.0-cil
+  libmono-system-configuration4.0-cil libmono-system-core4.0-cil
+  libmono-system-data-datasetextensions4.0-cil
+  libmono-system-data-entity4.0-cil libmono-system-data-linq4.0-cil
+  libmono-system-data-services-client4.0-cil
+  libmono-system-data-services4.0-cil libmono-system-data4.0-cil
+  libmono-system-deployment4.0-cil libmono-system-design4.0-cil
+  libmono-system-drawing-design4.0-cil libmono-system-drawing4.0-cil
+  libmono-system-dynamic4.0-cil libmono-system-enterpriseservices4.0-cil
+  libmono-system-identitymodel-selectors4.0-cil
+  libmono-system-identitymodel4.0-cil
+  libmono-system-io-compression-filesystem4.0-cil
+  libmono-system-io-compression4.0-cil libmono-system-json-microsoft4.0-cil
+  libmono-system-json4.0-cil libmono-system-ldap-protocols4.0-cil
+  libmono-system-ldap4.0-cil libmono-system-management4.0-cil
+  libmono-system-messaging4.0-cil libmono-system-net-http-formatting4.0-cil
+  libmono-system-net-http-webrequest4.0-cil libmono-system-net-http4.0-cil
+  libmono-system-net4.0-cil libmono-system-numerics-vectors4.0-cil
+  libmono-system-numerics4.0-cil libmono-system-reactive-core2.2-cil
+  libmono-system-reactive-debugger2.2-cil
+  libmono-system-reactive-experimental2.2-cil
+  libmono-system-reactive-interfaces2.2-cil
+  libmono-system-reactive-linq2.2-cil
+  libmono-system-reactive-observable-aliases0.0-cil
+  libmono-system-reactive-platformservices2.2-cil
+  libmono-system-reactive-providers2.2-cil
+  libmono-system-reactive-runtime-remoting2.2-cil
+  libmono-system-reactive-windows-forms2.2-cil
+  libmono-system-reactive-windows-threading2.2-cil
+  libmono-system-reflection-context4.0-cil
+  libmono-system-runtime-caching4.0-cil
+  libmono-system-runtime-durableinstancing4.0-cil
+  libmono-system-runtime-serialization-formatters-soap4.0-cil
+  libmono-system-runtime-serialization4.0-cil libmono-system-runtime4.0-cil
+  libmono-system-security4.0-cil libmono-system-servicemodel-activation4.0-cil
+  libmono-system-servicemodel-discovery4.0-cil
+  libmono-system-servicemodel-internals0.0-cil
+  libmono-system-servicemodel-routing4.0-cil
+  libmono-system-servicemodel-web4.0-cil libmono-system-servicemodel4.0a-cil
+  libmono-system-serviceprocess4.0-cil
+  libmono-system-threading-tasks-dataflow4.0-cil
+  libmono-system-transactions4.0-cil libmono-system-web-abstractions4.0-cil
+  libmono-system-web-applicationservices4.0-cil
+  libmono-system-web-dynamicdata4.0-cil
+  libmono-system-web-extensions-design4.0-cil
+  libmono-system-web-extensions4.0-cil libmono-system-web-http-selfhost4.0-cil
+  libmono-system-web-http-webhost4.0-cil libmono-system-web-http4.0-cil
+  libmono-system-web-mobile4.0-cil libmono-system-web-mvc3.0-cil
+  libmono-system-web-razor2.0-cil libmono-system-web-regularexpressions4.0-cil
+  libmono-system-web-routing4.0-cil libmono-system-web-services4.0-cil
+  libmono-system-web-webpages-deployment2.0-cil
+  libmono-system-web-webpages-razor2.0-cil libmono-system-web-webpages2.0-cil
+  libmono-system-web4.0-cil
+  libmono-system-windows-forms-datavisualization4.0a-cil
+  libmono-system-windows-forms4.0-cil libmono-system-windows4.0-cil
+  libmono-system-workflow-activities4.0-cil
+  libmono-system-workflow-componentmodel4.0-cil
+  libmono-system-workflow-runtime4.0-cil libmono-system-xaml4.0-cil
+  libmono-system-xml-linq4.0-cil libmono-system-xml-serialization4.0-cil
+  libmono-system-xml4.0-cil libmono-system4.0-cil libmono-tasklets4.0-cil
+  libmono-webbrowser4.0-cil libmono-webmatrix-data4.0-cil
+  libmono-windowsbase4.0-cil libmono-xbuild-tasks4.0-cil libmonosgen-2.0-1
+  libmonosgen-2.0-dev libnunit-cil-dev libnunit-console-runner2.6.3-cil
+  libnunit-core-interfaces2.6.3-cil libnunit-core2.6.3-cil
+  libnunit-framework2.6.3-cil libnunit-mocks2.6.3-cil libnunit-util2.6.3-cil
+  mono-4.0-gac mono-csharp-shell mono-gac mono-mcs mono-runtime
+  mono-runtime-common mono-runtime-sgen
+Suggested packages:
+  libgnomeui-0 libgtk2.0-0 libasound2 libgamin0 libnunit-doc
+  monodoc-nunit-manual
+Recommended packages:
+  libgluezilla
+The following NEW packages will be installed:
+  ca-certificates-mono cli-common libexif12 libgdiplus libgif7 libmono-2.0-dev
+  libmono-accessibility4.0-cil libmono-btls-interface4.0-cil
+  libmono-cairo4.0-cil libmono-cecil-private-cil libmono-cil-dev
+  libmono-codecontracts4.0-cil libmono-compilerservices-symbolwriter4.0-cil
+  libmono-corlib4.5-cil libmono-corlib4.5-dll libmono-cscompmgd0.0-cil
+  libmono-csharp4.0c-cil libmono-custommarshalers4.0-cil
+  libmono-data-tds4.0-cil libmono-db2-1.0-cil libmono-debugger-soft4.0a-cil
+  libmono-http4.0-cil libmono-i18n-cjk4.0-cil libmono-i18n-mideast4.0-cil
+  libmono-i18n-other4.0-cil libmono-i18n-rare4.0-cil libmono-i18n-west4.0-cil
+  libmono-i18n4.0-all libmono-i18n4.0-cil libmono-ldap4.0-cil
+  libmono-management4.0-cil libmono-messaging-rabbitmq4.0-cil
+  libmono-messaging4.0-cil libmono-microsoft-build-engine4.0-cil
+  libmono-microsoft-build-framework4.0-cil
+  libmono-microsoft-build-tasks-v4.0-4.0-cil
+  libmono-microsoft-build-utilities-v4.0-4.0-cil
+  libmono-microsoft-build4.0-cil libmono-microsoft-csharp4.0-cil
+  libmono-microsoft-visualc10.0-cil
+  libmono-microsoft-web-infrastructure1.0-cil libmono-oracle4.0-cil
+  libmono-parallel4.0-cil libmono-peapi4.0a-cil libmono-posix4.0-cil
+  libmono-rabbitmq4.0-cil libmono-relaxng4.0-cil libmono-security4.0-cil
+  libmono-sharpzip4.84-cil libmono-simd4.0-cil libmono-smdiagnostics0.0-cil
+  libmono-sqlite4.0-cil libmono-system-componentmodel-composition4.0-cil
+  libmono-system-componentmodel-dataannotations4.0-cil
+  libmono-system-configuration-install4.0-cil
+  libmono-system-configuration4.0-cil libmono-system-core4.0-cil
+  libmono-system-data-datasetextensions4.0-cil
+  libmono-system-data-entity4.0-cil libmono-system-data-linq4.0-cil
+  libmono-system-data-services-client4.0-cil
+  libmono-system-data-services4.0-cil libmono-system-data4.0-cil
+  libmono-system-deployment4.0-cil libmono-system-design4.0-cil
+  libmono-system-drawing-design4.0-cil libmono-system-drawing4.0-cil
+  libmono-system-dynamic4.0-cil libmono-system-enterpriseservices4.0-cil
+  libmono-system-identitymodel-selectors4.0-cil
+  libmono-system-identitymodel4.0-cil
+  libmono-system-io-compression-filesystem4.0-cil
+  libmono-system-io-compression4.0-cil libmono-system-json-microsoft4.0-cil
+  libmono-system-json4.0-cil libmono-system-ldap-protocols4.0-cil
+  libmono-system-ldap4.0-cil libmono-system-management4.0-cil
+  libmono-system-messaging4.0-cil libmono-system-net-http-formatting4.0-cil
+  libmono-system-net-http-webrequest4.0-cil libmono-system-net-http4.0-cil
+  libmono-system-net4.0-cil libmono-system-numerics-vectors4.0-cil
+  libmono-system-numerics4.0-cil libmono-system-reactive-core2.2-cil
+  libmono-system-reactive-debugger2.2-cil
+  libmono-system-reactive-experimental2.2-cil
+  libmono-system-reactive-interfaces2.2-cil
+  libmono-system-reactive-linq2.2-cil
+  libmono-system-reactive-observable-aliases0.0-cil
+  libmono-system-reactive-platformservices2.2-cil
+  libmono-system-reactive-providers2.2-cil
+  libmono-system-reactive-runtime-remoting2.2-cil
+  libmono-system-reactive-windows-forms2.2-cil
+  libmono-system-reactive-windows-threading2.2-cil
+  libmono-system-reflection-context4.0-cil
+  libmono-system-runtime-caching4.0-cil
+  libmono-system-runtime-durableinstancing4.0-cil
+  libmono-system-runtime-serialization-formatters-soap4.0-cil
+  libmono-system-runtime-serialization4.0-cil libmono-system-runtime4.0-cil
+  libmono-system-security4.0-cil libmono-system-servicemodel-activation4.0-cil
+  libmono-system-servicemodel-discovery4.0-cil
+  libmono-system-servicemodel-internals0.0-cil
+  libmono-system-servicemodel-routing4.0-cil
+  libmono-system-servicemodel-web4.0-cil libmono-system-servicemodel4.0a-cil
+  libmono-system-serviceprocess4.0-cil
+  libmono-system-threading-tasks-dataflow4.0-cil
+  libmono-system-transactions4.0-cil libmono-system-web-abstractions4.0-cil
+  libmono-system-web-applicationservices4.0-cil
+  libmono-system-web-dynamicdata4.0-cil
+  libmono-system-web-extensions-design4.0-cil
+  libmono-system-web-extensions4.0-cil libmono-system-web-http-selfhost4.0-cil
+  libmono-system-web-http-webhost4.0-cil libmono-system-web-http4.0-cil
+  libmono-system-web-mobile4.0-cil libmono-system-web-mvc3.0-cil
+  libmono-system-web-razor2.0-cil libmono-system-web-regularexpressions4.0-cil
+  libmono-system-web-routing4.0-cil libmono-system-web-services4.0-cil
+  libmono-system-web-webpages-deployment2.0-cil
+  libmono-system-web-webpages-razor2.0-cil libmono-system-web-webpages2.0-cil
+  libmono-system-web4.0-cil
+  libmono-system-windows-forms-datavisualization4.0a-cil
+  libmono-system-windows-forms4.0-cil libmono-system-windows4.0-cil
+  libmono-system-workflow-activities4.0-cil
+  libmono-system-workflow-componentmodel4.0-cil
+  libmono-system-workflow-runtime4.0-cil libmono-system-xaml4.0-cil
+  libmono-system-xml-linq4.0-cil libmono-system-xml-serialization4.0-cil
+  libmono-system-xml4.0-cil libmono-system4.0-cil libmono-tasklets4.0-cil
+  libmono-webbrowser4.0-cil libmono-webmatrix-data4.0-cil
+  libmono-windowsbase4.0-cil libmono-xbuild-tasks4.0-cil libmonosgen-2.0-1
+  libmonosgen-2.0-dev libnunit-cil-dev libnunit-console-runner2.6.3-cil
+  libnunit-core-interfaces2.6.3-cil libnunit-core2.6.3-cil
+  libnunit-framework2.6.3-cil libnunit-mocks2.6.3-cil libnunit-util2.6.3-cil
+  mono-4.0-gac mono-csharp-shell mono-devel mono-gac mono-mcs mono-runtime
+  mono-runtime-common mono-runtime-sgen mono-xbuild
+0 upgraded, 164 newly installed, 0 to remove and 120 not upgraded.
+Need to get 45.8 MB of archives.
+After this operation, 209 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/universe amd64 mono-runtime-common amd64 6.8.0.105+dfsg-3.2 [1030 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-corlib4.5-dll all 6.8.0.105+dfsg-3.2 [1254 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-core4.0-cil all 6.8.0.105+dfsg-3.2 [302 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-numerics4.0-cil all 6.8.0.105+dfsg-3.2 [48.6 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-xml4.0-cil all 6.8.0.105+dfsg-3.2 [816 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-security4.0-cil all 6.8.0.105+dfsg-3.2 [114 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-configuration4.0-cil all 6.8.0.105+dfsg-3.2 [54.9 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system4.0-cil all 6.8.0.105+dfsg-3.2 [802 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-security4.0-cil all 6.8.0.105+dfsg-3.2 [95.3 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/universe amd64 mono-4.0-gac all 6.8.0.105+dfsg-3.2 [153 kB]
+Err:11 http://archive.ubuntu.com/ubuntu jammy/universe amd64 mono-gac all 6.8.0.105+dfsg-3.2
+  502  Bad Gateway [IP: 91.189.91.83 80]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 mono-runtime-sgen amd64 6.8.0.105+dfsg-3.2 [1793 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy/universe amd64 mono-runtime amd64 6.8.0.105+dfsg-3.2 [14.8 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-corlib4.5-cil all 6.8.0.105+dfsg-3.2 [13.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy/universe amd64 ca-certificates-mono all 6.8.0.105+dfsg-3.2 [18.0 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy/universe amd64 cli-common all 0.10 [171 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libexif12 amd64 0.6.24-1ubuntu0.22.04.1 [92.7 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgif7 amd64 5.1.9-2ubuntu0.3 [34.3 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libgdiplus amd64 6.0.4+dfsg-2 [160 kB]
+Get:20 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmonosgen-2.0-1 amd64 6.8.0.105+dfsg-3.2 [1733 kB]
+Get:21 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmonosgen-2.0-dev amd64 6.8.0.105+dfsg-3.2 [1961 kB]
+Get:22 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-2.0-dev amd64 6.8.0.105+dfsg-3.2 [48.0 kB]
+Get:23 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-accessibility4.0-cil all 6.8.0.105+dfsg-3.2 [15.8 kB]
+Get:24 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-btls-interface4.0-cil amd64 6.8.0.105+dfsg-3.2 [25.0 kB]
+Get:25 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-cairo4.0-cil all 6.8.0.105+dfsg-3.2 [31.9 kB]
+Get:26 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-cecil-private-cil all 6.8.0.105+dfsg-3.2 [199 kB]
+Get:27 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-codecontracts4.0-cil all 6.8.0.105+dfsg-3.2 [202 kB]
+Get:28 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-compilerservices-symbolwriter4.0-cil all 6.8.0.105+dfsg-3.2 [28.5 kB]
+Get:29 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-cscompmgd0.0-cil all 6.8.0.105+dfsg-3.2 [18.5 kB]
+Get:30 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-csharp4.0c-cil all 6.8.0.105+dfsg-3.2 [404 kB]
+Get:31 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-custommarshalers4.0-cil all 6.8.0.105+dfsg-3.2 [16.4 kB]
+Get:32 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-data-tds4.0-cil all 6.8.0.105+dfsg-3.2 [46.0 kB]
+Get:33 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-transactions4.0-cil all 6.8.0.105+dfsg-3.2 [23.7 kB]
+Get:34 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-enterpriseservices4.0-cil all 6.8.0.105+dfsg-3.2 [27.0 kB]
+Get:35 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-data4.0-cil all 6.8.0.105+dfsg-3.2 [578 kB]
+Get:36 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-db2-1.0-cil all 6.8.0.105+dfsg-3.2 [36.9 kB]
+Get:37 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-debugger-soft4.0a-cil all 6.8.0.105+dfsg-3.2 [68.4 kB]
+Get:38 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-sharpzip4.84-cil all 6.8.0.105+dfsg-3.2 [61.1 kB]
+Get:39 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-sqlite4.0-cil all 6.8.0.105+dfsg-3.2 [58.2 kB]
+Get:40 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-componentmodel-dataannotations4.0-cil all 6.8.0.105+dfsg-3.2 [37.4 kB]
+Get:41 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-drawing4.0-cil all 6.8.0.105+dfsg-3.2 [150 kB]
+Get:42 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-runtime-serialization-formatters-soap4.0-cil all 6.8.0.105+dfsg-3.2 [26.9 kB]
+Get:43 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-applicationservices4.0-cil all 6.8.0.105+dfsg-3.2 [23.0 kB]
+Get:44 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-posix4.0-cil all 6.8.0.105+dfsg-3.2 [82.3 kB]
+Get:45 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-webbrowser4.0-cil all 6.8.0.105+dfsg-3.2 [58.5 kB]
+Get:46 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-i18n4.0-cil all 6.8.0.105+dfsg-3.2 [22.9 kB]
+Get:47 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-i18n-west4.0-cil all 6.8.0.105+dfsg-3.2 [25.9 kB]
+Get:48 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-windows-forms4.0-cil all 6.8.0.105+dfsg-3.2 [812 kB]
+Get:49 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-design4.0-cil all 6.8.0.105+dfsg-3.2 [104 kB]
+Get:50 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-ldap4.0-cil all 6.8.0.105+dfsg-3.2 [93.0 kB]
+Get:51 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-ldap4.0-cil all 6.8.0.105+dfsg-3.2 [41.6 kB]
+Get:52 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-services4.0-cil all 6.8.0.105+dfsg-3.2 [173 kB]
+Get:53 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web4.0-cil all 6.8.0.105+dfsg-3.2 [755 kB]
+Get:54 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-http4.0-cil all 6.8.0.105+dfsg-3.2 [22.8 kB]
+Get:55 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-i18n-cjk4.0-cil all 6.8.0.105+dfsg-3.2 [240 kB]
+Get:56 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-i18n-mideast4.0-cil all 6.8.0.105+dfsg-3.2 [19.9 kB]
+Get:57 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-i18n-other4.0-cil all 6.8.0.105+dfsg-3.2 [21.4 kB]
+Get:58 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-i18n-rare4.0-cil all 6.8.0.105+dfsg-3.2 [37.6 kB]
+Get:59 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-i18n4.0-all all 6.8.0.105+dfsg-3.2 [12.5 kB]
+Get:60 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-management4.0-cil all 6.8.0.105+dfsg-3.2 [16.8 kB]
+Get:61 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-messaging4.0-cil all 6.8.0.105+dfsg-3.2 [23.5 kB]
+Get:62 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-rabbitmq4.0-cil all 6.8.0.105+dfsg-3.2 [93.1 kB]
+Get:63 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-messaging-rabbitmq4.0-cil all 6.8.0.105+dfsg-3.2 [24.1 kB]
+Get:64 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-microsoft-build-framework4.0-cil all 6.8.0.105+dfsg-3.2 [22.2 kB]
+Get:65 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-microsoft-build4.0-cil all 6.8.0.105+dfsg-3.2 [100 kB]
+Get:66 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-microsoft-build-utilities-v4.0-4.0-cil all 6.8.0.105+dfsg-3.2 [32.5 kB]
+Get:67 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-microsoft-build-engine4.0-cil all 6.8.0.105+dfsg-3.2 [90.9 kB]
+Get:68 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-xbuild-tasks4.0-cil all 6.8.0.105+dfsg-3.2 [26.0 kB]
+Get:69 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-microsoft-build-tasks-v4.0-4.0-cil all 6.8.0.105+dfsg-3.2 [69.4 kB]
+Get:70 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-microsoft-csharp4.0-cil all 6.8.0.105+dfsg-3.2 [116 kB]
+Get:71 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-microsoft-visualc10.0-cil all 6.8.0.105+dfsg-3.2 [15.3 kB]
+Get:72 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-microsoft-web-infrastructure1.0-cil all 6.8.0.105+dfsg-3.2 [17.7 kB]
+Get:73 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-oracle4.0-cil all 6.8.0.105+dfsg-3.2 [64.8 kB]
+Get:74 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-parallel4.0-cil all 6.8.0.105+dfsg-3.2 [23.3 kB]
+Get:75 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-peapi4.0a-cil all 6.8.0.105+dfsg-3.2 [47.6 kB]
+Get:76 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-relaxng4.0-cil all 6.8.0.105+dfsg-3.2 [80.4 kB]
+Get:77 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-simd4.0-cil all 6.8.0.105+dfsg-3.2 [27.5 kB]
+Get:78 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-servicemodel-internals0.0-cil all 6.8.0.105+dfsg-3.2 [82.3 kB]
+Get:79 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-smdiagnostics0.0-cil all 6.8.0.105+dfsg-3.2 [27.9 kB]
+Get:80 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-componentmodel-composition4.0-cil all 6.8.0.105+dfsg-3.2 [97.3 kB]
+Get:81 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-configuration-install4.0-cil all 6.8.0.105+dfsg-3.2 [19.9 kB]
+Get:82 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-data-datasetextensions4.0-cil all 6.8.0.105+dfsg-3.2 [22.5 kB]
+Get:83 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-runtime-serialization4.0-cil all 6.8.0.105+dfsg-3.2 [251 kB]
+Get:84 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-xml-linq4.0-cil all 6.8.0.105+dfsg-3.2 [57.1 kB]
+Get:85 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-data-entity4.0-cil all 6.8.0.105+dfsg-3.2 [838 kB]
+Get:86 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-data-linq4.0-cil all 6.8.0.105+dfsg-3.2 [200 kB]
+Get:87 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-data-services-client4.0-cil all 6.8.0.105+dfsg-3.2 [140 kB]
+Get:88 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-identitymodel4.0-cil all 6.8.0.105+dfsg-3.2 [54.3 kB]
+Get:89 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-identitymodel-selectors4.0-cil all 6.8.0.105+dfsg-3.2 [17.3 kB]
+Get:90 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-messaging4.0-cil all 6.8.0.105+dfsg-3.2 [35.8 kB]
+Get:91 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-servicemodel4.0a-cil all 6.8.0.105+dfsg-3.2 [378 kB]
+Get:92 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-servicemodel-activation4.0-cil all 6.8.0.105+dfsg-3.2 [16.1 kB]
+Get:93 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-extensions4.0-cil all 6.8.0.105+dfsg-3.2 [163 kB]
+Get:94 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-servicemodel-web4.0-cil all 6.8.0.105+dfsg-3.2 [40.5 kB]
+Get:95 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-data-services4.0-cil all 6.8.0.105+dfsg-3.2 [27.7 kB]
+Get:96 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-deployment4.0-cil all 6.8.0.105+dfsg-3.2 [15.2 kB]
+Get:97 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-drawing-design4.0-cil all 6.8.0.105+dfsg-3.2 [22.4 kB]
+Get:98 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-dynamic4.0-cil all 6.8.0.105+dfsg-3.2 [44.3 kB]
+Get:99 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-io-compression4.0-cil all 6.8.0.105+dfsg-3.2 [56.9 kB]
+Get:100 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-io-compression-filesystem4.0-cil all 6.8.0.105+dfsg-3.2 [18.4 kB]
+Get:101 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-json4.0-cil all 6.8.0.105+dfsg-3.2 [23.0 kB]
+Get:102 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-json-microsoft4.0-cil all 6.8.0.105+dfsg-3.2 [32.1 kB]
+Get:103 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-ldap-protocols4.0-cil all 6.8.0.105+dfsg-3.2 [30.9 kB]
+Get:104 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-management4.0-cil all 6.8.0.105+dfsg-3.2 [26.8 kB]
+Get:105 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-net4.0-cil all 6.8.0.105+dfsg-3.2 [16.0 kB]
+Get:106 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-net-http4.0-cil all 6.8.0.105+dfsg-3.2 [109 kB]
+Get:107 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-net-http-formatting4.0-cil all 6.8.0.105+dfsg-3.2 [173 kB]
+Get:108 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-net-http-webrequest4.0-cil all 6.8.0.105+dfsg-3.2 [21.8 kB]
+Get:109 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-numerics-vectors4.0-cil all 6.8.0.105+dfsg-3.2 [15.5 kB]
+Get:110 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-reactive-interfaces2.2-cil all 6.8.0.105+dfsg-3.2 [15.4 kB]
+Get:111 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-reactive-core2.2-cil all 6.8.0.105+dfsg-3.2 [46.6 kB]
+Get:112 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-reactive-linq2.2-cil all 6.8.0.105+dfsg-3.2 [159 kB]
+Get:113 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-reactive-debugger2.2-cil all 6.8.0.105+dfsg-3.2 [14.5 kB]
+Get:114 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-reactive-experimental2.2-cil all 6.8.0.105+dfsg-3.2 [22.7 kB]
+Get:115 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-reactive-providers2.2-cil all 6.8.0.105+dfsg-3.2 [51.4 kB]
+Get:116 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-reactive-observable-aliases0.0-cil all 6.8.0.105+dfsg-3.2 [15.3 kB]
+Get:117 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-reactive-platformservices2.2-cil all 6.8.0.105+dfsg-3.2 [21.9 kB]
+Get:118 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-reactive-runtime-remoting2.2-cil all 6.8.0.105+dfsg-3.2 [16.3 kB]
+Get:119 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-reactive-windows-forms2.2-cil all 6.8.0.105+dfsg-3.2 [16.3 kB]
+Get:120 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-xaml4.0-cil all 6.8.0.105+dfsg-3.2 [74.6 kB]
+Get:121 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-windowsbase4.0-cil all 6.8.0.105+dfsg-3.2 [64.7 kB]
+Get:122 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-reactive-windows-threading2.2-cil all 6.8.0.105+dfsg-3.2 [17.6 kB]
+Get:123 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-reflection-context4.0-cil all 6.8.0.105+dfsg-3.2 [15.8 kB]
+Get:124 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-runtime4.0-cil all 6.8.0.105+dfsg-3.2 [56.1 kB]
+Get:125 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-runtime-caching4.0-cil all 6.8.0.105+dfsg-3.2 [38.9 kB]
+Get:126 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-runtime-durableinstancing4.0-cil all 6.8.0.105+dfsg-3.2 [46.7 kB]
+Get:127 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-servicemodel-discovery4.0-cil all 6.8.0.105+dfsg-3.2 [53.2 kB]
+Get:128 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-servicemodel-routing4.0-cil all 6.8.0.105+dfsg-3.2 [23.6 kB]
+Get:129 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-serviceprocess4.0-cil all 6.8.0.105+dfsg-3.2 [28.7 kB]
+Get:130 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-threading-tasks-dataflow4.0-cil all 6.8.0.105+dfsg-3.2 [69.7 kB]
+Get:131 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-abstractions4.0-cil all 6.8.0.105+dfsg-3.2 [15.6 kB]
+Get:132 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-dynamicdata4.0-cil all 6.8.0.105+dfsg-3.2 [37.1 kB]
+Get:133 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-extensions-design4.0-cil all 6.8.0.105+dfsg-3.2 [16.6 kB]
+Get:134 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-http4.0-cil all 6.8.0.105+dfsg-3.2 [122 kB]
+Get:135 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-http-selfhost4.0-cil all 6.8.0.105+dfsg-3.2 [44.5 kB]
+Get:136 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-http-webhost4.0-cil all 6.8.0.105+dfsg-3.2 [34.8 kB]
+Get:137 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-mobile4.0-cil all 6.8.0.105+dfsg-3.2 [15.2 kB]
+Get:138 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-razor2.0-cil all 6.8.0.105+dfsg-3.2 [96.1 kB]
+Get:139 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-webpages-deployment2.0-cil all 6.8.0.105+dfsg-3.2 [26.4 kB]
+Get:140 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-webpages2.0-cil all 6.8.0.105+dfsg-3.2 [79.2 kB]
+Get:141 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-webpages-razor2.0-cil all 6.8.0.105+dfsg-3.2 [25.9 kB]
+Get:142 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-mvc3.0-cil all 6.8.0.105+dfsg-3.2 [142 kB]
+Get:143 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-regularexpressions4.0-cil all 6.8.0.105+dfsg-3.2 [15.2 kB]
+Get:144 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-web-routing4.0-cil all 6.8.0.105+dfsg-3.2 [15.5 kB]
+Get:145 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-windows4.0-cil all 6.8.0.105+dfsg-3.2 [15.2 kB]
+Get:146 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-windows-forms-datavisualization4.0a-cil all 6.8.0.105+dfsg-3.2 [49.5 kB]
+Get:147 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-workflow-activities4.0-cil all 6.8.0.105+dfsg-3.2 [15.2 kB]
+Get:148 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-workflow-componentmodel4.0-cil all 6.8.0.105+dfsg-3.2 [15.2 kB]
+Get:149 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-workflow-runtime4.0-cil all 6.8.0.105+dfsg-3.2 [15.2 kB]
+Get:150 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-system-xml-serialization4.0-cil all 6.8.0.105+dfsg-3.2 [15.1 kB]
+Get:151 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-tasklets4.0-cil all 6.8.0.105+dfsg-3.2 [15.5 kB]
+Get:152 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-webmatrix-data4.0-cil all 6.8.0.105+dfsg-3.2 [18.3 kB]
+Get:153 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libnunit-core-interfaces2.6.3-cil all 2.6.4+dfsg-1.1 [23.3 kB]
+Get:154 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libnunit-core2.6.3-cil all 2.6.4+dfsg-1.1 [52.7 kB]
+Get:155 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libnunit-util2.6.3-cil all 2.6.4+dfsg-1.1 [48.5 kB]
+Get:156 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libnunit-console-runner2.6.3-cil all 2.6.4+dfsg-1.1 [13.6 kB]
+Get:157 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libnunit-framework2.6.3-cil all 2.6.4+dfsg-1.1 [46.4 kB]
+Get:158 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libnunit-mocks2.6.3-cil all 2.6.4+dfsg-1.1 [10.5 kB]
+Get:159 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libnunit-cil-dev all 2.6.4+dfsg-1.1 [4960 B]
+Get:160 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmono-cil-dev all 6.8.0.105+dfsg-3.2 [15.0 kB]
+Get:161 http://archive.ubuntu.com/ubuntu jammy/universe amd64 mono-csharp-shell all 6.8.0.105+dfsg-3.2 [35.5 kB]
+Get:162 http://archive.ubuntu.com/ubuntu jammy/universe amd64 mono-mcs all 6.8.0.105+dfsg-3.2 [536 kB]
+Get:163 http://archive.ubuntu.com/ubuntu jammy/universe amd64 mono-xbuild all 6.8.0.105+dfsg-3.2 [454 kB]
+Get:164 http://archive.ubuntu.com/ubuntu jammy/universe amd64 mono-devel all 6.8.0.105+dfsg-3.2 [23.5 MB]
+Fetched 45.8 MB in 2min 10s (352 kB/s)

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "xbuild",
+    "/p:Configuration=Release",
+    "/p:LangVersion=Experimental",
+    "NewBoogie.sln"
+  ],
+  "cwd": "/root/RSG/work/CondTerm/ice/popl16_artifact/Boogie/Source",
+  "started_utc": "2026-10-10T09:05:02.329047+00:00",
+  "exit_code": 1,
+  "wall_seconds": 3.7840506019999793,
+  "stdout": "logs/build_boogie_hook.stdout",
+  "stderr": "logs/build_boogie_hook.stderr",
+  "peak_rss_kib": 287916
+}

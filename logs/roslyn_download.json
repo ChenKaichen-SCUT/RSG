@@ -1,0 +1,21 @@
+{
+  "command": [
+    "curl",
+    "-L",
+    "--fail",
+    "--connect-timeout",
+    "15",
+    "--max-time",
+    "150",
+    "-o",
+    "sources/microsoft.net.compilers.toolset.4.8.0.nupkg",
+    "https://api.nuget.org/v3-flatcontainer/microsoft.net.compilers.toolset/4.8.0/microsoft.net.compilers.toolset.4.8.0.nupkg"
+  ],
+  "cwd": "/root/RSG",
+  "started_utc": "2026-10-10T09:03:52.756123+00:00",
+  "exit_code": 0,
+  "wall_seconds": 4.721407941000052,
+  "stdout": "logs/roslyn_download.stdout",
+  "stderr": "logs/roslyn_download.stderr",
+  "peak_rss_kib": 14948
+}

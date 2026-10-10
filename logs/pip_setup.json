@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/bin/pip",
+    "install",
+    "z3-solver==4.8.9.0",
+    "pandas",
+    "scipy",
+    "scikit-learn",
+    "antlr4-python3-runtime",
+    "xlsxwriter"
+  ],
+  "cwd": "/root/RSG",
+  "started_utc": "2026-10-10T08:51:50.255670+00:00",
+  "exit_code": 143,
+  "wall_seconds": 122.13053455200003,
+  "stdout": "logs/pip_setup.stdout",
+  "stderr": "logs/pip_setup.stderr",
+  "peak_rss_kib": 50452
+}

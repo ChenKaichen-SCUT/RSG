@@ -1,0 +1,32 @@
+{
+  "command": [
+    "/root/RSG/.venv/bin/python",
+    "-u",
+    "experiment/scripts/CondTerm.py",
+    "--name",
+    "Witness",
+    "--ledir",
+    "/root/RSG/work/e2e/natural/benchmarks/le",
+    "--nledir",
+    "/root/RSG/work/e2e/natural/benchmarks/nle",
+    "--seed",
+    "888",
+    "--tmp",
+    "/root/RSG/work/e2e/natural/tmp",
+    "--test",
+    "/root/RSG/work/e2e/natural/test",
+    "--vars",
+    "p|x",
+    "--conf",
+    "/root/RSG/experiments/Config.xml"
+  ],
+  "cwd": "/root/RSG/work/CondTerm",
+  "started_utc": "2026-10-10T09:09:57.280631+00:00",
+  "sampled_peak_tree_rss_kib": 366380,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 6.926492045000032,
+  "stdout": "logs/e2e/natural.stdout",
+  "stderr": "logs/e2e/natural.stderr",
+  "peak_rss_kib": 187136
+}

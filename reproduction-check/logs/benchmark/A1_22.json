@@ -1,0 +1,23 @@
+{
+  "command": [
+    "mono",
+    "Boogie.exe",
+    "/nologo",
+    "/noinfer",
+    "/contractInfer",
+    "/mlHoudini:dt_penalty",
+    "/RSInfer",
+    "/RSGeneralize",
+    "/proverLog:/root/RSG-reproduction-check/logs/benchmark/A1_22.smt2",
+    "/root/RSG-reproduction-check/experiments/witness.bpl"
+  ],
+  "cwd": "/root/RSG-reproduction-check/work/CondTerm/ice/popl16_artifact/Boogie/Binaries",
+  "started_utc": "2026-10-10T09:23:19.913420+00:00",
+  "sampled_peak_tree_rss_kib": 61460,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 0.2345712960000128,
+  "stdout": "logs/benchmark/A1_22.stdout",
+  "stderr": "logs/benchmark/A1_22.stderr",
+  "peak_rss_kib": 39844
+}

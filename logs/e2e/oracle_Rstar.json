@@ -1,0 +1,32 @@
+{
+  "command": [
+    "/root/RSG/.venv/bin/python",
+    "-u",
+    "experiment/scripts/CondTerm.py",
+    "--name",
+    "Witness",
+    "--ledir",
+    "/root/RSG/work/e2e/oracle_Rstar/benchmarks/le",
+    "--nledir",
+    "/root/RSG/work/e2e/oracle_Rstar/benchmarks/nle",
+    "--seed",
+    "888",
+    "--tmp",
+    "/root/RSG/work/e2e/oracle_Rstar/tmp",
+    "--test",
+    "/root/RSG/work/e2e/oracle_Rstar/test",
+    "--vars",
+    "p|x",
+    "--conf",
+    "/root/RSG/experiments/Config.xml"
+  ],
+  "cwd": "/root/RSG/work/CondTerm",
+  "started_utc": "2026-10-10T09:10:10.912714+00:00",
+  "sampled_peak_tree_rss_kib": 367424,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 4.6949627789999795,
+  "stdout": "logs/e2e/oracle_Rstar.stdout",
+  "stderr": "logs/e2e/oracle_Rstar.stderr",
+  "peak_rss_kib": 185484
+}

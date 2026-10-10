@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/root/RSG/.venv/bin/python",
+    "/root/RSG/experiments/run_python_method.py",
+    "repair",
+    "benchmark_Closure-Repair_12"
+  ],
+  "cwd": "/root/RSG",
+  "started_utc": "2026-10-10T09:08:52.898967+00:00",
+  "sampled_peak_tree_rss_kib": 42188,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 0.12461255399989568,
+  "stdout": "logs/benchmark/Closure-Repair_12.stdout",
+  "stderr": "logs/benchmark/Closure-Repair_12.stderr",
+  "peak_rss_kib": 41100
+}

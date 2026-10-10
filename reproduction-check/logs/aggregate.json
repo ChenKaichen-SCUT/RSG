@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "scripts/aggregate_results.py"
+  ],
+  "cwd": "/root/RSG-reproduction-check",
+  "started_utc": "2026-10-10T09:23:48.172486+00:00",
+  "sampled_peak_tree_rss_kib": 28208,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 0.10395863199983069,
+  "stdout": "logs/aggregate.stdout",
+  "stderr": "logs/aggregate.stderr",
+  "peak_rss_kib": 29420
+}

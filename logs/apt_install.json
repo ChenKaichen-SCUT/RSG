@@ -1,0 +1,26 @@
+{
+  "command": [
+    "env",
+    "DEBIAN_FRONTEND=noninteractive",
+    "apt-get",
+    "install",
+    "-y",
+    "mono-devel",
+    "mono-xbuild",
+    "unrar",
+    "python3-venv",
+    "python3-pip",
+    "build-essential",
+    "curl",
+    "unzip",
+    "time",
+    "poppler-utils"
+  ],
+  "cwd": "/root/RSG",
+  "started_utc": "2026-10-10T08:51:43.377700+00:00",
+  "exit_code": 0,
+  "wall_seconds": 0.5115480430000048,
+  "stdout": "logs/apt_install.stdout",
+  "stderr": "logs/apt_install.stderr",
+  "peak_rss_kib": 100076
+}

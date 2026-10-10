@@ -1,0 +1,13 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "experiments/verify.py"
+  ],
+  "cwd": "/root/RSG",
+  "started_utc": "2026-10-10T08:54:33.599774+00:00",
+  "exit_code": 0,
+  "wall_seconds": 0.35376220800003466,
+  "stdout": "logs/independent_smt.stdout",
+  "stderr": "logs/independent_smt.stderr",
+  "peak_rss_kib": 41888
+}

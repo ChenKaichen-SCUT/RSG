@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "scripts/capture_environment.py"
+  ],
+  "cwd": "/root/RSG-reproduction-check",
+  "started_utc": "2026-10-10T09:22:15.150742+00:00",
+  "sampled_peak_tree_rss_kib": 56132,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 0.32984919299997273,
+  "stdout": "logs/setup/environment.stdout",
+  "stderr": "logs/setup/environment.stderr",
+  "peak_rss_kib": 43372
+}

@@ -1,0 +1,17 @@
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-fun x () Int)
+(declare-fun p () Int)
+(assert
+ (let ((?x40 (- p x)))
+ (let (($x97 (<= ?x40 (- 2))))
+ (let (($x98 (>= 1 p)))
+ (let (($x106 (and (and (and (>= 2 (- ?x40)) (<= (- p) (- 1))) $x98) $x97)))
+ (let (($x104 (and (and (and (<= (- x) (- 1)) (>= 1 x)) (>= 0 p)) (>= 0 (- p)))))
+ (let (($x107 (or $x104 $x106)))
+ (let (($x137 (and (and (and (and (< (- 1) p) $x98) (< 0 p)) $x97) (< (- 3) ?x40))))
+ (let (($x132 (>= 1 x)))
+ (let (($x139 (and (and (and (and (< (- 1) p) $x98) (>= 0 p)) $x132) (< 0 x))))
+ (let (($x43 (or $x139 $x137)))
+ (and $x43 (not $x107)))))))))))))
+(check-sat)

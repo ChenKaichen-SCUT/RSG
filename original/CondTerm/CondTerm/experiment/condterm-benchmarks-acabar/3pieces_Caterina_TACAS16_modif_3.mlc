@@ -1,0 +1,55 @@
+##if (y > 0) return 0;
+##if (N <= 0) return 0;
+##while (x != 0)
+##{
+##  if (x < N) x++; else x = y;
+##}
+##
+##
+### these are the variables
+###
+!vars
+x y N
+
+# these are the primed variables 
+!pvars 
+x' y' N'
+
+# PATH 1
+#
+!path
+y<=0
+N>=1
+x>=1
+x<=N-1
+x'=x+1
+y'=y
+N'=N
+
+!path
+y<=0
+N>=1
+x>=1
+x>=N
+x'=y
+y'=y
+N'=N
+
+!path
+y<=0
+N>=1
+x<=-1
+x<=N-1
+x'=x+1
+y'=y
+N'=N
+
+!path
+y<=0
+N>=1
+x<=-1
+x>=N
+x'=y
+y'=y
+N'=N
+

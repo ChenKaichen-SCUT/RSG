@@ -1,0 +1,6742 @@
+{
+  "method": "A4 exhaustive axis-separable single-term search (controlled)",
+  "candidates": [
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0))) (and (= p 1) (= x 4)))",
+      "valid": true,
+      "strict": false,
+      "checks": [
+        {
+          "name": "A4_0_0_0_guard",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0029885239998748148,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_0_closure",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002665917000058471,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_0_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023674290000599285,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_0_strict",
+          "result": "unsat",
+          "expected": null,
+          "seconds": 0.002367889000197465,
+          "passed": null
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        1
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 1))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_1_guard",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002795700000206125,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_1_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028313809998508077,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "1",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_0_0_1_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002384630000051402,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_1_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0024275500002204353,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        2
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 2))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_2_guard",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002702567000142153,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_2_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002816840000150478,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "2",
+            "p_next": "1",
+            "x_next": "2"
+          }
+        },
+        {
+          "name": "A4_0_0_2_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002366329000096812,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_2_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0024323200000253564,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        1,
+        2
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 1) (= x 2))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_3_guard",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0027315279999129416,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_3_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028150399998594366,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "1",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_0_0_3_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002366879000192057,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_3_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002495542000133355,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        3
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 3))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_4_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0026828070001556625,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_0_4_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027893189999304013,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "1",
+            "x_next": "1"
+          }
+        },
+        {
+          "name": "A4_0_0_4_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023699889998169965,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_4_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0024186299999655603,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        1,
+        3
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 1) (= x 3))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_5_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027204779999010498,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_0_5_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028012099999159545,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "1",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_0_0_5_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023853090001466626,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_5_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026415249999445223,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        2,
+        3
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 2) (= x 3))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_6_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027525279999736085,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_0_6_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002777928999876167,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "2",
+            "p_next": "1",
+            "x_next": "2"
+          }
+        },
+        {
+          "name": "A4_0_0_6_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002378388999886738,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_6_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002486222000015914,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 1) (= x 2) (= x 3)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_7_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027597989999321726,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_0_7_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028238110000984307,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "1",
+            "x_next": "1"
+          }
+        },
+        {
+          "name": "A4_0_0_7_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002424840999992739,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_7_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026723759999640606,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        4
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 4))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_8_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002747458999920127,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_0_8_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027689290000125766,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "1",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_0_8_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023951299999680487,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_8_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002417939999986629,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        1,
+        4
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 1) (= x 4))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_9_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027345379999133,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_0_9_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028027800001382275,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "1",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_0_0_9_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023850789998505206,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_9_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026842869999654795,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        2,
+        4
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 2) (= x 4))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_10_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002743108000004213,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_0_10_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027907490000416146,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "2",
+            "p_next": "1",
+            "x_next": "2"
+          }
+        },
+        {
+          "name": "A4_0_0_10_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023706189999757044,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_10_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002612405000036233,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 1) (= x 2) (= x 4)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_11_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027428079999936017,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_0_11_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028071199999430974,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "1",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_0_0_11_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0024186600001030456,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_11_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026674860000639455,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        3,
+        4
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 3) (= x 4))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_12_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027472079998460686,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_0_12_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028094599999803904,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "1",
+            "x_next": "1"
+          }
+        },
+        {
+          "name": "A4_0_0_12_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002392159000009997,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_12_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002552164000007906,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 1) (= x 3) (= x 4)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_13_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027402880000408913,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_0_13_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002813540000033754,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "1",
+            "x_next": "1"
+          }
+        },
+        {
+          "name": "A4_0_0_13_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023648989999855985,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_13_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002659377000099994,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 2) (= x 3) (= x 4)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_14_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.00273136800001339,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_0_14_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028083800000331394,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "2",
+            "p_next": "1",
+            "x_next": "2"
+          }
+        },
+        {
+          "name": "A4_0_0_14_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023916289999306173,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_14_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026554670000678016,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0
+      ],
+      "x_values": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "formula": "(or (and (or (= p 0)) (or (= x 0) (= x 1) (= x 2) (= x 3) (= x 4)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_0_15_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027767589999712072,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_0_15_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028397199998835276,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "1",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_0_15_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002392500000041764,
+          "passed": true
+        },
+        {
+          "name": "A4_0_0_15_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026232549998894683,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_0_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002721958000165614,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_0_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027567390000058367,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "4"
+          }
+        },
+        {
+          "name": "A4_0_1_0_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023950990000685124,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_0_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002451772000085839,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        1
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 1))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_1_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027247979999174277,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_1_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002801860000090528,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "4"
+          }
+        },
+        {
+          "name": "A4_0_1_1_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023872899998877983,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_1_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0025937850000445906,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        2
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 2))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_2_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002760259000069709,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_2_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002814759999864691,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "4"
+          }
+        },
+        {
+          "name": "A4_0_1_2_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023942300001635886,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_2_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002675506999821664,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        1,
+        2
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 1) (= x 2)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_3_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027391979999720206,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_3_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028058800000962947,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_0_1_3_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002438940000047296,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_3_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002644555999950171,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        3
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 3))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_4_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027291279998280515,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_4_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002787309000041205,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "4"
+          }
+        },
+        {
+          "name": "A4_0_1_4_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023858189999828028,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_4_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002647415999945224,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        1,
+        3
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 1) (= x 3)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_5_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002735358000109045,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_5_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028019500000482367,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "4"
+          }
+        },
+        {
+          "name": "A4_0_1_5_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002403230000027179,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_5_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026769270000386314,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        2,
+        3
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 2) (= x 3)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_6_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002788860000009663,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_6_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002839471000015692,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "1"
+          }
+        },
+        {
+          "name": "A4_0_1_6_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023976299999048933,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_6_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026639359998625878,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 1) (= x 2) (= x 3)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_7_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027565089999370684,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_7_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002823851000130162,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "4"
+          }
+        },
+        {
+          "name": "A4_0_1_7_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023919699999623845,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_7_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002652276999924652,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        4
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 4))) (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_8_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027146869999796763,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_8_closure",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0027297679998810054,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_8_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002414649999991525,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_8_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002714867999884518,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        1,
+        4
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 1) (= x 4)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_9_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027259379999122757,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_9_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028062200001386373,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_0_1_9_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002389039000036064,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_9_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002724707999959719,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        2,
+        4
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 2) (= x 4)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_10_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027348789999450673,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_10_closure",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0027856699998665135,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_10_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002390510000168433,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_10_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0027416279999670223,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 1) (= x 2) (= x 4)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_11_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002753448000021308,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_11_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028004889998101135,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_0_1_11_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0024124599999595375,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_11_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002722278000192091,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        3,
+        4
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 3) (= x 4)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_12_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027303669999128033,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_12_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028063400000064576,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "1"
+          }
+        },
+        {
+          "name": "A4_0_1_12_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023830200000247714,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_12_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002762169000106951,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 1) (= x 3) (= x 4)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_13_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027558090000638913,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_13_closure",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002777529000013601,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_13_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.00239462900003673,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_13_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0027558090000638913,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 2) (= x 3) (= x 4)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_14_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002757469000016499,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_14_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028146499998911167,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "1"
+          }
+        },
+        {
+          "name": "A4_0_1_14_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023991499999738153,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_14_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002770470000086789,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 0,
+      "p_values": [
+        0,
+        1
+      ],
+      "x_values": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "formula": "(or (and (or (= p 0) (= p 1)) (or (= x 0) (= x 1) (= x 2) (= x 3) (= x 4)))\n    (and (= p 1) (= x 4)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_0_1_15_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002754258000095433,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_0_1_15_closure",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002792340000041804,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_15_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0024121500000546803,
+          "passed": true
+        },
+        {
+          "name": "A4_0_1_15_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002757928999926662,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4))) (and (= p 0) (= x 0)))",
+      "valid": true,
+      "strict": false,
+      "checks": [
+        {
+          "name": "A4_1_0_0_guard",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002717877000122826,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_0_closure",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002657246000126179,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_0_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0024015900000904367,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_0_strict",
+          "result": "unsat",
+          "expected": null,
+          "seconds": 0.002371839000034015,
+          "passed": null
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        0
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 0))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_1_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002769909000107873,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_0_1_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002768139000181691,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "4"
+          }
+        },
+        {
+          "name": "A4_1_0_1_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0024210999999922933,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_1_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0024185010001929186,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        1
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 1))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_2_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027438790000360314,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_0_2_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.00277592900010859,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_1_0_2_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002368168999964837,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_2_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0024296809999668767,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        0,
+        1
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 0) (= x 1))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_3_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027535779997833743,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_0_3_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002833010999893304,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_1_0_3_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002408990000049016,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_3_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002498931999980414,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        2
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 2))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_4_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002741758000183836,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_0_4_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002778900000066642,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "2"
+          }
+        },
+        {
+          "name": "A4_1_0_4_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0024028299999372393,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_4_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0024285100000724924,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        0,
+        2
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 0) (= x 2))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_5_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027471979999518226,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_0_5_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002766648999795507,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "2"
+          }
+        },
+        {
+          "name": "A4_1_0_5_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002404370000022027,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_5_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002633085999832474,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        1,
+        2
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 1) (= x 2))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_6_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002749359000063123,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_0_6_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002822100000003047,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_1_0_6_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002386239999850659,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_6_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002512492999812821,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        0,
+        1,
+        2
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 0) (= x 1) (= x 2)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_7_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027455379999992147,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_0_7_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028293509999457456,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_1_0_7_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023825989999295416,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_7_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002676336000149604,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        3
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 3))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_8_guard",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002717677999953594,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_8_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027892500002053566,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "1"
+          }
+        },
+        {
+          "name": "A4_1_0_8_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023922800000946154,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_8_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0024320210000041698,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        0,
+        3
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 0) (= x 3))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_9_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027327479999712523,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_0_9_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027668589998484094,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "4"
+          }
+        },
+        {
+          "name": "A4_1_0_9_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023813099999188125,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_9_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026319859998693573,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        1,
+        3
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 1) (= x 3))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_10_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027714090001609293,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_0_10_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028075199998056632,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "1"
+          }
+        },
+        {
+          "name": "A4_1_0_10_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002402060000122219,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_10_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026423159999922063,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        0,
+        1,
+        3
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 0) (= x 1) (= x 3)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_11_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027653790000385925,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_0_11_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028360109999994165,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_1_0_11_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023973989998467005,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_11_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002665426000021398,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        2,
+        3
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 2) (= x 3))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_12_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027402680000250257,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_0_12_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.00282311099999788,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "1"
+          }
+        },
+        {
+          "name": "A4_1_0_12_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002401278999968781,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_12_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0025274030001583014,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        0,
+        2,
+        3
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 0) (= x 2) (= x 3)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_13_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027439680000043154,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_0_13_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002810949999911827,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "4"
+          }
+        },
+        {
+          "name": "A4_1_0_13_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002399920000016209,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_13_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002635526000176469,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        1,
+        2,
+        3
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 1) (= x 2) (= x 3)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_14_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027565590000904194,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_0_14_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002810990000170932,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "2"
+          }
+        },
+        {
+          "name": "A4_1_0_14_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002413759999853937,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_14_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026655359999949724,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1
+      ],
+      "x_values": [
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "formula": "(or (and (or (= p 1)) (or (= x 4) (= x 0) (= x 1) (= x 2) (= x 3)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_0_15_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.00273046800020893,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_0_15_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028311309999935474,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_1_0_15_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002388858999893273,
+          "passed": true
+        },
+        {
+          "name": "A4_1_0_15_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026164549999521114,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_0_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027149370000643103,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_0_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027723589998913667,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "1",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_0_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002390580000110276,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_0_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002428831000088394,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        0
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 0))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_1_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002744548999999097,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_1_closure",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0027026580000892864,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_1_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023965299999417766,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_1_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002735788000109096,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        1
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 1))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_2_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002749318000041967,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_2_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002799869000000399,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_1_1_2_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002389928999946278,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_2_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002665435999915644,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        0,
+        1
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 0) (= x 1)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_3_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002747488000068188,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_3_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002808039999990797,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "1",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_1_1_3_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023937100002058287,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_3_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.00271639800007506,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        2
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 2))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_4_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027457789999516535,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_4_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027845489998981066,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "1",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_4_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023709189999863156,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_4_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026764070000808715,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        0,
+        2
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 0) (= x 2)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_5_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027472680001210392,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_5_closure",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0027417480000622163,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_5_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023899999998775456,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_5_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0027561479998894356,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        1,
+        2
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 1) (= x 2)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_6_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027414680000674707,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_6_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027966689999630034,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "1",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_6_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0024181899998438894,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_6_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026658369999950082,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        0,
+        1,
+        2
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 0) (= x 1) (= x 2)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_7_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027897200000097655,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_7_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002833960000089064,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "3"
+          }
+        },
+        {
+          "name": "A4_1_1_7_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023747190000449336,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_7_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002774919000103182,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "0",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        3
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 3))) (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_8_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002716426999995747,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_8_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027800790001037967,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "1",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_8_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002380338999955711,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_8_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0026188550000370014,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        0,
+        3
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 0) (= x 3)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_9_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027415480001309334,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_9_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.00278892000005726,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "1"
+          }
+        },
+        {
+          "name": "A4_1_1_9_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023907389997930295,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_9_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0027246580000337417,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        1,
+        3
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 1) (= x 3)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_10_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027409990000251128,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_10_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0028015700002015365,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "1",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_10_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.00243960100010554,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_10_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002697007000051599,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        0,
+        1,
+        3
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 0) (= x 1) (= x 3)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_11_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027661080000598304,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_11_closure",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002775489999976344,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_11_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023850599998240796,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_11_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0027732300000025134,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        2,
+        3
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 2) (= x 3)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_12_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027370689999770548,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_12_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002834309999798279,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "1"
+          }
+        },
+        {
+          "name": "A4_1_1_12_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002403499999900305,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_12_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002706066999962786,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        0,
+        2,
+        3
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 0) (= x 2) (= x 3)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_13_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027774190000400267,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_13_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002796068999941781,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "1",
+            "x_next": "1"
+          }
+        },
+        {
+          "name": "A4_1_1_13_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002405199999884644,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_13_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002747699000110515,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        1,
+        2,
+        3
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 1) (= x 2) (= x 3)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_14_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.0027611289999640576,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "3",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_14_closure",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002820909999854848,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "1",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_14_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002379209000082483,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_14_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.002705988000116122,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "2",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    },
+    {
+      "term": 1,
+      "p_values": [
+        1,
+        0
+      ],
+      "x_values": [
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "formula": "(or (and (or (= p 1) (= p 0)) (or (= x 4) (= x 0) (= x 1) (= x 2) (= x 3)))\n    (and (= p 0) (= x 0)))",
+      "valid": false,
+      "strict": true,
+      "checks": [
+        {
+          "name": "A4_1_1_15_guard",
+          "result": "sat",
+          "expected": "unsat",
+          "seconds": 0.002724917000023197,
+          "passed": false,
+          "counterexample_or_witness": {
+            "p": "1",
+            "x": "1",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        },
+        {
+          "name": "A4_1_1_15_closure",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.002814810000018042,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_15_seed",
+          "result": "unsat",
+          "expected": "unsat",
+          "seconds": 0.0023886989999937214,
+          "passed": true
+        },
+        {
+          "name": "A4_1_1_15_strict",
+          "result": "sat",
+          "expected": null,
+          "seconds": 0.0028043199999956414,
+          "passed": null,
+          "counterexample_or_witness": {
+            "p": "0",
+            "x": "4",
+            "p_next": "0",
+            "x_next": "0"
+          }
+        }
+      ]
+    }
+  ],
+  "strict_valid_candidates": [],
+  "wall_seconds": 1.5952455649999138,
+  "smt_calls": 256,
+  "solver_seconds": 0.6756682840014037,
+  "unsat_core_calls": 0,
+  "language_relation": "superset of all weakenings expressible with frozen unary attributes, including non-convex digging",
+  "formula_smt2": "(or (and (= p 0) (= x 0)) (and (= p 1) (= x 4)))",
+  "queries": [
+    {
+      "name": "A4_0_0_0_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0029885239998748148,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_0_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002665917000058471,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_0_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023674290000599285,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_0_strict",
+      "result": "unsat",
+      "expected": null,
+      "seconds": 0.002367889000197465,
+      "passed": null
+    },
+    {
+      "name": "A4_0_0_1_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002795700000206125,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_1_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028313809998508077,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "1",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_0_0_1_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002384630000051402,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_1_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0024275500002204353,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_2_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002702567000142153,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_2_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002816840000150478,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "2",
+        "p_next": "1",
+        "x_next": "2"
+      }
+    },
+    {
+      "name": "A4_0_0_2_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002366329000096812,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_2_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0024323200000253564,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_3_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0027315279999129416,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_3_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028150399998594366,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "1",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_0_0_3_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002366879000192057,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_3_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002495542000133355,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_4_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0026828070001556625,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_4_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027893189999304013,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "1",
+        "x_next": "1"
+      }
+    },
+    {
+      "name": "A4_0_0_4_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023699889998169965,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_4_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0024186299999655603,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_5_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027204779999010498,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_5_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028012099999159545,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "1",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_0_0_5_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023853090001466626,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_5_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026415249999445223,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_6_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027525279999736085,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_6_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002777928999876167,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "2",
+        "p_next": "1",
+        "x_next": "2"
+      }
+    },
+    {
+      "name": "A4_0_0_6_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002378388999886738,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_6_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002486222000015914,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_7_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027597989999321726,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_7_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028238110000984307,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "1",
+        "x_next": "1"
+      }
+    },
+    {
+      "name": "A4_0_0_7_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002424840999992739,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_7_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026723759999640606,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_8_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002747458999920127,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_8_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027689290000125766,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "1",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_8_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023951299999680487,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_8_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002417939999986629,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_9_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027345379999133,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_9_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028027800001382275,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "1",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_0_0_9_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023850789998505206,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_9_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026842869999654795,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_10_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002743108000004213,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_10_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027907490000416146,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "2",
+        "p_next": "1",
+        "x_next": "2"
+      }
+    },
+    {
+      "name": "A4_0_0_10_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023706189999757044,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_10_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002612405000036233,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_11_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027428079999936017,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_11_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028071199999430974,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "1",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_0_0_11_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0024186600001030456,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_11_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026674860000639455,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_12_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027472079998460686,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_12_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028094599999803904,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "1",
+        "x_next": "1"
+      }
+    },
+    {
+      "name": "A4_0_0_12_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002392159000009997,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_12_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002552164000007906,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_13_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027402880000408913,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_13_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002813540000033754,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "1",
+        "x_next": "1"
+      }
+    },
+    {
+      "name": "A4_0_0_13_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023648989999855985,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_13_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002659377000099994,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_14_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.00273136800001339,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_14_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028083800000331394,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "2",
+        "p_next": "1",
+        "x_next": "2"
+      }
+    },
+    {
+      "name": "A4_0_0_14_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023916289999306173,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_14_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026554670000678016,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_15_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027767589999712072,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_15_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028397199998835276,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "1",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_0_15_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002392500000041764,
+      "passed": true
+    },
+    {
+      "name": "A4_0_0_15_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026232549998894683,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_0_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002721958000165614,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_0_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027567390000058367,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "4"
+      }
+    },
+    {
+      "name": "A4_0_1_0_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023950990000685124,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_0_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002451772000085839,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_1_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027247979999174277,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_1_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002801860000090528,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "4"
+      }
+    },
+    {
+      "name": "A4_0_1_1_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023872899998877983,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_1_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0025937850000445906,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_2_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002760259000069709,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_2_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002814759999864691,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "4"
+      }
+    },
+    {
+      "name": "A4_0_1_2_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023942300001635886,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_2_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002675506999821664,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_3_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027391979999720206,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_3_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028058800000962947,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_0_1_3_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002438940000047296,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_3_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002644555999950171,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_4_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027291279998280515,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_4_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002787309000041205,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "4"
+      }
+    },
+    {
+      "name": "A4_0_1_4_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023858189999828028,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_4_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002647415999945224,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_5_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002735358000109045,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_5_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028019500000482367,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "4"
+      }
+    },
+    {
+      "name": "A4_0_1_5_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002403230000027179,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_5_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026769270000386314,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_6_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002788860000009663,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_6_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002839471000015692,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "1"
+      }
+    },
+    {
+      "name": "A4_0_1_6_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023976299999048933,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_6_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026639359998625878,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_7_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027565089999370684,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_7_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002823851000130162,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "4"
+      }
+    },
+    {
+      "name": "A4_0_1_7_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023919699999623845,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_7_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002652276999924652,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_8_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027146869999796763,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_8_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0027297679998810054,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_8_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002414649999991525,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_8_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002714867999884518,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_9_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027259379999122757,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_9_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028062200001386373,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_0_1_9_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002389039000036064,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_9_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002724707999959719,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_10_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027348789999450673,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_10_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0027856699998665135,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_10_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002390510000168433,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_10_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0027416279999670223,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_11_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002753448000021308,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_11_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028004889998101135,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_0_1_11_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0024124599999595375,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_11_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002722278000192091,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_12_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027303669999128033,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_12_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028063400000064576,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "1"
+      }
+    },
+    {
+      "name": "A4_0_1_12_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023830200000247714,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_12_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002762169000106951,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_13_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027558090000638913,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_13_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002777529000013601,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_13_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.00239462900003673,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_13_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0027558090000638913,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_14_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002757469000016499,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_14_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028146499998911167,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "1"
+      }
+    },
+    {
+      "name": "A4_0_1_14_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023991499999738153,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_14_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002770470000086789,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_15_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002754258000095433,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_0_1_15_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002792340000041804,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_15_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0024121500000546803,
+      "passed": true
+    },
+    {
+      "name": "A4_0_1_15_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002757928999926662,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_0_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002717877000122826,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_0_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002657246000126179,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_0_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0024015900000904367,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_0_strict",
+      "result": "unsat",
+      "expected": null,
+      "seconds": 0.002371839000034015,
+      "passed": null
+    },
+    {
+      "name": "A4_1_0_1_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002769909000107873,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_1_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002768139000181691,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "4"
+      }
+    },
+    {
+      "name": "A4_1_0_1_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0024210999999922933,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_1_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0024185010001929186,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_2_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027438790000360314,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_2_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.00277592900010859,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_1_0_2_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002368168999964837,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_2_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0024296809999668767,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_3_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027535779997833743,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_3_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002833010999893304,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_1_0_3_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002408990000049016,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_3_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002498931999980414,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_4_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002741758000183836,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_4_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002778900000066642,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "2"
+      }
+    },
+    {
+      "name": "A4_1_0_4_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0024028299999372393,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_4_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0024285100000724924,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_5_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027471979999518226,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_5_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002766648999795507,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "2"
+      }
+    },
+    {
+      "name": "A4_1_0_5_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002404370000022027,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_5_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002633085999832474,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_6_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002749359000063123,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_6_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002822100000003047,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_1_0_6_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002386239999850659,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_6_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002512492999812821,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_7_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027455379999992147,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_7_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028293509999457456,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_1_0_7_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023825989999295416,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_7_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002676336000149604,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_8_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002717677999953594,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_8_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027892500002053566,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "1"
+      }
+    },
+    {
+      "name": "A4_1_0_8_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023922800000946154,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_8_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0024320210000041698,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_9_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027327479999712523,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_9_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027668589998484094,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "4"
+      }
+    },
+    {
+      "name": "A4_1_0_9_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023813099999188125,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_9_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026319859998693573,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_10_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027714090001609293,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_10_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028075199998056632,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "1"
+      }
+    },
+    {
+      "name": "A4_1_0_10_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002402060000122219,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_10_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026423159999922063,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_11_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027653790000385925,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_11_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028360109999994165,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_1_0_11_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023973989998467005,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_11_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002665426000021398,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_12_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027402680000250257,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_12_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.00282311099999788,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "1"
+      }
+    },
+    {
+      "name": "A4_1_0_12_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002401278999968781,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_12_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0025274030001583014,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_13_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027439680000043154,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_13_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002810949999911827,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "4"
+      }
+    },
+    {
+      "name": "A4_1_0_13_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002399920000016209,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_13_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002635526000176469,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_14_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027565590000904194,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_14_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002810990000170932,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "2"
+      }
+    },
+    {
+      "name": "A4_1_0_14_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002413759999853937,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_14_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026655359999949724,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_15_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.00273046800020893,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_0_15_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028311309999935474,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_1_0_15_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002388858999893273,
+      "passed": true
+    },
+    {
+      "name": "A4_1_0_15_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026164549999521114,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_0_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027149370000643103,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_0_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027723589998913667,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "1",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_0_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002390580000110276,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_0_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002428831000088394,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_1_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002744548999999097,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_1_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0027026580000892864,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_1_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023965299999417766,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_1_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002735788000109096,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_2_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002749318000041967,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_2_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002799869000000399,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_1_1_2_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002389928999946278,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_2_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002665435999915644,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_3_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002747488000068188,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_3_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002808039999990797,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "1",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_1_1_3_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023937100002058287,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_3_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.00271639800007506,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_4_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027457789999516535,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_4_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027845489998981066,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "1",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_4_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023709189999863156,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_4_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026764070000808715,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_5_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027472680001210392,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_5_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0027417480000622163,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_5_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023899999998775456,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_5_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0027561479998894356,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_6_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027414680000674707,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_6_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027966689999630034,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "1",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_6_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0024181899998438894,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_6_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026658369999950082,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_7_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027897200000097655,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_7_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002833960000089064,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "3"
+      }
+    },
+    {
+      "name": "A4_1_1_7_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023747190000449336,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_7_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002774919000103182,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_8_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002716426999995747,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_8_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027800790001037967,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "1",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_8_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002380338999955711,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_8_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026188550000370014,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_9_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027415480001309334,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_9_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.00278892000005726,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "1"
+      }
+    },
+    {
+      "name": "A4_1_1_9_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023907389997930295,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_9_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0027246580000337417,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_10_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027409990000251128,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_10_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0028015700002015365,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "1",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_10_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.00243960100010554,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_10_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002697007000051599,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_11_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027661080000598304,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_11_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002775489999976344,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_11_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023850599998240796,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_11_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0027732300000025134,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_12_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027370689999770548,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_12_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002834309999798279,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "1"
+      }
+    },
+    {
+      "name": "A4_1_1_12_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002403499999900305,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_12_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002706066999962786,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_13_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027774190000400267,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_13_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002796068999941781,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "1",
+        "x_next": "1"
+      }
+    },
+    {
+      "name": "A4_1_1_13_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002405199999884644,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_13_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002747699000110515,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_14_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0027611289999640576,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_14_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002820909999854848,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "1",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_14_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002379209000082483,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_14_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002705988000116122,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_15_guard",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002724917000023197,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    },
+    {
+      "name": "A4_1_1_15_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002814810000018042,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_15_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0023886989999937214,
+      "passed": true
+    },
+    {
+      "name": "A4_1_1_15_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0028043199999956414,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      }
+    }
+  ]
+}

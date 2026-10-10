@@ -1,0 +1,15 @@
+{
+  "command": [
+    "unrar",
+    "t",
+    "-idq",
+    "/root/RSG/sources/CondTerm-Artifact.rar"
+  ],
+  "cwd": "/root/RSG",
+  "started_utc": "2026-10-10T09:03:11.783447+00:00",
+  "exit_code": 0,
+  "wall_seconds": 2.8723657830000775,
+  "stdout": "logs/artifact_crc.stdout",
+  "stderr": "logs/artifact_crc.stderr",
+  "peak_rss_kib": 8624
+}

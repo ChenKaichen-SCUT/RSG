@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/root/RSG-reproduction-check/.venv/bin/python",
+    "/root/RSG-reproduction-check/experiments/run_python_method.py",
+    "joint",
+    "benchmark_Joint-2-Selector_10"
+  ],
+  "cwd": "/root/RSG-reproduction-check",
+  "started_utc": "2026-10-10T09:23:05.820086+00:00",
+  "sampled_peak_tree_rss_kib": 41868,
+  "rss_sampling_interval_seconds": 0.005,
+  "exit_code": 0,
+  "wall_seconds": 0.17120899200017448,
+  "stdout": "logs/benchmark/Joint-2-Selector_10.stdout",
+  "stderr": "logs/benchmark/Joint-2-Selector_10.stderr",
+  "peak_rss_kib": 41212
+}

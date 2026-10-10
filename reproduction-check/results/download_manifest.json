@@ -1,0 +1,14 @@
+{
+  "source_url": "https://zenodo.org/records/16891885/files/CondTerm-Artifact.rar",
+  "record_id": "16891885",
+  "artifact_version": "v1",
+  "publication_date": "2025-08-18",
+  "size_bytes": 338912600,
+  "expected_size": 338912600,
+  "expected_checksum": "md5:a75d0094fedfb274dd48bf31cf730741",
+  "md5": "a75d0094fedfb274dd48bf31cf730741",
+  "sha256": "bae5800d4e0a6134e9910ca17e540b60070ef54cc8b8b9d71c176c01d41207fb",
+  "seconds": 0.6528142049996859,
+  "cached": true,
+  "verified": true
+}

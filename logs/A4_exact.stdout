@@ -1,0 +1,834 @@
+{
+  "method": "A4 exhaustive official boundaries plus predicate elimination",
+  "distances": [
+    0,
+    1,
+    2,
+    4,
+    6,
+    8,
+    10,
+    20,
+    50
+  ],
+  "total_candidates": 20000,
+  "guard_pruned": 19995,
+  "guard_pruning": "Exact Cartesian-box argument with SMT-verified boundary witnesses; no sampled state search.",
+  "guard_certificates": [
+    {
+      "name": "prune_witness_0_0",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0026843569999073225,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0000_prune_witness_0_0.smt2"
+    },
+    {
+      "name": "prune_witness_0_1",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0025404830000752554,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0001_prune_witness_0_1.smt2"
+    },
+    {
+      "name": "prune_witness_0_2",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002511162000018885,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0002_prune_witness_0_2.smt2"
+    },
+    {
+      "name": "prune_witness_0_3",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0025127530000190745,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0003_prune_witness_0_3.smt2"
+    },
+    {
+      "name": "prune_witness_1_0",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0025526530000661296,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0019_prune_witness_1_0.smt2"
+    },
+    {
+      "name": "prune_witness_1_1",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002543923000075665,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0020_prune_witness_1_1.smt2"
+    },
+    {
+      "name": "prune_witness_1_2",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002553754000018671,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0021_prune_witness_1_2.smt2"
+    },
+    {
+      "name": "prune_witness_1_3",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002521191999903749,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0022_prune_witness_1_3.smt2"
+    }
+  ],
+  "survivors": [
+    {
+      "term": 0,
+      "distances": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "formula_smt2": "(or (and (<= p 0) (<= (- p) 0) (<= x 0) (<= (- x) 0)) (and (= p 1) (= x 4)))",
+      "validation": {
+        "formula_smt2": "(or (and (<= p 0) (<= (- p) 0) (<= x 0) (<= (- x) 0)) (and (= p 1) (= x 4)))",
+        "valid": true,
+        "checks": [
+          {
+            "name": "A4_exact_0_0_0_nonempty",
+            "result": "sat",
+            "expected": "sat",
+            "seconds": 0.003069586000037816,
+            "passed": true,
+            "counterexample_or_witness": {
+              "p": "0",
+              "x": "0",
+              "p_next": "0",
+              "x_next": "0"
+            },
+            "query_file": "logs/smt/A4_exact/0004_A4_exact_0_0_0_nonempty.smt2"
+          },
+          {
+            "name": "A4_exact_0_0_0_seed",
+            "result": "unsat",
+            "expected": "unsat",
+            "seconds": 0.002546613000049547,
+            "passed": true,
+            "query_file": "logs/smt/A4_exact/0005_A4_exact_0_0_0_seed.smt2"
+          },
+          {
+            "name": "A4_exact_0_0_0_guard",
+            "result": "unsat",
+            "expected": "unsat",
+            "seconds": 0.0028656509998654656,
+            "passed": true,
+            "query_file": "logs/smt/A4_exact/0006_A4_exact_0_0_0_guard.smt2"
+          },
+          {
+            "name": "A4_exact_0_0_0_closure",
+            "result": "unsat",
+            "expected": "unsat",
+            "seconds": 0.002925253000057637,
+            "passed": true,
+            "query_file": "logs/smt/A4_exact/0007_A4_exact_0_0_0_closure.smt2"
+          }
+        ],
+        "display_states": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      "strict": {
+        "name": "A4_exact_0_0_0_strict",
+        "result": "unsat",
+        "expected": null,
+        "seconds": 0.0026655260001007264,
+        "passed": null,
+        "query_file": "logs/smt/A4_exact/0008_A4_exact_0_0_0_strict.smt2"
+      }
+    },
+    {
+      "term": 0,
+      "distances": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "formula_smt2": "(or (and (<= p 0) (<= (- p) 0) (<= x 1) (<= (- x) 0)) (and (= p 1) (= x 4)))",
+      "validation": {
+        "formula_smt2": "(or (and (<= p 0) (<= (- p) 0) (<= x 1) (<= (- x) 0)) (and (= p 1) (= x 4)))",
+        "valid": false,
+        "checks": [
+          {
+            "name": "A4_exact_0_1_0_nonempty",
+            "result": "sat",
+            "expected": "sat",
+            "seconds": 0.002878902000020389,
+            "passed": true,
+            "counterexample_or_witness": {
+              "p": "0",
+              "x": "0",
+              "p_next": "0",
+              "x_next": "0"
+            },
+            "query_file": "logs/smt/A4_exact/0009_A4_exact_0_1_0_nonempty.smt2"
+          },
+          {
+            "name": "A4_exact_0_1_0_seed",
+            "result": "unsat",
+            "expected": "unsat",
+            "seconds": 0.0025488929998118692,
+            "passed": true,
+            "query_file": "logs/smt/A4_exact/0010_A4_exact_0_1_0_seed.smt2"
+          },
+          {
+            "name": "A4_exact_0_1_0_guard",
+            "result": "unsat",
+            "expected": "unsat",
+            "seconds": 0.002862751000066055,
+            "passed": true,
+            "query_file": "logs/smt/A4_exact/0011_A4_exact_0_1_0_guard.smt2"
+          },
+          {
+            "name": "A4_exact_0_1_0_closure",
+            "result": "sat",
+            "expected": "unsat",
+            "seconds": 0.002932452000095509,
+            "passed": false,
+            "counterexample_or_witness": {
+              "p": "0",
+              "x": "1",
+              "p_next": "1",
+              "x_next": "3"
+            },
+            "query_file": "logs/smt/A4_exact/0012_A4_exact_0_1_0_closure.smt2"
+          }
+        ],
+        "display_states": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      "strict": {
+        "name": "A4_exact_0_1_0_strict",
+        "result": "sat",
+        "expected": null,
+        "seconds": 0.0026475560000562837,
+        "passed": null,
+        "counterexample_or_witness": {
+          "p": "0",
+          "x": "1",
+          "p_next": "0",
+          "x_next": "0"
+        },
+        "query_file": "logs/smt/A4_exact/0013_A4_exact_0_1_0_strict.smt2"
+      }
+    },
+    {
+      "term": 0,
+      "distances": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "formula_smt2": "(or (and (<= p 0) (<= (- p) 0) (<= x 2) (<= (- x) 0)) (and (= p 1) (= x 4)))",
+      "validation": {
+        "formula_smt2": "(or (and (<= p 0) (<= (- p) 0) (<= x 2) (<= (- x) 0)) (and (= p 1) (= x 4)))",
+        "valid": false,
+        "checks": [
+          {
+            "name": "A4_exact_0_2_0_nonempty",
+            "result": "sat",
+            "expected": "sat",
+            "seconds": 0.0028562109998802043,
+            "passed": true,
+            "counterexample_or_witness": {
+              "p": "1",
+              "x": "4",
+              "p_next": "0",
+              "x_next": "0"
+            },
+            "query_file": "logs/smt/A4_exact/0014_A4_exact_0_2_0_nonempty.smt2"
+          },
+          {
+            "name": "A4_exact_0_2_0_seed",
+            "result": "unsat",
+            "expected": "unsat",
+            "seconds": 0.0025549629999659373,
+            "passed": true,
+            "query_file": "logs/smt/A4_exact/0015_A4_exact_0_2_0_seed.smt2"
+          },
+          {
+            "name": "A4_exact_0_2_0_guard",
+            "result": "unsat",
+            "expected": "unsat",
+            "seconds": 0.002868691999992734,
+            "passed": true,
+            "query_file": "logs/smt/A4_exact/0016_A4_exact_0_2_0_guard.smt2"
+          },
+          {
+            "name": "A4_exact_0_2_0_closure",
+            "result": "sat",
+            "expected": "unsat",
+            "seconds": 0.0029564330000084738,
+            "passed": false,
+            "counterexample_or_witness": {
+              "p": "0",
+              "x": "1",
+              "p_next": "1",
+              "x_next": "3"
+            },
+            "query_file": "logs/smt/A4_exact/0017_A4_exact_0_2_0_closure.smt2"
+          }
+        ],
+        "display_states": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      "strict": {
+        "name": "A4_exact_0_2_0_strict",
+        "result": "sat",
+        "expected": null,
+        "seconds": 0.0028316609998455533,
+        "passed": null,
+        "counterexample_or_witness": {
+          "p": "0",
+          "x": "2",
+          "p_next": "0",
+          "x_next": "0"
+        },
+        "query_file": "logs/smt/A4_exact/0018_A4_exact_0_2_0_strict.smt2"
+      }
+    },
+    {
+      "term": 1,
+      "distances": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "formula_smt2": "(or (and (<= p 1) (<= (- p) (- 1)) (<= x 4) (<= (- x) (- 4)))\n    (and (= p 0) (= x 0)))",
+      "validation": {
+        "formula_smt2": "(or (and (<= p 1) (<= (- p) (- 1)) (<= x 4) (<= (- x) (- 4)))\n    (and (= p 0) (= x 0)))",
+        "valid": true,
+        "checks": [
+          {
+            "name": "A4_exact_1_0_0_nonempty",
+            "result": "sat",
+            "expected": "sat",
+            "seconds": 0.0028727819999403437,
+            "passed": true,
+            "counterexample_or_witness": {
+              "p": "1",
+              "x": "4",
+              "p_next": "0",
+              "x_next": "0"
+            },
+            "query_file": "logs/smt/A4_exact/0023_A4_exact_1_0_0_nonempty.smt2"
+          },
+          {
+            "name": "A4_exact_1_0_0_seed",
+            "result": "unsat",
+            "expected": "unsat",
+            "seconds": 0.0025845139998637023,
+            "passed": true,
+            "query_file": "logs/smt/A4_exact/0024_A4_exact_1_0_0_seed.smt2"
+          },
+          {
+            "name": "A4_exact_1_0_0_guard",
+            "result": "unsat",
+            "expected": "unsat",
+            "seconds": 0.0028541709998535225,
+            "passed": true,
+            "query_file": "logs/smt/A4_exact/0025_A4_exact_1_0_0_guard.smt2"
+          },
+          {
+            "name": "A4_exact_1_0_0_closure",
+            "result": "unsat",
+            "expected": "unsat",
+            "seconds": 0.0028994419999435195,
+            "passed": true,
+            "query_file": "logs/smt/A4_exact/0026_A4_exact_1_0_0_closure.smt2"
+          }
+        ],
+        "display_states": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      "strict": {
+        "name": "A4_exact_1_0_0_strict",
+        "result": "unsat",
+        "expected": null,
+        "seconds": 0.002717966999853161,
+        "passed": null,
+        "query_file": "logs/smt/A4_exact/0027_A4_exact_1_0_0_strict.smt2"
+      }
+    },
+    {
+      "term": 1,
+      "distances": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "formula_smt2": "(or (and (<= p 1) (<= (- p) (- 1)) (<= x 4) (<= (- x) (- 3)))\n    (and (= p 0) (= x 0)))",
+      "validation": {
+        "formula_smt2": "(or (and (<= p 1) (<= (- p) (- 1)) (<= x 4) (<= (- x) (- 3)))\n    (and (= p 0) (= x 0)))",
+        "valid": false,
+        "checks": [
+          {
+            "name": "A4_exact_1_0_1_nonempty",
+            "result": "sat",
+            "expected": "sat",
+            "seconds": 0.0028552700000545883,
+            "passed": true,
+            "counterexample_or_witness": {
+              "p": "1",
+              "x": "3",
+              "p_next": "0",
+              "x_next": "0"
+            },
+            "query_file": "logs/smt/A4_exact/0028_A4_exact_1_0_1_nonempty.smt2"
+          },
+          {
+            "name": "A4_exact_1_0_1_seed",
+            "result": "unsat",
+            "expected": "unsat",
+            "seconds": 0.0025586540000404057,
+            "passed": true,
+            "query_file": "logs/smt/A4_exact/0029_A4_exact_1_0_1_seed.smt2"
+          },
+          {
+            "name": "A4_exact_1_0_1_guard",
+            "result": "unsat",
+            "expected": "unsat",
+            "seconds": 0.002840051000021049,
+            "passed": true,
+            "query_file": "logs/smt/A4_exact/0030_A4_exact_1_0_1_guard.smt2"
+          },
+          {
+            "name": "A4_exact_1_0_1_closure",
+            "result": "sat",
+            "expected": "unsat",
+            "seconds": 0.002961153999876842,
+            "passed": false,
+            "counterexample_or_witness": {
+              "p": "1",
+              "x": "3",
+              "p_next": "0",
+              "x_next": "1"
+            },
+            "query_file": "logs/smt/A4_exact/0031_A4_exact_1_0_1_closure.smt2"
+          }
+        ],
+        "display_states": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      "strict": {
+        "name": "A4_exact_1_0_1_strict",
+        "result": "sat",
+        "expected": null,
+        "seconds": 0.002691547000040373,
+        "passed": null,
+        "counterexample_or_witness": {
+          "p": "1",
+          "x": "3",
+          "p_next": "0",
+          "x_next": "0"
+        },
+        "query_file": "logs/smt/A4_exact/0032_A4_exact_1_0_1_strict.smt2"
+      }
+    }
+  ],
+  "queries": [
+    {
+      "name": "prune_witness_0_0",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0026843569999073225,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0000_prune_witness_0_0.smt2"
+    },
+    {
+      "name": "prune_witness_0_1",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0025404830000752554,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0001_prune_witness_0_1.smt2"
+    },
+    {
+      "name": "prune_witness_0_2",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002511162000018885,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0002_prune_witness_0_2.smt2"
+    },
+    {
+      "name": "prune_witness_0_3",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0025127530000190745,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0003_prune_witness_0_3.smt2"
+    },
+    {
+      "name": "A4_exact_0_0_0_nonempty",
+      "result": "sat",
+      "expected": "sat",
+      "seconds": 0.003069586000037816,
+      "passed": true,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      },
+      "query_file": "logs/smt/A4_exact/0004_A4_exact_0_0_0_nonempty.smt2"
+    },
+    {
+      "name": "A4_exact_0_0_0_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002546613000049547,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0005_A4_exact_0_0_0_seed.smt2"
+    },
+    {
+      "name": "A4_exact_0_0_0_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0028656509998654656,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0006_A4_exact_0_0_0_guard.smt2"
+    },
+    {
+      "name": "A4_exact_0_0_0_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002925253000057637,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0007_A4_exact_0_0_0_closure.smt2"
+    },
+    {
+      "name": "A4_exact_0_0_0_strict",
+      "result": "unsat",
+      "expected": null,
+      "seconds": 0.0026655260001007264,
+      "passed": null,
+      "query_file": "logs/smt/A4_exact/0008_A4_exact_0_0_0_strict.smt2"
+    },
+    {
+      "name": "A4_exact_0_1_0_nonempty",
+      "result": "sat",
+      "expected": "sat",
+      "seconds": 0.002878902000020389,
+      "passed": true,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "0",
+        "p_next": "0",
+        "x_next": "0"
+      },
+      "query_file": "logs/smt/A4_exact/0009_A4_exact_0_1_0_nonempty.smt2"
+    },
+    {
+      "name": "A4_exact_0_1_0_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0025488929998118692,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0010_A4_exact_0_1_0_seed.smt2"
+    },
+    {
+      "name": "A4_exact_0_1_0_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002862751000066055,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0011_A4_exact_0_1_0_guard.smt2"
+    },
+    {
+      "name": "A4_exact_0_1_0_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002932452000095509,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "1",
+        "x_next": "3"
+      },
+      "query_file": "logs/smt/A4_exact/0012_A4_exact_0_1_0_closure.smt2"
+    },
+    {
+      "name": "A4_exact_0_1_0_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0026475560000562837,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "0",
+        "x_next": "0"
+      },
+      "query_file": "logs/smt/A4_exact/0013_A4_exact_0_1_0_strict.smt2"
+    },
+    {
+      "name": "A4_exact_0_2_0_nonempty",
+      "result": "sat",
+      "expected": "sat",
+      "seconds": 0.0028562109998802043,
+      "passed": true,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      },
+      "query_file": "logs/smt/A4_exact/0014_A4_exact_0_2_0_nonempty.smt2"
+    },
+    {
+      "name": "A4_exact_0_2_0_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0025549629999659373,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0015_A4_exact_0_2_0_seed.smt2"
+    },
+    {
+      "name": "A4_exact_0_2_0_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002868691999992734,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0016_A4_exact_0_2_0_guard.smt2"
+    },
+    {
+      "name": "A4_exact_0_2_0_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.0029564330000084738,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "1",
+        "p_next": "1",
+        "x_next": "3"
+      },
+      "query_file": "logs/smt/A4_exact/0017_A4_exact_0_2_0_closure.smt2"
+    },
+    {
+      "name": "A4_exact_0_2_0_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.0028316609998455533,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "0",
+        "x": "2",
+        "p_next": "0",
+        "x_next": "0"
+      },
+      "query_file": "logs/smt/A4_exact/0018_A4_exact_0_2_0_strict.smt2"
+    },
+    {
+      "name": "prune_witness_1_0",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0025526530000661296,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0019_prune_witness_1_0.smt2"
+    },
+    {
+      "name": "prune_witness_1_1",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002543923000075665,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0020_prune_witness_1_1.smt2"
+    },
+    {
+      "name": "prune_witness_1_2",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002553754000018671,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0021_prune_witness_1_2.smt2"
+    },
+    {
+      "name": "prune_witness_1_3",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002521191999903749,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0022_prune_witness_1_3.smt2"
+    },
+    {
+      "name": "A4_exact_1_0_0_nonempty",
+      "result": "sat",
+      "expected": "sat",
+      "seconds": 0.0028727819999403437,
+      "passed": true,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "4",
+        "p_next": "0",
+        "x_next": "0"
+      },
+      "query_file": "logs/smt/A4_exact/0023_A4_exact_1_0_0_nonempty.smt2"
+    },
+    {
+      "name": "A4_exact_1_0_0_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0025845139998637023,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0024_A4_exact_1_0_0_seed.smt2"
+    },
+    {
+      "name": "A4_exact_1_0_0_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0028541709998535225,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0025_A4_exact_1_0_0_guard.smt2"
+    },
+    {
+      "name": "A4_exact_1_0_0_closure",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0028994419999435195,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0026_A4_exact_1_0_0_closure.smt2"
+    },
+    {
+      "name": "A4_exact_1_0_0_strict",
+      "result": "unsat",
+      "expected": null,
+      "seconds": 0.002717966999853161,
+      "passed": null,
+      "query_file": "logs/smt/A4_exact/0027_A4_exact_1_0_0_strict.smt2"
+    },
+    {
+      "name": "A4_exact_1_0_1_nonempty",
+      "result": "sat",
+      "expected": "sat",
+      "seconds": 0.0028552700000545883,
+      "passed": true,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      },
+      "query_file": "logs/smt/A4_exact/0028_A4_exact_1_0_1_nonempty.smt2"
+    },
+    {
+      "name": "A4_exact_1_0_1_seed",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.0025586540000404057,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0029_A4_exact_1_0_1_seed.smt2"
+    },
+    {
+      "name": "A4_exact_1_0_1_guard",
+      "result": "unsat",
+      "expected": "unsat",
+      "seconds": 0.002840051000021049,
+      "passed": true,
+      "query_file": "logs/smt/A4_exact/0030_A4_exact_1_0_1_guard.smt2"
+    },
+    {
+      "name": "A4_exact_1_0_1_closure",
+      "result": "sat",
+      "expected": "unsat",
+      "seconds": 0.002961153999876842,
+      "passed": false,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "1"
+      },
+      "query_file": "logs/smt/A4_exact/0031_A4_exact_1_0_1_closure.smt2"
+    },
+    {
+      "name": "A4_exact_1_0_1_strict",
+      "result": "sat",
+      "expected": null,
+      "seconds": 0.002691547000040373,
+      "passed": null,
+      "counterexample_or_witness": {
+        "p": "1",
+        "x": "3",
+        "p_next": "0",
+        "x_next": "0"
+      },
+      "query_file": "logs/smt/A4_exact/0032_A4_exact_1_0_1_strict.smt2"
+    }
+  ],
+  "smt_calls": 33,
+  "unsat_core_calls": 0,
+  "wall_seconds": 0.2723585449998609,
+  "solver_seconds": 0.09026697199942646,
+  "strict_valid_candidates": 0
+}

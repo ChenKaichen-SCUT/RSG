@@ -1,0 +1,36 @@
+<job>
+    <Name>CondTerm_Config</Name>
+    <!-- A path to tmp directory -->
+    <Tmp>/tmpfs</Tmp>
+    <!-- A path to output result directory -->
+    <Log_Dir>/log</Log_Dir>
+    <Log>10</Log>
+    <Log_Lgs>LeNLeMixed_Main_Standard_TIME_</Log_Lgs>
+    <Log_Excel>AllBench-_TIME_-gen-ds</Log_Excel>
+    <RSGeneralize>true</RSGeneralize>
+    <DataSaving>true</DataSaving>
+    <NLe>
+        <Timeout>10</Timeout>
+        <TestRound>100</TestRound>
+        <CBC_Limit>1000</CBC_Limit>
+        <UseAdvancedCBC>True</UseAdvancedCBC>
+        <MLearnTarget>L2</MLearnTarget>
+        <MLearnClusterNum>10</MLearnClusterNum>
+    </NLe>
+    <Le>
+        <Timeout>25</Timeout>
+        <TestRound>100</TestRound>
+        <UseAdvancedCBC>True</UseAdvancedCBC>
+        <LexicalStrategy>TraceBest</LexicalStrategy>
+        <LexicalRankMax>2</LexicalRankMax>
+        <MLearnTarget>LSM_L2</MLearnTarget>
+    </Le>
+    <Le>
+        <Timeout>40</Timeout>
+        <TestRound>100</TestRound>
+        <UseAdvancedCBC>True</UseAdvancedCBC>
+        <LexicalStrategy>TraceBest</LexicalStrategy>
+        <LexicalRankMax>3</LexicalRankMax>
+        <MLearnTarget>LSM_L2</MLearnTarget>
+    </Le>
+</job>
