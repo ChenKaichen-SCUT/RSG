@@ -31,6 +31,7 @@ def online(name,cmd,**kw):
 collect.run=online
 lock=threading.Lock()
 def execute(trial,project):
+ method=trial['method']
  runlabel=f"{label}/{trial['program']}/{trial['phase']}_{trial['round']:02d}/{method}"
  result=collect.collect(rows[trial['program']],project,label=runlabel,trace=True,seed=P['primary_seed'])
  traces=[json.loads((ROOT/p).read_text()) for p in result['rsg_traces']]
@@ -38,6 +39,8 @@ def execute(trial,project):
  for p in result['rsg_traces']:
   f=(ROOT/p).parent/'integration.json'
   if f.exists():integrations.append(json.loads(f.read_text()))
+ if result['rsl_calls_without_trace']<0 or any(r['method']!=method for r in integrations) or (method=='official' and integrations):
+  raise RuntimeError('Trial isolation/configuration integrity failure: '+runlabel)
  result.update(trial=trial,rsg_seconds=sum(t.get('rsg_seconds',0) for t in traces),
   rsg_native_smt_calls=sum(t.get('smt_calls',0) for t in traces),rsg_core_calls=sum(t.get('core_calls',0) for t in traces),
   rsg_solver_seconds=sum(t.get('solver_seconds',0) for t in traces)+sum(q['seconds'] for r in integrations for q in r['all_queries']),

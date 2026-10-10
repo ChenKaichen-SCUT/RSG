@@ -1,0 +1,33 @@
+{
+  "selected_utc": "2026-10-10T11:46:20.220705+00:00",
+  "programs": [
+    "AlternDivWidening",
+    "Ex06",
+    "Fibonacci"
+  ],
+  "reason": "All three have independently verified natural D_symbolic outputs strictly larger than official RSG. They cover a two-variable unbounded guard with fixed initialization, a one-variable exactly finite guard, and a four-variable recurrence whose complete CondTerm run returns Unknown. Include the slow unsuccessful program rather than condition timing on success.",
+  "workers": 8,
+  "warmup_per_method_program": 3,
+  "measurements_per_method_program": 20,
+  "methods": [
+    "official",
+    "closure",
+    "joint"
+  ],
+  "order_seed": 20261010,
+  "block_policy": "Eight isolated workers; one paired repetition block runs three methods sequentially in frozen randomized order; all warmup blocks before measurements. No other experiment batch during formal measurements.",
+  "claim_scope": "Whole process cost under this shared-host paired-block schedule, not unloaded-host microbenchmark speedup. UNKNOWN/timeout costs included; no time-to-solution speedup is inferred from censored runs.",
+  "code_sha256": {
+    "src/Stage2Integration.cs": "d8ca5df9159ab89e490150e29d0267bd8b0e429c54abe6367d219a445006b9c7",
+    "scripts/build_integration.py": "03025beca39da861f9a76c21239bd6008c51232f455131ab47facc0b831ef73b",
+    "scripts/integrate.py": "0d55da02547d3a9e1fc78fc6b573ce6b9df8a7cbc146be83bcdfc0b79d703885",
+    "scripts/run_e2e.py": "c3ea2f29e405d4b458202ac6aaa3500f1c4b114772bcc9697dc7f158c7fefde6",
+    "scripts/analyze_e2e.py": "4b53a55b73d114ed917dec1a97b774be2591e81d9cf6c967fdf303aa32a215af",
+    "scripts/validate_online.py": "862453fedff6c5962a9c951af2605808ec6a648078c676b8ce81bcf980cc4054",
+    "src/condition_parser.py": "618f1c3f275352ef9fa903e19a01a2bcfac1ddd0f823a83985a5ee6cf8b1643d",
+    "scripts/collect.py": "8841eb9f788d7c96ef216bad9b6a695e289ac4d385c0d5869f63769b2efec8d2"
+  },
+  "final_frozen_utc": "2026-10-10T12:02:35.285493+00:00",
+  "closure_dispatch": "Generic syntactically bounded integer guard -> independently certified exact finite closure; otherwise frozen symbolic closure. One backend per call. Empty seed -> official fallback.",
+  "serialization": "At most 2 extra seconds of proven DNF redundancy removal, complemented comparisons, arithmetic equality encoded as two inequalities; Python and actual C# returned AST checked independently."
+}

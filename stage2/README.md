@@ -66,3 +66,21 @@ python3 stage2/scripts/unpack_evidence.py
 验证冻结输入无需重跑 RSLearn；B 需要先构建原生重放入口。重放会更新当前目录对应的第二阶段验证/比较记录，建议另用一份 clone 保存公开测量。只做验证时不需要运行 CondTerm 前端或下载新语料。
 
 `results/summary.json` 按全体、smoke、holdout 分开统计；`results/hard_cases.json` 给出完整候选与证明引用；`results/corpus_index.json` 给出全部实际 AST。程序是频率统计单位，单次 RSG 调用只用于机制分析。SMT 超时、搜索预算耗尽、有限闭包状态上限、未支持、原生错误及无 RSG 均单列，不能据此声称数学上不存在扩展。
+
+## 有条件的真实端到端比较
+
+`run_all.sh` 在核心比较完成后检查自然收益；存在经过验证的闭包/联合收益时，按 `config/e2e_selection.json` 的冻结程序名单运行真实集成：
+
+```bash
+.venv/bin/python stage2/scripts/build_integration.py
+.venv/bin/python stage2/scripts/run_e2e.py --ids AlternDivWidening Ex06 Fibonacci --workers 8
+.venv/bin/python stage2/scripts/validate_online.py
+.venv/bin/python stage2/scripts/analyze_e2e.py
+.venv/bin/python stage2/scripts/prove_simple_conditions.py
+```
+
+每个程序/配置 3 次预热、20 次正式测量，共 207 个完整运行。8 个独立工作目录/PID 命名空间并行执行配对块；同一配对块的三种方法依预先随机顺序串行，所有预热块结束后才开始测量。正式测量期间停止其他实验批次。计时属于这一共享主机调度条件，不宣称独占主机微基准加速。
+
+集成配置为官方方法、简单闭包、自动双项搜索。闭包以通用语法检查判断每个整数变量是否在 guard 每个分支中有直接上下界：有则调用仍须 SMT 证明枚举完备的有限闭包，否则调用冻结的符号闭包；不手工指定目标集合。序列化最多另用 2 秒删除已证明冗余的 DNF 项，转换前后验证等价。所有集成候选最终必须严格包含官方结果且完整 VC 验证通过，否则回退到官方结果。空种子直接回退。
+
+除了 Python 选中的候选，`validate_online.py` 还验证 C# 实际返回的 AST 与 Python 结果等价并满足完整 VC。端到端时间计入解释器启动、所有搜索/转换、独立检查与前端成本。SMT 成本表是 RSG 部分，未插桩终止侧全部内部 SMT 查询，不把缺少的总量写成 0。`Unknown`、超时与失败的运行仍保留在每组成本及成功率分母中。

@@ -16,6 +16,9 @@ def worker_project(i,pristine=False):
 
 def collect(row,project,label='primary',trace=True,seed=888):
  name=row['id'];tag=f'{label}/{name}';case=S/'work/runs'/label/name
+ corpus=S/'corpus'/label/name
+ if (case.exists() and any(case.iterdir())) or (corpus.exists() and any(corpus.iterdir())):
+  raise RuntimeError('Refusing to reuse experiment inputs/caches: '+tag+'. Use a fresh label or prepare_fresh_run.py.')
  case.mkdir(parents=True,exist_ok=True)
  for kind in ('le','nle'):
   dst=case/'benchmarks'/kind/name;dst.mkdir(parents=True,exist_ok=True)

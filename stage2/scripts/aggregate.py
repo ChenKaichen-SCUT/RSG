@@ -41,6 +41,8 @@ def summary(split='all'):
   if official_stuck and single_complete and repeat_stuck and closure:types.append('Type II (fixed language)')
   if official_stuck and single_complete and repeat_stuck and joint and not closure:types.append('Type III (closure resource/representation relative)')
   if not types and (closure or joint):types.append('positive_signal_without_single_term_impossibility')
+  if not types and expanded(single,'versus_official'):types.append('single_term_improvement_over_official')
+  if not types and expanded(b,'versus_official'):types.append('official_gap_solved_by_repeated_RSG')
   if types:
    key=c['instance'];directory=S/'corpus'/key;trace=read(directory/'trace.json')
    hard.append({'instance':key,'types':types,'program':key.split('/')[1],
@@ -56,6 +58,8 @@ def summary(split='all'):
   'rslearn_invocations':sum(r['rslearn_invocations'] for r in runs),'rsg_calls':sum(len(r['rsg_traces']) for r in runs),
   'rslearn_calls_without_rsg_trace':sum(r['rsl_calls_without_trace'] for r in runs),
   'validation_statuses':dict(collections.Counter(r['status'] for r in validations)),
+  'empty_seed_inputs':sum(r.get('seed_nonempty',{}).get('result')=='unsat' for r in validations),
+  'nonempty_validation_failures':sum(r['status']=='validation_failed' and r.get('seed_nonempty',{}).get('result')!='unsat' for r in validations),
   'valid_multiterm_inputs':sum(r['dnf_terms']>=2 for r in valid),'valid_singleterm_inputs':sum(r['dnf_terms']==1 for r in valid),
   'dnf_term_counts':dict(collections.Counter(r['dnf_terms'] for r in valid)),
   'official_did_not_expand':sum(r['official_comparison']['relation']=='equal' for r in valid),

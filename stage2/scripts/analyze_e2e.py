@@ -5,7 +5,7 @@ sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[1]/'src'))
 import z3
 from common import ROOT,S,dump
 from semantics import Context
-from formula_parser import parse
+from condition_parser import parse
 
 def entry_state(program,env,manifest):
  text=(ROOT/manifest[program]['files']['nle.bpl']['path']).read_text()
