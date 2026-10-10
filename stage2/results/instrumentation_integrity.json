@@ -1,0 +1,6 @@
+{
+  "rsg_body_unchanged": true,
+  "sha256": "8058a728d10ca4bbe3f681ed33ad25a9d8dfeec2a81259676c0a33f8a8f0e431",
+  "extra_solver_queries": 0,
+  "context_export": "log-only transaction with Process.Send suppressed"
+}

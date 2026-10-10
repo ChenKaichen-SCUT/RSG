@@ -36,6 +36,9 @@ def paired_ci(diffs):
  rng=random.Random(20261010);medians=[statistics.median(rng.choices(diffs,k=len(diffs))) for _ in range(10000)]
  return {'median_difference_seconds':statistics.median(diffs),'bootstrap_95_percent_CI':[quantile(medians,.025),quantile(medians,.975)],'bootstrap_resamples':10000,'differences':diffs,'direction':'method minus official; positive means slower'}
 
+def has_condition(row):
+ return row['condition'] is not None and row['condition'].strip().lower() not in ('','none','null')
+
 ap=argparse.ArgumentParser();ap.add_argument('--pilot',action='store_true');args=ap.parse_args()
 label='e2e_pilot' if args.pilot else 'e2e';runs=json.loads((S/'results'/(label+'.json')).read_text())
 manifest={r['id']:r for r in json.loads((S/'config/manifest.json').read_text())['programs']};programs={};condition_checks=[]
@@ -48,7 +51,8 @@ for program in sorted({r['program'] for r in runs}):
  for method in ('official','closure','joint'):
   rs=[r for r in measured if r['trial']['method']==method]
   methods[method]={'runs':len(rs),'tool_results':dict(collections.Counter(str(r['result']) for r in rs)),
-   'statuses':dict(collections.Counter(r['status'] for r in rs)),'successes':sum(r['result']=='Cond-Termination' and r['status']=='completed' for r in rs),
+   'statuses':dict(collections.Counter(r['status'] for r in rs)),'successes':sum(r['result']=='Cond-Termination' and r['status']=='completed' and has_condition(r) for r in rs),
+   'missing_final_conditions':sum(not has_condition(r) for r in rs),
    'wall_seconds':distribution([r['process']['wall_seconds'] for r in rs]),
    'iterations':distribution([r['iterations'] for r in rs if 'iterations' in r]),
    'rsl_calls':distribution([r['rslearn_invocations'] for r in rs]),'termination_boogie_calls':distribution([r['termination_boogie_invocations'] for r in rs]),
@@ -66,7 +70,7 @@ for program in sorted({r['program'] for r in runs}):
    if not b:continue
    diffs.append(r['process']['wall_seconds']-b['process']['wall_seconds'])
    check={'program':program,'round':r['trial']['round'],'method':method,'baseline_result':b['result'],'method_result':r['result']}
-   if state is not None and b['condition'] is not None and r['condition'] is not None:
+   if state is not None and has_condition(b) and has_condition(r):
     try:
      left=z3.substitute(parse(b['condition'],c.env),*[(v,state[k]) for k,v in c.env.items()])
      right=z3.substitute(parse(r['condition'],c.env),*[(v,state[k]) for k,v in c.env.items()])
@@ -81,7 +85,7 @@ for program in sorted({r['program'] for r in runs}):
  if state is not None and program in ('AlternDivWidening','Ex06'):
   t=state['t'];exact=z3.And(t>=-5,t<=5) if program=='AlternDivWidening' else z3.Or(t < -5,t > 5)
   for i,r in enumerate(measured):
-   if r['condition'] is None:continue
+   if not has_condition(r):continue
    formula=z3.substitute(parse(r['condition'],c.env),*[(v,state[k]) for k,v in c.env.items()])
    test,_=c.check('exact_'+str(i),z3.And(assumptions,z3.Xor(formula,exact)),'unsat')
    exact_checks.append({'trial':r['trial'],'check':test})

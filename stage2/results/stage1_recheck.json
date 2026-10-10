@@ -1,0 +1,128 @@
+{
+  "base_commit": "769bca6e3b232527135117407ecee9d6be97197f",
+  "all_stages_passed": true,
+  "stages": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "experiments/verify.py"
+      ],
+      "cwd": "/root/RSG/stage2-repo/stage2/work/stage1-check",
+      "started_utc": "2026-10-10T11:00:28.199098+00:00",
+      "sampled_peak_tree_rss_kib": 43048,
+      "rss_sampling_interval_seconds": 0.005,
+      "exit_code": 0,
+      "wall_seconds": 0.357900551000057,
+      "stdout": "logs/independent_smt.stdout",
+      "stderr": "logs/independent_smt.stderr",
+      "peak_rss_kib": 41932
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/prepare_end_to_end.py"
+      ],
+      "cwd": "/root/RSG/stage2-repo/stage2/work/stage1-check",
+      "started_utc": "2026-10-10T11:00:28.583279+00:00",
+      "sampled_peak_tree_rss_kib": 11608,
+      "rss_sampling_interval_seconds": 0.005,
+      "exit_code": 0,
+      "wall_seconds": 0.02107785600128409,
+      "stdout": "logs/prepare_frontend.stdout",
+      "stderr": "logs/prepare_frontend.stderr",
+      "peak_rss_kib": 10660
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "experiments/verify_frontend.py"
+      ],
+      "cwd": "/root/RSG/stage2-repo/stage2/work/stage1-check",
+      "started_utc": "2026-10-10T11:00:28.629567+00:00",
+      "sampled_peak_tree_rss_kib": 41768,
+      "rss_sampling_interval_seconds": 0.005,
+      "exit_code": 0,
+      "wall_seconds": 0.17125759900045523,
+      "stdout": "logs/frontend_equivalence.stdout",
+      "stderr": "logs/frontend_equivalence.stderr",
+      "peak_rss_kib": 40692
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "experiments/run_interface.py"
+      ],
+      "cwd": "/root/RSG/stage2-repo/stage2/work/stage1-check",
+      "started_utc": "2026-10-10T11:00:28.826989+00:00",
+      "sampled_peak_tree_rss_kib": 109088,
+      "rss_sampling_interval_seconds": 0.005,
+      "exit_code": 0,
+      "wall_seconds": 47.922233342000254,
+      "stdout": "logs/interface_suite.stdout",
+      "stderr": "logs/interface_suite.stderr",
+      "peak_rss_kib": 52056
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "experiments/exact_single_term.py"
+      ],
+      "cwd": "/root/RSG/stage2-repo/stage2/work/stage1-check",
+      "started_utc": "2026-10-10T11:01:16.775666+00:00",
+      "sampled_peak_tree_rss_kib": 43220,
+      "rss_sampling_interval_seconds": 0.005,
+      "exit_code": 0,
+      "wall_seconds": 0.35230110799966496,
+      "stdout": "logs/A4_exact.stdout",
+      "stderr": "logs/A4_exact.stderr",
+      "peak_rss_kib": 42136
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "experiments/run_end_to_end.py"
+      ],
+      "cwd": "/root/RSG/stage2-repo/stage2/work/stage1-check",
+      "started_utc": "2026-10-10T11:01:17.154125+00:00",
+      "sampled_peak_tree_rss_kib": 408988,
+      "rss_sampling_interval_seconds": 0.005,
+      "exit_code": 0,
+      "wall_seconds": 18.52370119399893,
+      "stdout": "logs/end_to_end_suite.stdout",
+      "stderr": "logs/end_to_end_suite.stderr",
+      "peak_rss_kib": 187200
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "experiments/analyze_end_to_end.py"
+      ],
+      "cwd": "/root/RSG/stage2-repo/stage2/work/stage1-check",
+      "started_utc": "2026-10-10T11:01:35.704297+00:00",
+      "sampled_peak_tree_rss_kib": 44104,
+      "rss_sampling_interval_seconds": 0.005,
+      "exit_code": 0,
+      "wall_seconds": 0.5801023570002144,
+      "stdout": "logs/end_to_end_validation.stdout",
+      "stderr": "logs/end_to_end_validation.stderr",
+      "peak_rss_kib": 42948
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/aggregate_results.py"
+      ],
+      "cwd": "/root/RSG/stage2-repo/stage2/work/stage1-check",
+      "started_utc": "2026-10-10T11:01:36.310602+00:00",
+      "sampled_peak_tree_rss_kib": 28168,
+      "rss_sampling_interval_seconds": 0.005,
+      "exit_code": 0,
+      "wall_seconds": 0.10400479800046014,
+      "stdout": "logs/aggregate.stdout",
+      "stderr": "logs/aggregate.stderr",
+      "peak_rss_kib": 29480
+    }
+  ],
+  "evidence_archive": "stage2/evidence/stage1-recheck.tar.gz",
+  "archive_sha256": "5448d045adcb803027873fdecb47557be3df99b4559c9d34c3c5c9fb8a0bde9b"
+}

@@ -1,0 +1,7 @@
+{
+  "recorded_utc": "2026-10-10T12:46:43.324961+00:00",
+  "phase": "After all 207 trials completed",
+  "change": "Only final-condition postprocessing treats the official string None as missing. Raw trial JSON, algorithm outputs, timings and search implementations unchanged. Missing conditions excluded from equivalence proofs, all runs retained for success/cost denominators.",
+  "file": "scripts/analyze_e2e.py",
+  "sha256": "dd39008348fe0fdf1c58ae871cde56ace22be9faf0a157f5f2ea4f436972ee3d"
+}

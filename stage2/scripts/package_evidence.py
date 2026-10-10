@@ -52,10 +52,17 @@ dump(evidence/'manifest.json',{'format':'ordered parts concatenate into gzip tar
  'parts':[{'path':str(p.relative_to(ROOT)),'bytes':p.stat().st_size,'sha256':sha256(p)} for p in parts],
  'raw_file_count':len(files),'raw_bytes':sum(r['bytes'] for r in manifest),'files':manifest})
 index=[]
-for p in sorted((S/'corpus').glob('*/*/call_*/trace.json')):
- d=json.loads(p.read_text());index.append({'instance':str(p.parent.relative_to(S/'corpus')),
+for p in sorted((S/'corpus').rglob('trace.json')):
+ key=str(p.parent.relative_to(S/'corpus'))
+ try:d=json.loads(p.read_text())
+ except (ValueError,UnicodeError) as error:
+  index.append({'instance':key,'index_status':'unparseable_preserved_raw_trace','error':str(error)});continue
+ invocation=p.parent/'invocation.json'
+ try:metadata=json.loads(invocation.read_text()) if invocation.exists() else None
+ except (ValueError,UnicodeError) as error:metadata={'index_error':str(error)}
+ index.append({'instance':key,
   **{k:d.get(k) for k in ('variables','input_ast','output_ast','input_boogie','output_boogie','dnf','attributes','context_bindings','distances','rsg_seconds','smt_calls','core_calls')},
-  'invocation':json.loads((p.parent/'invocation.json').read_text()) if (p.parent/'invocation.json').exists() else None,
+  'invocation':metadata,
   'proof_context_path':str((p.parent/'context.smt2').relative_to(ROOT)),'raw_prover_path':str((p.parent/'prover.smt2').relative_to(ROOT))})
 dump(S/'results/corpus_index.json',index)
 print(json.dumps({'raw_files':len(files),'raw_bytes':sum(r['bytes'] for r in manifest),'archive_bytes':sum(p.stat().st_size for p in parts),'parts':len(parts)}))

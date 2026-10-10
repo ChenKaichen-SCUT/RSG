@@ -1,0 +1,4416 @@
+{
+  "programs": {
+    "AlternDivWidening": {
+      "warmup_runs": 9,
+      "methods": {
+        "official": {
+          "runs": 20,
+          "tool_results": {
+            "Cond-Termination": 20
+          },
+          "statuses": {
+            "completed": 20
+          },
+          "successes": 20,
+          "missing_final_conditions": 0,
+          "wall_seconds": {
+            "n": 20,
+            "median": 8.636933871499423,
+            "q1": 8.41487928424931,
+            "q3": 9.003672168749745,
+            "min": 8.019710660000783,
+            "max": 10.366068924999126
+          },
+          "iterations": {
+            "n": 20,
+            "median": 2.0,
+            "q1": 2.0,
+            "q3": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "rsl_calls": {
+            "n": 20,
+            "median": 1.0,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 2
+          },
+          "termination_boogie_calls": {
+            "n": 20,
+            "median": 1.0,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "rsg_seconds": {
+            "n": 20,
+            "median": 0.03964665,
+            "q1": 0.0379775,
+            "q3": 0.0412698,
+            "min": 0.0350539,
+            "max": 0.0879372
+          },
+          "rsg_solver_seconds": {
+            "n": 20,
+            "median": 0.01334865,
+            "q1": 0.012932625,
+            "q3": 0.015265149999999998,
+            "min": 0.011608899999999998,
+            "max": 0.030400600000000003
+          },
+          "rsg_smt_calls": {
+            "n": 20,
+            "median": 4.0,
+            "q1": 4.0,
+            "q3": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "peak_tree_rss_kib": {
+            "n": 20,
+            "median": 370786.0,
+            "q1": 368490.0,
+            "q3": 372157.0,
+            "min": 366332,
+            "max": 380196
+          },
+          "accepted_extensions": 0,
+          "integration_errors": 0,
+          "conditions": [
+            "((w < 3) && (w < 4)) || ((w < 3) && (t + w > -1)) || ((w < 4) && (t - w < 1)) || ((t + w > -1) && (t - w < 1))"
+          ]
+        },
+        "closure": {
+          "runs": 20,
+          "tool_results": {
+            "Cond-Termination": 19,
+            "Unknown": 1
+          },
+          "statuses": {
+            "completed": 20
+          },
+          "successes": 19,
+          "missing_final_conditions": 1,
+          "wall_seconds": {
+            "n": 20,
+            "median": 13.509317822499725,
+            "q1": 13.020760497750416,
+            "q3": 13.749417945749883,
+            "min": 12.686084643999493,
+            "max": 25.14529011200102
+          },
+          "iterations": {
+            "n": 20,
+            "median": 2.0,
+            "q1": 2.0,
+            "q3": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "rsl_calls": {
+            "n": 20,
+            "median": 1.0,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 2
+          },
+          "termination_boogie_calls": {
+            "n": 20,
+            "median": 1.0,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 3
+          },
+          "rsg_seconds": {
+            "n": 20,
+            "median": 4.21744185,
+            "q1": 4.075841925000001,
+            "q3": 4.31187105,
+            "min": 3.9076239999999998,
+            "max": 4.680938
+          },
+          "rsg_solver_seconds": {
+            "n": 20,
+            "median": 1.3538362095059906,
+            "q1": 1.2698478897413712,
+            "q3": 1.4589078232431691,
+            "min": 1.2190121929982403,
+            "max": 1.6184904740080743
+          },
+          "rsg_smt_calls": {
+            "n": 20,
+            "median": 158.0,
+            "q1": 158.0,
+            "q3": 158.0,
+            "min": 158,
+            "max": 158
+          },
+          "peak_tree_rss_kib": {
+            "n": 20,
+            "median": 370890.0,
+            "q1": 366890.0,
+            "q3": 373161.0,
+            "min": 365912,
+            "max": 378244
+          },
+          "accepted_extensions": 20,
+          "integration_errors": 0,
+          "conditions": [
+            "(w <= 0) || ((t <= w) && (t + w > -1))",
+            "None"
+          ]
+        },
+        "joint": {
+          "runs": 20,
+          "tool_results": {
+            "Cond-Termination": 20
+          },
+          "statuses": {
+            "completed": 20
+          },
+          "successes": 20,
+          "missing_final_conditions": 0,
+          "wall_seconds": {
+            "n": 20,
+            "median": 9.398834382999667,
+            "q1": 9.180439615000068,
+            "q3": 9.729728610499023,
+            "min": 8.661241066000002,
+            "max": 10.05245560000003
+          },
+          "iterations": {
+            "n": 20,
+            "median": 2.0,
+            "q1": 2.0,
+            "q3": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "rsl_calls": {
+            "n": 20,
+            "median": 1.0,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "termination_boogie_calls": {
+            "n": 20,
+            "median": 1.0,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "rsg_seconds": {
+            "n": 20,
+            "median": 0.59746135,
+            "q1": 0.573506625,
+            "q3": 0.6716227749999999,
+            "min": 0.5353036999999999,
+            "max": 0.8696077
+          },
+          "rsg_solver_seconds": {
+            "n": 20,
+            "median": 0.12913817449755205,
+            "q1": 0.11262399175118268,
+            "q3": 0.15436774125465313,
+            "min": 0.10112930100049741,
+            "max": 0.2633838779991358
+          },
+          "rsg_smt_calls": {
+            "n": 20,
+            "median": 19.0,
+            "q1": 19.0,
+            "q3": 19.0,
+            "min": 19,
+            "max": 19
+          },
+          "peak_tree_rss_kib": {
+            "n": 20,
+            "median": 368552.0,
+            "q1": 366989.0,
+            "q3": 370390.0,
+            "min": 365892,
+            "max": 377668
+          },
+          "accepted_extensions": 0,
+          "integration_errors": 0,
+          "conditions": [
+            "((w < 3) && (w < 4)) || ((w < 3) && (t + w > -1)) || ((w < 4) && (t - w < 1)) || ((t + w > -1) && (t - w < 1))"
+          ]
+        }
+      },
+      "paired_wall_differences": {
+        "closure": {
+          "median_difference_seconds": 4.8350382674989305,
+          "bootstrap_95_percent_CI": [
+            4.34515505499985,
+            5.051121808501193
+          ],
+          "bootstrap_resamples": 10000,
+          "differences": [
+            4.2041068079997785,
+            2.910322231000464,
+            4.337814067001091,
+            5.279922652998721,
+            5.072665284002142,
+            4.638574502001575,
+            4.931781559002047,
+            4.964000220998059,
+            3.889070890001676,
+            4.3524960429986095,
+            4.289758621000146,
+            4.750286643999061,
+            3.4954430729994783,
+            5.299739738000426,
+            6.163667699000143,
+            5.029578333000245,
+            5.098305493000225,
+            4.657261637001284,
+            4.9197898909988,
+            17.038269049002338
+          ],
+          "direction": "method minus official; positive means slower"
+        },
+        "joint": {
+          "median_difference_seconds": 0.6335979025006964,
+          "bootstrap_95_percent_CI": [
+            0.35874066300038976,
+            1.0553739150000183
+          ],
+          "bootstrap_resamples": 10000,
+          "differences": [
+            0.7324210170008882,
+            -0.22807857699990564,
+            0.2762755469993863,
+            0.7518975130005856,
+            1.1485337339981925,
+            1.362940751001588,
+            1.2094947709992994,
+            1.3679401250010415,
+            0.39438479500131507,
+            1.048799190999489,
+            0.25452100499933294,
+            1.0619486390005477,
+            0.38248261799890315,
+            0.44908710699746734,
+            0.33499870800187637,
+            -0.602634887000022,
+            0.07054857599905517,
+            0.9231531850000465,
+            0.5347747880005045,
+            1.692359998001848
+          ],
+          "direction": "method minus official; positive means slower"
+        }
+      },
+      "entry_state": {
+        "t": "t__entry",
+        "w": "5"
+      },
+      "entry_error": null,
+      "exact_condition_checks": [
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 0,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_0",
+            "result": "unsat",
+            "seconds": 0.002803979999953299,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00039_exact_0.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 5,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_1",
+            "result": "unsat",
+            "seconds": 0.002685376999579603,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00040_exact_1.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 9,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_2",
+            "result": "unsat",
+            "seconds": 0.002684387000044808,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00041_exact_2.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 15,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_3",
+            "result": "unsat",
+            "seconds": 0.002699727001527208,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00042_exact_3.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 3,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_4",
+            "result": "unsat",
+            "seconds": 0.0027456879997771466,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00043_exact_4.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 8,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_5",
+            "result": "unsat",
+            "seconds": 0.0027223479992244393,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00044_exact_5.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 6,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_6",
+            "result": "unsat",
+            "seconds": 0.0027105680001113797,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00045_exact_6.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 1,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_7",
+            "result": "unsat",
+            "seconds": 0.0027131770002597477,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00046_exact_7.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 14,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_8",
+            "result": "unsat",
+            "seconds": 0.002744908999375184,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00047_exact_8.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 13,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_9",
+            "result": "unsat",
+            "seconds": 0.002689437000299222,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00048_exact_9.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 12,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_10",
+            "result": "unsat",
+            "seconds": 0.0027068469989899313,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00049_exact_10.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 2,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_11",
+            "result": "unsat",
+            "seconds": 0.0026995769985660445,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00050_exact_11.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 4,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_12",
+            "result": "unsat",
+            "seconds": 0.002707288000237895,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00051_exact_12.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 10,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_13",
+            "result": "unsat",
+            "seconds": 0.002660436999576632,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00052_exact_13.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 11,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_14",
+            "result": "unsat",
+            "seconds": 0.002672986000106903,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00053_exact_14.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 7,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_15",
+            "result": "unsat",
+            "seconds": 0.0027164170005562482,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00054_exact_15.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 0,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_16",
+            "result": "unsat",
+            "seconds": 0.0027237079993938096,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00055_exact_16.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 14,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_17",
+            "result": "unsat",
+            "seconds": 0.002737437998803216,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00056_exact_17.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 9,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_18",
+            "result": "unsat",
+            "seconds": 0.002691357000003336,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00057_exact_18.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 2,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_19",
+            "result": "unsat",
+            "seconds": 0.0026851370002987096,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00058_exact_19.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 6,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_20",
+            "result": "unsat",
+            "seconds": 0.0027299180001136847,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00059_exact_20.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 4,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_21",
+            "result": "unsat",
+            "seconds": 0.0026958769994962495,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00060_exact_21.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 15,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_22",
+            "result": "unsat",
+            "seconds": 0.002672656000868301,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00061_exact_22.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 13,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_23",
+            "result": "unsat",
+            "seconds": 0.002733547999014263,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00062_exact_23.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 1,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_24",
+            "result": "unsat",
+            "seconds": 0.002731738000875339,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00063_exact_24.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 5,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_25",
+            "result": "unsat",
+            "seconds": 0.002662746001078631,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00064_exact_25.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 3,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_26",
+            "result": "unsat",
+            "seconds": 0.0027621589997579576,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00065_exact_26.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 7,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_27",
+            "result": "unsat",
+            "seconds": 0.002723617999436101,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00066_exact_27.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 10,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_28",
+            "result": "unsat",
+            "seconds": 0.0026981970004271716,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00067_exact_28.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 8,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_29",
+            "result": "unsat",
+            "seconds": 0.002655755999512621,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00068_exact_29.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 12,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_30",
+            "result": "unsat",
+            "seconds": 0.0027045269998779986,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00069_exact_30.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 11,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_31",
+            "result": "unsat",
+            "seconds": 0.002709747999688261,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00070_exact_31.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 3,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_32",
+            "result": "unsat",
+            "seconds": 0.002684057000806206,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00071_exact_32.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 0,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_33",
+            "result": "unsat",
+            "seconds": 0.002689607001229888,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00072_exact_33.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 5,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_34",
+            "result": "unsat",
+            "seconds": 0.002680086001419113,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00073_exact_34.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 6,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_35",
+            "result": "unsat",
+            "seconds": 0.0026546959998086095,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00074_exact_35.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 2,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_36",
+            "result": "unsat",
+            "seconds": 0.002721007998843561,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00075_exact_36.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 15,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_37",
+            "result": "unsat",
+            "seconds": 0.002679866998732905,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00076_exact_37.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 14,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_38",
+            "result": "unsat",
+            "seconds": 0.0026696770000853576,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00077_exact_38.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 13,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_39",
+            "result": "unsat",
+            "seconds": 0.0026952169992000563,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00078_exact_39.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 12,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_40",
+            "result": "unsat",
+            "seconds": 0.002708527999857324,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00079_exact_40.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 10,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_41",
+            "result": "unsat",
+            "seconds": 0.0026993069986929186,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00080_exact_41.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 8,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_42",
+            "result": "unsat",
+            "seconds": 0.002689156999622355,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00081_exact_42.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 9,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_43",
+            "result": "unsat",
+            "seconds": 0.002687776999664493,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00082_exact_43.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 7,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_44",
+            "result": "unsat",
+            "seconds": 0.0026857169996219454,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00083_exact_44.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 4,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_45",
+            "result": "unsat",
+            "seconds": 0.002671456000825856,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00084_exact_45.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 1,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_46",
+            "result": "unsat",
+            "seconds": 0.002685997000298812,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00085_exact_46.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 11,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_47",
+            "result": "unsat",
+            "seconds": 0.0026929769992420916,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00086_exact_47.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 16,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_48",
+            "result": "unsat",
+            "seconds": 0.0026917070008494193,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00087_exact_48.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 18,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_49",
+            "result": "unsat",
+            "seconds": 0.002695737999601988,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00088_exact_49.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 17,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_50",
+            "result": "unsat",
+            "seconds": 0.0026715969997894717,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00089_exact_50.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 18,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_51",
+            "result": "unsat",
+            "seconds": 0.0026752360008686082,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00090_exact_51.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 16,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_52",
+            "result": "unsat",
+            "seconds": 0.002707126999666798,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00091_exact_52.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 17,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_53",
+            "result": "unsat",
+            "seconds": 0.002703897000174038,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00092_exact_53.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 16,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_55",
+            "result": "unsat",
+            "seconds": 0.0027143770003021928,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00093_exact_55.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 18,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_56",
+            "result": "unsat",
+            "seconds": 0.0026899270014837384,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00094_exact_56.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 17,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_57",
+            "result": "unsat",
+            "seconds": 0.0026878770004259422,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00095_exact_57.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 19,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_58",
+            "result": "unsat",
+            "seconds": 0.0027278079996904125,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00096_exact_58.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "measurement",
+            "round": 19,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_59",
+            "result": "unsat",
+            "seconds": 0.0027013870003429474,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00097_exact_59.smt2"
+          }
+        }
+      ]
+    },
+    "Ex06": {
+      "warmup_runs": 9,
+      "methods": {
+        "official": {
+          "runs": 20,
+          "tool_results": {
+            "Cond-Termination": 20
+          },
+          "statuses": {
+            "completed": 20
+          },
+          "successes": 20,
+          "missing_final_conditions": 0,
+          "wall_seconds": {
+            "n": 20,
+            "median": 10.833802289999767,
+            "q1": 10.555691384250167,
+            "q3": 10.953420939749776,
+            "min": 10.05434259699905,
+            "max": 21.13326507199963
+          },
+          "iterations": {
+            "n": 20,
+            "median": 4.0,
+            "q1": 4.0,
+            "q3": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "rsl_calls": {
+            "n": 20,
+            "median": 4.0,
+            "q1": 3.0,
+            "q3": 4.0,
+            "min": 3,
+            "max": 4
+          },
+          "termination_boogie_calls": {
+            "n": 20,
+            "median": 1.0,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 2
+          },
+          "rsg_seconds": {
+            "n": 20,
+            "median": 0.09060605,
+            "q1": 0.084983725,
+            "q3": 0.10876514999999999,
+            "min": 0.0799991,
+            "max": 0.1252848
+          },
+          "rsg_solver_seconds": {
+            "n": 20,
+            "median": 0.01875015,
+            "q1": 0.018006499999999995,
+            "q3": 0.019841325,
+            "min": 0.016634200000000002,
+            "max": 0.0264398
+          },
+          "rsg_smt_calls": {
+            "n": 20,
+            "median": 6.0,
+            "q1": 6.0,
+            "q3": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "peak_tree_rss_kib": {
+            "n": 20,
+            "median": 369786.0,
+            "q1": 369396.0,
+            "q3": 370836.0,
+            "min": 368740,
+            "max": 371980
+          },
+          "accepted_extensions": 0,
+          "integration_errors": 0,
+          "conditions": [
+            "(abs(t) > 5) && ((t > 1) || (t < -5)) && ((t > 3) || (t < -5))"
+          ]
+        },
+        "closure": {
+          "runs": 20,
+          "tool_results": {
+            "Cond-Termination": 20
+          },
+          "statuses": {
+            "completed": 20
+          },
+          "successes": 20,
+          "missing_final_conditions": 0,
+          "wall_seconds": {
+            "n": 20,
+            "median": 8.974930002999827,
+            "q1": 8.088390636500662,
+            "q3": 9.107178198999009,
+            "min": 7.84096504199988,
+            "max": 9.335256690999813
+          },
+          "iterations": {
+            "n": 20,
+            "median": 2.0,
+            "q1": 2.0,
+            "q3": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "rsl_calls": {
+            "n": 20,
+            "median": 2.0,
+            "q1": 1.0,
+            "q3": 2.0,
+            "min": 1,
+            "max": 2
+          },
+          "termination_boogie_calls": {
+            "n": 20,
+            "median": 1.0,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "rsg_seconds": {
+            "n": 20,
+            "median": 1.2546040500000002,
+            "q1": 1.14436955,
+            "q3": 1.3401936749999999,
+            "min": 0.9937332999999999,
+            "max": 1.6638175
+          },
+          "rsg_solver_seconds": {
+            "n": 20,
+            "median": 0.3380273824935631,
+            "q1": 0.3037422937601123,
+            "q3": 0.3834442487453593,
+            "min": 0.25923314999852454,
+            "max": 0.6489487139999408
+          },
+          "rsg_smt_calls": {
+            "n": 20,
+            "median": 50.0,
+            "q1": 48.0,
+            "q3": 50.0,
+            "min": 48,
+            "max": 50
+          },
+          "peak_tree_rss_kib": {
+            "n": 20,
+            "median": 368638.0,
+            "q1": 368036.0,
+            "q3": 369230.0,
+            "min": 367464,
+            "max": 370892
+          },
+          "accepted_extensions": 20,
+          "integration_errors": 0,
+          "conditions": [
+            "ne(t, -5) && ne(t, -4) && ne(t, -3) && ne(t, -2) && ne(t, -1) && ne(t, 0) && ne(t, 1) && ne(t, 2) && ne(t, 3) && ne(t, 4) && ne(t, 5)"
+          ]
+        },
+        "joint": {
+          "runs": 20,
+          "tool_results": {
+            "Cond-Termination": 20
+          },
+          "statuses": {
+            "completed": 20
+          },
+          "successes": 20,
+          "missing_final_conditions": 0,
+          "wall_seconds": {
+            "n": 20,
+            "median": 12.663618160000624,
+            "q1": 12.251089477999358,
+            "q3": 12.90363807049971,
+            "min": 11.477933625999867,
+            "max": 13.200948466999762
+          },
+          "iterations": {
+            "n": 20,
+            "median": 4.0,
+            "q1": 4.0,
+            "q3": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "rsl_calls": {
+            "n": 20,
+            "median": 4.0,
+            "q1": 4.0,
+            "q3": 4.0,
+            "min": 3,
+            "max": 4
+          },
+          "termination_boogie_calls": {
+            "n": 20,
+            "median": 1.0,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "rsg_seconds": {
+            "n": 20,
+            "median": 1.6730969999999998,
+            "q1": 1.5590918,
+            "q3": 1.723141925,
+            "min": 1.254661,
+            "max": 1.7743226
+          },
+          "rsg_solver_seconds": {
+            "n": 20,
+            "median": 0.29511773499479776,
+            "q1": 0.2715895677495078,
+            "q3": 0.3392077894998259,
+            "min": 0.2487747520006089,
+            "max": 0.3835303630026395
+          },
+          "rsg_smt_calls": {
+            "n": 20,
+            "median": 44.0,
+            "q1": 44.0,
+            "q3": 44.0,
+            "min": 42,
+            "max": 44
+          },
+          "peak_tree_rss_kib": {
+            "n": 20,
+            "median": 369644.0,
+            "q1": 369184.0,
+            "q3": 370300.0,
+            "min": 368392,
+            "max": 371536
+          },
+          "accepted_extensions": 0,
+          "integration_errors": 0,
+          "conditions": [
+            "(abs(t) > 5) && ((t > 1) || (t < -5)) && ((t > 3) || (t < -5))"
+          ]
+        }
+      },
+      "paired_wall_differences": {
+        "closure": {
+          "median_difference_seconds": -1.8691290925007706,
+          "bootstrap_95_percent_CI": [
+            -2.483133049000571,
+            -1.7344934664997709
+          ],
+          "bootstrap_resamples": 10000,
+          "differences": [
+            -12.053878108999925,
+            -1.8743782480014488,
+            -1.5798768090007798,
+            -2.0498397960000148,
+            -2.309456577000674,
+            -1.480811282999639,
+            -1.9266727700014599,
+            -2.720672500998262,
+            -2.683772891999979,
+            -3.0571345449989167,
+            -1.7292583369999193,
+            -1.7575513320007303,
+            -1.4857489160003752,
+            -2.6568095210004685,
+            -1.7972388289999799,
+            -1.8638799370000925,
+            -1.4385608520005917,
+            -1.7397285959996225,
+            -2.8516407099996286,
+            -1.5860653719992115
+          ],
+          "direction": "method minus official; positive means slower"
+        },
+        "joint": {
+          "median_difference_seconds": 1.7198507870007234,
+          "bootstrap_95_percent_CI": [
+            1.5541126580001219,
+            2.0269009144994925
+          ],
+          "bootstrap_resamples": 10000,
+          "differences": [
+            1.8644936220007367,
+            2.085069131000637,
+            2.016758922000008,
+            -8.23044012399987,
+            1.5194139440009167,
+            1.7653598340020835,
+            1.646419803999379,
+            2.2546781430010014,
+            1.6743417399993632,
+            2.037042906998977,
+            2.1892803349983296,
+            2.3849136650005676,
+            1.8228278560000035,
+            1.0541601050008467,
+            2.4574237289998564,
+            1.1067261839980347,
+            1.588811371999327,
+            0.6313346530005219,
+            1.41149009900073,
+            1.6264084670001466
+          ],
+          "direction": "method minus official; positive means slower"
+        }
+      },
+      "entry_state": {
+        "t": "t__entry"
+      },
+      "entry_error": null,
+      "exact_condition_checks": [
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 5,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_0",
+            "result": "unsat",
+            "seconds": 0.002970634001030703,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00040_exact_0.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 6,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_1",
+            "result": "unsat",
+            "seconds": 0.0028831019990320783,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00041_exact_1.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 11,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_2",
+            "result": "unsat",
+            "seconds": 0.0028323700007604202,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00042_exact_2.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 3,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_3",
+            "result": "unsat",
+            "seconds": 0.0028350310003588675,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00043_exact_3.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 0,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_4",
+            "result": "unsat",
+            "seconds": 0.002739708001172403,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00044_exact_4.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 4,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_5",
+            "result": "unsat",
+            "seconds": 0.002725008000197704,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00045_exact_5.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 8,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_6",
+            "result": "unsat",
+            "seconds": 0.0027456790012365673,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00046_exact_6.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 9,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_7",
+            "result": "unsat",
+            "seconds": 0.002712898000027053,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00047_exact_7.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 10,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_8",
+            "result": "unsat",
+            "seconds": 0.0027635079986794153,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00048_exact_8.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 2,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_9",
+            "result": "unsat",
+            "seconds": 0.0027038680000259774,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00049_exact_9.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 1,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_10",
+            "result": "unsat",
+            "seconds": 0.002746058000411722,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00050_exact_10.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 7,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_11",
+            "result": "unsat",
+            "seconds": 0.002757298998403712,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00051_exact_11.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 9,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_12",
+            "result": "unsat",
+            "seconds": 0.0028428309997252654,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00052_exact_12.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 0,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_13",
+            "result": "unsat",
+            "seconds": 0.002854241000022739,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00053_exact_13.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 8,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_14",
+            "result": "unsat",
+            "seconds": 0.002831960000548861,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00054_exact_14.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 4,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_15",
+            "result": "unsat",
+            "seconds": 0.0028260910003155004,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00055_exact_15.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 10,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_16",
+            "result": "unsat",
+            "seconds": 0.002831089999745018,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00056_exact_16.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 6,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_17",
+            "result": "unsat",
+            "seconds": 0.0027534990003914572,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00057_exact_17.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 11,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_18",
+            "result": "unsat",
+            "seconds": 0.002744888999586692,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00058_exact_18.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 5,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_19",
+            "result": "unsat",
+            "seconds": 0.0027288479996059323,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00059_exact_19.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 2,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_20",
+            "result": "unsat",
+            "seconds": 0.00272204800057807,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00060_exact_20.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 7,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_21",
+            "result": "unsat",
+            "seconds": 0.0028221800002938835,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00061_exact_21.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 3,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_22",
+            "result": "unsat",
+            "seconds": 0.0027398580004955875,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00062_exact_22.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 1,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_23",
+            "result": "unsat",
+            "seconds": 0.00276885899984336,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00063_exact_23.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 9,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_24",
+            "result": "unsat",
+            "seconds": 0.0027504679983394453,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00064_exact_24.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 7,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_25",
+            "result": "unsat",
+            "seconds": 0.0028493310001067584,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00065_exact_25.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 3,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_26",
+            "result": "unsat",
+            "seconds": 0.002826580001055845,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00066_exact_26.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 2,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_27",
+            "result": "unsat",
+            "seconds": 0.002820801000780193,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00067_exact_27.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 1,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_28",
+            "result": "unsat",
+            "seconds": 0.0028304000006755814,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00068_exact_28.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 0,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_29",
+            "result": "unsat",
+            "seconds": 0.0027375979989301413,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00069_exact_29.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 8,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_30",
+            "result": "unsat",
+            "seconds": 0.002745628999036853,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00070_exact_30.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 10,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_31",
+            "result": "unsat",
+            "seconds": 0.0027480189983180026,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00071_exact_31.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 4,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_32",
+            "result": "unsat",
+            "seconds": 0.0027513389995874604,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00072_exact_32.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 6,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_33",
+            "result": "unsat",
+            "seconds": 0.0027558790006878553,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00073_exact_33.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 11,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_34",
+            "result": "unsat",
+            "seconds": 0.002747997999904328,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00074_exact_34.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 12,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_35",
+            "result": "unsat",
+            "seconds": 0.002835740999216796,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00075_exact_35.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 17,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_36",
+            "result": "unsat",
+            "seconds": 0.0028481110002758214,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00076_exact_36.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 13,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_37",
+            "result": "unsat",
+            "seconds": 0.0027481180004542693,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00077_exact_37.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 18,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_38",
+            "result": "unsat",
+            "seconds": 0.0028366210008243797,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00078_exact_38.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 16,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_39",
+            "result": "unsat",
+            "seconds": 0.0027134880001540296,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00079_exact_39.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 5,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_40",
+            "result": "unsat",
+            "seconds": 0.0027447579996078275,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00080_exact_40.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 14,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_41",
+            "result": "unsat",
+            "seconds": 0.0027236280002398416,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00081_exact_41.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 19,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_42",
+            "result": "unsat",
+            "seconds": 0.0027589880010054912,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00082_exact_42.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 15,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_43",
+            "result": "unsat",
+            "seconds": 0.0027276670007267967,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00083_exact_43.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 12,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_44",
+            "result": "unsat",
+            "seconds": 0.0027558889996726066,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00084_exact_44.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 17,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_45",
+            "result": "unsat",
+            "seconds": 0.0027361980010027764,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00085_exact_45.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 13,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_46",
+            "result": "unsat",
+            "seconds": 0.0027583589999267133,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00086_exact_46.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 18,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_47",
+            "result": "unsat",
+            "seconds": 0.0027499180014274316,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00087_exact_47.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 19,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_48",
+            "result": "unsat",
+            "seconds": 0.002831110999977682,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00088_exact_48.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 15,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_49",
+            "result": "unsat",
+            "seconds": 0.0028296510008658515,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00089_exact_49.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 16,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_50",
+            "result": "unsat",
+            "seconds": 0.0027774089994636597,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00090_exact_50.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 14,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_51",
+            "result": "unsat",
+            "seconds": 0.0027365080004528863,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00091_exact_51.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 13,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_52",
+            "result": "unsat",
+            "seconds": 0.0028312700014794245,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00092_exact_52.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 12,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_53",
+            "result": "unsat",
+            "seconds": 0.002782348999971873,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00093_exact_53.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 17,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_54",
+            "result": "unsat",
+            "seconds": 0.0027630079985101474,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00094_exact_54.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 14,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_55",
+            "result": "unsat",
+            "seconds": 0.002821939999194001,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00095_exact_55.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 16,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_56",
+            "result": "unsat",
+            "seconds": 0.0028260700000828365,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00096_exact_56.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 19,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_57",
+            "result": "unsat",
+            "seconds": 0.002740587999142008,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00097_exact_57.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 15,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_58",
+            "result": "unsat",
+            "seconds": 0.002748137998423772,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00098_exact_58.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "measurement",
+            "round": 18,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_59",
+            "result": "unsat",
+            "seconds": 0.002761739000561647,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e/condition_validation/Ex06/00099_exact_59.smt2"
+          }
+        }
+      ]
+    },
+    "Fibonacci": {
+      "warmup_runs": 9,
+      "methods": {
+        "official": {
+          "runs": 20,
+          "tool_results": {
+            "Unknown": 20
+          },
+          "statuses": {
+            "completed": 20
+          },
+          "successes": 0,
+          "missing_final_conditions": 20,
+          "wall_seconds": {
+            "n": 20,
+            "median": 164.0700339875002,
+            "q1": 162.08879858099954,
+            "q3": 172.03807140724984,
+            "min": 147.95779675099948,
+            "max": 177.77177065100113
+          },
+          "iterations": {
+            "n": 20,
+            "median": 4.0,
+            "q1": 4.0,
+            "q3": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "rsl_calls": {
+            "n": 20,
+            "median": 4.0,
+            "q1": 4.0,
+            "q3": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "termination_boogie_calls": {
+            "n": 20,
+            "median": 21.5,
+            "q1": 20.0,
+            "q3": 25.0,
+            "min": 17,
+            "max": 31
+          },
+          "rsg_seconds": {
+            "n": 20,
+            "median": 0.15778885,
+            "q1": 0.14245984999999997,
+            "q3": 0.171716975,
+            "min": 0.0855696,
+            "max": 0.2220992
+          },
+          "rsg_solver_seconds": {
+            "n": 20,
+            "median": 0.06042444999999999,
+            "q1": 0.050703525,
+            "q3": 0.07515585,
+            "min": 0.0333847,
+            "max": 0.09363489999999997
+          },
+          "rsg_smt_calls": {
+            "n": 20,
+            "median": 10.0,
+            "q1": 10.0,
+            "q3": 10.0,
+            "min": 10,
+            "max": 12
+          },
+          "peak_tree_rss_kib": {
+            "n": 20,
+            "median": 385880.0,
+            "q1": 385532.0,
+            "q3": 387357.0,
+            "min": 379204,
+            "max": 509196
+          },
+          "accepted_extensions": 0,
+          "integration_errors": 0,
+          "conditions": [
+            "None"
+          ]
+        },
+        "closure": {
+          "runs": 20,
+          "tool_results": {
+            "Unknown": 20
+          },
+          "statuses": {
+            "completed": 20
+          },
+          "successes": 0,
+          "missing_final_conditions": 20,
+          "wall_seconds": {
+            "n": 20,
+            "median": 166.19070447800004,
+            "q1": 158.49215393725035,
+            "q3": 167.6091181329998,
+            "min": 149.0548113120003,
+            "max": 173.8754773260007
+          },
+          "iterations": {
+            "n": 20,
+            "median": 3.0,
+            "q1": 3.0,
+            "q3": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "rsl_calls": {
+            "n": 20,
+            "median": 3.0,
+            "q1": 3.0,
+            "q3": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "termination_boogie_calls": {
+            "n": 20,
+            "median": 20.0,
+            "q1": 17.0,
+            "q3": 20.0,
+            "min": 15,
+            "max": 26
+          },
+          "rsg_seconds": {
+            "n": 20,
+            "median": 8.40005905,
+            "q1": 7.547970175,
+            "q3": 9.083945374999999,
+            "min": 4.3875256,
+            "max": 9.954950899999998
+          },
+          "rsg_solver_seconds": {
+            "n": 20,
+            "median": 3.4096143819991784,
+            "q1": 3.029476775731859,
+            "q3": 3.9285138077542427,
+            "min": 1.5810597759842349,
+            "max": 4.470178126007334
+          },
+          "rsg_smt_calls": {
+            "n": 20,
+            "median": 352.0,
+            "q1": 352.0,
+            "q3": 352.0,
+            "min": 299,
+            "max": 357
+          },
+          "peak_tree_rss_kib": {
+            "n": 20,
+            "median": 386978.0,
+            "q1": 385630.0,
+            "q3": 441416.0,
+            "min": 378556,
+            "max": 469092
+          },
+          "accepted_extensions": 20,
+          "integration_errors": 0,
+          "conditions": [
+            "None"
+          ]
+        },
+        "joint": {
+          "runs": 20,
+          "tool_results": {
+            "Unknown": 20
+          },
+          "statuses": {
+            "completed": 20
+          },
+          "successes": 0,
+          "missing_final_conditions": 20,
+          "wall_seconds": {
+            "n": 20,
+            "median": 166.5933305110002,
+            "q1": 157.0481957779998,
+            "q3": 173.11451318924946,
+            "min": 150.50759184600065,
+            "max": 183.29893043999982
+          },
+          "iterations": {
+            "n": 20,
+            "median": 4.0,
+            "q1": 4.0,
+            "q3": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "rsl_calls": {
+            "n": 20,
+            "median": 4.0,
+            "q1": 4.0,
+            "q3": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "termination_boogie_calls": {
+            "n": 20,
+            "median": 20.0,
+            "q1": 17.0,
+            "q3": 23.0,
+            "min": 13,
+            "max": 30
+          },
+          "rsg_seconds": {
+            "n": 20,
+            "median": 5.2316416,
+            "q1": 2.752591775,
+            "q3": 5.4074864499999995,
+            "min": 1.9401251999999998,
+            "max": 9.1499688
+          },
+          "rsg_solver_seconds": {
+            "n": 20,
+            "median": 1.9693299305089669,
+            "q1": 0.8993622167519835,
+            "q3": 2.1595143095095297,
+            "min": 0.4570249540080559,
+            "max": 3.610188855000484
+          },
+          "rsg_smt_calls": {
+            "n": 20,
+            "median": 244.0,
+            "q1": 244.0,
+            "q3": 244.0,
+            "min": 63,
+            "max": 445
+          },
+          "peak_tree_rss_kib": {
+            "n": 20,
+            "median": 385954.0,
+            "q1": 385127.0,
+            "q3": 387128.0,
+            "min": 378076,
+            "max": 465616
+          },
+          "accepted_extensions": 0,
+          "integration_errors": 0,
+          "conditions": [
+            "None"
+          ]
+        }
+      },
+      "paired_wall_differences": {
+        "closure": {
+          "median_difference_seconds": -3.1538777309997386,
+          "bootstrap_95_percent_CI": [
+            -6.694252106000931,
+            3.772546751999471
+          ],
+          "bootstrap_resamples": 10000,
+          "differences": [
+            -15.261342777999744,
+            -4.781947265000781,
+            4.5998191719991155,
+            8.117377000000488,
+            -2.4034088219996192,
+            -4.773174240999651,
+            -10.006147720001536,
+            -11.267388838001352,
+            7.091516340000453,
+            -3.904346639999858,
+            6.035429658000794,
+            -7.686158140000771,
+            -0.8359860359978484,
+            2.9452743319998262,
+            -5.702346072001092,
+            1.7361963809998997,
+            8.622616843998912,
+            17.919230392000827,
+            -10.416568086999177,
+            -23.04198888799874
+          ],
+          "direction": "method minus official; positive means slower"
+        },
+        "joint": {
+          "median_difference_seconds": 1.2945700214995668,
+          "bootstrap_95_percent_CI": [
+            -5.129211180999846,
+            6.827887574998385
+          ],
+          "bootstrap_resamples": 10000,
+          "differences": [
+            -0.19552371700046933,
+            5.68376959500165,
+            10.953825516999132,
+            -6.213163684000392,
+            10.859891251999215,
+            -3.0267259949996514,
+            5.736272991998703,
+            -9.522464867999588,
+            7.919502157998068,
+            8.442073662998155,
+            -4.914940743999978,
+            -8.748885180999423,
+            -5.343481617999714,
+            2.784663759999603,
+            -2.130811758001073,
+            10.339541486999224,
+            -9.202935596000316,
+            2.8783118600003945,
+            -21.5892083539984,
+            9.878891739999744
+          ],
+          "direction": "method minus official; positive means slower"
+        }
+      },
+      "entry_state": {
+        "j": "1",
+        "n": "n__entry",
+        "_i": "0",
+        "t": "0"
+      },
+      "entry_error": null,
+      "exact_condition_checks": []
+    }
+  },
+  "condition_checks": [
+    {
+      "program": "AlternDivWidening",
+      "round": 10,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_10",
+        "result": "unsat",
+        "seconds": 0.003070705999562051,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00000_condition_closure_10.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 11,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_11",
+        "result": "unsat",
+        "seconds": 0.0027038680000259774,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00001_condition_closure_11.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 7,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_7",
+        "result": "unsat",
+        "seconds": 0.0026591259993438143,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00002_condition_closure_7.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 5,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_5",
+        "result": "unsat",
+        "seconds": 0.0026913469991995953,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00003_condition_closure_5.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 3,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_3",
+        "result": "unsat",
+        "seconds": 0.002720377000514418,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00004_condition_closure_3.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 8,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_8",
+        "result": "unsat",
+        "seconds": 0.002703266998651088,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00005_condition_closure_8.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 12,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_12",
+        "result": "unsat",
+        "seconds": 0.002705446999243577,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00006_condition_closure_12.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 0,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_0",
+        "result": "unsat",
+        "seconds": 0.002706178000153159,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00007_condition_closure_0.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 6,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_6",
+        "result": "unsat",
+        "seconds": 0.0026883659993472975,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00008_condition_closure_6.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 2,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_2",
+        "result": "unsat",
+        "seconds": 0.002692537000257289,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00009_condition_closure_2.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 15,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_15",
+        "result": "unsat",
+        "seconds": 0.0027009679997718194,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00010_condition_closure_15.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 14,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_14",
+        "result": "unsat",
+        "seconds": 0.002699386999665876,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00011_condition_closure_14.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 13,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_13",
+        "result": "unsat",
+        "seconds": 0.0027101180003228365,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00012_condition_closure_13.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 9,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_9",
+        "result": "unsat",
+        "seconds": 0.0026721670001279563,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00013_condition_closure_9.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 4,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_4",
+        "result": "unsat",
+        "seconds": 0.00264708599934238,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00014_condition_closure_4.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 1,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_1",
+        "result": "unsat",
+        "seconds": 0.0026992669991159346,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00015_condition_closure_1.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 17,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_17",
+        "result": "unsat",
+        "seconds": 0.002696916999411769,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00016_condition_closure_17.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 18,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_18",
+        "result": "unsat",
+        "seconds": 0.0027171069996256847,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00017_condition_closure_18.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 16,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_16",
+        "result": "unsat",
+        "seconds": 0.0027124279986310285,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00018_condition_closure_16.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 19,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 3,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_3",
+        "result": "unsat",
+        "seconds": 0.002460220999637386,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00019_condition_joint_3.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 8,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_8",
+        "result": "unsat",
+        "seconds": 0.002446771000904846,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00020_condition_joint_8.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 14,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_14",
+        "result": "unsat",
+        "seconds": 0.002405340001132572,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00021_condition_joint_14.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 12,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_12",
+        "result": "unsat",
+        "seconds": 0.0024220899995270884,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00022_condition_joint_12.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 2,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_2",
+        "result": "unsat",
+        "seconds": 0.002442031000100542,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00023_condition_joint_2.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 4,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_4",
+        "result": "unsat",
+        "seconds": 0.0024381710009038216,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00024_condition_joint_4.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 0,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_0",
+        "result": "unsat",
+        "seconds": 0.0024222499996540137,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00025_condition_joint_0.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 9,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_9",
+        "result": "unsat",
+        "seconds": 0.00245494099908683,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00026_condition_joint_9.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 6,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_6",
+        "result": "unsat",
+        "seconds": 0.002442080998662277,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00027_condition_joint_6.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 15,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_15",
+        "result": "unsat",
+        "seconds": 0.0024418510001851246,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00028_condition_joint_15.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 13,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_13",
+        "result": "unsat",
+        "seconds": 0.0024359910003113328,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00029_condition_joint_13.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 1,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_1",
+        "result": "unsat",
+        "seconds": 0.0024424910006928258,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00030_condition_joint_1.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 10,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_10",
+        "result": "unsat",
+        "seconds": 0.0024222499996540137,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00031_condition_joint_10.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 5,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_5",
+        "result": "unsat",
+        "seconds": 0.0024422910009889165,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00032_condition_joint_5.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 7,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_7",
+        "result": "unsat",
+        "seconds": 0.0024216299989348045,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00033_condition_joint_7.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 11,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_11",
+        "result": "unsat",
+        "seconds": 0.002445359999910579,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00034_condition_joint_11.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 16,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_16",
+        "result": "unsat",
+        "seconds": 0.0024453009991702856,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00035_condition_joint_16.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 18,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_18",
+        "result": "unsat",
+        "seconds": 0.0024178799994842848,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00036_condition_joint_18.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 17,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_17",
+        "result": "unsat",
+        "seconds": 0.002433710000332212,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00037_condition_joint_17.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 19,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_19",
+        "result": "unsat",
+        "seconds": 0.002408980000836891,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/AlternDivWidening/00038_condition_joint_19.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 5,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_5",
+        "result": "unsat",
+        "seconds": 0.00294558299901837,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00000_condition_closure_5.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 6,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_6",
+        "result": "unsat",
+        "seconds": 0.0028527609993034275,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00001_condition_closure_6.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 11,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_11",
+        "result": "unsat",
+        "seconds": 0.002893271999710123,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00002_condition_closure_11.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 9,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_9",
+        "result": "unsat",
+        "seconds": 0.002891492000344442,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00003_condition_closure_9.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 0,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_0",
+        "result": "unsat",
+        "seconds": 0.002888471999540343,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00004_condition_closure_0.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 8,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_8",
+        "result": "unsat",
+        "seconds": 0.0029014419997110963,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00005_condition_closure_8.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 4,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_4",
+        "result": "unsat",
+        "seconds": 0.002883421999285929,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00006_condition_closure_4.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 10,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_10",
+        "result": "unsat",
+        "seconds": 0.0028688809998129727,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00007_condition_closure_10.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 7,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_7",
+        "result": "unsat",
+        "seconds": 0.002882642000258784,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00008_condition_closure_7.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 3,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_3",
+        "result": "unsat",
+        "seconds": 0.002854371001376421,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00009_condition_closure_3.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 2,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_2",
+        "result": "unsat",
+        "seconds": 0.0028737120010191575,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00010_condition_closure_2.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 1,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_1",
+        "result": "unsat",
+        "seconds": 0.002851200999430148,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00011_condition_closure_1.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 12,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_12",
+        "result": "unsat",
+        "seconds": 0.00286385100116604,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00012_condition_closure_12.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 17,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_17",
+        "result": "unsat",
+        "seconds": 0.002880902000470087,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00013_condition_closure_17.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 18,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_18",
+        "result": "unsat",
+        "seconds": 0.002877921000617789,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00014_condition_closure_18.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 19,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_19",
+        "result": "unsat",
+        "seconds": 0.002859651000107988,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00015_condition_closure_19.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 15,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_15",
+        "result": "unsat",
+        "seconds": 0.0028600509995158063,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00016_condition_closure_15.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 13,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_13",
+        "result": "unsat",
+        "seconds": 0.002916142000685795,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00017_condition_closure_13.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 14,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_14",
+        "result": "unsat",
+        "seconds": 0.002879842000766075,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00018_condition_closure_14.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 16,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_16",
+        "result": "unsat",
+        "seconds": 0.0028779719996236963,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00019_condition_closure_16.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 2,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_2",
+        "result": "unsat",
+        "seconds": 0.002475630999470013,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00020_condition_joint_2.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 1,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_1",
+        "result": "unsat",
+        "seconds": 0.0024214510012825485,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00021_condition_joint_1.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 7,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_7",
+        "result": "unsat",
+        "seconds": 0.0024140999994415324,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00022_condition_joint_7.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 5,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_5",
+        "result": "unsat",
+        "seconds": 0.002436500999465352,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00023_condition_joint_5.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 3,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_3",
+        "result": "unsat",
+        "seconds": 0.002420279999569175,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00024_condition_joint_3.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 9,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_9",
+        "result": "unsat",
+        "seconds": 0.002421699999104021,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00025_condition_joint_9.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 0,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_0",
+        "result": "unsat",
+        "seconds": 0.0024340100007975707,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00026_condition_joint_0.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 8,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_8",
+        "result": "unsat",
+        "seconds": 0.0024311710003530607,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00027_condition_joint_8.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 10,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_10",
+        "result": "unsat",
+        "seconds": 0.0024456609990011202,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00028_condition_joint_10.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 4,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_4",
+        "result": "unsat",
+        "seconds": 0.0024147599997377256,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00029_condition_joint_4.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 6,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_6",
+        "result": "unsat",
+        "seconds": 0.0024471710003126645,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00030_condition_joint_6.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 11,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_11",
+        "result": "unsat",
+        "seconds": 0.00243700099963462,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00031_condition_joint_11.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 14,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_14",
+        "result": "unsat",
+        "seconds": 0.0024278410000988515,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00032_condition_joint_14.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 19,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_19",
+        "result": "unsat",
+        "seconds": 0.002433010000459035,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00033_condition_joint_19.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 15,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_15",
+        "result": "unsat",
+        "seconds": 0.0024557819997426122,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00034_condition_joint_15.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 17,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_17",
+        "result": "unsat",
+        "seconds": 0.0024349610011995537,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00035_condition_joint_17.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 13,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_13",
+        "result": "unsat",
+        "seconds": 0.002442861001327401,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00036_condition_joint_13.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 16,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_16",
+        "result": "unsat",
+        "seconds": 0.0024390910002694,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00037_condition_joint_16.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 12,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_12",
+        "result": "unsat",
+        "seconds": 0.0024317200004588813,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00038_condition_joint_12.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 18,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_18",
+        "result": "unsat",
+        "seconds": 0.0024290700002893573,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e/condition_validation/Ex06/00039_condition_joint_18.smt2"
+      }
+    },
+    {
+      "program": "Fibonacci",
+      "round": 1,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 0,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 3,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 5,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 4,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 9,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 11,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 13,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 8,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 15,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 2,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 7,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 6,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 14,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 10,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 12,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 19,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 18,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 16,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 17,
+      "method": "closure",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 2,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 6,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 10,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 3,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 5,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 9,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 11,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 1,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 0,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 7,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 4,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 14,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 8,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 15,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 13,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 12,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 16,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 18,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 17,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    },
+    {
+      "program": "Fibonacci",
+      "round": 19,
+      "method": "joint",
+      "baseline_result": "Unknown",
+      "method_result": "Unknown",
+      "status": "no_final_condition_or_unsupported_entry",
+      "error": null
+    }
+  ],
+  "timing_scope": "Full process wall time, includes failed and unknown runs, startup, tracing, search, serialization and all official stages. Independent paired blocks run concurrently under the worker limit in e2e_execution.json; no isolated-host speed claim.",
+  "solver_scope": "RSG native and Python checks only; termination-side solver total unavailable, not replaced by zero."
+}

@@ -1,0 +1,140 @@
+[
+  {
+    "stage": "final_validation",
+    "command": [
+      "/root/RSG/.venv/bin/python",
+      "/root/RSG/stage2-repo/stage2/scripts/validate_corpus.py"
+    ],
+    "started_utc": "2026-10-10T12:13:07.295483+00:00",
+    "exit_code": 0,
+    "wall_seconds": 73.56706404299985
+  },
+  {
+    "stage": "final_comparison",
+    "command": [
+      "/root/RSG/.venv/bin/python",
+      "/root/RSG/stage2-repo/stage2/scripts/compare.py",
+      "--resume"
+    ],
+    "started_utc": "2026-10-10T12:14:20.862824+00:00",
+    "exit_code": 0,
+    "wall_seconds": 0.6100542160002078
+  },
+  {
+    "stage": "final_balanced_comparison",
+    "command": [
+      "/root/RSG/.venv/bin/python",
+      "/root/RSG/stage2-repo/stage2/scripts/compare_balanced.py"
+    ],
+    "started_utc": "2026-10-10T12:14:21.473156+00:00",
+    "exit_code": 0,
+    "wall_seconds": 0.6096248060002836
+  },
+  {
+    "stage": "corpus_audit",
+    "command": [
+      "/root/RSG/.venv/bin/python",
+      "/root/RSG/stage2-repo/stage2/scripts/audit_corpus.py"
+    ],
+    "started_utc": "2026-10-10T12:14:22.083090+00:00",
+    "exit_code": 0,
+    "wall_seconds": 0.10015883800042502
+  },
+  {
+    "stage": "replay_syntax",
+    "command": [
+      "/root/RSG/.venv/bin/python",
+      "/root/RSG/stage2-repo/stage2/scripts/check_replay_syntax.py"
+    ],
+    "started_utc": "2026-10-10T12:14:22.183537+00:00",
+    "exit_code": 0,
+    "wall_seconds": 0.5909419620002154
+  },
+  {
+    "stage": "aggregate_before_e2e",
+    "command": [
+      "/root/RSG/.venv/bin/python",
+      "/root/RSG/stage2-repo/stage2/scripts/aggregate.py"
+    ],
+    "started_utc": "2026-10-10T12:14:22.774783+00:00",
+    "exit_code": 0,
+    "wall_seconds": 1.9886128670004837
+  },
+  {
+    "stage": "dependencies",
+    "command": [
+      "/root/RSG/.venv/bin/python",
+      "/root/RSG/stage2-repo/stage2/scripts/analyze_dependencies.py"
+    ],
+    "started_utc": "2026-10-10T12:14:24.763730+00:00",
+    "exit_code": 0,
+    "wall_seconds": 4.274525200999051
+  },
+  {
+    "stage": "exact_conditions",
+    "command": [
+      "/root/RSG/.venv/bin/python",
+      "/root/RSG/stage2-repo/stage2/scripts/prove_simple_conditions.py"
+    ],
+    "started_utc": "2026-10-10T12:14:29.038598+00:00",
+    "exit_code": 0,
+    "wall_seconds": 0.2586676369992347
+  },
+  {
+    "stage": "e2e_formal",
+    "command": [
+      "/root/RSG/.venv/bin/python",
+      "/root/RSG/stage2-repo/stage2/scripts/run_e2e.py",
+      "--ids",
+      "AlternDivWidening",
+      "Ex06",
+      "Fibonacci",
+      "--workers",
+      "16",
+      "--resume"
+    ],
+    "started_utc": "2026-10-10T12:22:34.747062+00:00",
+    "exit_code": 0,
+    "wall_seconds": 1177.6825114969997
+  },
+  {
+    "stage": "online_validation",
+    "command": [
+      "/root/RSG/.venv/bin/python",
+      "/root/RSG/stage2-repo/stage2/scripts/validate_online.py"
+    ],
+    "started_utc": "2026-10-10T12:42:12.430001+00:00",
+    "exit_code": 0,
+    "wall_seconds": 22.180329135999273
+  },
+  {
+    "stage": "e2e_analysis",
+    "command": [
+      "/root/RSG/.venv/bin/python",
+      "/root/RSG/stage2-repo/stage2/scripts/analyze_e2e.py"
+    ],
+    "started_utc": "2026-10-10T12:42:34.610675+00:00",
+    "exit_code": 1,
+    "wall_seconds": 0.8868019189994811
+  },
+  {
+    "stage": "e2e_analysis",
+    "command": [
+      "/root/RSG/.venv/bin/python",
+      "/root/RSG/stage2-repo/stage2/scripts/analyze_e2e.py"
+    ],
+    "started_utc": "2026-10-10T12:43:54.908583+00:00",
+    "exit_code": 0,
+    "wall_seconds": 1.8188712850005686
+  },
+  {
+    "stage": "aggregate_final",
+    "command": [
+      "/root/RSG/.venv/bin/python",
+      "/root/RSG/stage2-repo/stage2/scripts/aggregate.py"
+    ],
+    "started_utc": "2026-10-10T12:43:56.727804+00:00",
+    "exit_code": 0,
+    "wall_seconds": 2.010131465000086
+  }
+]

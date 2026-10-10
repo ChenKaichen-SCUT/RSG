@@ -1,0 +1,1244 @@
+[
+  {
+    "program": "AlternDivWidening",
+    "phase": "warmup",
+    "round": 0,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "warmup",
+    "round": 0,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "warmup",
+    "round": 0,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "warmup",
+    "round": 1,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "warmup",
+    "round": 1,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "warmup",
+    "round": 1,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "warmup",
+    "round": 2,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "warmup",
+    "round": 2,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "warmup",
+    "round": 2,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 0,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 0,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 0,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 1,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 1,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 1,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 2,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 2,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 2,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 3,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 3,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 3,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 4,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 4,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 4,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 5,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 5,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 5,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 6,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 6,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 6,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 7,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 7,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 7,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 8,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 8,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 8,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 9,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 9,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 9,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 10,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 10,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 10,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 11,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 11,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 11,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 12,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 12,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 12,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 13,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 13,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 13,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 14,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 14,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 14,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 15,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 15,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 15,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 16,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 16,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 16,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 17,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 17,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 17,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 18,
+    "method": "official"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 18,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 18,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 19,
+    "method": "closure"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 19,
+    "method": "joint"
+  },
+  {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 19,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "warmup",
+    "round": 0,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "warmup",
+    "round": 0,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "warmup",
+    "round": 0,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "warmup",
+    "round": 1,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "warmup",
+    "round": 1,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "warmup",
+    "round": 1,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "warmup",
+    "round": 2,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "warmup",
+    "round": 2,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "warmup",
+    "round": 2,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 0,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 0,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 0,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 1,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 1,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 1,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 2,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 2,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 2,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 3,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 3,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 3,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 4,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 4,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 4,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 5,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 5,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 5,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 6,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 6,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 6,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 7,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 7,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 7,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 8,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 8,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 8,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 9,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 9,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 9,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 10,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 10,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 10,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 11,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 11,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 11,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 12,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 12,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 12,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 13,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 13,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 13,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 14,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 14,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 14,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 15,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 15,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 15,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 16,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 16,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 16,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 17,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 17,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 17,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 18,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 18,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 18,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 19,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 19,
+    "method": "closure"
+  },
+  {
+    "program": "Ex06",
+    "phase": "measurement",
+    "round": 19,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "warmup",
+    "round": 0,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "warmup",
+    "round": 0,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "warmup",
+    "round": 0,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "warmup",
+    "round": 1,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "warmup",
+    "round": 1,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "warmup",
+    "round": 1,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "warmup",
+    "round": 2,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "warmup",
+    "round": 2,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "warmup",
+    "round": 2,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 0,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 0,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 0,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 1,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 1,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 1,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 2,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 2,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 2,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 3,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 3,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 3,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 4,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 4,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 4,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 5,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 5,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 5,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 6,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 6,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 6,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 7,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 7,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 7,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 8,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 8,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 8,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 9,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 9,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 9,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 10,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 10,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 10,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 11,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 11,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 11,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 12,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 12,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 12,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 13,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 13,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 13,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 14,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 14,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 14,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 15,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 15,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 15,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 16,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 16,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 16,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 17,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 17,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 17,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 18,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 18,
+    "method": "joint"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 18,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 19,
+    "method": "closure"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 19,
+    "method": "official"
+  },
+  {
+    "program": "Fibonacci",
+    "phase": "measurement",
+    "round": 19,
+    "method": "joint"
+  }
+]

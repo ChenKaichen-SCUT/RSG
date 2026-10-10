@@ -1,0 +1,360 @@
+{
+  "programs": {
+    "Ex06": {
+      "warmup_runs": 0,
+      "methods": {
+        "official": {
+          "runs": 1,
+          "tool_results": {
+            "Cond-Termination": 1
+          },
+          "statuses": {
+            "completed": 1
+          },
+          "successes": 1,
+          "wall_seconds": {
+            "n": 1,
+            "median": 8.276180061999185,
+            "q1": 8.276180061999185,
+            "q3": 8.276180061999185,
+            "min": 8.276180061999185,
+            "max": 8.276180061999185
+          },
+          "iterations": {
+            "n": 1,
+            "median": 4,
+            "q1": 4.0,
+            "q3": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "rsl_calls": {
+            "n": 1,
+            "median": 3,
+            "q1": 3.0,
+            "q3": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "termination_boogie_calls": {
+            "n": 1,
+            "median": 1,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "rsg_seconds": {
+            "n": 1,
+            "median": 0.05967159999999999,
+            "q1": 0.05967159999999999,
+            "q3": 0.05967159999999999,
+            "min": 0.05967159999999999,
+            "max": 0.05967159999999999
+          },
+          "rsg_solver_seconds": {
+            "n": 1,
+            "median": 0.0152001,
+            "q1": 0.0152001,
+            "q3": 0.0152001,
+            "min": 0.0152001,
+            "max": 0.0152001
+          },
+          "rsg_smt_calls": {
+            "n": 1,
+            "median": 6,
+            "q1": 6.0,
+            "q3": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "peak_tree_rss_kib": {
+            "n": 1,
+            "median": 365996,
+            "q1": 365996.0,
+            "q3": 365996.0,
+            "min": 365996,
+            "max": 365996
+          },
+          "accepted_extensions": 0,
+          "integration_errors": 0,
+          "conditions": [
+            "(abs(t) > 5) && ((t > 1) || (t < -5)) && ((t > 3) || (t < -5))"
+          ]
+        },
+        "closure": {
+          "runs": 1,
+          "tool_results": {
+            "Cond-Termination": 1
+          },
+          "statuses": {
+            "completed": 1
+          },
+          "successes": 1,
+          "wall_seconds": {
+            "n": 1,
+            "median": 6.067799441998432,
+            "q1": 6.067799441998432,
+            "q3": 6.067799441998432,
+            "min": 6.067799441998432,
+            "max": 6.067799441998432
+          },
+          "iterations": {
+            "n": 1,
+            "median": 2,
+            "q1": 2.0,
+            "q3": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "rsl_calls": {
+            "n": 1,
+            "median": 1,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "termination_boogie_calls": {
+            "n": 1,
+            "median": 1,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "rsg_seconds": {
+            "n": 1,
+            "median": 0.5759548999999999,
+            "q1": 0.5759548999999999,
+            "q3": 0.5759548999999999,
+            "min": 0.5759548999999999,
+            "max": 0.5759548999999999
+          },
+          "rsg_solver_seconds": {
+            "n": 1,
+            "median": 0.14297989699934033,
+            "q1": 0.14297989699934033,
+            "q3": 0.14297989699934033,
+            "min": 0.14297989699934033,
+            "max": 0.14297989699934033
+          },
+          "rsg_smt_calls": {
+            "n": 1,
+            "median": 48,
+            "q1": 48.0,
+            "q3": 48.0,
+            "min": 48,
+            "max": 48
+          },
+          "peak_tree_rss_kib": {
+            "n": 1,
+            "median": 361472,
+            "q1": 361472.0,
+            "q3": 361472.0,
+            "min": 361472,
+            "max": 361472
+          },
+          "accepted_extensions": 1,
+          "integration_errors": 0,
+          "conditions": [
+            "ne(t, -5) && ne(t, -4) && ne(t, -3) && ne(t, -2) && ne(t, -1) && ne(t, 0) && ne(t, 1) && ne(t, 2) && ne(t, 3) && ne(t, 4) && ne(t, 5)"
+          ]
+        },
+        "joint": {
+          "runs": 1,
+          "tool_results": {
+            "Cond-Termination": 1
+          },
+          "statuses": {
+            "completed": 1
+          },
+          "successes": 1,
+          "wall_seconds": {
+            "n": 1,
+            "median": 8.789733146999424,
+            "q1": 8.789733146999424,
+            "q3": 8.789733146999424,
+            "min": 8.789733146999424,
+            "max": 8.789733146999424
+          },
+          "iterations": {
+            "n": 1,
+            "median": 4,
+            "q1": 4.0,
+            "q3": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "rsl_calls": {
+            "n": 1,
+            "median": 3,
+            "q1": 3.0,
+            "q3": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "termination_boogie_calls": {
+            "n": 1,
+            "median": 1,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "rsg_seconds": {
+            "n": 1,
+            "median": 0.7191048,
+            "q1": 0.7191048,
+            "q3": 0.7191048,
+            "min": 0.7191048,
+            "max": 0.7191048
+          },
+          "rsg_solver_seconds": {
+            "n": 1,
+            "median": 0.1116209149995219,
+            "q1": 0.1116209149995219,
+            "q3": 0.1116209149995219,
+            "min": 0.1116209149995219,
+            "max": 0.1116209149995219
+          },
+          "rsg_smt_calls": {
+            "n": 1,
+            "median": 42,
+            "q1": 42.0,
+            "q3": 42.0,
+            "min": 42,
+            "max": 42
+          },
+          "peak_tree_rss_kib": {
+            "n": 1,
+            "median": 298548,
+            "q1": 298548.0,
+            "q3": 298548.0,
+            "min": 298548,
+            "max": 298548
+          },
+          "accepted_extensions": 0,
+          "integration_errors": 0,
+          "conditions": [
+            "(abs(t) > 5) && ((t > 1) || (t < -5)) && ((t > 3) || (t < -5))"
+          ]
+        }
+      },
+      "paired_wall_differences": {
+        "closure": {
+          "median_difference_seconds": -2.208380620000753,
+          "bootstrap_95_percent_CI": [
+            -2.208380620000753,
+            -2.208380620000753
+          ],
+          "bootstrap_resamples": 10000,
+          "differences": [
+            -2.208380620000753
+          ],
+          "direction": "method minus official; positive means slower"
+        },
+        "joint": {
+          "median_difference_seconds": 0.5135530850002397,
+          "bootstrap_95_percent_CI": [
+            0.5135530850002397,
+            0.5135530850002397
+          ],
+          "bootstrap_resamples": 10000,
+          "differences": [
+            0.5135530850002397
+          ],
+          "direction": "method minus official; positive means slower"
+        }
+      },
+      "entry_state": {
+        "t": "t__entry"
+      },
+      "entry_error": null,
+      "exact_condition_checks": [
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "pilot",
+            "round": 0,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_0",
+            "result": "unsat",
+            "seconds": 0.0027703790001396555,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e_pilot/condition_validation/Ex06/00002_exact_0.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "pilot",
+            "round": 0,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_1",
+            "result": "unsat",
+            "seconds": 0.002643106001414708,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e_pilot/condition_validation/Ex06/00003_exact_1.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "Ex06",
+            "phase": "pilot",
+            "round": 0,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_2",
+            "result": "unsat",
+            "seconds": 0.002728368001044146,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e_pilot/condition_validation/Ex06/00004_exact_2.smt2"
+          }
+        }
+      ]
+    }
+  },
+  "condition_checks": [
+    {
+      "program": "Ex06",
+      "round": 0,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_0",
+        "result": "unsat",
+        "seconds": 0.0031562690001010196,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e_pilot/condition_validation/Ex06/00000_condition_closure_0.smt2"
+      }
+    },
+    {
+      "program": "Ex06",
+      "round": 0,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_0",
+        "result": "unsat",
+        "seconds": 0.0023618289997102693,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e_pilot/condition_validation/Ex06/00001_condition_joint_0.smt2"
+      }
+    }
+  ],
+  "timing_scope": "Full process wall time, includes failed and unknown runs, startup, tracing, search, serialization and all official stages. Four independent paired blocks may run concurrently; no isolated-host speed claim.",
+  "solver_scope": "RSG native and Python checks only; termination-side solver total unavailable, not replaced by zero."
+}

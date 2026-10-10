@@ -1,0 +1,35 @@
+{
+  "trial": {
+    "program": "AlternDivWidening",
+    "phase": "measurement",
+    "round": 19,
+    "method": "closure"
+  },
+  "observed_result": "Unknown",
+  "accepted_rsg_set_valid": true,
+  "issue": "Generated official CBC program references TR1..TR4 without declaring them. Saved exact generated file reproduces 28 name resolution errors. No algorithm or formal record replaced.",
+  "process": {
+    "command": [
+      "mono",
+      "Boogie.exe",
+      "/noinfer",
+      "/contractInfer",
+      "/liveVariableAnalysis:0",
+      "/printAssignment",
+      "/trace",
+      "/printModel:4",
+      "/root/RSG/stage2-repo/stage2/logs/failure_artifacts/AlternDivWidening_measurement_19_closure/tmp/CBC_AlternDivWidening_assume.bpl"
+    ],
+    "cwd": "/root/RSG/stage2-repo/stage2/work/e2e-workers/9/ice/popl16_artifact/Boogie/Binaries",
+    "started_utc": "2026-10-10T12:45:15.792297+00:00",
+    "pid_namespace_isolation": true,
+    "exit_code": 0,
+    "wall_seconds": 0.08225407700047072,
+    "sampled_peak_tree_rss_kib": 29776,
+    "rss_sampling_ms": 10,
+    "stdout": "stage2/logs/failure_diagnosis/AlternDivWidening_CBC.stdout",
+    "stderr": "stage2/logs/failure_diagnosis/AlternDivWidening_CBC.stderr"
+  },
+  "reproduced_name_resolution_errors": true,
+  "artifact": "stage2/logs/failure_artifacts/AlternDivWidening_measurement_19_closure/tmp/CBC_AlternDivWidening_assume.bpl"
+}

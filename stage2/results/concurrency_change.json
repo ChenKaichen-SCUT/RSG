@@ -1,0 +1,24 @@
+{
+  "reason": "User requested maximum server parallelism before formal measurements began",
+  "previous_workers": 8,
+  "new_workers": 16,
+  "completed_warmups_preserved": 24,
+  "interrupted_trial_roots": [],
+  "recorded_epoch": 1791634878.1611922,
+  "interrupted_trial_process_groups": [
+    1340542,
+    1340623,
+    1343085
+  ],
+  "preserved_partial_directories": [
+    "work/runs/e2e/Fibonacci/warmup_00/joint",
+    "corpus/e2e/Fibonacci/warmup_00/joint",
+    "logs/collection/e2e/Fibonacci/warmup_00/joint",
+    "work/runs/e2e/Fibonacci/warmup_01/official",
+    "corpus/e2e/Fibonacci/warmup_01/official",
+    "logs/collection/e2e/Fibonacci/warmup_01/official",
+    "work/runs/e2e/Fibonacci/warmup_02/official",
+    "corpus/e2e/Fibonacci/warmup_02/official",
+    "logs/collection/e2e/Fibonacci/warmup_02/official"
+  ]
+}

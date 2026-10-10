@@ -1,0 +1,434 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "instance": "e2e_pilot/AlternDivWidening/pilot_00/closure/AlternDivWidening/call_000",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.0033338329994876403,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/AlternDivWidening/pilot_00/closure/AlternDivWidening/call_000/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.0036073600003874162,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/AlternDivWidening/pilot_00/closure/AlternDivWidening/call_000/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.0024770610016275896,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/AlternDivWidening/pilot_00/closure/AlternDivWidening/call_000/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/AlternDivWidening/pilot_00/joint/AlternDivWidening/call_000",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.00299853500109748,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/AlternDivWidening/pilot_00/joint/AlternDivWidening/call_000/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.0034421860000293236,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/AlternDivWidening/pilot_00/joint/AlternDivWidening/call_000/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.0024042900004133116,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/AlternDivWidening/pilot_00/joint/AlternDivWidening/call_000/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/Ex06/pilot_00/closure/Ex06/call_000",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.0026491059998079436,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/closure/Ex06/call_000/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.0032898520003072917,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/closure/Ex06/call_000/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.002458270999341039,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/closure/Ex06/call_000/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/Ex06/pilot_00/closure/Ex06/call_001",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.0027158080010849517,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/closure/Ex06/call_001/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.0031671590004407335,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/closure/Ex06/call_001/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.002426029999696766,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/closure/Ex06/call_001/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/Ex06/pilot_00/closure/Ex06/call_002",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.0025340240008517867,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/closure/Ex06/call_002/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.0024493310011166614,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/closure/Ex06/call_002/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.0023882790010247845,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/closure/Ex06/call_002/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/Ex06/pilot_00/joint/Ex06/call_000",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.002679686000192305,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_000/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.003086647000600351,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_000/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.002426410001135082,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_000/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/Ex06/pilot_00/joint/Ex06/call_001",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.0028130390001024352,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_001/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.003176018999511143,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_001/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.002883171999201295,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_001/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/Ex06/pilot_00/joint/Ex06/call_002",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.0027558679994399427,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_002/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.0031838590002735145,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_002/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.0024212010011979146,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_002/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/Fibonacci/pilot_00/closure/Fibonacci/call_000",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.0036414909991435707,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/closure/Fibonacci/call_000/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.0031605180010956246,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/closure/Fibonacci/call_000/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.002441300999635132,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/closure/Fibonacci/call_000/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/Fibonacci/pilot_00/closure/Fibonacci/call_001",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.003428334999625804,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/closure/Fibonacci/call_001/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.0036310399991634768,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/closure/Fibonacci/call_001/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.0024457510007778183,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/closure/Fibonacci/call_001/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/Fibonacci/pilot_00/joint/Fibonacci/call_000",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.002933423000285984,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/joint/Fibonacci/call_000/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.003092737000770285,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/joint/Fibonacci/call_000/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.002466641000864911,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/joint/Fibonacci/call_000/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/Fibonacci/pilot_00/joint/Fibonacci/call_001",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.0029181420013628667,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/joint/Fibonacci/call_001/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.003169318999425741,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/joint/Fibonacci/call_001/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.0024228909987868974,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/joint/Fibonacci/call_001/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/Fibonacci/pilot_00/joint/Fibonacci/call_002",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.003522466999129392,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/joint/Fibonacci/call_002/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.0035237880001659505,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/joint/Fibonacci/call_002/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.0025356229998578783,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Fibonacci/pilot_00/joint/Fibonacci/call_002/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    }
+  ]
+}

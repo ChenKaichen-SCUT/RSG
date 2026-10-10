@@ -1,0 +1,20 @@
+[
+  {
+    "program": "Ex06",
+    "phase": "pilot",
+    "round": 0,
+    "method": "joint"
+  },
+  {
+    "program": "Ex06",
+    "phase": "pilot",
+    "round": 0,
+    "method": "official"
+  },
+  {
+    "program": "Ex06",
+    "phase": "pilot",
+    "round": 0,
+    "method": "closure"
+  }
+]

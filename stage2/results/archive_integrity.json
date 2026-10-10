@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-10T12:55:25.276649+00:00",
+  "scope": "Independent local copy downloaded from the experiment server; every compressed part and every decompressed raw file verified without extraction.",
+  "command": "python3 stage2/scripts/unpack_evidence.py --verify-only",
+  "verifier_stdout": "Verified without extracting 237111 raw evidence files.",
+  "raw_file_count": 237111,
+  "raw_bytes": 9491929549,
+  "parts": 5,
+  "archive_bytes": 277887164,
+  "manifest_sha256": "d8619fffed95eca8d6079d6caf84f007932c791016dc803187acf69804c1e1ba",
+  "checker_sha256": "561a93bc7cdd5b4a71724f5f335c780ad01f79038d2377aab97ab2a5f90376e4",
+  "stage1_recheck_archive_checksum_passed": true
+}

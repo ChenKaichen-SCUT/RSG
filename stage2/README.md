@@ -1,6 +1,6 @@
 # 第二阶段：自然 RSG 语料与算法比较
 
-基于第一阶段提交 `769bca6`，独立分支 `stage2/natural-rsg-20261010`。第一阶段代码、结果和提交不覆盖。任务原文见 `instructions.txt`；中文研究报告见 `../reports/stage2_natural_rsg_report.md`。
+基于第一阶段提交 `769bca6`，独立分支 `stage2/natural-rsg-20261010`。第一阶段代码、结果和提交不覆盖。任务原文见 `instructions.txt`；中文研究报告见 [stage2_natural_rsg_report.md](../reports/stage2_natural_rsg_report.md)。
 
 ## 实验定义
 
@@ -59,6 +59,7 @@ bash stage2/scripts/run_all.sh
 原始日志、每条 SMT 查询及模型、每次进程的参数/退出码/时间/RSS、完整 frozen input、原生 prover 输出和开发失败记录均无损压缩在 `evidence/`，`evidence/manifest.json` 给出分片及解压后逐文件 SHA-256。先解压，再重放：
 
 ```bash
+python3 stage2/scripts/unpack_evidence.py --verify-only  # 可先流式核对全部原始文件而不解压
 python3 stage2/scripts/unpack_evidence.py
 .venv/bin/python stage2/scripts/validate_corpus.py
 .venv/bin/python stage2/scripts/replay_instance.py primary/Flip/call_001

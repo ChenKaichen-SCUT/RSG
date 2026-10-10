@@ -1,0 +1,1982 @@
+[
+  {
+    "instance": "primary/2Nested_false-termination/call_005",
+    "regions": [
+      "(and (< 0 (+ (+ x y) 1))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (>= (- 3) y)\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ (+ x y) 1))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (< (- 3) y))",
+      "(and (< 0 (+ x y 1)) (< (- 4) y) (< (- 1) x) (< (- 2) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) (+ y 1))\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (< (- 3) y))",
+      "(and (< 0 (+ x y)) (< (- 4) (+ y 1)) (< (- 1) x) (< (- 2) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) (+ x 1))\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (>= (- 3) y)\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) (+ x 1))\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (< (- 3) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) x)\n     (<= y (+ (- 2) 1))\n     (< 1 (+ x y))\n     (>= (- 3) y)\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) x)\n     (<= y (+ (- 2) 1))\n     (< 1 (+ x y))\n     (< (- 3) y))",
+      "(and (< 0 (+ x y)) (< (- 4) y) (< (- 1) x) (< (- 2) (+ y 1)))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ (+ x y) 1))\n     (>= (- 3) y)\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ (+ x y) 1))\n     (< (- 3) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (<= y (+ (- 3) 1))\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ x y)) true (< (- 1) x) (< (- 2) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (>= (- 3) y)\n     (< 3 (+ (+ x y) 1)))",
+      "(and true (< (- 4) y) (< (- 1) x) (>= (- 2) y) (< 1 (+ x y)) (< (- 3) y))",
+      "(and true\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (>= (- 3) y)\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ x y)) true (< (- 1) x) (>= (- 2) y) (< 1 (+ x y)) (< (- 3) y))",
+      "(and (< 0 (+ x y)) (< (- 4) y) true (>= (- 2) y) (< 1 (+ x y)) (< (- 3) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     true\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (>= (- 3) y)\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ x y)) (< (- 4) y) (< (- 1) x) true (< 1 (+ x y)) (< (- 3) y))",
+      "(and (< 0 (+ x y)) (< (- 4) (+ y 2)) (< (- 1) x) (< (- 2) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) x)\n     true\n     (< 1 (+ x y))\n     (>= (- 3) y)\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ x y)) (< (- 4) y) (< (- 1) x) (>= (- 2) y) true (< (- 3) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     true\n     (>= (- 3) y)\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     true\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ (+ x y) 2))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (< (- 3) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) (+ y 2))\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (< (- 3) y))",
+      "(and (< 0 (+ x y)) (< (- 4) (+ y 4)) (< (- 1) x) (< (- 2) y))",
+      "(and (< 0 (+ (+ x y) 2))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (>= (- 3) y)\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) (+ x 2))\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (< (- 3) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) x)\n     (<= y (+ (- 2) 2))\n     (< 1 (+ x y))\n     (< (- 3) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) (+ x 2))\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (>= (- 3) y)\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ (+ x y) 2))\n     (< (- 3) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) x)\n     (<= y (+ (- 2) 2))\n     (< 1 (+ x y))\n     (>= (- 3) y)\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ x y)) (< (- 4) (+ y 6)) (< (- 1) x) (< (- 2) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ (+ x y) 2))\n     (>= (- 3) y)\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ (+ x y) 4))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (< (- 3) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (<= y (+ (- 3) 2))\n     (< 3 (+ x y)))",
+      "(and (< 0 (+ x y))\n     (< (- 4) (+ y 4))\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (< (- 3) y))",
+      "(and (< 0 (+ x y))\n     (< (- 4) y)\n     (< (- 1) (+ x 4))\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (< (- 3) y))",
+      "(and (< 0 (+ (+ x y) 4))\n     (< (- 4) y)\n     (< (- 1) x)\n     (>= (- 2) y)\n     (< 1 (+ x y))\n     (>= (- 3) y)\n     (< 3 (+ x y)))"
+    ],
+    "observations": [
+      {
+        "source_region": 0,
+        "query": {
+          "name": "region_requires_coverage_0",
+          "result": "unsat",
+          "seconds": 0.004021959999590763,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/2Nested_false-termination/call_005/00000_region_requires_coverage_0.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 1,
+        "query": {
+          "name": "region_requires_coverage_1",
+          "result": "unsat",
+          "seconds": 0.003568727999663679,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/2Nested_false-termination/call_005/00001_region_requires_coverage_1.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 2,
+        "query": {
+          "name": "region_requires_coverage_2",
+          "result": "sat",
+          "seconds": 0.0036627509998652386,
+          "expected": null,
+          "passed": null,
+          "model": "[y = -2,\n %lbl%@624 = False,\n y@1 = -1,\n %lbl%@331 = False,\n y@0 = -3,\n x@1 = 1,\n x = -1,\n x@0 = -6,\n %lbl%+589 = True,\n %lbl%+231 = True,\n %lbl%+233 = True,\n x@2 = 0,\n y@2 = 0,\n %lbl%+317 = True,\n %lbl%+225 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/2Nested_false-termination/call_005/00002_region_requires_coverage_2.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate x y)",
+            "state": {
+              "x": "-1",
+              "y": "-2"
+            },
+            "covering_regions": []
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate x@2 y@2)",
+            "state": {
+              "x": "0",
+              "y": "0"
+            },
+            "covering_regions": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 3,
+        "query": {
+          "name": "region_requires_coverage_3",
+          "result": "unsat",
+          "seconds": 0.0035119280000799336,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/2Nested_false-termination/call_005/00003_region_requires_coverage_3.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 4,
+        "query": {
+          "name": "region_requires_coverage_4",
+          "result": "unsat",
+          "seconds": 0.003492956999252783,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/2Nested_false-termination/call_005/00004_region_requires_coverage_4.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 5,
+        "query": {
+          "name": "region_requires_coverage_5",
+          "result": "unsat",
+          "seconds": 0.0035388169999350794,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/2Nested_false-termination/call_005/00005_region_requires_coverage_5.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 6,
+        "query": {
+          "name": "region_requires_coverage_6",
+          "result": "unsat",
+          "seconds": 0.0035317980000399984,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/2Nested_false-termination/call_005/00006_region_requires_coverage_6.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 7,
+        "query": {
+          "name": "region_requires_coverage_7",
+          "result": "unsat",
+          "seconds": 0.0035166970010322984,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/2Nested_false-termination/call_005/00007_region_requires_coverage_7.smt2"
+        },
+        "coverage_alternatives": []
+      }
+    ],
+    "interpretation": "One countermodel may admit several covering regions. These are witnessed coverage alternatives, not universally mandatory dependencies or a proof of minimum joint width.",
+    "proved_minimum_width": "not established"
+  },
+  {
+    "instance": "primary/AlternDivWidening/call_000",
+    "regions": [
+      "(and (< 4 (+ w 1)) (>= (- 1) (+ t w)))",
+      "(and (< 4 (+ w 1)) (< (- 1) (+ t w)) (< 0 (- t w)))",
+      "(and (< 4 w) (< (- 1) (+ t w 1)) (< 0 (- t w)))",
+      "(and (< 4 (+ w 2)) (>= (- 1) (+ t w)))",
+      "(and (< 4 w) true (< 0 (- t w)))",
+      "(and (< 4 (+ w 4)) (>= (- 1) (+ t w)))",
+      "(and (< 4 (+ w 2)) (< (- 1) (+ t w)) (< 0 (- t w)))",
+      "(and (< 4 w) (< (- 1) (+ t w 2)) (< 0 (- t w)))",
+      "(and (< 4 (+ w 4)) (< (- 1) (+ t w)) (< 0 (- t w)))",
+      "(and (< 4 w) (< (- 1) (+ t w 4)) (< 0 (- t w)))",
+      "(and (< 4 w) (< (- 1) (+ t w 6)) (< 0 (- t w)))",
+      "(and (< 4 w) (< (- 1) (+ t w 8)) (< 0 (- t w)))",
+      "(and (< 4 w) (< (- 1) (+ t w 10)) (< 0 (- t w)))",
+      "(and (< 4 w) (< (- 1) (+ t w 20)) (< 0 (- t w)))",
+      "(and (< 4 w) (< (- 1) (+ t w 50)) (< 0 (- t w)))",
+      "(and (< 4 (+ w 1)) (< (- 1) (+ t w 1)) (< 0 (- t w)))",
+      "(and (< 4 (+ w 1)) true (< 0 (- t w)))",
+      "(and (< 4 (+ w 1)) (< (- 1) (+ t w 2)) (< 0 (- t w)))",
+      "(and (< 4 (+ w 1)) (< (- 1) (+ t w 4)) (< 0 (- t w)))",
+      "(and (< 4 (+ w 1)) (< (- 1) (+ t w 6)) (< 0 (- t w)))"
+    ],
+    "observations": [
+      {
+        "source_region": 0,
+        "query": {
+          "name": "region_requires_coverage_0",
+          "result": "unsat",
+          "seconds": 0.0036288999999669613,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/AlternDivWidening/call_000/00000_region_requires_coverage_0.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 1,
+        "query": {
+          "name": "region_requires_coverage_1",
+          "result": "unsat",
+          "seconds": 0.003536677000738564,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/AlternDivWidening/call_000/00001_region_requires_coverage_1.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 2,
+        "query": {
+          "name": "region_requires_coverage_2",
+          "result": "unsat",
+          "seconds": 0.0034446560002834303,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/AlternDivWidening/call_000/00002_region_requires_coverage_2.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 3,
+        "query": {
+          "name": "region_requires_coverage_3",
+          "result": "sat",
+          "seconds": 0.0035323780011822237,
+          "expected": null,
+          "passed": null,
+          "model": "[t = -5,\n w@0 = 3,\n %lbl%+175 = True,\n w = 5,\n %lbl%@568 = False,\n t@1 = -4,\n %lbl%@710 = False,\n t@6 = 5,\n t@5 = 0,\n w@1 = 4,\n t@4 = -4,\n %lbl%+162 = True,\n %lbl%+171 = True,\n %lbl%+173 = True,\n %lbl%+169 = True,\n %lbl%+160 = True,\n %lbl%+153 = True,\n %lbl%+594 = True,\n t@3 = 5,\n t@2 = -5,\n %lbl%+544 = True,\n %lbl%+147 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/AlternDivWidening/call_000/00003_region_requires_coverage_3.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@6 w@1)",
+            "state": {
+              "t": "5",
+              "w": "4"
+            },
+            "covering_regions": [
+              1,
+              6,
+              8,
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t w)",
+            "state": {
+              "t": "-5",
+              "w": "5"
+            },
+            "covering_regions": []
+          }
+        ]
+      },
+      {
+        "source_region": 4,
+        "query": {
+          "name": "region_requires_coverage_4",
+          "result": "unsat",
+          "seconds": 0.0034319750011491124,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/AlternDivWidening/call_000/00004_region_requires_coverage_4.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 5,
+        "query": {
+          "name": "region_requires_coverage_5",
+          "result": "sat",
+          "seconds": 0.003570568000213825,
+          "expected": null,
+          "passed": null,
+          "model": "[t = -1,\n w@0 = 1,\n %lbl%+175 = True,\n w = 5,\n %lbl%@568 = False,\n %lbl%@710 = False,\n t@1 = -2,\n t@6 = 3,\n t@5 = 0,\n t@4 = -2,\n w@1 = 2,\n %lbl%+594 = True,\n %lbl%+160 = True,\n %lbl%+153 = True,\n %lbl%+169 = True,\n %lbl%+171 = True,\n %lbl%+173 = True,\n %lbl%+162 = True,\n t@3 = 3,\n t@2 = -3,\n %lbl%+544 = True,\n %lbl%+147 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/AlternDivWidening/call_000/00005_region_requires_coverage_5.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@6 w@1)",
+            "state": {
+              "t": "3",
+              "w": "2"
+            },
+            "covering_regions": [
+              8
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t w)",
+            "state": {
+              "t": "-1",
+              "w": "5"
+            },
+            "covering_regions": []
+          }
+        ]
+      },
+      {
+        "source_region": 6,
+        "query": {
+          "name": "region_requires_coverage_6",
+          "result": "sat",
+          "seconds": 0.0035680790006153984,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 6,\n %lbl%+175 = True,\n w@0 = 3,\n w = 5,\n %lbl%@568 = False,\n t@1 = 4,\n %lbl%@710 = False,\n t@6 = -5,\n t@5 = -5,\n t@4 = 5,\n w@1 = 4,\n %lbl%+160 = True,\n %lbl%+153 = True,\n %lbl%+169 = True,\n %lbl%+171 = True,\n %lbl%+173 = True,\n %lbl%+162 = True,\n %lbl%+594 = True,\n t@3 = -3,\n t@2 = 3,\n %lbl%+544 = True,\n %lbl%+147 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/AlternDivWidening/call_000/00006_region_requires_coverage_6.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@6 w@1)",
+            "state": {
+              "t": "-5",
+              "w": "4"
+            },
+            "covering_regions": [
+              0,
+              3,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 7,
+        "query": {
+          "name": "region_requires_coverage_7",
+          "result": "unsat",
+          "seconds": 0.003442114999415935,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/AlternDivWidening/call_000/00007_region_requires_coverage_7.smt2"
+        },
+        "coverage_alternatives": []
+      }
+    ],
+    "interpretation": "One countermodel may admit several covering regions. These are witnessed coverage alternatives, not universally mandatory dependencies or a proof of minimum joint width.",
+    "proved_minimum_width": "not established"
+  },
+  {
+    "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_004",
+    "regions": [
+      "(and (<= (+ x y) (+ (- 1) 1)) (>= 4 y) (>= (- 1) x) (< 1 y) (>= (- 12) x))",
+      "(and (<= (+ x y) (+ (- 1) 1))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (>= (- 5) (+ x y)))",
+      "(and (<= (+ x y) (+ (- 1) 1))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (< (- 5) (+ x y))\n     (>= 2 y)\n     (>= (- 3) (+ x y)))",
+      "(and (>= (- 1) (+ x y)) (<= y (+ 4 1)) (>= (- 1) x) (>= 1 y))",
+      "(and (>= (- 1) (+ x y))\n     (<= y (+ 4 1))\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (>= (- 5) (+ x y)))",
+      "(and (>= (- 1) (+ x y))\n     (<= y (+ 4 1))\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (< (- 5) (+ x y))\n     (>= 2 y)\n     (>= (- 3) (+ x y)))",
+      "(and (>= (- 1) (+ x y)) (>= 4 y) (<= x (+ (- 1) 1)) (< 1 y) (>= (- 12) x))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (<= x (+ (- 1) 1))\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (>= (- 5) (+ x y)))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (<= x (+ (- 1) 1))\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (< (- 5) (+ x y))\n     (>= 2 y)\n     (>= (- 3) (+ x y)))",
+      "(and (>= (- 1) (+ x y)) (>= 4 y) (>= (- 1) x) (< 1 (+ y 1)) (>= (- 12) x))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 (+ y 1))\n     (< (- 12) x)\n     (>= 3 y)\n     (>= (- 5) (+ x y)))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 (+ y 1))\n     (< (- 12) x)\n     (>= 3 y)\n     (< (- 5) (+ x y))\n     (>= 2 y)\n     (>= (- 3) (+ x y)))",
+      "(and (>= (- 1) (+ x y)) (>= 4 y) (>= (- 1) x) (< 1 y) (<= x (+ (- 12) 1)))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) (+ x 1))\n     (>= 3 y)\n     (>= (- 5) (+ x y)))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) (+ x 1))\n     (>= 3 y)\n     (< (- 5) (+ x y))\n     (>= 2 y)\n     (>= (- 3) (+ x y)))",
+      "(and (>= (- 1) (+ x y)) true (>= (- 1) x) (>= 1 y))",
+      "(and true (>= 4 y) (>= (- 1) x) (< 1 y) (>= (- 12) x))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (<= y (+ 3 1))\n     (< (- 5) (+ x y))\n     (>= 2 y)\n     (>= (- 3) (+ x y)))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (<= (+ x y) (+ (- 5) 1)))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (< (- 5) (+ (+ x y) 1))\n     (>= 2 y)\n     (>= (- 3) (+ x y)))",
+      "(and (>= (- 1) (+ x y)) (>= 4 y) true (< 1 y) (>= (- 12) x))",
+      "(and true\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (>= (- 5) (+ x y)))",
+      "(and (>= (- 1) (+ x y)) (>= 4 y) (>= (- 1) x) true (>= (- 12) x))",
+      "(and (>= (- 1) (+ x y))\n     true\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (>= (- 5) (+ x y)))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (< (- 5) (+ x y))\n     (>= 2 y)\n     (<= (+ x y) (+ (- 3) 1)))",
+      "(and (>= (- 1) (+ x y)) (<= y (+ 4 2)) (>= (- 1) x) (>= 1 y))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     true\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (>= (- 5) (+ x y)))",
+      "(and true\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (< (- 5) (+ x y))\n     (>= 2 y)\n     (>= (- 3) (+ x y)))",
+      "(and (<= (+ x y) (+ (- 1) 2)) (>= 4 y) (>= (- 1) x) (< 1 y) (>= (- 12) x))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (>= (- 1) x)\n     true\n     (< (- 12) x)\n     (>= 3 y)\n     (>= (- 5) (+ x y)))",
+      "(and (>= (- 1) (+ x y))\n     true\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (< (- 5) (+ x y))\n     (>= 2 y)\n     (>= (- 3) (+ x y)))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     true\n     (>= 3 y)\n     (>= (- 5) (+ x y)))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     true\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (< (- 5) (+ x y))\n     (>= 2 y)\n     (>= (- 3) (+ x y)))",
+      "(and (>= (- 1) (+ x y)) (>= 4 y) (<= x (+ (- 1) 2)) (< 1 y) (>= (- 12) x))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (>= (- 1) x)\n     true\n     (< (- 12) x)\n     (>= 3 y)\n     (< (- 5) (+ x y))\n     (>= 2 y)\n     (>= (- 3) (+ x y)))",
+      "(and (>= (- 1) (+ x y)) (<= y (+ 4 4)) (>= (- 1) x) (>= 1 y))",
+      "(and (>= (- 1) (+ x y)) (>= 4 y) (>= (- 1) x) (< 1 (+ y 2)) (>= (- 12) x))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     true\n     (>= 3 y)\n     (< (- 5) (+ x y))\n     (>= 2 y)\n     (>= (- 3) (+ x y)))",
+      "(and (<= (+ x y) (+ (- 1) 2))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (>= (- 5) (+ x y)))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     true\n     (< (- 5) (+ x y))\n     (>= 2 y)\n     (>= (- 3) (+ x y)))",
+      "(and (<= (+ x y) (+ (- 1) 4)) (>= 4 y) (>= (- 1) x) (< 1 y) (>= (- 12) x))",
+      "(and (>= (- 1) (+ x y))\n     (<= y (+ 4 2))\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     (>= (- 5) (+ x y)))",
+      "(and (>= (- 1) (+ x y))\n     (>= 4 y)\n     (>= (- 1) x)\n     (< 1 y)\n     (< (- 12) x)\n     (>= 3 y)\n     true\n     (>= 2 y)\n     (>= (- 3) (+ x y)))"
+    ],
+    "observations": [
+      {
+        "source_region": 0,
+        "query": {
+          "name": "region_requires_coverage_0",
+          "result": "unsat",
+          "seconds": 0.003912697000487242,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_004/00000_region_requires_coverage_0.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 1,
+        "query": {
+          "name": "region_requires_coverage_1",
+          "result": "unsat",
+          "seconds": 0.0037549429998762207,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_004/00001_region_requires_coverage_1.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 2,
+        "query": {
+          "name": "region_requires_coverage_2",
+          "result": "unsat",
+          "seconds": 0.0038415350009017857,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_004/00002_region_requires_coverage_2.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 3,
+        "query": {
+          "name": "region_requires_coverage_3",
+          "result": "unsat",
+          "seconds": 0.0037047420009912457,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_004/00003_region_requires_coverage_3.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 4,
+        "query": {
+          "name": "region_requires_coverage_4",
+          "result": "unsat",
+          "seconds": 0.0037674840004910948,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_004/00004_region_requires_coverage_4.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 5,
+        "query": {
+          "name": "region_requires_coverage_5",
+          "result": "unsat",
+          "seconds": 0.0037624329997925088,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_004/00005_region_requires_coverage_5.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 6,
+        "query": {
+          "name": "region_requires_coverage_6",
+          "result": "unsat",
+          "seconds": 0.003734632999112364,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_004/00006_region_requires_coverage_6.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 7,
+        "query": {
+          "name": "region_requires_coverage_7",
+          "result": "unsat",
+          "seconds": 0.0038092550003057113,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_004/00007_region_requires_coverage_7.smt2"
+        },
+        "coverage_alternatives": []
+      }
+    ],
+    "interpretation": "One countermodel may admit several covering regions. These are witnessed coverage alternatives, not universally mandatory dependencies or a proof of minimum joint width.",
+    "proved_minimum_width": "not established"
+  },
+  {
+    "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex3.02_false-termination/call_001",
+    "regions": [
+      "(and (< 1 (+ z 1)) (< 0 (+ x y)) (< 0 x) (< (- 2) y))",
+      "(and (< 1 z) (< 0 (+ x y)) (< 0 x) (< (- 2) (+ y 1)))"
+    ],
+    "observations": [
+      {
+        "source_region": 0,
+        "query": {
+          "name": "region_requires_coverage_0",
+          "result": "sat",
+          "seconds": 0.0031167680008366005,
+          "expected": null,
+          "passed": null,
+          "model": "[x@1 = 1,\n y@1 = 0,\n z@0 = 1,\n x@0 = 0,\n y@0 = 0,\n %lbl%@319 = False,\n y@2 = 1,\n x@2 = 1,\n %lbl%+284 = True,\n %lbl%+122 = True,\n %lbl%+120 = True,\n %lbl%+114 = True,\n %lbl%+220 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/ChenFlurMukhopadhyay-SAS2012-Ex3.02_false-termination/call_001/00000_region_requires_coverage_0.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate x y z)",
+            "state": {
+              "x": "0",
+              "y": "0",
+              "z": "0"
+            },
+            "covering_regions": []
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate x@2 y@2 z@0)",
+            "state": {
+              "x": "1",
+              "y": "1",
+              "z": "1"
+            },
+            "covering_regions": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 1,
+        "query": {
+          "name": "region_requires_coverage_1",
+          "result": "unsat",
+          "seconds": 0.0029560530001617735,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/ChenFlurMukhopadhyay-SAS2012-Ex3.02_false-termination/call_001/00001_region_requires_coverage_1.smt2"
+        },
+        "coverage_alternatives": []
+      }
+    ],
+    "interpretation": "One countermodel may admit several covering regions. These are witnessed coverage alternatives, not universally mandatory dependencies or a proof of minimum joint width.",
+    "proved_minimum_width": "not established"
+  },
+  {
+    "instance": "primary/Ex06/call_000",
+    "regions": [
+      "(and (< (- 6) t) (<= t (+ 0 1)))",
+      "(and (< (- 6) t) (<= t (+ 0 2)))",
+      "(and (< (- 6) t) (<= t (+ 0 4)))"
+    ],
+    "observations": [
+      {
+        "source_region": 0,
+        "query": {
+          "name": "region_requires_coverage_0",
+          "result": "unsat",
+          "seconds": 0.0032699810017220443,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Ex06/call_000/00000_region_requires_coverage_0.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 1,
+        "query": {
+          "name": "region_requires_coverage_1",
+          "result": "sat",
+          "seconds": 0.0032327610006177565,
+          "expected": null,
+          "passed": null,
+          "model": "[t@1 = 2,\n t = 3,\n %lbl%@594 = False,\n t@3 = 1,\n %lbl%@584 = False,\n %lbl%@477 = False,\n %lbl%+128 = True,\n %lbl%+130 = True,\n %lbl%+139 = True,\n %lbl%+141 = True,\n %lbl%+126 = True,\n %lbl%+119 = True,\n %lbl%+505 = True,\n t@4 = 2,\n t@2 = 1,\n %lbl%+463 = True,\n %lbl%+113 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/Ex06/call_000/00001_region_requires_coverage_1.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@4)",
+            "state": {
+              "t": "2"
+            },
+            "covering_regions": [
+              1,
+              2
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@3)",
+            "state": {
+              "t": "1"
+            },
+            "covering_regions": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "3"
+            },
+            "covering_regions": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 2,
+        "query": {
+          "name": "region_requires_coverage_2",
+          "result": "sat",
+          "seconds": 0.003218330000891001,
+          "expected": null,
+          "passed": null,
+          "model": "[t = -6,\n %lbl%@594 = False,\n t@1 = 2,\n t@3 = 1,\n %lbl%@584 = False,\n %lbl%@477 = False,\n %lbl%+505 = True,\n %lbl%+126 = True,\n %lbl%+119 = True,\n %lbl%+128 = True,\n %lbl%+130 = True,\n %lbl%+141 = True,\n %lbl%+139 = True,\n t@4 = 2,\n t@2 = 1,\n %lbl%+463 = True,\n %lbl%+113 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/Ex06/call_000/00002_region_requires_coverage_2.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@4)",
+            "state": {
+              "t": "2"
+            },
+            "covering_regions": [
+              1,
+              2
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@3)",
+            "state": {
+              "t": "1"
+            },
+            "covering_regions": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "-6"
+            },
+            "covering_regions": []
+          }
+        ]
+      }
+    ],
+    "interpretation": "One countermodel may admit several covering regions. These are witnessed coverage alternatives, not universally mandatory dependencies or a proof of minimum joint width.",
+    "proved_minimum_width": "not established"
+  },
+  {
+    "instance": "primary/Fibonacci/call_000",
+    "regions": [
+      "(and (<= n (+ (- 1) 1)) (< 0 j) (< (- 1) _i))",
+      "(and (>= (- 1) n) (< 0 (+ j 1)) (< (- 1) _i))",
+      "(and (>= (- 1) n) (< 0 j) (< (- 1) (+ _i 1)))"
+    ],
+    "observations": [
+      {
+        "source_region": 0,
+        "query": {
+          "name": "region_requires_coverage_0",
+          "result": "sat",
+          "seconds": 0.0032751110011304263,
+          "expected": null,
+          "passed": null,
+          "model": "[n@0 = 0,\n _i@0 = 0,\n n = 2,\n %lbl%@268 = False,\n %lbl%@335 = False,\n j = 1,\n j@0 = 1,\n %lbl%+307 = True,\n %lbl%+128 = True,\n %lbl%+126 = True,\n _i = 0,\n t@1 = 1,\n %lbl%+246 = True,\n %lbl%+120 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/Fibonacci/call_000/00000_region_requires_coverage_0.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@1 n@0 j@0 t@1)",
+            "state": {
+              "j": "1",
+              "n": "0",
+              "_i": "1",
+              "t": "1"
+            },
+            "covering_regions": [
+              0
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate j n _i t)",
+            "state": {
+              "j": "1",
+              "n": "2",
+              "_i": "0",
+              "t": "0"
+            },
+            "covering_regions": []
+          }
+        ]
+      },
+      {
+        "source_region": 1,
+        "query": {
+          "name": "region_requires_coverage_1",
+          "result": "sat",
+          "seconds": 0.003138698000839213,
+          "expected": null,
+          "passed": null,
+          "model": "[n@0 = -1,\n _i@0 = 0,\n n = 0,\n %lbl%@268 = False,\n %lbl%@335 = False,\n j = 1,\n j@0 = 0,\n %lbl%+128 = True,\n %lbl%+126 = True,\n %lbl%+307 = True,\n _i = 0,\n t@1 = 0,\n %lbl%+246 = True,\n %lbl%+120 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/Fibonacci/call_000/00001_region_requires_coverage_1.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@1 n@0 j@0 t@1)",
+            "state": {
+              "j": "0",
+              "n": "-1",
+              "_i": "0",
+              "t": "0"
+            },
+            "covering_regions": [
+              1
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate j n _i t)",
+            "state": {
+              "j": "1",
+              "n": "0",
+              "_i": "0",
+              "t": "0"
+            },
+            "covering_regions": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 2,
+        "query": {
+          "name": "region_requires_coverage_2",
+          "result": "sat",
+          "seconds": 0.0031268279999494553,
+          "expected": null,
+          "passed": null,
+          "model": "[n@0 = -1,\n _i@0 = -1,\n n = 2,\n %lbl%@268 = False,\n %lbl%@335 = False,\n j = 1,\n _i = 0,\n j@0 = 1,\n %lbl%+307 = True,\n %lbl%+128 = True,\n %lbl%+126 = True,\n t@1 = 0,\n %lbl%+246 = True,\n %lbl%+120 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/Fibonacci/call_000/00002_region_requires_coverage_2.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@1 n@0 j@0 t@1)",
+            "state": {
+              "j": "0",
+              "n": "-1",
+              "_i": "1",
+              "t": "0"
+            },
+            "covering_regions": [
+              1
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate j n _i t)",
+            "state": {
+              "j": "1",
+              "n": "2",
+              "_i": "0",
+              "t": "0"
+            },
+            "covering_regions": []
+          }
+        ]
+      }
+    ],
+    "interpretation": "One countermodel may admit several covering regions. These are witnessed coverage alternatives, not universally mandatory dependencies or a proof of minimum joint width.",
+    "proved_minimum_width": "not established"
+  },
+  {
+    "instance": "primary/Hanoi_2vars_false-termination/call_004",
+    "regions": [
+      "(and (< (- 5) (+ y 1))\n     (< 0 (+ x y))\n     (< (- 4) y)\n     (< 0 x)\n     (>= (- 2) y)\n     (>= 4 (+ x y))\n     (< (- 3) y)\n     (< 1 (+ x y)))",
+      "(and (< (- 5) (+ y 1))\n     (< 0 (+ x y))\n     (< (- 4) y)\n     (< 0 x)\n     (>= (- 2) y)\n     (< 4 (+ x y)))",
+      "(and (< (- 5) (+ y 1)) (< 0 (+ x y)) (< (- 4) y) (< 0 x) (< (- 2) y))",
+      "(and (< (- 5) y) (< 0 (+ (+ x y) 1)) (>= (- 4) y) (< 7 (+ x y)))",
+      "(and (< (- 5) y)\n     (< 0 (+ (+ x y) 1))\n     (< (- 4) y)\n     (< 0 x)\n     (>= (- 2) y)\n     (>= 4 (+ x y))\n     (< (- 3) y)\n     (< 1 (+ x y)))",
+      "(and (< (- 5) y)\n     (< 0 (+ (+ x y) 1))\n     (< (- 4) y)\n     (< 0 x)\n     (>= (- 2) y)\n     (< 4 (+ x y)))",
+      "(and (< (- 5) y) (< 0 (+ x y)) (<= y (+ (- 4) 1)) (< 7 (+ x y)))",
+      "(and (< (- 5) y)\n     (< 0 (+ x y))\n     (< (- 4) (+ y 1))\n     (< 0 x)\n     (>= (- 2) y)\n     (>= 4 (+ x y))\n     (< (- 3) y)\n     (< 1 (+ x y)))",
+      "(and (< (- 5) y) (< 0 (+ x y)) (< (- 4) (+ y 1)) (< 0 x) (< (- 2) y))",
+      "(and (< (- 5) y) (< 0 (+ x y)) (>= (- 4) y) (< 7 (+ (+ x y) 1)))",
+      "(and (< (- 5) y)\n     (< 0 (+ x y))\n     (< (- 4) y)\n     (< 0 (+ x 1))\n     (>= (- 2) y)\n     (>= 4 (+ x y))\n     (< (- 3) y)\n     (< 1 (+ x y)))",
+      "(and (< (- 5) y)\n     (< 0 (+ x y))\n     (< (- 4) y)\n     (< 0 (+ x 1))\n     (>= (- 2) y)\n     (< 4 (+ x y)))",
+      "(and (< (- 5) y)\n     (< 0 (+ x y))\n     (< (- 4) y)\n     (< 0 x)\n     (<= y (+ (- 2) 1))\n     (>= 4 (+ x y))\n     (< (- 3) y)\n     (< 1 (+ x y)))",
+      "(and (< (- 5) y)\n     (< 0 (+ x y))\n     (< (- 4) y)\n     (< 0 x)\n     (<= y (+ (- 2) 1))\n     (< 4 (+ x y)))",
+      "(and (< (- 5) y) true (>= (- 4) y) (< 7 (+ x y)))",
+      "(and (< (- 5) y)\n     (< 0 (+ x y))\n     (< (- 4) y)\n     (< 0 x)\n     (>= (- 2) y)\n     (<= (+ x y) (+ 4 1))\n     (< (- 3) y)\n     (< 1 (+ x y)))",
+      "(and (< (- 5) y)\n     (< 0 (+ x y))\n     (< (- 4) y)\n     (< 0 x)\n     (>= (- 2) y)\n     (< 4 (+ (+ x y) 1)))",
+      "(and true (< 0 (+ x y)) (< (- 4) y) (< 0 x) (< (- 2) y))",
+      "(and true (< 0 (+ x y)) (< (- 4) y) (< 0 x) (>= (- 2) y) (< 4 (+ x y)))",
+      "(and (< (- 5) y) true (< (- 4) y) (< 0 x) (>= (- 2) y) (< 4 (+ x y)))",
+      "(and (< (- 5) y) (< 0 (+ x y)) true (< 0 x) (< (- 2) y))",
+      "(and true\n     (< 0 (+ x y))\n     (< (- 4) y)\n     (< 0 x)\n     (>= (- 2) y)\n     (>= 4 (+ x y))\n     (< (- 3) y)\n     (< 1 (+ x y)))",
+      "(and (< (- 5) y) (< 0 (+ (+ x y) 2)) (>= (- 4) y) (< 7 (+ x y)))",
+      "(and (< (- 5) y)\n     true\n     (< (- 4) y)\n     (< 0 x)\n     (>= (- 2) y)\n     (>= 4 (+ x y))\n     (< (- 3) y)\n     (< 1 (+ x y)))",
+      "(and (< (- 5) y) (< 0 (+ x y)) (< (- 4) y) true (>= (- 2) y) (< 4 (+ x y)))",
+      "(and (< (- 5) y) (< 0 (+ x y)) (<= y (+ (- 4) 2)) (< 7 (+ x y)))",
+      "(and (< (- 5) y)\n     (< 0 (+ x y))\n     true\n     (< 0 x)\n     (>= (- 2) y)\n     (>= 4 (+ x y))\n     (< (- 3) y)\n     (< 1 (+ x y)))",
+      "(and (< (- 5) y) (< 0 (+ x y)) (< (- 4) y) (< 0 x) true (< 4 (+ x y)))",
+      "(and (< (- 5) (+ y 2)) (< 0 (+ x y)) (< (- 4) y) (< 0 x) (< (- 2) y))",
+      "(and (< (- 5) y)\n     (< 0 (+ x y))\n     (< (- 4) y)\n     true\n     (>= (- 2) y)\n     (>= 4 (+ x y))\n     (< (- 3) y)\n     (< 1 (+ x y)))",
+      "(and (< (- 5) y)\n     (< 0 (+ x y))\n     (< (- 4) y)\n     (< 0 x)\n     true\n     (>= 4 (+ x y))\n     (< (- 3) y)\n     (< 1 (+ x y)))",
+      "(and (< (- 5) (+ y 2))\n     (< 0 (+ x y))\n     (< (- 4) y)\n     (< 0 x)\n     (>= (- 2) y)\n     (< 4 (+ x y)))",
+      "(and (< (- 5) y) (< 0 (+ x y)) (< (- 4) (+ y 2)) (< 0 x) (< (- 2) y))",
+      "(and (< (- 5) y) (< 0 (+ (+ x y) 4)) (>= (- 4) y) (< 7 (+ x y)))",
+      "(and (< (- 5) y)\n     (< 0 (+ x y))\n     (< (- 4) y)\n     (< 0 x)\n     (>= (- 2) y)\n     true\n     (< (- 3) y)\n     (< 1 (+ x y)))",
+      "(and (< (- 5) y)\n     (< 0 (+ (+ x y) 2))\n     (< (- 4) y)\n     (< 0 x)\n     (>= (- 2) y)\n     (< 4 (+ x y)))",
+      "(and (< (- 5) y) (< 0 (+ x y)) (<= y (+ (- 4) 4)) (< 7 (+ x y)))",
+      "(and (< (- 5) y)\n     (< 0 (+ x y))\n     (< (- 4) y)\n     (< 0 (+ x 2))\n     (>= (- 2) y)\n     (< 4 (+ x y)))",
+      "(and (< (- 5) (+ y 4)) (< 0 (+ x y)) (< (- 4) y) (< 0 x) (< (- 2) y))"
+    ],
+    "observations": [
+      {
+        "source_region": 0,
+        "query": {
+          "name": "region_requires_coverage_0",
+          "result": "unsat",
+          "seconds": 0.00361398899985943,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_2vars_false-termination/call_004/00000_region_requires_coverage_0.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 1,
+        "query": {
+          "name": "region_requires_coverage_1",
+          "result": "unsat",
+          "seconds": 0.0034335450000071432,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_2vars_false-termination/call_004/00001_region_requires_coverage_1.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 2,
+        "query": {
+          "name": "region_requires_coverage_2",
+          "result": "unsat",
+          "seconds": 0.0034005249999609077,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_2vars_false-termination/call_004/00002_region_requires_coverage_2.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 3,
+        "query": {
+          "name": "region_requires_coverage_3",
+          "result": "unsat",
+          "seconds": 0.003620538998802658,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_2vars_false-termination/call_004/00003_region_requires_coverage_3.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 4,
+        "query": {
+          "name": "region_requires_coverage_4",
+          "result": "unsat",
+          "seconds": 0.003411345000131405,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_2vars_false-termination/call_004/00004_region_requires_coverage_4.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 5,
+        "query": {
+          "name": "region_requires_coverage_5",
+          "result": "unsat",
+          "seconds": 0.0034244350008520996,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_2vars_false-termination/call_004/00005_region_requires_coverage_5.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 6,
+        "query": {
+          "name": "region_requires_coverage_6",
+          "result": "unsat",
+          "seconds": 0.0036261400000512367,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_2vars_false-termination/call_004/00006_region_requires_coverage_6.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 7,
+        "query": {
+          "name": "region_requires_coverage_7",
+          "result": "unsat",
+          "seconds": 0.003437956000198028,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_2vars_false-termination/call_004/00007_region_requires_coverage_7.smt2"
+        },
+        "coverage_alternatives": []
+      }
+    ],
+    "interpretation": "One countermodel may admit several covering regions. These are witnessed coverage alternatives, not universally mandatory dependencies or a proof of minimum joint width.",
+    "proved_minimum_width": "not established"
+  },
+  {
+    "instance": "primary/Hanoi_3vars_false-termination/call_001",
+    "regions": [
+      "(and (< 1 (+ x y 1)) (< 1 x) (< (- 3) y) (< (- 1) (+ y z)) (< (- 2) z))",
+      "(and (< 1 (+ x y)) (< 1 (+ x 1)) (< (- 3) y) (< (- 1) (+ y z)) (< (- 2) z))",
+      "(and (< 1 (+ x y)) (< 1 x) (< (- 3) (+ y 1)) (< (- 1) (+ y z)) (< (- 2) z))",
+      "(and (< 1 (+ x y)) (< 1 x) true (< (- 1) (+ y z)) (< (- 2) z))",
+      "(and (< 1 (+ x y)) (< 1 x) (< (- 3) (+ y 2)) (< (- 1) (+ y z)) (< (- 2) z))",
+      "(and (< 1 (+ x y)) (< 1 x) (< (- 3) (+ y 4)) (< (- 1) (+ y z)) (< (- 2) z))",
+      "(and (< 1 (+ x y)) (< 1 x) (< (- 3) (+ y 6)) (< (- 1) (+ y z)) (< (- 2) z))",
+      "(and (< 1 (+ x y)) (< 1 x) (< (- 3) (+ y 8)) (< (- 1) (+ y z)) (< (- 2) z))",
+      "(and (< 1 (+ x y)) (< 1 x) (< (- 3) (+ y 10)) (< (- 1) (+ y z)) (< (- 2) z))",
+      "(and (< 1 (+ x y)) (< 1 x) (< (- 3) (+ y 20)) (< (- 1) (+ y z)) (< (- 2) z))",
+      "(and (< 1 (+ x y)) (< 1 x) (< (- 3) (+ y 50)) (< (- 1) (+ y z)) (< (- 2) z))",
+      "(and (< 1 (+ x y 1)) (< 1 (+ x 1)) (< (- 3) y) (< (- 1) (+ y z)) (< (- 2) z))"
+    ],
+    "observations": [
+      {
+        "source_region": 0,
+        "query": {
+          "name": "region_requires_coverage_0",
+          "result": "sat",
+          "seconds": 0.0034208350007247645,
+          "expected": null,
+          "passed": null,
+          "model": "[%lbl%@243 = False,\n y = 0,\n y@1 = -1,\n %lbl%@342 = False,\n z = 0,\n x@1 = 2,\n x = 2,\n z@1 = 2,\n x@0 = 1,\n z@0 = 0,\n y@0 = -1,\n %lbl%+296 = True,\n %lbl%+126 = True,\n %lbl%+128 = True,\n x@2 = 1,\n z@2 = 3,\n y@2 = 1,\n %lbl%+227 = True,\n %lbl%+120 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_3vars_false-termination/call_001/00000_region_requires_coverage_0.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate x@2 y@2 z@2)",
+            "state": {
+              "x": "1",
+              "y": "1",
+              "z": "3"
+            },
+            "covering_regions": [
+              1,
+              11
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 1,
+        "query": {
+          "name": "region_requires_coverage_1",
+          "result": "unsat",
+          "seconds": 0.0030883770014042966,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_3vars_false-termination/call_001/00001_region_requires_coverage_1.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 2,
+        "query": {
+          "name": "region_requires_coverage_2",
+          "result": "unsat",
+          "seconds": 0.0032076699990284396,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_3vars_false-termination/call_001/00002_region_requires_coverage_2.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 3,
+        "query": {
+          "name": "region_requires_coverage_3",
+          "result": "unsat",
+          "seconds": 0.0031569980001222575,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_3vars_false-termination/call_001/00003_region_requires_coverage_3.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 4,
+        "query": {
+          "name": "region_requires_coverage_4",
+          "result": "unsat",
+          "seconds": 0.0031696880014351336,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_3vars_false-termination/call_001/00004_region_requires_coverage_4.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 5,
+        "query": {
+          "name": "region_requires_coverage_5",
+          "result": "unsat",
+          "seconds": 0.003185028999723727,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_3vars_false-termination/call_001/00005_region_requires_coverage_5.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 6,
+        "query": {
+          "name": "region_requires_coverage_6",
+          "result": "unsat",
+          "seconds": 0.0032000700011849403,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_3vars_false-termination/call_001/00006_region_requires_coverage_6.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 7,
+        "query": {
+          "name": "region_requires_coverage_7",
+          "result": "unsat",
+          "seconds": 0.003174458001012681,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/Hanoi_3vars_false-termination/call_001/00007_region_requires_coverage_7.smt2"
+        },
+        "coverage_alternatives": []
+      }
+    ],
+    "interpretation": "One countermodel may admit several covering regions. These are witnessed coverage alternatives, not universally mandatory dependencies or a proof of minimum joint width.",
+    "proved_minimum_width": "not established"
+  },
+  {
+    "instance": "primary/MirrorInterv/call_001",
+    "regions": [
+      "(and (< 19 (+ range 1)) (< (- 1) (+ t range)) (>= 5 (+ t range)))",
+      "(and (< 19 (+ range 1))\n     (< (- 1) (+ t range))\n     (< 5 (+ t range))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 range)\n     (< (- 1) (+ (+ t range) 1))\n     (< 5 (+ t range))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 range) (< (- 1) (+ t range)) (<= (+ t range) (+ 5 1)))",
+      "(and (< 19 range)\n     (< (- 1) (+ t range))\n     (< 5 (+ (+ t range) 1))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 (+ range 2)) (< (- 1) (+ t range)) (>= 5 (+ t range)))",
+      "(and (< 19 range)\n     true\n     (< 5 (+ t range))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 range)\n     (< (- 1) (+ t range))\n     true\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 range) (< (- 1) (+ t range)) (<= (+ t range) (+ 5 2)))",
+      "(and (< 19 (+ range 4)) (< (- 1) (+ t range)) (>= 5 (+ t range)))",
+      "(and (< 19 (+ range 2))\n     (< (- 1) (+ t range))\n     (< 5 (+ t range))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 range) (< (- 1) (+ t range)) (<= (+ t range) (+ 5 4)))",
+      "(and (< 19 range)\n     (< (- 1) (+ (+ t range) 2))\n     (< 5 (+ t range))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 (+ range 6)) (< (- 1) (+ t range)) (>= 5 (+ t range)))",
+      "(and (< 19 range)\n     (< (- 1) (+ t range))\n     (< 5 (+ (+ t range) 2))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 range) (< (- 1) (+ t range)) (<= (+ t range) (+ 5 6)))",
+      "(and (< 19 (+ range 8)) (< (- 1) (+ t range)) (>= 5 (+ t range)))",
+      "(and (< 19 (+ range 4))\n     (< (- 1) (+ t range))\n     (< 5 (+ t range))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 range)\n     (< (- 1) (+ (+ t range) 4))\n     (< 5 (+ t range))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 range) (< (- 1) (+ t range)) (<= (+ t range) (+ 5 8)))",
+      "(and (< 19 range)\n     (< (- 1) (+ t range))\n     (< 5 (+ (+ t range) 4))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 (+ range 10)) (< (- 1) (+ t range)) (>= 5 (+ t range)))",
+      "(and (< 19 range) (< (- 1) (+ t range)) (<= (+ t range) (+ 5 10)))",
+      "(and (< 19 (+ range 6))\n     (< (- 1) (+ t range))\n     (< 5 (+ t range))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 range)\n     (< (- 1) (+ (+ t range) 6))\n     (< 5 (+ t range))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 range)\n     (< (- 1) (+ t range))\n     (< 5 (+ (+ t range) 6))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 (+ range 8))\n     (< (- 1) (+ t range))\n     (< 5 (+ t range))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 range)\n     (< (- 1) (+ (+ t range) 8))\n     (< 5 (+ t range))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 range)\n     (< (- 1) (+ t range))\n     (< 5 (+ (+ t range) 8))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 (+ range 10))\n     (< (- 1) (+ t range))\n     (< 5 (+ t range))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))",
+      "(and (< 19 range)\n     (< (- 1) (+ (+ t range) 10))\n     (< 5 (+ t range))\n     (< (- 5) (- t range))\n     (>= 0 (- t range)))"
+    ],
+    "observations": [
+      {
+        "source_region": 0,
+        "query": {
+          "name": "region_requires_coverage_0",
+          "result": "sat",
+          "seconds": 0.003800383999987389,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 21,\n range@2 = 20,\n range@0 = 19,\n %lbl%@725 = False,\n %lbl%@736 = False,\n t@1 = -15,\n %lbl%@662 = False,\n range = 20,\n t@0 = 1,\n %lbl%@540 = False,\n %lbl%+165 = True,\n %lbl%+172 = True,\n %lbl%+601 = True,\n %lbl%+181 = True,\n %lbl%+183 = True,\n %lbl%+185 = True,\n %lbl%+174 = True,\n t@2 = 15,\n t@3 = -16,\n range@1 = 20,\n %lbl%+520 = True,\n %lbl%+159 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/MirrorInterv/call_001/00000_region_requires_coverage_0.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@2 range@0)",
+            "state": {
+              "t": "15",
+              "range": "19"
+            },
+            "covering_regions": [
+              1,
+              10,
+              17,
+              23,
+              26,
+              29
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t range)",
+            "state": {
+              "t": "21",
+              "range": "20"
+            },
+            "covering_regions": []
+          }
+        ]
+      },
+      {
+        "source_region": 1,
+        "query": {
+          "name": "region_requires_coverage_1",
+          "result": "sat",
+          "seconds": 0.003691132000312791,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 0,\n range@2 = 20,\n range@0 = 19,\n %lbl%@725 = False,\n %lbl%@736 = False,\n t@1 = 17,\n %lbl%@662 = False,\n range = -1,\n t@0 = 1,\n %lbl%@540 = False,\n %lbl%+185 = True,\n %lbl%+183 = True,\n %lbl%+181 = True,\n %lbl%+174 = True,\n %lbl%+165 = True,\n %lbl%+601 = True,\n %lbl%+172 = True,\n t@2 = -17,\n range@1 = 20,\n t@3 = 16,\n %lbl%+520 = True,\n %lbl%+159 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/MirrorInterv/call_001/00001_region_requires_coverage_1.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@2 range@0)",
+            "state": {
+              "t": "-17",
+              "range": "19"
+            },
+            "covering_regions": [
+              0,
+              5,
+              9,
+              13,
+              16,
+              21
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t range)",
+            "state": {
+              "t": "0",
+              "range": "-1"
+            },
+            "covering_regions": []
+          }
+        ]
+      },
+      {
+        "source_region": 2,
+        "query": {
+          "name": "region_requires_coverage_2",
+          "result": "unsat",
+          "seconds": 0.003591169001083472,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/MirrorInterv/call_001/00002_region_requires_coverage_2.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 3,
+        "query": {
+          "name": "region_requires_coverage_3",
+          "result": "sat",
+          "seconds": 0.0036092299997108057,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 21,\n range@2 = 20,\n range@0 = 20,\n %lbl%@725 = False,\n %lbl%@736 = False,\n %lbl%@662 = False,\n range = 20,\n t@1 = -14,\n t@0 = -15,\n %lbl%@540 = False,\n %lbl%+601 = True,\n %lbl%+165 = True,\n %lbl%+172 = True,\n %lbl%+183 = True,\n %lbl%+185 = True,\n %lbl%+181 = True,\n %lbl%+174 = True,\n t@2 = 14,\n range@1 = 21,\n t@3 = -15,\n %lbl%+520 = True,\n %lbl%+159 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/MirrorInterv/call_001/00003_region_requires_coverage_3.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@2 range@0)",
+            "state": {
+              "t": "14",
+              "range": "20"
+            },
+            "covering_regions": []
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@3 range@1)",
+            "state": {
+              "t": "-15",
+              "range": "21"
+            },
+            "covering_regions": [
+              3,
+              8,
+              11,
+              15,
+              19,
+              22
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t range)",
+            "state": {
+              "t": "21",
+              "range": "20"
+            },
+            "covering_regions": []
+          }
+        ]
+      },
+      {
+        "source_region": 4,
+        "query": {
+          "name": "region_requires_coverage_4",
+          "result": "unsat",
+          "seconds": 0.0036099890003242763,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/MirrorInterv/call_001/00004_region_requires_coverage_4.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 5,
+        "query": {
+          "name": "region_requires_coverage_5",
+          "result": "sat",
+          "seconds": 0.003642149998995592,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 21,\n range@2 = 20,\n range@0 = 19,\n %lbl%@725 = False,\n %lbl%@736 = False,\n t@1 = -15,\n %lbl%@662 = False,\n range = 20,\n t@0 = -15,\n %lbl%@540 = False,\n %lbl%+165 = True,\n %lbl%+172 = True,\n %lbl%+601 = True,\n %lbl%+181 = True,\n %lbl%+183 = True,\n %lbl%+185 = True,\n %lbl%+174 = True,\n t@2 = 15,\n range@1 = 20,\n t@3 = -16,\n %lbl%+520 = True,\n %lbl%+159 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/MirrorInterv/call_001/00005_region_requires_coverage_5.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@2 range@0)",
+            "state": {
+              "t": "15",
+              "range": "19"
+            },
+            "covering_regions": [
+              1,
+              10,
+              17,
+              23,
+              26,
+              29
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t range)",
+            "state": {
+              "t": "21",
+              "range": "20"
+            },
+            "covering_regions": []
+          }
+        ]
+      },
+      {
+        "source_region": 6,
+        "query": {
+          "name": "region_requires_coverage_6",
+          "result": "unsat",
+          "seconds": 0.0035285079993627733,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/MirrorInterv/call_001/00006_region_requires_coverage_6.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 7,
+        "query": {
+          "name": "region_requires_coverage_7",
+          "result": "unsat",
+          "seconds": 0.0035368080007174285,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/MirrorInterv/call_001/00007_region_requires_coverage_7.smt2"
+        },
+        "coverage_alternatives": []
+      }
+    ],
+    "interpretation": "One countermodel may admit several covering regions. These are witnessed coverage alternatives, not universally mandatory dependencies or a proof of minimum joint width.",
+    "proved_minimum_width": "not established"
+  },
+  {
+    "instance": "primary/NO_22/call_000",
+    "regions": [
+      "(and (<= t (+ 50 1)))",
+      "(and (<= t (+ 50 2)))",
+      "(and (<= t (+ 50 4)))",
+      "(and (<= t (+ 50 6)))",
+      "(and (<= t (+ 50 8)))",
+      "(and (<= t (+ 50 10)))",
+      "(and (<= t (+ 50 20)))"
+    ],
+    "observations": [
+      {
+        "source_region": 0,
+        "query": {
+          "name": "region_requires_coverage_0",
+          "result": "unsat",
+          "seconds": 0.003078327001276193,
+          "expected": null,
+          "passed": null,
+          "query_file": "stage2/logs/dependencies/primary/NO_22/call_000/00000_region_requires_coverage_0.smt2"
+        },
+        "coverage_alternatives": []
+      },
+      {
+        "source_region": 1,
+        "query": {
+          "name": "region_requires_coverage_1",
+          "result": "sat",
+          "seconds": 0.002992273999552708,
+          "expected": null,
+          "passed": null,
+          "model": "[%lbl%@340 = False,\n t = 53,\n %lbl%@387 = False,\n t@0 = 52,\n %lbl%@408 = False,\n %lbl%+102 = True,\n %lbl%+358 = True,\n %lbl%+109 = True,\n %lbl%+111 = True,\n %lbl%+113 = True,\n t@2 = 51,\n t@1 = 53,\n %lbl%+324 = True,\n %lbl%+96 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/NO_22/call_000/00001_region_requires_coverage_1.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@1)",
+            "state": {
+              "t": "53"
+            },
+            "covering_regions": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@2)",
+            "state": {
+              "t": "51"
+            },
+            "covering_regions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "53"
+            },
+            "covering_regions": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 2,
+        "query": {
+          "name": "region_requires_coverage_2",
+          "result": "sat",
+          "seconds": 0.00297255499936,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 55,\n t@0 = 52,\n %lbl%@387 = False,\n %lbl%@408 = False,\n %lbl%@340 = False,\n %lbl%+358 = True,\n %lbl%+113 = True,\n %lbl%+111 = True,\n %lbl%+102 = True,\n %lbl%+109 = True,\n t@1 = 53,\n t@2 = 51,\n %lbl%+324 = True,\n %lbl%+96 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/NO_22/call_000/00002_region_requires_coverage_2.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@1)",
+            "state": {
+              "t": "53"
+            },
+            "covering_regions": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@2)",
+            "state": {
+              "t": "51"
+            },
+            "covering_regions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "55"
+            },
+            "covering_regions": [
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 3,
+        "query": {
+          "name": "region_requires_coverage_3",
+          "result": "sat",
+          "seconds": 0.0029571930008387426,
+          "expected": null,
+          "passed": null,
+          "model": "[t@0 = 52,\n %lbl%@387 = False,\n t = 57,\n %lbl%@408 = False,\n %lbl%@340 = False,\n %lbl%+113 = True,\n %lbl%+111 = True,\n %lbl%+358 = True,\n %lbl%+102 = True,\n %lbl%+109 = True,\n t@1 = 53,\n t@2 = 51,\n %lbl%+324 = True,\n %lbl%+96 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/NO_22/call_000/00003_region_requires_coverage_3.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@1)",
+            "state": {
+              "t": "53"
+            },
+            "covering_regions": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@2)",
+            "state": {
+              "t": "51"
+            },
+            "covering_regions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "57"
+            },
+            "covering_regions": [
+              4,
+              5,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 4,
+        "query": {
+          "name": "region_requires_coverage_4",
+          "result": "sat",
+          "seconds": 0.002994234999277978,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 59,\n %lbl%@387 = False,\n t@0 = 52,\n %lbl%@408 = False,\n %lbl%@340 = False,\n %lbl%+358 = True,\n %lbl%+102 = True,\n %lbl%+111 = True,\n %lbl%+113 = True,\n %lbl%+109 = True,\n t@2 = 51,\n t@1 = 53,\n %lbl%+324 = True,\n %lbl%+96 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/NO_22/call_000/00004_region_requires_coverage_4.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@1)",
+            "state": {
+              "t": "53"
+            },
+            "covering_regions": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@2)",
+            "state": {
+              "t": "51"
+            },
+            "covering_regions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "59"
+            },
+            "covering_regions": [
+              5,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 5,
+        "query": {
+          "name": "region_requires_coverage_5",
+          "result": "sat",
+          "seconds": 0.0029995350014360156,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 61,\n t@0 = 52,\n %lbl%@387 = False,\n %lbl%@408 = False,\n %lbl%@340 = False,\n %lbl%+358 = True,\n %lbl%+111 = True,\n %lbl%+113 = True,\n %lbl%+102 = True,\n %lbl%+109 = True,\n t@2 = 51,\n t@1 = 53,\n %lbl%+324 = True,\n %lbl%+96 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/NO_22/call_000/00005_region_requires_coverage_5.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@1)",
+            "state": {
+              "t": "53"
+            },
+            "covering_regions": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@2)",
+            "state": {
+              "t": "51"
+            },
+            "covering_regions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "61"
+            },
+            "covering_regions": [
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 6,
+        "query": {
+          "name": "region_requires_coverage_6",
+          "result": "sat",
+          "seconds": 0.003021185999386944,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 71,\n t@0 = 52,\n %lbl%@387 = False,\n %lbl%@408 = False,\n %lbl%@340 = False,\n %lbl%+113 = True,\n %lbl%+111 = True,\n %lbl%+102 = True,\n %lbl%+109 = True,\n %lbl%+358 = True,\n t@2 = 51,\n t@1 = 53,\n %lbl%+324 = True,\n %lbl%+96 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/NO_22/call_000/00006_region_requires_coverage_6.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@1)",
+            "state": {
+              "t": "53"
+            },
+            "covering_regions": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@2)",
+            "state": {
+              "t": "51"
+            },
+            "covering_regions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "71"
+            },
+            "covering_regions": []
+          }
+        ]
+      }
+    ],
+    "interpretation": "One countermodel may admit several covering regions. These are witnessed coverage alternatives, not universally mandatory dependencies or a proof of minimum joint width.",
+    "proved_minimum_width": "not established"
+  },
+  {
+    "instance": "primary/TwoFloatInterv/call_000",
+    "regions": [
+      "(and (< 11 t) (<= t (+ 12 1)))",
+      "(and (< 11 t) (<= t (+ 12 2)))",
+      "(and (< 11 t) (<= t (+ 12 4)))",
+      "(and (< 11 t) (<= t (+ 12 6)))",
+      "(and (< 11 t) (<= t (+ 12 8)))",
+      "(and (< 11 t) (<= t (+ 12 10)))",
+      "(and (< 11 t) (<= t (+ 12 20)))"
+    ],
+    "observations": [
+      {
+        "source_region": 0,
+        "query": {
+          "name": "region_requires_coverage_0",
+          "result": "sat",
+          "seconds": 0.0035140470008627744,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 14,\n %lbl%@783 = False,\n %lbl%@802 = False,\n %lbl%@645 = False,\n t@1 = 13,\n t@5 = 13,\n t@3 = 12,\n %lbl%+142 = True,\n %lbl%+671 = True,\n %lbl%+149 = True,\n %lbl%+151 = True,\n %lbl%+153 = True,\n %lbl%+162 = True,\n %lbl%+164 = True,\n %lbl%+173 = True,\n %lbl%+175 = True,\n t@6 = 12,\n t@4 = 13,\n t@2 = 12,\n %lbl%+629 = True,\n %lbl%+136 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/TwoFloatInterv/call_000/00000_region_requires_coverage_0.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@5)",
+            "state": {
+              "t": "13"
+            },
+            "covering_regions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "14"
+            },
+            "covering_regions": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 1,
+        "query": {
+          "name": "region_requires_coverage_1",
+          "result": "sat",
+          "seconds": 0.003373903999090544,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 15,\n %lbl%@783 = False,\n %lbl%@802 = False,\n %lbl%@645 = False,\n t@1 = 14,\n t@5 = 14,\n t@3 = 13,\n %lbl%+153 = True,\n %lbl%+151 = True,\n %lbl%+162 = True,\n %lbl%+164 = True,\n %lbl%+173 = True,\n %lbl%+175 = True,\n %lbl%+671 = True,\n %lbl%+142 = True,\n %lbl%+149 = True,\n t@6 = 13,\n t@4 = 14,\n t@2 = 13,\n %lbl%+629 = True,\n %lbl%+136 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/TwoFloatInterv/call_000/00001_region_requires_coverage_1.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@6)",
+            "state": {
+              "t": "13"
+            },
+            "covering_regions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@5)",
+            "state": {
+              "t": "14"
+            },
+            "covering_regions": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "15"
+            },
+            "covering_regions": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 2,
+        "query": {
+          "name": "region_requires_coverage_2",
+          "result": "sat",
+          "seconds": 0.003365423999639461,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 17,\n %lbl%@783 = False,\n %lbl%@802 = False,\n %lbl%@645 = False,\n t@1 = 14,\n t@5 = 14,\n t@3 = 13,\n %lbl%+151 = True,\n %lbl%+153 = True,\n %lbl%+162 = True,\n %lbl%+164 = True,\n %lbl%+173 = True,\n %lbl%+175 = True,\n %lbl%+671 = True,\n %lbl%+142 = True,\n %lbl%+149 = True,\n t@6 = 13,\n t@4 = 14,\n t@2 = 13,\n %lbl%+629 = True,\n %lbl%+136 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/TwoFloatInterv/call_000/00002_region_requires_coverage_2.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@6)",
+            "state": {
+              "t": "13"
+            },
+            "covering_regions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@5)",
+            "state": {
+              "t": "14"
+            },
+            "covering_regions": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "17"
+            },
+            "covering_regions": [
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 3,
+        "query": {
+          "name": "region_requires_coverage_3",
+          "result": "sat",
+          "seconds": 0.003388823999557644,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 19,\n %lbl%@783 = False,\n %lbl%@802 = False,\n %lbl%@645 = False,\n t@1 = 13,\n t@5 = 13,\n t@3 = 12,\n %lbl%+151 = True,\n %lbl%+153 = True,\n %lbl%+164 = True,\n %lbl%+162 = True,\n %lbl%+173 = True,\n %lbl%+175 = True,\n %lbl%+671 = True,\n %lbl%+142 = True,\n %lbl%+149 = True,\n t@6 = 12,\n t@4 = 13,\n t@2 = 12,\n %lbl%+629 = True,\n %lbl%+136 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/TwoFloatInterv/call_000/00003_region_requires_coverage_3.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@5)",
+            "state": {
+              "t": "13"
+            },
+            "covering_regions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "19"
+            },
+            "covering_regions": [
+              4,
+              5,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 4,
+        "query": {
+          "name": "region_requires_coverage_4",
+          "result": "sat",
+          "seconds": 0.003388724000615184,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 21,\n %lbl%@783 = False,\n %lbl%@802 = False,\n %lbl%@645 = False,\n t@1 = 13,\n t@5 = 13,\n t@3 = 12,\n %lbl%+671 = True,\n %lbl%+151 = True,\n %lbl%+153 = True,\n %lbl%+162 = True,\n %lbl%+164 = True,\n %lbl%+173 = True,\n %lbl%+175 = True,\n %lbl%+142 = True,\n %lbl%+149 = True,\n t@6 = 12,\n t@4 = 13,\n t@2 = 12,\n %lbl%+629 = True,\n %lbl%+136 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/TwoFloatInterv/call_000/00004_region_requires_coverage_4.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@5)",
+            "state": {
+              "t": "13"
+            },
+            "covering_regions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "21"
+            },
+            "covering_regions": [
+              5,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 5,
+        "query": {
+          "name": "region_requires_coverage_5",
+          "result": "sat",
+          "seconds": 0.003410874000110198,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 23,\n %lbl%@783 = False,\n %lbl%@802 = False,\n %lbl%@645 = False,\n t@1 = 20,\n t@5 = 21,\n t@3 = 20,\n %lbl%+671 = True,\n %lbl%+142 = True,\n %lbl%+149 = True,\n %lbl%+151 = True,\n %lbl%+153 = True,\n %lbl%+162 = True,\n %lbl%+164 = True,\n %lbl%+173 = True,\n %lbl%+175 = True,\n t@6 = 20,\n t@4 = 21,\n t@2 = 19,\n %lbl%+629 = True,\n %lbl%+136 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/TwoFloatInterv/call_000/00005_region_requires_coverage_5.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@6)",
+            "state": {
+              "t": "20"
+            },
+            "covering_regions": [
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@5)",
+            "state": {
+              "t": "21"
+            },
+            "covering_regions": [
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "23"
+            },
+            "covering_regions": [
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "source_region": 6,
+        "query": {
+          "name": "region_requires_coverage_6",
+          "result": "sat",
+          "seconds": 0.003357874000357697,
+          "expected": null,
+          "passed": null,
+          "model": "[t = 33,\n %lbl%@783 = False,\n %lbl%@802 = False,\n %lbl%@645 = False,\n t@1 = 13,\n t@5 = 13,\n t@3 = 12,\n %lbl%+151 = True,\n %lbl%+153 = True,\n %lbl%+162 = True,\n %lbl%+164 = True,\n %lbl%+173 = True,\n %lbl%+175 = True,\n %lbl%+671 = True,\n %lbl%+142 = True,\n %lbl%+149 = True,\n t@6 = 12,\n t@4 = 13,\n t@2 = 12,\n %lbl%+629 = True,\n %lbl%+136 = True,\n tickleBool = [else -> True]]",
+          "query_file": "stage2/logs/dependencies/primary/TwoFloatInterv/call_000/00006_region_requires_coverage_6.smt2"
+        },
+        "coverage_alternatives": [
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t@5)",
+            "state": {
+              "t": "13"
+            },
+            "covering_regions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "native_negative_candidate_application": "(Stage2Candidate t)",
+            "state": {
+              "t": "33"
+            },
+            "covering_regions": []
+          }
+        ]
+      }
+    ],
+    "interpretation": "One countermodel may admit several covering regions. These are witnessed coverage alternatives, not universally mandatory dependencies or a proof of minimum joint width.",
+    "proved_minimum_width": "not established"
+  }
+]

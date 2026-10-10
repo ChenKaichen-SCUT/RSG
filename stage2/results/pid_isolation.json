@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "parent_namespace": "pid:[4026531836]",
+  "child": {
+    "pid": 1,
+    "namespace": "pid:[4026532508]",
+    "visible_processes": "    PID COMMAND\n      1 python\n      2 ps\n"
+  },
+  "process": {
+    "command": [
+      "/root/RSG/.venv/bin/python",
+      "-c",
+      "import os,json,subprocess; print(json.dumps({'pid':os.getpid(),'namespace':os.readlink('/proc/self/ns/pid'),'visible_processes':subprocess.check_output(['ps','-A','-o','pid,comm'],text=True)}))"
+    ],
+    "cwd": "/root/RSG/stage2-repo",
+    "started_utc": "2026-10-10T11:27:20.228117+00:00",
+    "pid_namespace_isolation": true,
+    "exit_code": 0,
+    "wall_seconds": 0.020883889999822713,
+    "sampled_peak_tree_rss_kib": 10684,
+    "rss_sampling_ms": 10,
+    "stdout": "stage2/logs/isolation/probe.stdout",
+    "stderr": "stage2/logs/isolation/probe.stderr"
+  },
+  "reason": "Official CondTerm.py kill_related_process calls kill_by_name using ps -A at lines 453/525/610. Private PID and /proc namespaces isolate those official cleanup calls without modifying algorithm or cleanup semantics."
+}

@@ -1,0 +1,361 @@
+{
+  "programs": {
+    "AlternDivWidening": {
+      "warmup_runs": 0,
+      "methods": {
+        "official": {
+          "runs": 1,
+          "tool_results": {
+            "Cond-Termination": 1
+          },
+          "statuses": {
+            "completed": 1
+          },
+          "successes": 1,
+          "wall_seconds": {
+            "n": 1,
+            "median": 6.0770240720012225,
+            "q1": 6.0770240720012225,
+            "q3": 6.0770240720012225,
+            "min": 6.0770240720012225,
+            "max": 6.0770240720012225
+          },
+          "iterations": {
+            "n": 1,
+            "median": 2,
+            "q1": 2.0,
+            "q3": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "rsl_calls": {
+            "n": 1,
+            "median": 1,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "termination_boogie_calls": {
+            "n": 1,
+            "median": 1,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "rsg_seconds": {
+            "n": 1,
+            "median": 0.027592799999999997,
+            "q1": 0.027592799999999997,
+            "q3": 0.027592799999999997,
+            "min": 0.027592799999999997,
+            "max": 0.027592799999999997
+          },
+          "rsg_solver_seconds": {
+            "n": 1,
+            "median": 0.0112769,
+            "q1": 0.0112769,
+            "q3": 0.0112769,
+            "min": 0.0112769,
+            "max": 0.0112769
+          },
+          "rsg_smt_calls": {
+            "n": 1,
+            "median": 4,
+            "q1": 4.0,
+            "q3": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "peak_tree_rss_kib": {
+            "n": 1,
+            "median": 368236,
+            "q1": 368236.0,
+            "q3": 368236.0,
+            "min": 368236,
+            "max": 368236
+          },
+          "accepted_extensions": 0,
+          "integration_errors": 0,
+          "conditions": [
+            "((w < 3) && (w < 4)) || ((w < 3) && (t + w > -1)) || ((w < 4) && (t - w < 1)) || ((t + w > -1) && (t - w < 1))"
+          ]
+        },
+        "closure": {
+          "runs": 1,
+          "tool_results": {
+            "Cond-Termination": 1
+          },
+          "statuses": {
+            "completed": 1
+          },
+          "successes": 1,
+          "wall_seconds": {
+            "n": 1,
+            "median": 8.558686710000984,
+            "q1": 8.558686710000984,
+            "q3": 8.558686710000984,
+            "min": 8.558686710000984,
+            "max": 8.558686710000984
+          },
+          "iterations": {
+            "n": 1,
+            "median": 2,
+            "q1": 2.0,
+            "q3": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "rsl_calls": {
+            "n": 1,
+            "median": 1,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "termination_boogie_calls": {
+            "n": 1,
+            "median": 1,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "rsg_seconds": {
+            "n": 1,
+            "median": 2.3915002999999997,
+            "q1": 2.3915002999999997,
+            "q3": 2.3915002999999997,
+            "min": 2.3915002999999997,
+            "max": 2.3915002999999997
+          },
+          "rsg_solver_seconds": {
+            "n": 1,
+            "median": 0.6459823890231428,
+            "q1": 0.6459823890231428,
+            "q3": 0.6459823890231428,
+            "min": 0.6459823890231428,
+            "max": 0.6459823890231428
+          },
+          "rsg_smt_calls": {
+            "n": 1,
+            "median": 158,
+            "q1": 158.0,
+            "q3": 158.0,
+            "min": 158,
+            "max": 158
+          },
+          "peak_tree_rss_kib": {
+            "n": 1,
+            "median": 300824,
+            "q1": 300824.0,
+            "q3": 300824.0,
+            "min": 300824,
+            "max": 300824
+          },
+          "accepted_extensions": 1,
+          "integration_errors": 0,
+          "conditions": [
+            "(w <= 0) || ((t <= w) && (t + w > -1))"
+          ]
+        },
+        "joint": {
+          "runs": 1,
+          "tool_results": {
+            "Cond-Termination": 1
+          },
+          "statuses": {
+            "completed": 1
+          },
+          "successes": 1,
+          "wall_seconds": {
+            "n": 1,
+            "median": 6.321718817000146,
+            "q1": 6.321718817000146,
+            "q3": 6.321718817000146,
+            "min": 6.321718817000146,
+            "max": 6.321718817000146
+          },
+          "iterations": {
+            "n": 1,
+            "median": 2,
+            "q1": 2.0,
+            "q3": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "rsl_calls": {
+            "n": 1,
+            "median": 1,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "termination_boogie_calls": {
+            "n": 1,
+            "median": 1,
+            "q1": 1.0,
+            "q3": 1.0,
+            "min": 1,
+            "max": 1
+          },
+          "rsg_seconds": {
+            "n": 1,
+            "median": 0.3841776,
+            "q1": 0.3841776,
+            "q3": 0.3841776,
+            "min": 0.3841776,
+            "max": 0.3841776
+          },
+          "rsg_solver_seconds": {
+            "n": 1,
+            "median": 0.0637552229988475,
+            "q1": 0.0637552229988475,
+            "q3": 0.0637552229988475,
+            "min": 0.0637552229988475,
+            "max": 0.0637552229988475
+          },
+          "rsg_smt_calls": {
+            "n": 1,
+            "median": 19,
+            "q1": 19.0,
+            "q3": 19.0,
+            "min": 19,
+            "max": 19
+          },
+          "peak_tree_rss_kib": {
+            "n": 1,
+            "median": 300680,
+            "q1": 300680.0,
+            "q3": 300680.0,
+            "min": 300680,
+            "max": 300680
+          },
+          "accepted_extensions": 0,
+          "integration_errors": 0,
+          "conditions": [
+            "((w < 3) && (w < 4)) || ((w < 3) && (t + w > -1)) || ((w < 4) && (t - w < 1)) || ((t + w > -1) && (t - w < 1))"
+          ]
+        }
+      },
+      "paired_wall_differences": {
+        "closure": {
+          "median_difference_seconds": 2.4816626379997615,
+          "bootstrap_95_percent_CI": [
+            2.4816626379997615,
+            2.4816626379997615
+          ],
+          "bootstrap_resamples": 10000,
+          "differences": [
+            2.4816626379997615
+          ],
+          "direction": "method minus official; positive means slower"
+        },
+        "joint": {
+          "median_difference_seconds": 0.24469474499892385,
+          "bootstrap_95_percent_CI": [
+            0.24469474499892385,
+            0.24469474499892385
+          ],
+          "bootstrap_resamples": 10000,
+          "differences": [
+            0.24469474499892385
+          ],
+          "direction": "method minus official; positive means slower"
+        }
+      },
+      "entry_state": {
+        "t": "t__entry",
+        "w": "5"
+      },
+      "entry_error": null,
+      "exact_condition_checks": [
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "pilot",
+            "round": 0,
+            "method": "joint"
+          },
+          "check": {
+            "name": "exact_0",
+            "result": "unsat",
+            "seconds": 0.004343098000390455,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e_pilot/condition_validation/AlternDivWidening/00002_exact_0.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "pilot",
+            "round": 0,
+            "method": "official"
+          },
+          "check": {
+            "name": "exact_1",
+            "result": "unsat",
+            "seconds": 0.003119987000900437,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e_pilot/condition_validation/AlternDivWidening/00003_exact_1.smt2"
+          }
+        },
+        {
+          "trial": {
+            "program": "AlternDivWidening",
+            "phase": "pilot",
+            "round": 0,
+            "method": "closure"
+          },
+          "check": {
+            "name": "exact_2",
+            "result": "unsat",
+            "seconds": 0.003234840000004624,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/e2e_pilot/condition_validation/AlternDivWidening/00004_exact_2.smt2"
+          }
+        }
+      ]
+    }
+  },
+  "condition_checks": [
+    {
+      "program": "AlternDivWidening",
+      "round": 0,
+      "method": "closure",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_closure_0",
+        "result": "unsat",
+        "seconds": 0.004885090998868691,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e_pilot/condition_validation/AlternDivWidening/00000_condition_closure_0.smt2"
+      }
+    },
+    {
+      "program": "AlternDivWidening",
+      "round": 0,
+      "method": "joint",
+      "baseline_result": "Cond-Termination",
+      "method_result": "Cond-Termination",
+      "entry_equivalence": {
+        "name": "condition_joint_0",
+        "result": "unsat",
+        "seconds": 0.0040014000005612615,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/e2e_pilot/condition_validation/AlternDivWidening/00001_condition_joint_0.smt2"
+      }
+    }
+  ],
+  "timing_scope": "Full process wall time, includes failed and unknown runs, startup, tracing, search, serialization and all official stages. Four independent paired blocks may run concurrently; no isolated-host speed claim.",
+  "solver_scope": "RSG native and Python checks only; termination-side solver total unavailable, not replaced by zero."
+}

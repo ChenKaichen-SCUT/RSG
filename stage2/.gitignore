@@ -2,7 +2,4 @@
 /corpus/
 /logs/
 /replay/
-/results/collection/
-/results/comparison/
-/results/validation/
-/results/repro_build/
+/results/*/

@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "programs": [
+    {
+      "program": "ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination",
+      "condition_equivalence": {
+        "name": "final_condition_equivalence",
+        "result": "unsat",
+        "seconds": 0.0026548860005277675,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/natural_control_validation/ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination/00000_final_condition_equivalence.smt2"
+      },
+      "pristine": {
+        "result": "Cond-Termination",
+        "iterations": 2,
+        "rslearn_invocations": 1,
+        "condition": "(x > 0) || (x < y) || (y < 0)"
+      },
+      "traced": {
+        "result": "Cond-Termination",
+        "iterations": 2,
+        "rslearn_invocations": 1,
+        "condition": "(x > 0) || (x < y) || (y < 0)"
+      },
+      "passed": true
+    },
+    {
+      "program": "Flip",
+      "condition_equivalence": {
+        "name": "final_condition_equivalence",
+        "result": "unsat",
+        "seconds": 0.0026320950000808807,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/natural_control_validation/Flip/00000_final_condition_equivalence.smt2"
+      },
+      "pristine": {
+        "result": "Cond-Termination",
+        "iterations": 4,
+        "rslearn_invocations": 3,
+        "condition": "((_i > -1) || (j > -1)) && ((_i > -1) || (j < 1)) && ((j > -1) || (_i < 1)) && ((_i < 1) || (j < 1))"
+      },
+      "traced": {
+        "result": "Cond-Termination",
+        "iterations": 4,
+        "rslearn_invocations": 3,
+        "condition": "((_i > -1) || (j > -1)) && ((_i > -1) || (j < 1)) && ((j > -1) || (_i < 1)) && ((_i < 1) || (j < 1))"
+      },
+      "passed": true
+    },
+    {
+      "program": "Singapore_v2_false-termination",
+      "condition_equivalence": {
+        "name": "final_condition_equivalence",
+        "result": "unsat",
+        "seconds": 0.002507072000298649,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/natural_control_validation/Singapore_v2_false-termination/00000_final_condition_equivalence.smt2"
+      },
+      "pristine": {
+        "result": "Cond-Termination",
+        "iterations": 2,
+        "rslearn_invocations": 1,
+        "condition": "(x < 1) || (x + y < 1)"
+      },
+      "traced": {
+        "result": "Cond-Termination",
+        "iterations": 2,
+        "rslearn_invocations": 1,
+        "condition": "(x < 1) || (x + y < 1)"
+      },
+      "passed": true
+    }
+  ]
+}

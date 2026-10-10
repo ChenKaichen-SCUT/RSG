@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "fresh_directory": "/root/RSG/stage2-repo/stage2/work/fresh-reproduction-20261010T124516Z",
+  "base_environment": "/root/RSG",
+  "steps": [
+    {
+      "script": "setup.py",
+      "command": [
+        "/root/RSG/.venv/bin/python",
+        "/root/RSG/stage2-repo/stage2/work/fresh-reproduction-20261010T124516Z/stage2/scripts/setup.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 9.864744447000703
+    },
+    {
+      "script": "replay_instance.py",
+      "command": [
+        "/root/RSG/.venv/bin/python",
+        "/root/RSG/stage2-repo/stage2/work/fresh-reproduction-20261010T124516Z/stage2/scripts/replay_instance.py",
+        "primary/TwoFloatInterv/call_001"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 11.15613435600062
+    },
+    {
+      "script": "compare_balanced.py",
+      "command": [
+        "/root/RSG/.venv/bin/python",
+        "/root/RSG/stage2-repo/stage2/work/fresh-reproduction-20261010T124516Z/stage2/scripts/compare_balanced.py",
+        "--workers",
+        "1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.30787320300078136
+    }
+  ],
+  "instance": "primary/TwoFloatInterv/call_001",
+  "all_methods_valid": true,
+  "C_strictly_larger_than_official": true,
+  "scope": "New source copy and native build; frozen actual input replay and all seven methods, no RSLearn rerun. Reuses installed stage-1 runtime."
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "program": "AlternDivWidening",
+    "exact_entry_termination": "-5 <= t && t <= 5; initial w := 5",
+    "nontermination_set": "(and (>= w 0) (or (< t (- w)) (> t w)))",
+    "transition_t": "(ite (< t (- w)) (- (- t 1)) (ite (> t w) (- (+ t 1)) 0))",
+    "transition_w": "(+ w 1)",
+    "checks": [
+      {
+        "name": "nonterm_guard",
+        "result": "unsat",
+        "seconds": 0.002628565998747945,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/exact_conditions/AlternDivWidening/00000_nonterm_guard.smt2"
+      },
+      {
+        "name": "nonterm_closure",
+        "result": "unsat",
+        "seconds": 0.0031643379988963716,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/exact_conditions/AlternDivWidening/00001_nonterm_closure.smt2"
+      },
+      {
+        "name": "term_one_step",
+        "result": "unsat",
+        "seconds": 0.0024939119994087378,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/exact_conditions/AlternDivWidening/00002_term_one_step.smt2"
+      },
+      {
+        "name": "entry_partition",
+        "result": "unsat",
+        "seconds": 0.0024448509993817424,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/exact_conditions/AlternDivWidening/00003_entry_partition.smt2"
+      }
+    ],
+    "native_vc_check": {
+      "name": "native_recurrent_set",
+      "result": "unsat",
+      "seconds": 0.0033555539994267747,
+      "expected": "unsat",
+      "passed": true,
+      "query_file": "stage2/logs/exact_conditions/AlternDivWidening/00004_native_recurrent_set.smt2"
+    }
+  },
+  {
+    "program": "Ex06",
+    "exact_entry_termination": "t < -5 || t > 5; otherwise the guard is a closed set, including fixed point 0",
+    "transition_t": "(ite (< (ite (> t 0) (- t 1) t) 0)\n     (+ (ite (> t 0) (- t 1) t) 1)\n     (ite (> t 0) (- t 1) t))",
+    "checks": [
+      {
+        "name": "guard_closed",
+        "result": "unsat",
+        "seconds": 0.0032873119998839684,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/exact_conditions/Ex06/00000_guard_closed.smt2"
+      },
+      {
+        "name": "native_guard_recurrent",
+        "result": "unsat",
+        "seconds": 0.0028977120000490686,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/exact_conditions/Ex06/00001_native_guard_recurrent.smt2"
+      }
+    ]
+  }
+]

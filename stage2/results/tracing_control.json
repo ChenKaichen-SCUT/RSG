@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "natural_seed_equals_R0",
+      "result": "unsat",
+      "seconds": 0.0033467330013081664,
+      "expected": "unsat",
+      "passed": true,
+      "query_file": "stage2/logs/control_verification/00000_natural_seed_equals_R0.smt2"
+    },
+    {
+      "name": "official_equals_R0",
+      "result": "unsat",
+      "seconds": 0.00288458199975139,
+      "expected": "unsat",
+      "passed": true,
+      "query_file": "stage2/logs/control_verification/00001_official_equals_R0.smt2"
+    },
+    {
+      "name": "native_context_R0",
+      "result": "unsat",
+      "seconds": 0.0031063370006449986,
+      "expected": "unsat",
+      "passed": true,
+      "query_file": "stage2/logs/control_verification/00002_native_context_R0.smt2"
+    },
+    {
+      "name": "native_context_Rstar",
+      "result": "unsat",
+      "seconds": 0.0029989550002937904,
+      "expected": "unsat",
+      "passed": true,
+      "query_file": "stage2/logs/control_verification/00003_native_context_Rstar.smt2"
+    },
+    {
+      "name": "native_context_A",
+      "result": "sat",
+      "seconds": 0.003109926999968593,
+      "expected": "sat",
+      "passed": true,
+      "model": "[p = 2,\n %lbl%@217 = False,\n p@1 = 0,\n %lbl%@391 = False,\n x@1 = 1,\n x = 5,\n %lbl%+116 = True,\n %lbl%+118 = True,\n %lbl%+283 = True,\n x@2 = 3,\n p@2 = 1,\n %lbl%+203 = True,\n %lbl%+110 = True,\n tickleBool = [else -> True]]",
+      "query_file": "stage2/logs/control_verification/00004_native_context_A.smt2"
+    },
+    {
+      "name": "native_context_B",
+      "result": "sat",
+      "seconds": 0.0030703960001119412,
+      "expected": "sat",
+      "passed": true,
+      "model": "[p = 1,\n %lbl%@217 = False,\n p@1 = 1,\n %lbl%@391 = False,\n x@1 = 3,\n x = 3,\n %lbl%+116 = True,\n %lbl%+118 = True,\n %lbl%+283 = True,\n p@2 = 0,\n x@2 = 1,\n %lbl%+203 = True,\n %lbl%+110 = True,\n tickleBool = [else -> True]]",
+      "query_file": "stage2/logs/control_verification/00005_native_context_B.smt2"
+    },
+    {
+      "name": "native_context_guard",
+      "result": "sat",
+      "seconds": 0.003063086998736253,
+      "expected": "sat",
+      "passed": true,
+      "model": "[p = 1,\n %lbl%@217 = False,\n p@1 = 0,\n %lbl%@391 = False,\n x@1 = 2,\n x = 3,\n %lbl%+116 = True,\n %lbl%+118 = True,\n %lbl%+283 = True,\n p@2 = 1,\n x@2 = 2,\n %lbl%+203 = True,\n %lbl%+110 = True,\n tickleBool = [else -> True]]",
+      "query_file": "stage2/logs/control_verification/00006_native_context_guard.smt2"
+    },
+    {
+      "name": "native_context_true",
+      "result": "sat",
+      "seconds": 0.0027137180004501715,
+      "expected": "sat",
+      "passed": true,
+      "model": "[p = 2,\n x = 5,\n %lbl%+203 = True,\n %lbl%+110 = True,\n %lbl%@217 = False,\n tickleBool = [else -> True]]",
+      "query_file": "stage2/logs/control_verification/00007_native_context_true.smt2"
+    },
+    {
+      "name": "final_condition_equivalence",
+      "result": "unsat",
+      "seconds": 0.0024031299999478506,
+      "expected": "unsat",
+      "passed": true,
+      "query_file": "stage2/logs/control_verification/00008_final_condition_equivalence.smt2"
+    },
+    {
+      "name": "final_condition_exact",
+      "result": "unsat",
+      "seconds": 0.003109756999037927,
+      "expected": "unsat",
+      "passed": true,
+      "query_file": "stage2/logs/control_verification/00009_final_condition_exact.smt2"
+    }
+  ],
+  "pristine_iterations": 3,
+  "traced_iterations": 3,
+  "pristine_rsl_calls": 2,
+  "traced_rsl_calls": 2,
+  "trace_initial_bug": "AST parent nodes may have no inferred Type; initial pilot threw after RSG, fixed with nullable metadata. Failed pilot retained under trace_control.",
+  "parser_compatibility": "Legacy :lblpos/:lblneg annotations structurally erased; treating them as arbitrary label applications was rejected by negative/control tests."
+}

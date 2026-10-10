@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "all_official_programs_attempted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_traces_accounted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "nonempty_contexts_valid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_method_outputs_valid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "frozen_207_trial_schedule",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "uniform_formal_concurrency",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_shared_cache_trace_mismatch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_online_integration_errors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tracing_control.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "natural_tracing_controls.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "replay_syntax_integrity.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "e2e_online_validation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "two_exact_program_condition_checks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "available_entry_condition_equivalences",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw_trial_process_logs_exist",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "tool_results": {
+    "Unknown": 49,
+    "Cond-Termination": 213,
+    "Timeout": 3,
+    "None": 1
+  },
+  "formal_trial_results": {
+    "Cond-Termination": 119,
+    "Unknown": 61
+  }
+}

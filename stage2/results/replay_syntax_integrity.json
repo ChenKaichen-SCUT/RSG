@@ -1,0 +1,1611 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "instance": "primary/2Nested_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/2Nested_false-termination/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/2Nested_false-termination/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/2Nested_false-termination/call_002",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/2Nested_false-termination/call_002",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/2Nested_false-termination/call_002",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/2Nested_false-termination/call_003",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/2Nested_false-termination/call_004",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/2Nested_false-termination/call_005",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/2Nested_false-termination/call_005",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/2Nested_false-termination/call_005",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/2Nested_false-termination/call_005",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/2Nested_false-termination/call_006",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/2Nested_false-termination/call_007",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/2Nested_false-termination/call_008",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternDiv/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternDiv/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternDivWide/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternDivWide/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternDivWidening/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternDivWidening/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternDivWidening/call_000",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternDivWidening/call_000",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_003",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_004",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_005",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_006",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_007",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_008",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_009",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_010",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_011",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_012",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_013",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/AlternKonv/call_014",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Bangalore_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Bangalore_v2_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Bangalore_v3_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/BradleyMannaSipma-CAV2005-Fig1-modified_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/BradleyMannaSipma-CAV2005-Fig1-modified_false-termination/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/BradleyMannaSipma-CAV2005-Fig1-modified_false-termination/call_001",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_nondet_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_003",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_004",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_005",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_006",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_007",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_008",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_009",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_010",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_011",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_012",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_013",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cairo_step2_false-termination/call_014",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenCookFuhsNimkarOHearn-TACAS2014-Introduction_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_003",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_004",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_004",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_004",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_004",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_005",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_006",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_006",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_006",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_007",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_007",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.02_false-termination/call_007",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.03_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.03_false-termination/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.04_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.04_false-termination/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.14_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.15_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.17_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.17_false-termination/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.17_false-termination/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.17_false-termination/call_001",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.17_false-termination/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.17_false-termination/call_002",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.17_false-termination/call_003",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.17_false-termination/call_003",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.17_false-termination/call_004",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.17_false-termination/call_005",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex2.17_false-termination/call_006",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex3.02_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex3.02_false-termination/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex3.02_false-termination/call_001",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex3.02_false-termination/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex3.02_false-termination/call_002",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex3.06_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex3.06_false-termination/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex3.06_false-termination/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex3.06_false-termination/call_002",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex3.06_false-termination/call_003",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChenFlurMukhopadhyay-SAS2012-Ex3.06_false-termination/call_004",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Choose/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ChooseLife/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ComplInterv/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ComplInterv/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ComplInterv2/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ComplInterv2/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ComplInterv3/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ComplInterv3/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ComplxStruc/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/ConvLower/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Cousot/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/DivWithoutMinus/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/DivWithoutMinus/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/DoubleNeg/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Even/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex01/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex02/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex03/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex04/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex05/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex06/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex06/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex06/call_000",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex06/call_000",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex06/call_000",
+      "iteration": 4,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex06/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex06/call_001",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex06/call_001",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex06/call_001",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex06/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex06/call_002",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex07/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Ex08/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_001",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_002",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_002",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_003",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_003",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_003",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_003",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_004",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_004",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_004",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_004",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_005",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_005",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_005",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_005",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_005",
+      "iteration": 4,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_006",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_006",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_006",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_006",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_007",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_007",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_007",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Factorial/call_007",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Fibonacci/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Fibonacci/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Fibonacci/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Fibonacci/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Fibonacci/call_002",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Flip/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Flip/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Flip/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Flip2/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Gauss/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_2vars_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_2vars_false-termination/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_2vars_false-termination/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_2vars_false-termination/call_003",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_2vars_false-termination/call_004",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_2vars_false-termination/call_004",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_2vars_false-termination/call_005",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_2vars_false-termination/call_005",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_2vars_false-termination/call_005",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_2vars_false-termination/call_005",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_2vars_false-termination/call_005",
+      "iteration": 4,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_2vars_false-termination/call_006",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_2vars_false-termination/call_007",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_3vars_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_3vars_false-termination/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_3vars_false-termination/call_001",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_3vars_false-termination/call_001",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_3vars_false-termination/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_3vars_false-termination/call_002",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_3vars_false-termination/call_002",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_plus_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_plus_false-termination/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_plus_false-termination/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_plus_false-termination/call_002",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_plus_false-termination/call_002",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Hanoi_plus_false-termination/call_002",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Lcm/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Lcm/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/LeikeHeizmann-WST2014-Ex5_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/LeikeHeizmann-WST2014-Ex6_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Loop/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Loop/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Loop/call_000",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Madrid_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Marbie1/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Marbie2/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_001",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_003",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_004",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_005",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_006",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_006",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_007",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_008",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_009",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_010",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_011",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_012",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_012",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_013",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_013",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Middle/call_014",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/MirrorInterv/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/MirrorInterv/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/MirrorInterv/call_000",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/MirrorInterv/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/MirrorInterv/call_001",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/MirrorInterv/call_001",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/MirrorInterv/call_001",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/MirrorIntervSim/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/MirrorIntervSim/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Mysore_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_000",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_000",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_000",
+      "iteration": 4,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_001",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_001",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_001",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_002",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_002",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_002",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_003",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_00/call_003",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_10/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_10/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_10/call_000",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_10/call_000",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_10/call_000",
+      "iteration": 4,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_12/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_13/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_13/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_21/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_21/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_21/call_000",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_21/call_000",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_21/call_000",
+      "iteration": 4,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_22/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_22/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_22/call_000",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_22/call_000",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_22/call_000",
+      "iteration": 4,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_23/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_23/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_23/call_000",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_23/call_000",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_24/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NO_24/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NarrowKonv/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Narrowing/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Narrowing/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NonTermination1_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NonTermination4_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NonTerminationSimple2_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NonTerminationSimple3_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NonTerminationSimple4_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NonTerminationSimple6_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/NonTerminationSimple7_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Rotation180_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Singapore_plus_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Singapore_plus_false-termination/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Singapore_v1_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Singapore_v2_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Singapore_v2_false-termination/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Sunset/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Sunset/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Swingers/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Swingers/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Swingers/call_000",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Swingers/call_000",
+      "iteration": 3,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Swingers/call_000",
+      "iteration": 4,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/TrueDiv/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/TwoFloatInterv/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/TwoFloatInterv/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/TwoFloatInterv/call_000",
+      "iteration": 2,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/TwoFloatInterv/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/TwoFloatInterv/call_002",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/TwoFloatInterv/call_002",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/UpAndDown/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/UpAndDownIneq/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Urban-WST2013-Fig1_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Urban-WST2013-Fig1_false-termination/call_000",
+      "iteration": 1,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Velroyen_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/Velroyen_false-termination/call_001",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/WhileIncr/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/WhileIncrPart/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/WhilePart/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/WhileSingle/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/WhileTrue/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    },
+    {
+      "instance": "primary/WhileTrue_false-termination/call_000",
+      "iteration": 0,
+      "exact_ast_shape_equal": true
+    }
+  ],
+  "ignored_metadata": "sort only: native type inference may populate initially null parent sort; no Boolean/arithmetic structure ignored"
+}

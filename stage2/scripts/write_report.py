@@ -6,6 +6,7 @@ from common import ROOT,S
 read=lambda n:json.loads((S/'results'/n).read_text())
 summary=read('summary.json');a=summary['all'];e=read('e2e_analysis.json');runs=read('e2e.json')
 online=read('e2e_online_validation.json');evidence=json.loads((S/'evidence/manifest.json').read_text())
+assert read('fresh_reproducibility.json')['passed'] and read('delivery_audit.json')['passed'] and read('archive_integrity.json')['passed']
 assert len(runs)==207 and online['passed']
 assert collections.Counter(r['trial']['phase'] for r in runs)=={'warmup':27,'measurement':180}
 assert all(r.get('configured_workers')==16 for r in runs if r['trial']['phase']=='measurement')
@@ -30,7 +31,7 @@ split_methods=table(['方法','smoke 严格超过 A：输入/程序','holdout �
  [n,*[f"{summary[s]['methods'][n]['strictly_larger_than_official_instances']}/{len(summary[s]['methods'][n]['strictly_larger_than_official_programs'])}" for s in ('smoke','holdout')]] for n in a['methods']])
 costs=table(['方法','搜索 SMT 次数','另计原生查询','搜索求解器累计秒','算法累计秒','算法秒范围'],[
  [n,m['search_smt_calls_sum'],m.get('additional_native_smt_calls_sum',0),f(m['search_solver_seconds_sum']),f(m['algorithm_seconds_sum']),f"{f(m['algorithm_seconds_min'])}–{f(m['algorithm_seconds_max'])}"] for n,m in a['methods'].items()])
-e2e=table(['程序/方法','成功/20','返回状态','总秒中位数 [Q1,Q3]','迭代/RSLearn/终止侧调用中位数','接纳次数/错误'],[
+e2e=table(['程序/方法','成功/20','返回状态','总秒中位数 [Q1,Q3]','迭代/RSLearn/终止侧调用中位数','接纳扩展/集成异常'],[
  [p+'/'+n,m['successes'],','.join(f'{k}:{v}' for k,v in m['tool_results'].items()),dist(m['wall_seconds']),
   '/'.join(str(m[k]['median']) for k in ('iterations','rsl_calls','termination_boogie_calls')),f"{m['accepted_extensions']}/{m['integration_errors']}"]
  for p,d in e['programs'].items() for n,m in d['methods'].items()])
@@ -48,15 +49,23 @@ exact=sum(len(d['exact_condition_checks']) for d in e['programs'].values())
 exact_pass=sum(x['check']['passed'] for d in e['programs'].values() for x in d['exact_condition_checks'])
 eq=[r for r in e['condition_checks'] if 'entry_equivalence' in r]
 eq_pass=sum(r['entry_equivalence']['passed'] for r in eq)
+alt=e['programs']['AlternDivWidening']['methods'];ex=e['programs']['Ex06']['methods'];fib=e['programs']['Fibonacci']['methods']
+interpretation=(f"Ex06 的 closure 外层迭代中位数为 {ex['closure']['iterations']['median']}，官方为 {ex['official']['iterations']['median']}；"
+ f"完整墙钟中位数分别为 {f(ex['closure']['wall_seconds']['median'])} 秒和 {f(ex['official']['wall_seconds']['median'])} 秒。"
+ f"AlternDivWidening 的 closure/官方迭代中位数均为 {alt['official']['iterations']['median']}，"
+ f"但墙钟分别为 {f(alt['closure']['wall_seconds']['median'])}/{f(alt['official']['wall_seconds']['median'])} 秒：新增内部状态没有改变入口条件或迭代数，搜索成本仍需支付。"
+ f"Fibonacci 的 closure/官方迭代中位数为 {fib['closure']['iterations']['median']}/{fib['official']['iterations']['median']}，"
+ f"墙钟为 {f(fib['closure']['wall_seconds']['median'])}/{f(fib['official']['wall_seconds']['median'])} 秒；三配置仍全部 Unknown，不能把少一次迭代等同于解决程序。"
+ "同一 seed 的 RSLearn 调用计数仍有波动，原始分布完整保留，未以试跑的单次值替代正式统计。")
 report=f'''# 第二阶段：CondTerm 自然 RSG 输入、闭包与自动联合搜索
 
 实验日期：2026-10-10（日志使用 UTC）。基线提交 `769bca6e3b232527135117407ecee9d6be97197f`；独立分支 `stage2/natural-rsg-20261010`。完整定义和源文件哈希见 [protocol](../stage2/config/protocol.json)、[manifest](../stage2/config/manifest.json)，复现入口见 [README](../stage2/README.md)。
 
 ## 结论和决策
 
-**NO-GO：本轮证据不支持投入完整增量 SAT/MaxSAT + SMT 泛化器。** 266 个官方程序全部尝试，95 个触发 RSG，203 次输入中 201 次为非空有效输入；其中 73 次多项输入只来自 18 个程序。自动双项方法 E-v1 和事后修复 E-v2 均未找到严格包含官方结果的集合。没有一个程序满足本报告的保守 Type II/III 证据条件；这表示本轮没有证明必要协调，不能解释为协调缺口在数学上不存在。
+**PARTIAL：自然收益已经验证，但必要协调、联合搜索优势及跨程序实用性证据不足，暂不投入完整增量 SAT/MaxSAT + SMT 泛化器。** 266 个官方程序全部尝试，95 个触发 RSG，203 次输入中 201 次为非空有效输入；其中 73 次多项输入只来自 18 个程序。自动双项方法 E-v1 和事后修复 E-v2 均未找到严格包含官方结果的集合（本预算下为 0/18 个具有多项输入的程序）。没有一个程序满足本报告的保守 Type II/III 证据条件；这表示本轮没有证明必要协调，不能解释为协调缺口在数学上不存在。
 
-重复官方 RSG 在 17 个程序的 25 次输入上超过一次官方调用；受限符号闭包在 11 个程序的 14 次输入上超过官方。精确有限闭包在 Ex06 的两次输入上超过官方，且实际集成减少外层迭代。更合理的近期方向是重复泛化、适用时的精确有限闭包、入口相关性筛选和廉价符号闭包；还没有足够证据作出“大量必要协调由符号闭包解决”的 PIVOT 判断。
+重复官方 RSG 在 17 个程序的 25 次输入上超过一次官方调用；受限符号闭包在 11 个程序的 14 次输入上超过官方。精确有限闭包在 Ex06 的两次输入上超过官方，且实际集成减少外层迭代。更合理的近期方向是重复泛化、适用时的精确有限闭包、入口相关性筛选和廉价符号闭包。C/E 在找到相对 R0 的第一个扩展后停止，E 的局部候选池又受限，因而不能从零个超过 A 的结果强推真实协调缺口稀少；也没有足够证据作出“大量必要协调由符号闭包解决”的 PIVOT 判断。PARTIAL 是对研究假设证据强度的判断，本轮 266 个程序、核心比较和 207 次端到端运行均已完成。
 
 ## 继承、源码审计与观测可信度
 
@@ -130,15 +139,19 @@ A 是 C# 内部函数计时，B 包含多次原生进程启动，C/D/E 为 Pytho
 
 {e2e}
 
+{interpretation}
+
+AlternDivWidening 的 closure 正式测量为 **19/20 成功、1 次 Unknown**（round 19）。该轮接纳的 RSG 集合仍通过完整 VC；随后官方生成的 CBC 程序引用了未声明的 `TR1`–`TR4`，准确保存的生成文件可独立重现 28 个名称解析错误。该 Unknown 的全部时间和分母保留，没有补跑替换。诊断见 [frontend_failure_diagnosis.json](../stage2/results/frontend_failure_diagnosis.json)。这也说明集合合法并不保证前端所有后续路径可靠。
+
 成对差为“方法总秒 − 同 round 官方总秒”，正数代表更慢；各 20 对，按配对差重采样 10,000 次、固定统计 seed 20261010，报告中位数差的百分位 bootstrap 区间。共享主机上块间资源相关、程序仅三个，因此置信区间是该调度下的描述性不确定度，不是跨程序总体显著性保证。Unknown/Timeout/失败的全部墙钟纳入，不能据被截尾/Unknown 程序声称 time-to-solution 加速。
 
 {paired}
 
 {ecost}
 
-进程树 RSS 每 10 ms 采样，峰值是采样下界。表中 SMT 成本仅 RSG 原生与 Python 查询；没有完整插桩终止侧内部 SMT 总量，不能把缺失总量记成 0。总墙钟包括解释器启动、搜索、公式转换、trace、终止侧和所有官方阶段。Python 候选与 C# **实际返回 AST** 分别检查：{len(online['checks'])} 个在线返回全部通过完整 VC 及边界等价验证。
+进程树 RSS 每 10 ms 采样，可能漏过短峰值，也可能重复计算共享页；它是该 RSS 求和指标的采样峰值，不等于唯一物理内存占用。表中 SMT 成本仅 RSG 原生与 Python 查询；没有完整插桩终止侧内部 SMT 总量，不能把缺失总量记成 0。总墙钟包括解释器启动、搜索、公式转换、trace、终止侧和所有官方阶段。Python 候选与 C# **实际返回 AST** 分别检查：{len(online['checks'])} 个在线返回全部通过完整 VC 及边界等价验证。
 
-最终条件在真实入口赋值/假设下比较，而不是把内部状态变量无条件视为自由输入。AlternDivWidening 入口 w=5 的精确终止条件为 `-5<=t<=5`；Ex06 为 `t<-5 || t>5`。两者独立归纳/立即退出证明见 [exact_e2e_conditions.json](../stage2/results/exact_e2e_conditions.json)；正式输出精确性检查 {exact_pass}/{exact} 通过，方法与官方入口条件等价检查 {eq_pass}/{len(eq)} 通过。Fibonacci 的 Unknown 不当作已经得到精确终止条件。
+最终条件在真实入口赋值/假设下比较，而不是把内部状态变量无条件视为自由输入。AlternDivWidening 入口 w=5 的精确终止条件为 `-5<=t<=5`；Ex06 为 `t<-5 || t>5`。两者独立归纳/立即退出证明见 [exact_e2e_conditions.json](../stage2/results/exact_e2e_conditions.json)；正式输出精确性检查 {exact_pass}/{exact} 通过，方法与官方入口条件等价检查 {eq_pass}/{len(eq)} 通过。AlternDivWidening 缺失条件的那一次和 Fibonacci 的 Unknown 均不当作已验证最终条件；字符串 `None` 只标记缺失，原始记录不改写。
 
 ## 失败、有效性边界与原始记录
 
@@ -160,7 +173,7 @@ A 是 C# 内部函数计时，B 包含多次原生进程启动，C/D/E 为 Pytho
 
 ## 复现和证据
 
-完整命令见 [stage2/README.md](../stage2/README.md)。源码/方法冻结和后续修复由 Git 历史、config 中的哈希及开发记录对应。原始语料、查询、模型、日志、失败记录和逐输入结果共 {evidence['raw_file_count']:,} 个文件、{evidence['raw_bytes']:,} 字节，压缩为 {len(evidence['parts'])} 个文件，总计 {sum(p['bytes'] for p in evidence['parts']):,} 字节。分片与解压后文件逐一 SHA-256 见 [manifest](../stage2/evidence/manifest.json)，公开的 [corpus_index](../stage2/results/corpus_index.json) 包含完整输入/输出 AST 与元数据。
+完整命令见 [stage2/README.md](../stage2/README.md)。源码/方法冻结和后续修复由 Git 历史、config 中的哈希及开发记录对应。原始语料、查询、模型、日志、失败记录和逐输入结果共 {evidence['raw_file_count']:,} 个文件、{evidence['raw_bytes']:,} 字节，压缩为 {len(evidence['parts'])} 个文件，总计 {sum(p['bytes'] for p in evidence['parts']):,} 字节。分片与解压后文件逐一 SHA-256 见 [manifest](../stage2/evidence/manifest.json)，公开的 [corpus_index](../stage2/results/corpus_index.json) 包含完整输入/输出 AST 与元数据。取回本地的全部分片及 237,111 个解压后原始文件已逐一流式核对 SHA-256，见 [archive_integrity.json](../stage2/results/archive_integrity.json)。
 
 ```bash
 # 全量新实验：先在独立 clone 完成第一阶段环境和构建
@@ -176,6 +189,8 @@ python3 stage2/scripts/unpack_evidence.py
 # 正式集成（需要 fresh 目录；已有完成记录可用 --resume）
 .venv/bin/python stage2/scripts/run_e2e.py --ids AlternDivWidening Ex06 Fibonacci --workers 16
 ```
+
+交付前还在全新的 source/work 目录重建原生入口，并从冻结自然输入 `TwoFloatInterv/call_001` 重放全部七种配置，验证单项改进和候选有效性；复用第一阶段已安装运行环境，记录见 [fresh_reproducibility.json](../stage2/results/fresh_reproducibility.json)。完整分母、冻结日程、并发条件、最终条件及实际返回 AST 的交付审计见 [delivery_audit.json](../stage2/results/delivery_audit.json)。
 
 服务器本次实验目录为 `/root/RSG/stage2-repo/stage2`，原阶段工程仍在 `/root/RSG`。新的实验目录不要复用未完成 trial 的学习缓存；已完成的记录也不覆盖。公开结果与第一次完整试跑的 wall time 不要求逐位相同，正确性证明、候选与所有失败状态可以按冻结输入复核。
 '''

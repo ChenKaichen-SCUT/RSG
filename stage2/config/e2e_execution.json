@@ -1,0 +1,5 @@
+{
+  "workers": 16,
+  "pairing": "Each worker executes one program/repetition block of three methods sequentially in frozen randomized order. Different blocks run concurrently; all warmup blocks finish before measurement blocks.",
+  "host_cpu_pinning": false
+}

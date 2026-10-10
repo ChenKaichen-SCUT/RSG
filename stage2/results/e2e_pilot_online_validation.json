@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "instance": "e2e_pilot/Ex06/pilot_00/closure/Ex06/call_000",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.0030245550005929545,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/closure/Ex06/call_000/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.004124032999243354,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/closure/Ex06/call_000/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.00245651099976385,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/closure/Ex06/call_000/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/Ex06/pilot_00/joint/Ex06/call_000",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.0028805210004065884,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_000/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.003224190000764793,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_000/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.0025173530011670664,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_000/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/Ex06/pilot_00/joint/Ex06/call_001",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.002838041000359226,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_001/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.0033092220000980888,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_001/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.0024591709989181254,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_001/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    },
+    {
+      "instance": "e2e_pilot/Ex06/pilot_00/joint/Ex06/call_002",
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "name": "native_actual_return_seed",
+            "result": "unsat",
+            "seconds": 0.003050556000744109,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_002/00000_native_actual_return_seed.smt2"
+          },
+          {
+            "name": "native_actual_return_official_guard_closure",
+            "result": "unsat",
+            "seconds": 0.0036338009995233733,
+            "expected": "unsat",
+            "passed": true,
+            "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_002/00001_native_actual_return_official_guard_closure.smt2"
+          }
+        ]
+      },
+      "equivalence": {
+        "name": "python_native_boundary_equivalence",
+        "result": "unsat",
+        "seconds": 0.0024946419998741476,
+        "expected": "unsat",
+        "passed": true,
+        "query_file": "stage2/logs/online_validation/e2e_pilot/Ex06/pilot_00/joint/Ex06/call_002/00002_python_native_boundary_equivalence.smt2"
+      },
+      "passed": true
+    }
+  ]
+}

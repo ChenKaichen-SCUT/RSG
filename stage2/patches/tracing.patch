@@ -1,0 +1,250 @@
+--- a/ice/popl16_artifact/Boogie/Source/Houdini/MLHoudini.cs
++++ b/ice/popl16_artifact/Boogie/Source/Houdini/MLHoudini.cs
+@@ -361,7 +361,7 @@
+         }
+     }
+ 
+-    public class MLHoudini
++    public partial class MLHoudini
+     {
+         // the tuple is <index, type, bound>
+         // type == 0 means ge, type == 1 means le
+@@ -1600,7 +1600,7 @@
+                 // Expr generalizedRS = newGeneralizeRS();
+                 if (CommandLineOptions.Clo.RSGeneralize)
+                 {
+-                    modelExpr = modifiedGeneralizeRS_2(modelExpr);
++                    modelExpr = S2Run(modelExpr);
+                 }
+                 
+                 // _ADD: try to infer a condition after finding the recurrent set(if needed)
+@@ -5149,6 +5149,7 @@
+ 
+         public VCGenOutcome ComputeSummaries()
+         {
++            if (Environment.GetEnvironmentVariable("RSG_STAGE2_REPLAY") == "1") return S2Replay();
+             // Compute SCCs and determine a priority order for impls
+             var Succ = new Dictionary<string, HashSet<string>>();
+             var Pred = new Dictionary<string, HashSet<string>>();
+--- a/ice/popl16_artifact/Boogie/Source/Houdini/Houdini.csproj
++++ b/ice/popl16_artifact/Boogie/Source/Houdini/Houdini.csproj
+@@ -152,6 +152,7 @@
+     <Compile Include="AbstractHoudini.cs" />
+     <Compile Include="Checker.cs" />
+     <Compile Include="CandidateDependenceAnalyser.cs" />
++    <Compile Include="Stage2Trace.cs" />
+     <Compile Include="MLHoudini.cs">
+       <SubType>Code</SubType>
+     </Compile>
+--- /dev/null
++++ b/ice/popl16_artifact/Boogie/Source/Houdini/Stage2Trace.cs
+@@ -0,0 +1,107 @@
++// Stage 2 observation/replay entry. The official RSG body is unchanged.
++using System;
++using System.Collections.Generic;
++using System.Diagnostics;
++using System.Globalization;
++using System.IO;
++using System.Linq;
++using Microsoft.Boogie;
++using Microsoft.Boogie.SMTLib;
++using Newtonsoft.Json;
++using Newtonsoft.Json.Linq;
++using Microsoft.Basetypes;
++using VC;
++namespace Microsoft.Boogie.Houdini {
++ public partial class MLHoudini {
++  private static object S2Ast(Expr e) {
++   var lit=e as LiteralExpr;
++   if(lit!=null) return new {kind="literal",value=lit.ToString(),sort=lit.Type.ToString()};
++   var id=e as IdentifierExpr;
++   if(id!=null) return new {kind="identifier",name=id.Name,sort=id.Decl.TypedIdent.Type.ToString()};
++   var n=e as NAryExpr;
++   if(n!=null) return new {kind="application",op=n.Fun.FunctionName,args=n.Args.Select(S2Ast).ToArray(),sort=e.Type==null?null:e.Type.ToString()};
++   return new {kind="unsupported",boogie=e.ToString(),type=e.GetType().ToString()};
++  }
++  private static List<Expr> S2Flatten(Expr e,string op) {
++   var n=e as NAryExpr;
++   if(n!=null && n.Fun.FunctionName==op) return n.Args.SelectMany(a=>S2Flatten(a,op)).ToList();
++   return new List<Expr>{e};
++  }
++  private Expr S2Run(Expr input) {
++   string dir=Environment.GetEnvironmentVariable("RSG_STAGE2_DIR");
++   if(String.IsNullOrEmpty(dir)) return modifiedGeneralizeRS_2(input);
++   Directory.CreateDirectory(dir);
++   var solver=prover as SMTLibProcessTheoremProver;
++   int checks=solver.Stage2Checks,cores=solver.Stage2Cores;double seconds=solver.Stage2Seconds;
++   var watch=Stopwatch.StartNew();
++   Expr output=modifiedGeneralizeRS_2(input);
++   watch.Stop();
++   var rec=new Dictionary<string,object>();
++   try {
++   rec["input_ast"]=S2Ast(input);rec["output_ast"]=S2Ast(output);
++   rec["input_boogie"]=input.ToString();rec["output_boogie"]=output.ToString();
++   rec["dnf"]=S2Flatten(input,"||").Select(t=>S2Flatten(t,"&&").Select(S2Ast).ToArray()).ToArray();
++   rec["variables"]=existentialFunctions["b1"].InParams.Select(v=>new {name=v.Name,sort=v.TypedIdent.Type.ToString()}).ToArray();
++   rec["attributes"]=attribute2Expr["b1"].Values.Select(S2Ast).ToArray();
++   rec["distances"]=boundForRSGeneralization;
++   rec["smt_calls"]=solver.Stage2Checks-checks;rec["core_calls"]=solver.Stage2Cores-cores;
++   rec["solver_seconds"]=solver.Stage2Seconds-seconds;rec["rsg_seconds"]=watch.Elapsed.TotalSeconds;
++   rec["pid"]=Process.GetCurrentProcess().Id;rec["source_file"]=filename;
++   try { S2ExportContext(rec,solver); } catch(Exception e) {rec["context_error"]=e.ToString();solver.Stage2CaptureOnly=false;}
++   } catch(Exception e) {rec["trace_error"]=e.ToString(); solver.Stage2CaptureOnly=false;}
++   File.WriteAllText(Path.Combine(dir,"trace.json"),JsonConvert.SerializeObject(rec,Formatting.Indented));
++   Console.WriteLine("[STAGE2_TRACE] "+Path.Combine(dir,"trace.json"));
++   return output;
++  }
++  private void S2ExportContext(Dictionary<string,object> rec,SMTLibProcessTheoremProver solver) {
++   string impl=implWithRS.Name;impl=impl.Substring(0,impl.Length-"_instrumented".Length);
++   var pars=new List<Variable>(existentialFunctions["b1"].InParams);
++   var candidate=new Function(Token.NoToken,"Stage2Candidate",pars,
++       new Formal(Token.NoToken,new TypedIdent(Token.NoToken,"r",Microsoft.Boogie.Type.Bool),false));
++   var terms=new List<Expr>();var bindings=new List<object>();
++   foreach(var tup in impl2FuncCalls[impl]) {
++    var control=tup.Item2;var actual=tup.Item3.Args.ToList();
++    var formal=control.InParams.Select(v=>(Expr)Expr.Ident(v)).ToList();
++    Expr rhs=new NAryExpr(Token.NoToken,new FunctionCall(candidate),actual);
++    Expr lhs=new NAryExpr(Token.NoToken,new FunctionCall(control),formal);
++    Expr binding=Expr.Eq(lhs,rhs);
++    if(control.InParams.Count!=0) binding=new ForallExpr(Token.NoToken,new List<Variable>(control.InParams),new Trigger(Token.NoToken,true,new List<Expr>{lhs}),binding);
++    terms.Add(binding);bindings.Add(new {control=control.Name,args=actual.Select(S2Ast).ToArray(),arity=control.InParams.Count});
++   }
++   foreach(var p in extraFunc2Value) {
++    var f=new Function(Token.NoToken,p.Key,new List<Variable>(),new Formal(Token.NoToken,new TypedIdent(Token.NoToken,"r",Microsoft.Boogie.Type.Bool),false));
++    terms.Add(Expr.Eq(new NAryExpr(Token.NoToken,new FunctionCall(f),new List<Expr>()),p.Value));
++   }
++   rec["context_bindings"]=bindings;rec["context_kind"]="official impl2VC with symbolic recurrent predicate; no additional check-sat";
++   var env=BinaryTreeAnd(terms,0,terms.Count-1);env.Typecheck(new TypecheckingContext((IErrorSink)null));
++   var gen=prover.VCExprGen;
++   var vc=gen.Implies(prover.Context.BoogieExprTranslator.Translate(env),impl2VC[impl]);
++   // Record-only transaction: Send() omits Process.Send while capturing, so the
++   // live solver receives no assertions, declarations, pushes or queries here.
++   solver.Stage2CaptureOnly=true;solver.Stage2Mark("CONTEXT_BEGIN");
++   prover.Push();prover.Assert(gen.Not(vc),true);prover.FlushAxiomsToTheoremProver();
++   solver.Stage2Mark("CONTEXT_SNAPSHOT");prover.Pop();solver.Stage2Mark("CONTEXT_END");
++   solver.Stage2CaptureOnly=false;
++  }
++  private Expr S2ReadAst(JToken a,Dictionary<string,Variable> vars) {
++   string kind=(string)a["kind"];
++   if(kind=="identifier") return Expr.Ident(vars[(string)a["name"]]);
++   if(kind=="literal") {
++    if((string)a["sort"]=="bool") return Expr.Literal((string)a["value"]=="true");
++    if((string)a["sort"]=="int") return Expr.Literal(BigNum.FromString((string)a["value"]));
++    throw new NotSupportedException("Replay literal sort "+a["sort"]);
++   }
++   var xs=a["args"].Select(x=>S2ReadAst(x,vars)).ToList();string op=(string)a["op"];
++   if(xs.Count==1) return Expr.Unary(Token.NoToken,op=="!"?UnaryOperator.Opcode.Not:UnaryOperator.Opcode.Neg,xs[0]);
++   var ops=new Dictionary<string,BinaryOperator.Opcode>{{"&&",BinaryOperator.Opcode.And},{"||",BinaryOperator.Opcode.Or},{"==>",BinaryOperator.Opcode.Imp},{"<==>",BinaryOperator.Opcode.Iff},{"+",BinaryOperator.Opcode.Add},{"-",BinaryOperator.Opcode.Sub},{"*",BinaryOperator.Opcode.Mul},{"<=",BinaryOperator.Opcode.Le},{"<",BinaryOperator.Opcode.Lt},{">=",BinaryOperator.Opcode.Ge},{">",BinaryOperator.Opcode.Gt},{"==",BinaryOperator.Opcode.Eq},{"!=",BinaryOperator.Opcode.Neq},{"div",BinaryOperator.Opcode.Div},{"mod",BinaryOperator.Opcode.Mod}};
++   if(xs.Count!=2 || !ops.ContainsKey(op)) throw new NotSupportedException("Replay operation "+op);
++   return Expr.Binary(Token.NoToken,ops[op],xs[0],xs[1]);
++  }
++  private VCGenOutcome S2Replay() {
++   var vars=existentialFunctions["b1"].InParams.ToDictionary(v=>v.Name,v=>v);
++   var body=S2ReadAst(JToken.Parse(File.ReadAllText(Environment.GetEnvironmentVariable("RSG_STAGE2_SEED_AST"))),vars);
++   S2Run(body);
++   return new VCGenOutcome(ProverInterface.Outcome.Valid,new List<Counterexample>());
++  }
++ }
++}
+--- a/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/ProverInterface.cs
++++ b/ice/popl16_artifact/Boogie/Source/Provers/SMTLib/ProverInterface.cs
+@@ -26,6 +26,10 @@
+ {
+   public class SMTLibProcessTheoremProver : ProverInterface
+   {
++    public bool Stage2CaptureOnly = false;
++    public int Stage2Checks = 0, Stage2Cores = 0;
++    public double Stage2Seconds = 0;
++    public void Stage2Mark(string s) { if(currentLogFile!=null) { currentLogFile.WriteLine("; STAGE2_"+s); currentLogFile.Flush(); } }
+     private readonly SMTLibProverContext ctx;
+     private VCExpressionGenerator gen;
+     private readonly SMTLibProverOptions options;
+@@ -194,7 +198,7 @@
+       if (isCommon)
+         common.Append(s).Append("\r\n");
+ 
+-      if (Process != null)
++      if (Process != null && !Stage2CaptureOnly)
+         Process.Send(s);
+       if (currentLogFile != null)
+         currentLogFile.WriteLine(s);
+@@ -1280,6 +1284,7 @@
+ 
+     public override List<string> CheckAndUnsatCore(List<string> constants)
+     {
++        Stage2Checks++; var stage2Watch = Stopwatch.StartNew(); try {
+         PrepareCommon();
+         SendThisVC("(check-sat " + constants.Concat(" ") + " )");
+         
+@@ -1303,11 +1308,12 @@
+         FlushLogFile();
+ 
+         return unsatCore;
++        } finally { stage2Watch.Stop(); Stage2Seconds += stage2Watch.Elapsed.TotalSeconds; }
+     }
+     
+     public List<string> UnsatCore()
+     {
+-      SendThisVC("(get-unsat-core)");
++      Stage2Cores++; SendThisVC("(get-unsat-core)");
+       var resp = Process.GetProverResponse().ToString();
+       return ParseUnsatCore(resp);
+     }
+--- a/src/RSLearner/RSLearner.py
++++ b/src/RSLearner/RSLearner.py
+@@ -71,9 +71,26 @@
+             command = [timeoutMonitor, '--foreground', '--kill-after', '1', str(int(timeout) + 1)] + command
+             self.Logger.StartTimer('TOM@RSL')
+         self.Logger.Log('[Debug] Boogie Cmd: {}'.format(reduce(lambda x, y: '{} {}'.format(x, y), command)))
++        stage2_env = None
++        stage2_root = os.environ.get('RSG_STAGE2_ROOT')
++        if stage2_root:
++            import json
++            serial_file = os.path.join(stage2_root, 'next_call.txt')
++            serial = int(open(serial_file).read()) if os.path.exists(serial_file) else 0
++            with open(serial_file,'w') as f: f.write(str(serial+1))
++            stage2_dir = os.path.join(stage2_root, 'call_%03d' % serial)
++            os.makedirs(stage2_dir, exist_ok=True)
++            shutil.copy2(self.fileName, os.path.join(stage2_dir,'input.bpl'))
++            stage2_env = dict(os.environ, RSG_STAGE2_DIR=stage2_dir)
++            command.append('/proverLog:'+os.path.join(stage2_dir,'prover.smt2'))
++            with open(os.path.join(stage2_dir,'invocation.json'),'w') as f:
++                json.dump({'serial':serial,'data_sharing':self.DS,'command':command,
++                           'outer_iteration':os.environ.get('RSG_STAGE2_ITERATION'),
++                           'program':os.environ.get('RSG_STAGE2_PROGRAM'),
++                           'seed':os.environ.get('RSG_STAGE2_SEED')},f,indent=2)
+         process = subprocess.Popen(command,
+                                    stdout=subprocess.PIPE,
+-                                   stderr=subprocess.PIPE)
++                                   stderr=subprocess.PIPE,env=stage2_env)
+         os.chdir(curDir)
+ 
+         # stdout, stderr = process.communicate()
+@@ -101,6 +118,8 @@
+             if line.startswith('\n') or line == '':
+                 continue
+             stdoutLines.append(line)
++            if stage2_root:
++                with open(os.path.join(stage2_dir,'native.stdout'),'a') as f: f.write(line+'\n')
+             if line.startswith('[Debug]') or line.startswith('[Warning]') or line.startswith(
+                     '[Info]') or line.startswith('[Error]'):
+                 self.Logger.Log(line)
+@@ -137,6 +156,8 @@
+                 return {'Result': 'Timeout'}
+             else:
+                 raise RuntimeError('No stdoutput!')
++        if stage2_root:
++            with open(os.path.join(stage2_dir,'native.stderr'),'w') as f: f.write(process.stderr.read().decode())
+         resultLine = stdoutLines[-1]
+         self.Logger.Log(resultLine)
+         reMatcher = r'Boogie program verifier finished with (\d+) verified, (\d+) error(s)?'
+--- a/experiment/scripts/CondTerm.py
++++ b/experiment/scripts/CondTerm.py
+@@ -751,6 +751,7 @@
+ final_condition = None
+ while True:
+     iteration += 1
++    if os.environ.get("RSG_STAGE2_ROOT"): os.environ["RSG_STAGE2_ITERATION"] = str(iteration)
+     # timeout:
+     if iteration > 15:
+         iteration -= 1
