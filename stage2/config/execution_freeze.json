@@ -1,0 +1,13 @@
+{
+  "frozen_utc": "2026-10-10T11:31:30.337353+00:00",
+  "purpose": "Final execution infrastructure after PID isolation and B remaining-time repair; before isolated holdout run. Candidate language/order unchanged from 1fc101f. Unisolated pilot holdout outcomes were seen; this is documented rather than claimed fully unseen.",
+  "files": {
+    "src/algorithms.py": "01a92d25ae0f2c0df7b37dbddb8fee38bed1f90e6b7cbbd431462322ec29701d",
+    "src/semantics.py": "e7ce64c048d3036dc899b127b267ae98a88dc69d7789f449789440577316c0d8",
+    "src/Stage2Trace.cs": "6e6de36adae173145c6e487e2943542a2b4e3a1f7926333c577034bbb8062b52",
+    "src/common.py": "d9dc3027b90b2e09be5512567e02c06a3d33b9b1c17352a54a8519b1d61f20f3",
+    "scripts/collect.py": "c333a2a4915916bed8840436db374adc56ae832838200675cfd630a7075da53f",
+    "scripts/compare.py": "94d4880fd49c01883744c4b876136e96787ba677ea01dd8efe4b391245a6deb3",
+    "scripts/instrument.py": "2d9045f329fd3847f576bc48515a2b3cb3a8ddf25b4c4f34859ceb0b45f66193"
+  }
+}

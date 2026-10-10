@@ -154,9 +154,11 @@ def repeat_official(c,key,project):
   for k in ('RSG_STAGE2_ROOT','RSG_EXPERIMENT','RSG_INJECT_ONCE','RSG_ORACLE'):env.pop(k,None)
   cmd=['mono','Boogie.exe','/nologo','/noinfer','/contractInfer','/mlHoudini:dt_penalty','/RSInfer','/RSGeneralize',
        '/proverLog:'+str(directory/'prover.smt2'),str(directory/'input.bpl')]
-  proc=run('replay/'+key+f'/{i}',cmd,cwd=project/'ice/popl16_artifact/Boogie/Binaries',env=env,timeout=20)
+  remaining=max(.001,P['method_wall_budget_seconds']-(time.perf_counter()-b.start))
+  proc=run('replay/'+key+f'/{i}',cmd,cwd=project/'ice/popl16_artifact/Boogie/Binaries',env=env,timeout=remaining)
   b.candidates+=1
-  if proc['exit_code'] or not (directory/'trace.json').exists():status='replay_failed';rows.append({'process':proc});break
+  if proc['exit_code'] or not (directory/'trace.json').exists():
+   status='replay_timeout' if proc['exit_code']==124 else 'replay_failed';rows.append({'process':proc});break
   trace=json.loads((directory/'trace.json').read_text());r=from_ast(trace['output_ast'],c.env)
   valid=c.validate(r,'B_iteration_'+str(i));eq=c.compare(current,r,'B_change_'+str(i))
   rows.append({'process':proc,'trace':trace,'validation':valid,'change':eq})
