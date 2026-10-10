@@ -1,14 +1,17 @@
-import datetime,json,os,pathlib,signal,subprocess,time
+import datetime,json,os,pathlib,signal,subprocess,time,sys
 ROOT=pathlib.Path(__file__).resolve().parents[2];S=ROOT/'stage2'
-PY=pathlib.Path(os.environ.get('RSG_PYTHON','/root/RSG/.venv/bin/python'))
+PY=pathlib.Path(os.environ.get('RSG_PYTHON',str(ROOT/'.venv/bin/python') if (ROOT/'.venv/bin/python').exists() else sys.executable))
 def dump(path,obj):
  path=pathlib.Path(path);path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n')
 def run(name,cmd,cwd=None,env=None,timeout=300):
  base=S/'logs'/name;base.parent.mkdir(parents=True,exist_ok=True)
- record={'command':list(map(str,cmd)),'cwd':str(cwd or ROOT),'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+ record={'command':list(map(str,cmd)),'cwd':str(cwd or ROOT),'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+         'pid_namespace_isolation':True}
  start=time.perf_counter();peak=0
  with open(str(base)+'.stdout','w') as out,open(str(base)+'.stderr','w') as err:
-  proc=subprocess.Popen(['/usr/bin/time','-v','-o',str(base)+'.time',*record['command']],cwd=cwd or ROOT,env=env,stdout=out,stderr=err,start_new_session=True)
+  # Official CondTerm kills all mono/z3/c5 processes visible through ps -A.
+  # A private PID namespace preserves that behavior within this run only.
+  proc=subprocess.Popen(['/usr/bin/time','-v','-o',str(base)+'.time','unshare','--pid','--fork','--mount-proc',*record['command']],cwd=cwd or ROOT,env=env,stdout=out,stderr=err,start_new_session=True)
   while proc.poll() is None:
    pending=[proc.pid];rss=0
    while pending:

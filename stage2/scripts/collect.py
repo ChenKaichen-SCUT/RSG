@@ -7,10 +7,11 @@ P=json.loads((S/'config/protocol.json').read_text())
 def worker_project(i,pristine=False):
  dst=S/'work'/('control' if pristine else 'workers')/str(i)
  if not dst.exists():
-  src=pathlib.Path('/root/RSG/work/CondTerm') if pristine else S/'work/traced'
+  base=pathlib.Path(os.environ.get('RSG_BASE_ROOT',ROOT))
+  src=base/'original/CondTerm/CondTerm' if pristine else S/'work/traced'
   for rel in ('src','experiment/scripts','ice/popl16_artifact/Boogie/Binaries'):
    shutil.copytree(src/rel,dst/rel,dirs_exist_ok=True)
-  if pristine:shutil.copytree('/root/RSG/work/pristine-bin',dst/'ice/popl16_artifact/Boogie/Binaries',dirs_exist_ok=True)
+  if pristine:shutil.copytree(base/'work/pristine-bin',dst/'ice/popl16_artifact/Boogie/Binaries',dirs_exist_ok=True)
  return dst
 
 def collect(row,project,label='primary',trace=True,seed=888):
