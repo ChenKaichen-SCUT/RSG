@@ -1,0 +1,17 @@
+{
+  "frozen_utc": "2026-10-10T11:20:22.815543+00:00",
+  "purpose": "Method implementation frozen after 24-program development; before holdout collection/evaluation",
+  "files": {
+    "scripts/check_tracing_control.py": "b0b63a3f277618d543677e3d73f5c26fe5b99e7f050d8aa03bfe184c330915d4",
+    "scripts/collect.py": "878a5b2e82de559d4598c8043691a99028c48ce02f299a11bd3c1c8666e4c34b",
+    "scripts/compare.py": "94d4880fd49c01883744c4b876136e96787ba677ea01dd8efe4b391245a6deb3",
+    "scripts/instrument.py": "2d9045f329fd3847f576bc48515a2b3cb3a8ddf25b4c4f34859ceb0b45f66193",
+    "scripts/inventory.py": "51dd9365c21495520b9cc0ba93085779eee15103ec217e3f167d2fcbf4f8fd53",
+    "scripts/validate_corpus.py": "91d3dcc9f060990076b3f1e70dbb3e3e832715af218c517a96fbc17305c8f667",
+    "src/Stage2Trace.cs": "6e6de36adae173145c6e487e2943542a2b4e3a1f7926333c577034bbb8062b52",
+    "src/algorithms.py": "2dbb3002534f1f02c4c7d2117214932201563b52690f5002daf871c12bcc7d2f",
+    "src/common.py": "7fc1b26d1c09578cee1102b7ee432adc4fc59a120e0f2a0270bce3ecede2248c",
+    "src/formula_parser.py": "f007e49f70f440679241e7484430a10e504b0e10785b00270e6e2028378d2524",
+    "src/semantics.py": "e7ce64c048d3036dc899b127b267ae98a88dc69d7789f449789440577316c0d8"
+  }
+}
