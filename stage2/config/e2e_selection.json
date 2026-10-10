@@ -6,7 +6,7 @@
     "Fibonacci"
   ],
   "reason": "All three have independently verified natural D_symbolic outputs strictly larger than official RSG. They cover a two-variable unbounded guard with fixed initialization, a one-variable exactly finite guard, and a four-variable recurrence whose complete CondTerm run returns Unknown. Include the slow unsuccessful program rather than condition timing on success.",
-  "workers": 8,
+  "workers": 16,
   "warmup_per_method_program": 3,
   "measurements_per_method_program": 20,
   "methods": [
@@ -15,9 +15,26 @@
     "joint"
   ],
   "order_seed": 20261010,
-  "block_policy": "Eight isolated workers; one paired repetition block runs three methods sequentially in frozen randomized order; all warmup blocks before measurements. No other experiment batch during formal measurements.",
+  "block_policy": "Sixteen isolated workers; one paired repetition block runs three methods sequentially in frozen randomized order; all warmup blocks before measurements. No other experiment batch during formal measurements.",
   "claim_scope": "Whole process cost under this shared-host paired-block schedule, not unloaded-host microbenchmark speedup. UNKNOWN/timeout costs included; no time-to-solution speedup is inferred from censored runs.",
   "code_sha256": {
+    "src/Stage2Integration.cs": "d8ca5df9159ab89e490150e29d0267bd8b0e429c54abe6367d219a445006b9c7",
+    "scripts/build_integration.py": "03025beca39da861f9a76c21239bd6008c51232f455131ab47facc0b831ef73b",
+    "scripts/integrate.py": "cae7d1b25e064e1ec568c9f2c6815e4fbadea903932382eb50fd2a3a7d7c7e58",
+    "scripts/run_e2e.py": "f1075cf2a8de8fde453304d047233ce3932a33b97cb04d1bf26ee513469dfa5f",
+    "scripts/analyze_e2e.py": "c6220b119ecc991a9699630062f032e8a8ab0ae0b08210210c43550dec1bf75f",
+    "scripts/validate_online.py": "862453fedff6c5962a9c951af2605808ec6a648078c676b8ce81bcf980cc4054",
+    "src/condition_parser.py": "618f1c3f275352ef9fa903e19a01a2bcfac1ddd0f823a83985a5ee6cf8b1643d",
+    "scripts/collect.py": "8841eb9f788d7c96ef216bad9b6a695e289ac4d385c0d5869f63769b2efec8d2",
+    "src/balanced_joint.py": "8eee111b54b7528e911943855027362efe44a0960a6cf8b733c24a6c51552566"
+  },
+  "final_frozen_utc": "2026-10-10T12:12:10.654591+00:00",
+  "closure_dispatch": "Generic syntactically bounded integer guard -> independently certified exact finite closure; otherwise frozen symbolic closure. One backend per call. Empty seed -> official fallback.",
+  "serialization": "At most 2 extra seconds of proven DNF redundancy removal, complemented comparisons, arithmetic equality encoded as two inequalities; Python and actual C# returned AST checked independently.",
+  "joint_backend": "E_balanced post-freeze pair-round-robin repair; original E_joint2 retained in offline results",
+  "initial_workers": 8,
+  "concurrency_amendment": "User requested maximum server utilization before any formal measurements. Preserve 24 completed warmup trials, quarantine 3 interrupted warmup trials, resume the frozen schedule with 16 workers. No algorithm or candidate-language change.",
+  "initial_code_sha256": {
     "src/Stage2Integration.cs": "d8ca5df9159ab89e490150e29d0267bd8b0e429c54abe6367d219a445006b9c7",
     "scripts/build_integration.py": "03025beca39da861f9a76c21239bd6008c51232f455131ab47facc0b831ef73b",
     "scripts/integrate.py": "cae7d1b25e064e1ec568c9f2c6815e4fbadea903932382eb50fd2a3a7d7c7e58",
@@ -27,9 +44,5 @@
     "src/condition_parser.py": "618f1c3f275352ef9fa903e19a01a2bcfac1ddd0f823a83985a5ee6cf8b1643d",
     "scripts/collect.py": "8841eb9f788d7c96ef216bad9b6a695e289ac4d385c0d5869f63769b2efec8d2",
     "src/balanced_joint.py": "8eee111b54b7528e911943855027362efe44a0960a6cf8b733c24a6c51552566"
-  },
-  "final_frozen_utc": "2026-10-10T12:12:10.654591+00:00",
-  "closure_dispatch": "Generic syntactically bounded integer guard -> independently certified exact finite closure; otherwise frozen symbolic closure. One backend per call. Empty seed -> official fallback.",
-  "serialization": "At most 2 extra seconds of proven DNF redundancy removal, complemented comparisons, arithmetic equality encoded as two inequalities; Python and actual C# returned AST checked independently.",
-  "joint_backend": "E_balanced post-freeze pair-round-robin repair; original E_joint2 retained in offline results"
+  }
 }

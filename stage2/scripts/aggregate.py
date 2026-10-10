@@ -27,6 +27,7 @@ def summary(split='all'):
    'algorithm_seconds_median':statistics.median(ts) if ts else None,'algorithm_seconds_sum':sum(ts),
    'algorithm_seconds_min':min(ts) if ts else None,'algorithm_seconds_max':max(ts) if ts else None,
    'search_smt_calls_sum':sum(r.get('search_smt_calls',0) for r in rs),
+   'additional_native_smt_calls_sum':sum(r.get('details',{}).get('native_smt_calls',0) for r in rs),
    'search_solver_seconds_sum':sum(r.get('search_solver_seconds',0) for r in rs),
    'complete_no_extension_instances':sum(r['status']=='complete_no_extension' for r in rs)}
  for c in cases:
@@ -61,6 +62,8 @@ def summary(split='all'):
   'empty_seed_inputs':sum(r.get('seed_nonempty',{}).get('result')=='unsat' for r in validations),
   'nonempty_validation_failures':sum(r['status']=='validation_failed' and r.get('seed_nonempty',{}).get('result')!='unsat' for r in validations),
   'valid_multiterm_inputs':sum(r['dnf_terms']>=2 for r in valid),'valid_singleterm_inputs':sum(r['dnf_terms']==1 for r in valid),
+  'programs_with_valid_rsg':len({r['instance'].split('/')[1] for r in valid}),
+  'programs_with_multiterm_inputs':len({r['instance'].split('/')[1] for r in valid if r['dnf_terms']>=2}),
   'dnf_term_counts':dict(collections.Counter(r['dnf_terms'] for r in valid)),
   'official_did_not_expand':sum(r['official_comparison']['relation']=='equal' for r in valid),
   'compared_instances':sum(c.get('status')=='compared' for c in cases),'methods':methods,'hard_cases':hard,

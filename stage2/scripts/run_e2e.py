@@ -5,7 +5,7 @@ sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[1]/'src'))
 from common import ROOT,S,PY,run,dump
 import collect
 P=json.loads((S/'config/protocol.json').read_text())
-ap=argparse.ArgumentParser();ap.add_argument('--ids',nargs='+',required=True);ap.add_argument('--pilot',action='store_true');ap.add_argument('--workers',type=int,default=4);args=ap.parse_args()
+ap=argparse.ArgumentParser();ap.add_argument('--ids',nargs='+',required=True);ap.add_argument('--pilot',action='store_true');ap.add_argument('--workers',type=int,default=16);ap.add_argument('--resume',action='store_true');args=ap.parse_args()
 rows={r['id']:r for r in json.loads((S/'config/manifest.json').read_text())['programs']}
 projects=queue.Queue()
 for i in range(args.workers):
@@ -22,6 +22,20 @@ for program in args.ids:
    order=['official','closure','joint'];rng.shuffle(order)
    for method in order:schedule.append({'program':program,'phase':phase,'round':i,'method':method})
 label='e2e_pilot' if args.pilot else 'e2e'
+def trial_key(t):return (t['program'],t['phase'],t['round'],t['method'])
+if args.resume:
+ if json.loads((S/'config'/(label+'_schedule.json')).read_text())!=schedule:
+  raise RuntimeError('Resume requires the exact frozen schedule')
+ records=json.loads((S/'results'/(label+'.json')).read_text())
+ keys=[trial_key(r['trial']) for r in records]
+ if len(keys)!=len(set(keys)) or not set(keys)<=set(map(trial_key,schedule)):
+  raise RuntimeError('Duplicate or unscheduled recorded trial')
+ for r in records:
+  if r['trial']['phase']=='measurement' and r.get('configured_workers')!=args.workers:
+   raise RuntimeError('Formal measurements must use a uniform worker limit')
+else:
+ if (S/'results'/(label+'.json')).exists():raise RuntimeError('Existing results; use --resume or a fresh run')
+completed={trial_key(r['trial']) for r in records}
 dump(S/'config'/(label+'_schedule.json'),schedule)
 dump(S/'config'/(label+'_execution.json'),{'workers':args.workers,'pairing':'Each worker executes one program/repetition block of three methods sequentially in frozen randomized order. Different blocks run concurrently; all warmup blocks finish before measurement blocks.','host_cpu_pinning':False})
 def online(name,cmd,**kw):
@@ -41,7 +55,7 @@ def execute(trial,project):
   if f.exists():integrations.append(json.loads(f.read_text()))
  if result['rsl_calls_without_trace']<0 or any(r['method']!=method for r in integrations) or (method=='official' and integrations):
   raise RuntimeError('Trial isolation/configuration integrity failure: '+runlabel)
- result.update(trial=trial,rsg_seconds=sum(t.get('rsg_seconds',0) for t in traces),
+ result.update(trial=trial,configured_workers=args.workers,rsg_seconds=sum(t.get('rsg_seconds',0) for t in traces),
   rsg_native_smt_calls=sum(t.get('smt_calls',0) for t in traces),rsg_core_calls=sum(t.get('core_calls',0) for t in traces),
   rsg_solver_seconds=sum(t.get('solver_seconds',0) for t in traces)+sum(q['seconds'] for r in integrations for q in r['all_queries']),
   rsg_python_smt_calls=sum(len(r['all_queries']) for r in integrations),
@@ -54,8 +68,9 @@ def execute(trial,project):
 def block(trials):
  project=projects.get()
  try:
-  for trial in trials:execute(trial,project)
+  for trial in trials:
+   if trial_key(trial) not in completed:execute(trial,project)
  finally:projects.put(project)
 for phase,count in plans:
- blocks=[schedule[i:i+3] for i in range(0,len(schedule),3) if schedule[i]['phase']==phase]
+ blocks=[schedule[i:i+3] for i in range(0,len(schedule),3) if schedule[i]['phase']==phase and any(trial_key(t) not in completed for t in schedule[i:i+3])]
  with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:list(pool.map(block,blocks))

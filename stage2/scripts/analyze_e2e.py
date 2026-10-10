@@ -88,6 +88,6 @@ for program in sorted({r['program'] for r in runs}):
  programs[program]={'warmup_runs':sum(r['trial']['phase']=='warmup' for r in all_trials),'methods':methods,'paired_wall_differences':pairs,
   'entry_state':{k:str(v) for k,v in state.items()} if state else None,'entry_error':entry_error,'exact_condition_checks':exact_checks}
 dump(S/'results'/(label+'_analysis.json'),{'programs':programs,'condition_checks':condition_checks,
- 'timing_scope':'Full process wall time, includes failed and unknown runs, startup, tracing, search, serialization and all official stages. Four independent paired blocks may run concurrently; no isolated-host speed claim.',
+ 'timing_scope':'Full process wall time, includes failed and unknown runs, startup, tracing, search, serialization and all official stages. Independent paired blocks run concurrently under the worker limit in e2e_execution.json; no isolated-host speed claim.',
  'solver_scope':'RSG native and Python checks only; termination-side solver total unavailable, not replaced by zero.'})
 print('Analyzed',len(runs),'trials across',len(programs),'programs.')

@@ -47,6 +47,7 @@ bash stage2/scripts/run_all.sh
 .venv/bin/python stage2/scripts/collect.py --split holdout
 .venv/bin/python stage2/scripts/validate_corpus.py
 .venv/bin/python stage2/scripts/compare.py --resume
+.venv/bin/python stage2/scripts/compare_balanced.py
 .venv/bin/python stage2/scripts/check_replay_syntax.py
 .venv/bin/python stage2/scripts/aggregate.py
 ```
@@ -73,14 +74,22 @@ python3 stage2/scripts/unpack_evidence.py
 
 ```bash
 .venv/bin/python stage2/scripts/build_integration.py
-.venv/bin/python stage2/scripts/run_e2e.py --ids AlternDivWidening Ex06 Fibonacci --workers 8
+.venv/bin/python stage2/scripts/run_e2e.py --ids AlternDivWidening Ex06 Fibonacci --workers 16
 .venv/bin/python stage2/scripts/validate_online.py
 .venv/bin/python stage2/scripts/analyze_e2e.py
 .venv/bin/python stage2/scripts/prove_simple_conditions.py
 ```
 
-每个程序/配置 3 次预热、20 次正式测量，共 207 个完整运行。8 个独立工作目录/PID 命名空间并行执行配对块；同一配对块的三种方法依预先随机顺序串行，所有预热块结束后才开始测量。正式测量期间停止其他实验批次。计时属于这一共享主机调度条件，不宣称独占主机微基准加速。
+每个程序/配置 3 次预热、20 次正式测量，共 207 个完整运行。16 个独立工作目录/PID 命名空间并行执行配对块；同一配对块的三种方法依预先随机顺序串行，所有预热块结束后才开始测量。正式测量期间停止其他实验批次。计时属于这一共享主机调度条件，不宣称独占主机微基准加速。
 
 集成配置为官方方法、简单闭包、自动双项搜索。闭包以通用语法检查判断每个整数变量是否在 guard 每个分支中有直接上下界：有则调用仍须 SMT 证明枚举完备的有限闭包，否则调用冻结的符号闭包；不手工指定目标集合。序列化最多另用 2 秒删除已证明冗余的 DNF 项，转换前后验证等价。所有集成候选最终必须严格包含官方结果且完整 VC 验证通过，否则回退到官方结果。空种子直接回退。
 
 除了 Python 选中的候选，`validate_online.py` 还验证 C# 实际返回的 AST 与 Python 结果等价并满足完整 VC。端到端时间计入解释器启动、所有搜索/转换、独立检查与前端成本。SMT 成本表是 RSG 部分，未插桩终止侧全部内部 SMT 查询，不把缺少的总量写成 0。`Unknown`、超时与失败的运行仍保留在每组成本及成功率分母中。
+
+E-v1 保留冻结的首对优先顺序；`E_balanced` 是看到初步留出结果后发现配对覆盖问题而新增的轮转审计，同一候选池与预算，单列为事后修复。正式端到端 joint 使用 E_balanced。
+
+用户在正式测量前要求用满 16 核服务器，因此并行上限由 8 调整为 16；已完成的 24 次预热保留，中断预热的原始目录另存后重做。全部正式测量均为 16 工作进程上限。断点续跑可在原命令后加 `--resume`；必须先结束同一批次的旧进程，并另存未完成目录，脚本不会复用未完成的学习缓存。
+
+## 交付校验与归档
+
+正式测量结束后，可运行 `check_fresh_reproduction.py` 在新目录重建原生入口、重放 TwoFloatInterv 正例（复用已安装运行环境），以及 `verify_delivery.py` 核对完整分母/日程/证明记录。`package_evidence.py` 使用至多 16 个线程并行压缩标准 gzip 成员，随后按 64 MiB 分片；解压器核对每片和全部原始文件的 SHA-256。不要在性能测量期间运行构建、重放或压缩。

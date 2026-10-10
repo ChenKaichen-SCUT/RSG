@@ -1,0 +1,8 @@
+# Raw evidence is published losslessly in evidence/ with per-file hashes.
+/corpus/
+/logs/
+/replay/
+/results/collection/
+/results/comparison/
+/results/validation/
+/results/repro_build/
